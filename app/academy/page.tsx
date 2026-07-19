@@ -40,7 +40,7 @@ export default function PageAcademy() {
           </div>
         </div>
         {/* STAT STRIP */}
-        <ImageSlot id="dl-ac-hero" style={{width:"100%",height:"520px",display:"block"}} placeholder="Hero image, a cohort in session / design leaders at work" />
+        <ImageSlot id="dl-ac-hero" src="/images/scenes/academy-hero.jpg" style={{width:"100%",height:"520px",display:"block"}} placeholder="Hero image, a cohort in session / design leaders at work" />
         <div style={{padding:"70px 64px",backgroundColor:"#FF6D35"}}>
           <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:"40px"}}>
             <div>
@@ -68,7 +68,7 @@ export default function PageAcademy() {
           <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"32px"}}>
             {/* Foundation */}
             <div className="dl-card" style={{border:"1px solid rgba(68,6,59,.18)",background:"#FDFBF0"}}>
-              <ImageSlot id="dl-ac-found" style={{width:"100%",height:"300px",display:"block"}} placeholder="Foundation cohort image" />
+              <ImageSlot id="dl-ac-found" src="/images/scenes/academy-found.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Foundation cohort image" />
               <div style={{padding:"36px 36px 40px"}}>
                 <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline",marginBottom:"22px"}}>
                   <div>
@@ -101,7 +101,7 @@ export default function PageAcademy() {
             </div>
             {/* Executive */}
             <div className="dl-card" style={{border:"1px solid #44063B",background:"#44063B"}}>
-              <ImageSlot id="dl-ac-exec" style={{width:"100%",height:"300px",display:"block"}} placeholder="Executive cohort image" />
+              <ImageSlot id="dl-ac-exec" src="/images/scenes/academy-exec.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Executive cohort image" />
               <div style={{padding:"36px 36px 40px"}}>
                 <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline",marginBottom:"22px"}}>
                   <div>
@@ -152,25 +152,25 @@ export default function PageAcademy() {
           </div>
           <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:"24px"}}>
             <div className="dl-facultycard">
-              <ImageSlot id="dl-fac-1" style={{width:"100%",height:"300px",display:"block"}} placeholder="Faculty photo" />
+              <ImageSlot id="dl-fac-1" src="/images/people/fac-1.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Faculty photo" />
               <div className="dl-fac-name" style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"20px",transition:"color .15s"}}>Faculty Member</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>CDO · NIGERIAN SCALE-UP</div>
               <p style={{font:"400 13px/1.55 'Inter Tight',sans-serif",color:"rgba(68,6,59,.6)",margin:"12px 0 0"}}>Name to be added</p>
             </div>
             <div className="dl-facultycard">
-              <ImageSlot id="dl-fac-2" style={{width:"100%",height:"300px",display:"block"}} placeholder="Faculty photo" />
+              <ImageSlot id="dl-fac-2" src="/images/people/fac-2.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Faculty photo" />
               <div className="dl-fac-name" style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"20px",transition:"color .15s"}}>Faculty Member</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>DESIGN DIRECTOR · GLOBAL FINTECH</div>
               <p style={{font:"400 13px/1.55 'Inter Tight',sans-serif",color:"rgba(68,6,59,.6)",margin:"12px 0 0"}}>Name to be added</p>
             </div>
             <div className="dl-facultycard">
-              <ImageSlot id="dl-fac-3" style={{width:"100%",height:"300px",display:"block"}} placeholder="Faculty photo" />
+              <ImageSlot id="dl-fac-3" src="/images/people/fac-3.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Faculty photo" />
               <div className="dl-fac-name" style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"20px",transition:"color .15s"}}>Faculty Member</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>DESIGN LEADER · DIASPORA</div>
               <p style={{font:"400 13px/1.55 'Inter Tight',sans-serif",color:"rgba(68,6,59,.6)",margin:"12px 0 0"}}>Name to be added</p>
             </div>
             <div className="dl-facultycard">
-              <ImageSlot id="dl-fac-4" style={{width:"100%",height:"300px",display:"block"}} placeholder="Faculty photo" />
+              <ImageSlot id="dl-fac-4" src="/images/people/fac-4.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Faculty photo" />
               <div className="dl-fac-name" style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"20px",transition:"color .15s"}}>Faculty Member</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>PRODUCT DESIGN VP · SCALE-UP</div>
               <p style={{font:"400 13px/1.55 'Inter Tight',sans-serif",color:"rgba(68,6,59,.6)",margin:"12px 0 0"}}>Name to be added</p>

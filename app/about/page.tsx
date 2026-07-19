@@ -44,7 +44,7 @@ export default function PageAbout() {
         </div>
         {/* HERO IMAGE */}
         <div style={{padding:"0 64px 100px"}}>
-          <ImageSlot id="dl-abt-hero" style={{width:"100%",height:"460px",display:"block"}} placeholder="The team at work" />
+          <ImageSlot id="dl-abt-hero" src="/images/scenes/about-hero.jpg" style={{width:"100%",height:"460px",display:"block"}} placeholder="The team at work" />
         </div>
         {/* MANIFESTO */}
         <div style={{padding:"120px 64px",backgroundColor:"#44063B"}}>
@@ -104,7 +104,7 @@ export default function PageAbout() {
               </p>
             </div>
             <div>
-              <ImageSlot id="dl-team-2" style={{width:"100%",height:"300px"}} placeholder="Team photo, Research Lead" />
+              <ImageSlot id="dl-team-2" src="/images/people/team-research.jpg" style={{width:"100%",height:"300px"}} placeholder="Team photo, Research Lead" />
               <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"20px"}}>Research Lead</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>NAME TO BE ADDED</div>
               <p style={{font:"400 13.5px/1.6 'Inter Tight',sans-serif",color:"rgba(68,6,59,.64)",margin:"14px 0 0"}}>
@@ -112,7 +112,7 @@ export default function PageAbout() {
               </p>
             </div>
             <div>
-              <ImageSlot id="dl-team-3" style={{width:"100%",height:"300px"}} placeholder="Team photo, Operations" />
+              <ImageSlot id="dl-team-3" src="/images/people/team-ops.jpg" style={{width:"100%",height:"300px"}} placeholder="Team photo, Operations" />
               <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"20px"}}>Operations</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>NAME TO BE ADDED</div>
               <p style={{font:"400 13.5px/1.6 'Inter Tight',sans-serif",color:"rgba(68,6,59,.64)",margin:"14px 0 0"}}>
@@ -120,7 +120,7 @@ export default function PageAbout() {
               </p>
             </div>
             <div>
-              <ImageSlot id="dl-team-4" style={{width:"100%",height:"300px"}} placeholder="Team photo, Associate" />
+              <ImageSlot id="dl-team-4" src="/images/people/team-associate.jpg" style={{width:"100%",height:"300px"}} placeholder="Team photo, Associate" />
               <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"20px"}}>Associate Practitioner</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>NAME TO BE ADDED</div>
               <p style={{font:"400 13.5px/1.6 'Inter Tight',sans-serif",color:"rgba(68,6,59,.64)",margin:"14px 0 0"}}>
@@ -136,7 +136,7 @@ export default function PageAbout() {
           </div>
           <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:"32px"}}>
             <div style={{border:"1px solid rgba(253,251,240,.2)",padding:"28px"}}>
-              <ImageSlot id="dl-adv-1" style={{width:"100%",height:"260px"}} placeholder="Advisor photo" />
+              <ImageSlot id="dl-adv-1" src="/images/people/adv-1.jpg" style={{width:"100%",height:"260px"}} placeholder="Advisor photo" />
               <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#FDFBF0",marginTop:"22px"}}>Founding Advisor</div>
               <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.55)",marginTop:"6px",letterSpacing:".02em"}}>DESIGN LEADERSHIP · GLOBAL FINTECH</div>
               <p style={{font:"400 13.5px/1.6 'Inter Tight',sans-serif",color:"rgba(253,251,240,.62)",margin:"14px 0 0"}}>
@@ -144,7 +144,7 @@ export default function PageAbout() {
               </p>
             </div>
             <div style={{border:"1px solid rgba(253,251,240,.2)",padding:"28px"}}>
-              <ImageSlot id="dl-adv-2" style={{width:"100%",height:"260px"}} placeholder="Advisor photo" />
+              <ImageSlot id="dl-adv-2" src="/images/people/adv-2.jpg" style={{width:"100%",height:"260px"}} placeholder="Advisor photo" />
               <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#FDFBF0",marginTop:"22px"}}>Founding Advisor</div>
               <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.55)",marginTop:"6px",letterSpacing:".02em"}}>DESIGN LEADERSHIP · GLOBAL PRODUCT</div>
               <p style={{font:"400 13.5px/1.6 'Inter Tight',sans-serif",color:"rgba(253,251,240,.62)",margin:"14px 0 0"}}>
@@ -152,7 +152,7 @@ export default function PageAbout() {
               </p>
             </div>
             <div style={{border:"1px solid rgba(253,251,240,.2)",padding:"28px"}}>
-              <ImageSlot id="dl-adv-3" style={{width:"100%",height:"260px"}} placeholder="Advisor photo" />
+              <ImageSlot id="dl-adv-3" src="/images/people/adv-3.jpg" style={{width:"100%",height:"260px"}} placeholder="Advisor photo" />
               <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#FDFBF0",marginTop:"22px"}}>Institutional Partner</div>
               <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.55)",marginTop:"6px",letterSpacing:".02em"}}>RESEARCH & ACADEMIC CREDIBILITY</div>
               <p style={{font:"400 13.5px/1.6 'Inter Tight',sans-serif",color:"rgba(253,251,240,.62)",margin:"14px 0 0"}}>

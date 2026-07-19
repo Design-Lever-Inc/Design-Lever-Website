@@ -43,102 +43,102 @@ export default function PageFaculty() {
           </div>
           <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:"44px 24px"}}>
             <div className="dl-fac cat-mentors dl-facultycard">
-              <ImageSlot id="dl-fac-1" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
+              <ImageSlot id="dl-fac-1" src="/images/people/fac-1.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
               <div className="dl-fac-name" style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px",transition:"color .15s"}}>Name to be added</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>CDO · NIGERIAN SCALE-UP</div>
             </div>
             <div className="dl-fac cat-mentors dl-facultycard">
-              <ImageSlot id="dl-fac-2" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
+              <ImageSlot id="dl-fac-2" src="/images/people/fac-2.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
               <div className="dl-fac-name" style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px",transition:"color .15s"}}>Name to be added</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>VP DESIGN · GLOBAL FINTECH</div>
             </div>
             <div className="dl-fac cat-mentors dl-facultycard">
-              <ImageSlot id="dl-fac-3" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
+              <ImageSlot id="dl-fac-3" src="/images/people/fac-3.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
               <div className="dl-fac-name" style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px",transition:"color .15s"}}>Name to be added</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>HEAD OF DESIGN · HEALTH TECH</div>
             </div>
             <div className="dl-fac cat-mentors dl-facultycard">
-              <ImageSlot id="dl-fac-4" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
+              <ImageSlot id="dl-fac-4" src="/images/people/fac-4.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
               <div className="dl-fac-name" style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px",transition:"color .15s"}}>Name to be added</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>FRACTIONAL CDO · MULTIPLE</div>
             </div>
             <div className="dl-fac cat-advisors dl-facultycard">
-              <ImageSlot id="dl-fac-5" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
+              <ImageSlot id="dl-fac-5" src="/images/people/fac-5.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
               <div className="dl-fac-name" style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px",transition:"color .15s"}}>Name to be added</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>FMR CPO · PAYMENTS</div>
             </div>
             <div className="dl-fac cat-advisors dl-facultycard">
-              <ImageSlot id="dl-fac-6" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
+              <ImageSlot id="dl-fac-6" src="/images/people/fac-6.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
               <div className="dl-fac-name" style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px",transition:"color .15s"}}>Name to be added</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>DESIGN PARTNER · VC</div>
             </div>
             <div className="dl-fac cat-advisors dl-facultycard">
-              <ImageSlot id="dl-fac-7" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
+              <ImageSlot id="dl-fac-7" src="/images/people/fac-7.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
               <div className="dl-fac-name" style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px",transition:"color .15s"}}>Name to be added</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>PROFESSOR OF PRACTICE · DIASPORA</div>
             </div>
             <div className="dl-fac cat-advisors dl-facultycard">
-              <ImageSlot id="dl-fac-8" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
+              <ImageSlot id="dl-fac-8" src="/images/people/fac-8.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
               <div className="dl-fac-name" style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px",transition:"color .15s"}}>Name to be added</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>FOUNDER · DESIGN STUDIO</div>
             </div>
             <div className="dl-fac cat-teachers dl-facultycard">
-              <ImageSlot id="dl-fac-9" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
+              <ImageSlot id="dl-fac-9" src="/images/people/fac-9.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
               <div className="dl-fac-name" style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px",transition:"color .15s"}}>Name to be added</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>DESIGN DIRECTOR · GLOBAL FINTECH</div>
             </div>
             <div className="dl-fac cat-teachers dl-facultycard">
-              <ImageSlot id="dl-fac-10" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
+              <ImageSlot id="dl-fac-10" src="/images/people/fac-10.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
               <div className="dl-fac-name" style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px",transition:"color .15s"}}>Name to be added</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>DESIGN LEADER · DIASPORA</div>
             </div>
             <div className="dl-fac cat-teachers dl-facultycard">
-              <ImageSlot id="dl-fac-11" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
+              <ImageSlot id="dl-fac-11" src="/images/people/fac-11.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
               <div className="dl-fac-name" style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px",transition:"color .15s"}}>Name to be added</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>PRODUCT DESIGN VP · SCALE-UP</div>
             </div>
             <div className="dl-fac cat-teachers dl-facultycard">
-              <ImageSlot id="dl-fac-12" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
+              <ImageSlot id="dl-fac-12" src="/images/people/fac-12.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
               <div className="dl-fac-name" style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px",transition:"color .15s"}}>Name to be added</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>CREATIVE DIRECTOR · BANKING</div>
             </div>
             <div className="dl-fac cat-teachers dl-facultycard">
-              <ImageSlot id="dl-fac-13" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
+              <ImageSlot id="dl-fac-13" src="/images/people/fac-13.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
               <div className="dl-fac-name" style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px",transition:"color .15s"}}>Name to be added</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>DESIGN OPS LEAD · MARKETPLACE</div>
             </div>
             <div className="dl-fac cat-teachers dl-facultycard">
-              <ImageSlot id="dl-fac-14" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
+              <ImageSlot id="dl-fac-14" src="/images/people/fac-14.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
               <div className="dl-fac-name" style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px",transition:"color .15s"}}>Name to be added</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>RESEARCH DIRECTOR · TELCO</div>
             </div>
             <div className="dl-fac cat-teachers dl-facultycard">
-              <ImageSlot id="dl-fac-15" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
+              <ImageSlot id="dl-fac-15" src="/images/people/fac-15.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
               <div className="dl-fac-name" style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px",transition:"color .15s"}}>Name to be added</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>STAFF DESIGNER · BIG TECH</div>
             </div>
             <div className="dl-fac cat-teachers dl-facultycard">
-              <ImageSlot id="dl-fac-16" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
+              <ImageSlot id="dl-fac-16" src="/images/people/fac-16.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
               <div className="dl-fac-name" style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px",transition:"color .15s"}}>Name to be added</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>BRAND LEAD · CONSUMER</div>
             </div>
             <div className="dl-fac cat-partners dl-facultycard">
-              <ImageSlot id="dl-fac-17" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
+              <ImageSlot id="dl-fac-17" src="/images/people/fac-17.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
               <div className="dl-fac-name" style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px",transition:"color .15s"}}>Name to be added</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>GUEST CRITIC · BRAND</div>
             </div>
             <div className="dl-fac cat-partners dl-facultycard">
-              <ImageSlot id="dl-fac-18" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
+              <ImageSlot id="dl-fac-18" src="/images/people/fac-18.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
               <div className="dl-fac-name" style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px",transition:"color .15s"}}>Name to be added</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>WORKSHOP LEAD · RESEARCH</div>
             </div>
             <div className="dl-fac cat-partners dl-facultycard">
-              <ImageSlot id="dl-fac-19" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
+              <ImageSlot id="dl-fac-19" src="/images/people/fac-19.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
               <div className="dl-fac-name" style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px",transition:"color .15s"}}>Name to be added</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>MENTOR · CAREER</div>
             </div>
             <div className="dl-fac cat-partners dl-facultycard">
-              <ImageSlot id="dl-fac-20" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
+              <ImageSlot id="dl-fac-20" src="/images/people/fac-20.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Photo" />
               <div className="dl-fac-name" style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px",transition:"color .15s"}}>Name to be added</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>SPEAKER · STRATEGY</div>
             </div>
@@ -147,28 +147,28 @@ export default function PageFaculty() {
             <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.5)",letterSpacing:".12em",textTransform:"uppercase",marginBottom:"22px"}}>Partner companies</div>
             <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:"24px"}}>
               <div style={{border:"1px solid rgba(68,6,59,.2)",padding:"28px",display:"flex",flexDirection:"column",justifyContent:"space-between",minHeight:"200px"}}>
-                <ImageSlot id="dl-partner-1" style={{width:"100%",height:"56px",display:"block"}} placeholder="Partner logo" />
+                <ImageSlot id="dl-partner-1" src="/images/logos/partner-asa.svg" fit="contain" style={{width:"100%",height:"56px",display:"block"}} placeholder="Partner logo" />
                 <div>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B",marginBottom:"6px"}}>Àsà Design</div>
                   <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".02em"}}>RESEARCH PARTNER</div>
                 </div>
               </div>
               <div style={{border:"1px solid rgba(68,6,59,.2)",padding:"28px",display:"flex",flexDirection:"column",justifyContent:"space-between",minHeight:"200px"}}>
-                <ImageSlot id="dl-partner-2" style={{width:"100%",height:"56px",display:"block"}} placeholder="Partner logo" />
+                <ImageSlot id="dl-partner-2" src="/images/logos/partner-techcabal.svg" fit="contain" style={{width:"100%",height:"56px",display:"block"}} placeholder="Partner logo" />
                 <div>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B",marginBottom:"6px"}}>TechCabal Insights</div>
                   <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".02em"}}>MEDIA & DATA</div>
                 </div>
               </div>
               <div style={{border:"1px solid rgba(68,6,59,.2)",padding:"28px",display:"flex",flexDirection:"column",justifyContent:"space-between",minHeight:"200px"}}>
-                <ImageSlot id="dl-partner-3" style={{width:"100%",height:"56px",display:"block"}} placeholder="Partner logo" />
+                <ImageSlot id="dl-partner-3" src="/images/logos/partner-fla.svg" fit="contain" style={{width:"100%",height:"56px",display:"block"}} placeholder="Partner logo" />
                 <div>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B",marginBottom:"6px"}}>Future London Academy</div>
                   <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".02em"}}>EDUCATION</div>
                 </div>
               </div>
               <div style={{border:"1px solid rgba(68,6,59,.2)",padding:"28px",display:"flex",flexDirection:"column",justifyContent:"space-between",minHeight:"200px"}}>
-                <ImageSlot id="dl-partner-4" style={{width:"100%",height:"56px",display:"block"}} placeholder="Partner logo" />
+                <ImageSlot id="dl-partner-4" src="/images/logos/partner-adplist.svg" fit="contain" style={{width:"100%",height:"56px",display:"block"}} placeholder="Partner logo" />
                 <div>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B",marginBottom:"6px"}}>ADPList</div>
                   <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".02em"}}>COMMUNITY</div>
@@ -188,7 +188,7 @@ export default function PageFaculty() {
               </p>
               <Link className="dl-btn hov-cream" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#44073B"}}>Apply to teach →</Link>
             </div>
-            <ImageSlot id="dl-fclt-teach" style={{width:"100%",height:"360px",display:"block"}} placeholder="A faculty member leading a session" />
+            <ImageSlot id="dl-fclt-teach" src="/images/scenes/faculty-teach.jpg" style={{width:"100%",height:"360px",display:"block"}} placeholder="A faculty member leading a session" />
           </div>
         </div>
         {/* FOOTER */}

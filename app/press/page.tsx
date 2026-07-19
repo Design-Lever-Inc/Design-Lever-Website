@@ -122,11 +122,11 @@ export default function PagePress() {
         <div style={{padding:"56px 64px",borderTop:"1px solid rgba(253,251,240,.14)",backgroundColor:"#FDFBF0"}}>
           <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase",marginBottom:"30px"}}>Featured in</div>
           <div style={{display:"grid",gridTemplateColumns:"repeat(5,1fr)",gap:"28px",alignItems:"center"}}>
-            <ImageSlot id="dl-press-feat1" style={{width:"100%",height:"56px",display:"block"}} placeholder="Media logo" />
-            <ImageSlot id="dl-press-feat2" style={{width:"100%",height:"56px",display:"block"}} placeholder="Media logo" />
-            <ImageSlot id="dl-press-feat3" style={{width:"100%",height:"56px",display:"block"}} placeholder="Media logo" />
-            <ImageSlot id="dl-press-feat4" style={{width:"100%",height:"56px",display:"block"}} placeholder="Media logo" />
-            <ImageSlot id="dl-press-feat5" style={{width:"100%",height:"56px",display:"block"}} placeholder="Media logo" />
+            <ImageSlot id="dl-press-feat1" src="/images/logos/media-1.svg" fit="contain" style={{width:"100%",height:"56px",display:"block"}} placeholder="Media logo" />
+            <ImageSlot id="dl-press-feat2" src="/images/logos/media-2.svg" fit="contain" style={{width:"100%",height:"56px",display:"block"}} placeholder="Media logo" />
+            <ImageSlot id="dl-press-feat3" src="/images/logos/media-3.svg" fit="contain" style={{width:"100%",height:"56px",display:"block"}} placeholder="Media logo" />
+            <ImageSlot id="dl-press-feat4" src="/images/logos/media-4.svg" fit="contain" style={{width:"100%",height:"56px",display:"block"}} placeholder="Media logo" />
+            <ImageSlot id="dl-press-feat5" src="/images/logos/media-5.svg" fit="contain" style={{width:"100%",height:"56px",display:"block"}} placeholder="Media logo" />
           </div>
         </div>
         <div style={{padding:"118px 64px",borderTop:"1px solid rgba(68,6,59,.16)"}}>

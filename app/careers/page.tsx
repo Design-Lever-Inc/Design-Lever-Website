@@ -69,7 +69,7 @@ export default function PageCareers() {
               </p>
               <Link className="dl-btn hov-cream" href="/faculty" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#FF6D35"}}>See the faculty →</Link>
             </div>
-            <ImageSlot id="dl-careers-teach" style={{width:"100%",height:"340px",display:"block"}} placeholder="A session in progress" />
+            <ImageSlot id="dl-careers-teach" src="/images/scenes/careers-teach.jpg" style={{width:"100%",height:"340px",display:"block"}} placeholder="A session in progress" />
           </div>
         </div>
         {/* FAQ */}

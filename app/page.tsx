@@ -148,22 +148,22 @@ export default function PageHome() {
           <div>
             <div className="dl-marq">
               <div className="dl-marq-track">
-                <ImageSlot className="dl-marq-item" id="dl-logo-1" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-2" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-3" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-4" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-5" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-6" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-7" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-8" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-1" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-2" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-3" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-4" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-5" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-6" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-7" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-8" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-1" src="/images/logos/client-1.svg" fit="contain" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-2" src="/images/logos/client-2.svg" fit="contain" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-3" src="/images/logos/client-3.svg" fit="contain" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-4" src="/images/logos/client-4.svg" fit="contain" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-5" src="/images/logos/client-5.svg" fit="contain" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-6" src="/images/logos/client-6.svg" fit="contain" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-7" src="/images/logos/client-7.svg" fit="contain" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-8" src="/images/logos/client-8.svg" fit="contain" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-1" src="/images/logos/client-1.svg" fit="contain" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-2" src="/images/logos/client-2.svg" fit="contain" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-3" src="/images/logos/client-3.svg" fit="contain" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-4" src="/images/logos/client-4.svg" fit="contain" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-5" src="/images/logos/client-5.svg" fit="contain" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-6" src="/images/logos/client-6.svg" fit="contain" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-7" src="/images/logos/client-7.svg" fit="contain" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-8" src="/images/logos/client-8.svg" fit="contain" style={{width:"160px",height:"60px",display:"block"}} placeholder="Client logo" />
               </div>
             </div>
           </div>
@@ -425,10 +425,10 @@ export default function PageHome() {
               </Link>
             </div>
             <div className="dl-imgcol">
-              <ImageSlot className="dl-img dl-img-1" id="dl-fly-1" style={{display:"block"}} placeholder="Practice, a design leader at work" />
-              <ImageSlot className="dl-img dl-img-2" id="dl-fly-2" style={{display:"block"}} placeholder="Academy, a cohort learning" />
-              <ImageSlot className="dl-img dl-img-3" id="dl-fly-3" style={{display:"block"}} placeholder="Network, the community" />
-              <ImageSlot className="dl-img dl-img-4" id="dl-fly-4" style={{display:"block"}} placeholder="Research, the report" />
+              <ImageSlot className="dl-img dl-img-1" id="dl-fly-1" src="/images/scenes/fly-practice.jpg" style={{display:"block"}} placeholder="Practice, a design leader at work" />
+              <ImageSlot className="dl-img dl-img-2" id="dl-fly-2" src="/images/scenes/fly-academy.jpg" style={{display:"block"}} placeholder="Academy, a cohort learning" />
+              <ImageSlot className="dl-img dl-img-3" id="dl-fly-3" src="/images/scenes/fly-network.jpg" style={{display:"block"}} placeholder="Network, the community" />
+              <ImageSlot className="dl-img dl-img-4" id="dl-fly-4" src="/images/scenes/fly-research.jpg" style={{display:"block"}} placeholder="Research, the report" />
             </div>
           </div>
         </div>

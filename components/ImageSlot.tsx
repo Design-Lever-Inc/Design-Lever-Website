@@ -10,6 +10,7 @@ export function ImageSlot({
   placeholder,
   src,
   alt,
+  fit = "cover",
   className,
   style,
 }: {
@@ -17,6 +18,8 @@ export function ImageSlot({
   placeholder?: string;
   src?: string;
   alt?: string;
+  /** cover for photography (default); contain for logos/wordmarks */
+  fit?: "cover" | "contain";
   className?: string;
   style?: CSSProperties;
 }) {
@@ -27,7 +30,7 @@ export function ImageSlot({
         src={src}
         alt={alt ?? placeholder ?? ""}
         className={className}
-        style={{ objectFit: "cover", display: "block", ...style }}
+        style={{ objectFit: fit, display: "block", ...style }}
       />
     );
   }

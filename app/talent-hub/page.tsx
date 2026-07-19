@@ -191,7 +191,7 @@ export default function PageTalentHub() {
           </div>
           <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:"24px"}}>
             <div className="dl-exec">
-              <ImageSlot id="dl-th-exec1" style={{width:"100%",height:"300px",display:"block"}} placeholder="Executive portrait" />
+              <ImageSlot id="dl-th-exec1" src="/images/people/th-1.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Executive portrait" />
               <div className="dl-exec-name" style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"20px",transition:"color .15s"}}>Fractional CDO</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"8px",letterSpacing:".02em"}}>EX-FINTECH · 14 YRS</div>
               <p style={{font:"400 13.5px/1.55 'Inter Tight',sans-serif",color:"#44073BA8",margin:"14px 0 0"}}>
@@ -203,7 +203,7 @@ export default function PageTalentHub() {
               </div>
             </div>
             <div className="dl-exec">
-              <ImageSlot id="dl-th-exec2" style={{width:"100%",height:"300px",display:"block"}} placeholder="Executive portrait" />
+              <ImageSlot id="dl-th-exec2" src="/images/people/th-2.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Executive portrait" />
               <div className="dl-exec-name" style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"20px",transition:"color .15s"}}>VP, Design</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"8px",letterSpacing:".02em"}}>EX-HEALTH TECH · 16 YRS</div>
               <p style={{font:"400 13.5px/1.55 'Inter Tight',sans-serif",color:"#44073BA8",margin:"14px 0 0"}}>Scaled a design org from 4 to 30. Deep on hiring, career frameworks, and retention.</p>
@@ -213,7 +213,7 @@ export default function PageTalentHub() {
               </div>
             </div>
             <div className="dl-exec">
-              <ImageSlot id="dl-th-exec3" style={{width:"100%",height:"300px",display:"block"}} placeholder="Executive portrait" />
+              <ImageSlot id="dl-th-exec3" src="/images/people/th-3.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Executive portrait" />
               <div className="dl-exec-name" style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"20px",transition:"color .15s"}}>Head of Design</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"8px",letterSpacing:".02em"}}>DIASPORA · 12 YRS</div>
               <p style={{font:"400 13.5px/1.55 'Inter Tight',sans-serif",color:"#44073BA8",margin:"14px 0 0"}}>
@@ -225,7 +225,7 @@ export default function PageTalentHub() {
               </div>
             </div>
             <div className="dl-exec">
-              <ImageSlot id="dl-th-exec4" style={{width:"100%",height:"300px",display:"block"}} placeholder="Executive portrait" />
+              <ImageSlot id="dl-th-exec4" src="/images/people/th-4.jpg" style={{width:"100%",height:"300px",display:"block"}} placeholder="Executive portrait" />
               <div className="dl-exec-name" style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"20px",transition:"color .15s"}}>Design Director</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"8px",letterSpacing:".02em"}}>EX-E-COMMERCE · 13 YRS</div>
               <p style={{font:"400 13.5px/1.55 'Inter Tight',sans-serif",color:"#44073BA8",margin:"14px 0 0"}}>

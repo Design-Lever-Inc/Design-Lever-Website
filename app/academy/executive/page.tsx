@@ -55,7 +55,7 @@ export default function PageAcademyExecutive() {
         </div>
         {/* HERO IMAGE */}
         <div style={{padding:"0 64px 100px"}}>
-          <ImageSlot id="dl-exe-hero" style={{width:"100%",height:"460px",display:"block"}} placeholder="Executive cohort, senior practitioners at work" />
+          <ImageSlot id="dl-exe-hero" src="/images/scenes/executive-hero.jpg" style={{width:"100%",height:"460px",display:"block"}} placeholder="Executive cohort, senior practitioners at work" />
         </div>
         {/* WHO IT'S FOR */}
         <div style={{padding:"100px 64px",backgroundColor:"#44073B"}}>
@@ -121,22 +121,22 @@ export default function PageAcademyExecutive() {
           </div>
           <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:"24px"}}>
             <div>
-              <ImageSlot id="dl-exe-fac1" style={{width:"100%",height:"280px",display:"block"}} placeholder="Faculty photo" />
+              <ImageSlot id="dl-exe-fac1" src="/images/people/fac-4.jpg" style={{width:"100%",height:"280px",display:"block"}} placeholder="Faculty photo" />
               <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px"}}>Faculty Member</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px"}}>FRACTIONAL CDO · PAN-AFRICAN</div>
             </div>
             <div>
-              <ImageSlot id="dl-exe-fac2" style={{width:"100%",height:"280px",display:"block"}} placeholder="Faculty photo" />
+              <ImageSlot id="dl-exe-fac2" src="/images/people/fac-7.jpg" style={{width:"100%",height:"280px",display:"block"}} placeholder="Faculty photo" />
               <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px"}}>Faculty Member</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px"}}>HEAD OF DESIGN · GLOBAL PRODUCT</div>
             </div>
             <div>
-              <ImageSlot id="dl-exe-fac3" style={{width:"100%",height:"280px",display:"block"}} placeholder="Faculty photo" />
+              <ImageSlot id="dl-exe-fac3" src="/images/people/fac-2.jpg" style={{width:"100%",height:"280px",display:"block"}} placeholder="Faculty photo" />
               <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px"}}>Faculty Member</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px"}}>RESEARCH LEAD · DESIGN LEVER</div>
             </div>
             <div>
-              <ImageSlot id="dl-exe-fac4" style={{width:"100%",height:"280px",display:"block"}} placeholder="Faculty photo" />
+              <ImageSlot id="dl-exe-fac4" src="/images/people/fac-8.jpg" style={{width:"100%",height:"280px",display:"block"}} placeholder="Faculty photo" />
               <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px"}}>Faculty Member</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px"}}>VP DESIGN · SCALE-UP</div>
             </div>

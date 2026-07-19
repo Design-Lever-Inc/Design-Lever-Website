@@ -55,7 +55,7 @@ export default function PageAcademyFoundation() {
         </div>
         {/* HERO IMAGE */}
         <div style={{padding:"0 64px 100px"}}>
-          <ImageSlot id="dl-fnd-hero" style={{width:"100%",height:"460px",display:"block"}} placeholder="Foundation cohort, a week in session" />
+          <ImageSlot id="dl-fnd-hero" src="/images/scenes/foundation-hero.jpg" style={{width:"100%",height:"460px",display:"block"}} placeholder="Foundation cohort, a week in session" />
         </div>
         {/* WHO IT'S FOR */}
         <div style={{padding:"100px 64px",background:"#14191D"}}>
@@ -126,22 +126,22 @@ export default function PageAcademyFoundation() {
           </div>
           <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:"24px"}}>
             <div>
-              <ImageSlot id="dl-fnd-fac1" style={{width:"100%",height:"280px",display:"block"}} placeholder="Faculty photo" />
+              <ImageSlot id="dl-fnd-fac1" src="/images/people/fac-1.jpg" style={{width:"100%",height:"280px",display:"block"}} placeholder="Faculty photo" />
               <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px"}}>Faculty Member</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px"}}>CDO · NIGERIAN SCALE-UP</div>
             </div>
             <div>
-              <ImageSlot id="dl-fnd-fac2" style={{width:"100%",height:"280px",display:"block"}} placeholder="Faculty photo" />
+              <ImageSlot id="dl-fnd-fac2" src="/images/people/fac-3.jpg" style={{width:"100%",height:"280px",display:"block"}} placeholder="Faculty photo" />
               <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px"}}>Faculty Member</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px"}}>DESIGN DIRECTOR · GLOBAL FINTECH</div>
             </div>
             <div>
-              <ImageSlot id="dl-fnd-fac3" style={{width:"100%",height:"280px",display:"block"}} placeholder="Faculty photo" />
+              <ImageSlot id="dl-fnd-fac3" src="/images/people/fac-5.jpg" style={{width:"100%",height:"280px",display:"block"}} placeholder="Faculty photo" />
               <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px"}}>Faculty Member</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px"}}>DESIGN LEADER · DIASPORA</div>
             </div>
             <div>
-              <ImageSlot id="dl-fnd-fac4" style={{width:"100%",height:"280px",display:"block"}} placeholder="Faculty photo" />
+              <ImageSlot id="dl-fnd-fac4" src="/images/people/fac-18.jpg" style={{width:"100%",height:"280px",display:"block"}} placeholder="Faculty photo" />
               <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px"}}>Faculty Member</div>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px"}}>HEAD OF DESIGN · HEALTH TECH</div>
             </div>

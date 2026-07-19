@@ -32,42 +32,42 @@ export default function PageBench() {
               </div>
               <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:"44px 24px"}}>
                 <div className="dl-exec cat-cdo" data-exec="1" style={{cursor:"pointer"}}>
-                  <ImageSlot id="dl-exec-1" style={{width:"100%",height:"300px",display:"block",pointerEvents:"none"}} placeholder="Photo" />
+                  <ImageSlot id="dl-exec-1" src="/images/people/adaeze-okafor.jpg" style={{width:"100%",height:"300px",display:"block",pointerEvents:"none"}} placeholder="Photo" />
                   <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px"}}>Adaeze Okafor</div>
                   <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>FRACTIONAL CDO · LAGOS, NIGERIA</div>
                 </div>
                 <div className="dl-exec cat-cdo" data-exec="2" style={{cursor:"pointer"}}>
-                  <ImageSlot id="dl-exec-2" style={{width:"100%",height:"300px",display:"block",pointerEvents:"none"}} placeholder="Photo" />
+                  <ImageSlot id="dl-exec-2" src="/images/people/tunde-bakare.jpg" style={{width:"100%",height:"300px",display:"block",pointerEvents:"none"}} placeholder="Photo" />
                   <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px"}}>Tunde Bakare</div>
                   <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>FRACTIONAL CDO · LAGOS / LONDON</div>
                 </div>
                 <div className="dl-exec cat-vp" data-exec="3" style={{cursor:"pointer"}}>
-                  <ImageSlot id="dl-exec-3" style={{width:"100%",height:"300px",display:"block",pointerEvents:"none"}} placeholder="Photo" />
+                  <ImageSlot id="dl-exec-3" src="/images/people/zainab-mohammed.jpg" style={{width:"100%",height:"300px",display:"block",pointerEvents:"none"}} placeholder="Photo" />
                   <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px"}}>Zainab Mohammed</div>
                   <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>VP DESIGN · ABUJA, NIGERIA</div>
                 </div>
                 <div className="dl-exec cat-vp" data-exec="4" style={{cursor:"pointer"}}>
-                  <ImageSlot id="dl-exec-4" style={{width:"100%",height:"300px",display:"block",pointerEvents:"none"}} placeholder="Photo" />
+                  <ImageSlot id="dl-exec-4" src="/images/people/kwame-mensah.jpg" style={{width:"100%",height:"300px",display:"block",pointerEvents:"none"}} placeholder="Photo" />
                   <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px"}}>Kwame Mensah</div>
                   <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>VP DESIGN · ACCRA, GHANA</div>
                 </div>
                 <div className="dl-exec cat-head" data-exec="5" style={{cursor:"pointer"}}>
-                  <ImageSlot id="dl-exec-5" style={{width:"100%",height:"300px",display:"block",pointerEvents:"none"}} placeholder="Photo" />
+                  <ImageSlot id="dl-exec-5" src="/images/people/amara-diallo.jpg" style={{width:"100%",height:"300px",display:"block",pointerEvents:"none"}} placeholder="Photo" />
                   <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px"}}>Amara Diallo</div>
                   <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>HEAD OF DESIGN · DAKAR, SENEGAL</div>
                 </div>
                 <div className="dl-exec cat-head" data-exec="6" style={{cursor:"pointer"}}>
-                  <ImageSlot id="dl-exec-6" style={{width:"100%",height:"300px",display:"block",pointerEvents:"none"}} placeholder="Photo" />
+                  <ImageSlot id="dl-exec-6" src="/images/people/femi-adeyemi.jpg" style={{width:"100%",height:"300px",display:"block",pointerEvents:"none"}} placeholder="Photo" />
                   <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px"}}>Femi Adeyemi</div>
                   <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>HEAD OF DESIGN · LAGOS, NIGERIA</div>
                 </div>
                 <div className="dl-exec cat-cdo" data-exec="7" style={{cursor:"pointer"}}>
-                  <ImageSlot id="dl-exec-7" style={{width:"100%",height:"300px",display:"block",pointerEvents:"none"}} placeholder="Photo" />
+                  <ImageSlot id="dl-exec-7" src="/images/people/nadia-hassan.jpg" style={{width:"100%",height:"300px",display:"block",pointerEvents:"none"}} placeholder="Photo" />
                   <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px"}}>Nadia Hassan</div>
                   <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>FRACTIONAL CDO · CAIRO / REMOTE</div>
                 </div>
                 <div className="dl-exec cat-head" data-exec="8" style={{cursor:"pointer"}}>
-                  <ImageSlot id="dl-exec-8" style={{width:"100%",height:"300px",display:"block",pointerEvents:"none"}} placeholder="Photo" />
+                  <ImageSlot id="dl-exec-8" src="/images/people/sipho-ndlovu.jpg" style={{width:"100%",height:"300px",display:"block",pointerEvents:"none"}} placeholder="Photo" />
                   <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",marginTop:"18px"}}>Sipho Ndlovu</div>
                   <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",marginTop:"6px",letterSpacing:".02em"}}>HEAD OF DESIGN · JOHANNESBURG, SA</div>
                 </div>
@@ -91,7 +91,7 @@ export default function PageBench() {
                   </p>
                   <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"#DEDF4D",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Engage Adaeze →</Link>
                 </div>
-                <ImageSlot id="dl-prof-1" style={{width:"100%",height:"420px",display:"block"}} placeholder="Portrait" />
+                <ImageSlot id="dl-prof-1" src="/images/people/adaeze-okafor.jpg" style={{width:"100%",height:"420px",display:"block"}} placeholder="Portrait" />
               </div>
             </div>
             <div style={{padding:"96px 64px"}}>
@@ -141,7 +141,7 @@ export default function PageBench() {
                   </p>
                   <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"#DEDF4D",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Engage Tunde →</Link>
                 </div>
-                <ImageSlot id="dl-prof-2" style={{width:"100%",height:"420px",display:"block"}} placeholder="Portrait" />
+                <ImageSlot id="dl-prof-2" src="/images/people/tunde-bakare.jpg" style={{width:"100%",height:"420px",display:"block"}} placeholder="Portrait" />
               </div>
             </div>
             <div style={{padding:"96px 64px"}}>
@@ -191,7 +191,7 @@ export default function PageBench() {
                   </p>
                   <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"#DEDF4D",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Engage Zainab →</Link>
                 </div>
-                <ImageSlot id="dl-prof-3" style={{width:"100%",height:"420px",display:"block"}} placeholder="Portrait" />
+                <ImageSlot id="dl-prof-3" src="/images/people/zainab-mohammed.jpg" style={{width:"100%",height:"420px",display:"block"}} placeholder="Portrait" />
               </div>
             </div>
             <div style={{padding:"96px 64px"}}>
@@ -241,7 +241,7 @@ export default function PageBench() {
                   </p>
                   <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"#DEDF4D",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Engage Kwame →</Link>
                 </div>
-                <ImageSlot id="dl-prof-4" style={{width:"100%",height:"420px",display:"block"}} placeholder="Portrait" />
+                <ImageSlot id="dl-prof-4" src="/images/people/kwame-mensah.jpg" style={{width:"100%",height:"420px",display:"block"}} placeholder="Portrait" />
               </div>
             </div>
             <div style={{padding:"96px 64px"}}>
@@ -291,7 +291,7 @@ export default function PageBench() {
                   </p>
                   <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"#DEDF4D",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Engage Amara →</Link>
                 </div>
-                <ImageSlot id="dl-prof-5" style={{width:"100%",height:"420px",display:"block"}} placeholder="Portrait" />
+                <ImageSlot id="dl-prof-5" src="/images/people/amara-diallo.jpg" style={{width:"100%",height:"420px",display:"block"}} placeholder="Portrait" />
               </div>
             </div>
             <div style={{padding:"96px 64px"}}>
@@ -341,7 +341,7 @@ export default function PageBench() {
                   </p>
                   <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"#DEDF4D",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Engage Femi →</Link>
                 </div>
-                <ImageSlot id="dl-prof-6" style={{width:"100%",height:"420px",display:"block"}} placeholder="Portrait" />
+                <ImageSlot id="dl-prof-6" src="/images/people/femi-adeyemi.jpg" style={{width:"100%",height:"420px",display:"block"}} placeholder="Portrait" />
               </div>
             </div>
             <div style={{padding:"96px 64px"}}>
@@ -391,7 +391,7 @@ export default function PageBench() {
                   </p>
                   <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"#DEDF4D",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Engage Nadia →</Link>
                 </div>
-                <ImageSlot id="dl-prof-7" style={{width:"100%",height:"420px",display:"block"}} placeholder="Portrait" />
+                <ImageSlot id="dl-prof-7" src="/images/people/nadia-hassan.jpg" style={{width:"100%",height:"420px",display:"block"}} placeholder="Portrait" />
               </div>
             </div>
             <div style={{padding:"96px 64px"}}>
@@ -441,7 +441,7 @@ export default function PageBench() {
                   </p>
                   <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"#DEDF4D",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Engage Sipho →</Link>
                 </div>
-                <ImageSlot id="dl-prof-8" style={{width:"100%",height:"420px",display:"block"}} placeholder="Portrait" />
+                <ImageSlot id="dl-prof-8" src="/images/people/sipho-ndlovu.jpg" style={{width:"100%",height:"420px",display:"block"}} placeholder="Portrait" />
               </div>
             </div>
             <div style={{padding:"96px 64px"}}>
