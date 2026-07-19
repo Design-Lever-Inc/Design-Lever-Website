@@ -1,0 +1,190 @@
+/* ================= Mobile layer =================
+   Extends the prototype's responsive rules (in prototype.css) to a fully
+   mobile-ready experience. Inline styles come from the design handoff, so
+   overrides use [style*=] attribute selectors + !important, the same
+   technique as the prototype's own responsive layer.
+
+   NOTE: every style attribute selector appears in two spellings —
+   compact (`a:b`, server-rendered HTML) and spaced (`a: b`, the browser's
+   CSSOM-normalized form after React hydration/re-render). Keep both. */
+
+/* ---------- Mobile nav (burger + panel) ---------- */
+.dl-mnav { display: none; }
+
+.dl-mnav-btn {
+  font: 400 12px 'Spline Sans Mono', monospace;
+  letter-spacing: .08em;
+  color: #44063B;
+  background: transparent;
+  border: 1px solid rgba(68, 6, 59, .35);
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.dl-mnav-panel {
+  position: fixed;
+  top: 68px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  background: #FDFBF0;
+  border-top: 1px solid rgba(68, 6, 59, .16);
+  padding: 10px 22px 40px;
+  z-index: 100;
+}
+
+.dl-mnav-group { border-bottom: 1px solid rgba(68, 6, 59, .16); padding: 14px 0; }
+
+.dl-mnav-link {
+  display: block;
+  font: 400 15px 'Inter Tight', sans-serif;
+  color: #44063B;
+  text-decoration: none;
+  padding: 9px 0 9px 18px;
+}
+.dl-mnav-link--head {
+  font: 400 12px 'Spline Sans Mono', monospace;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #FF6D35;
+  padding-left: 0;
+}
+.dl-mnav-link[aria-current="page"] { color: #FF6D35; }
+
+.dl-mnav-cta {
+  display: block;
+  margin-top: 24px;
+  text-align: center;
+  font: 400 12px 'Spline Sans Mono', monospace;
+  color: #FDFBF0;
+  background: #FF6D35;
+  padding: 16px;
+  text-decoration: none;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .dl-navmenu { display: none !important; }
+  .dl-mnav { display: block; margin-left: auto; margin-right: 14px; }
+}
+@media (max-width: 600px) {
+  /* the panel carries the CTA; keep the bar to logo + burger */
+  .dl-nav > .dl-navcta { display: none !important; }
+  .dl-mnav { margin-right: 0; }
+}
+
+/* ---------- Design-tool fixed dimensions ---------- */
+/* Headings and copy exported with hard px width/height must reflow. */
+@media (max-width: 1024px) {
+  h1, h2, h3, blockquote { width: auto !important; height: auto !important; }
+  p[style*="width:"] { width: auto !important; height: auto !important; }
+}
+
+/* Split-layout ratios the prototype's 1024 collapse list missed */
+@media (max-width: 1024px) {
+  [style*="grid-template-columns:.9fr"],
+  [style*="grid-template-columns: .9fr"],
+  [style*="grid-template-columns:1.15fr"],
+  [style*="grid-template-columns: 1.15fr"],
+  [style*="grid-template-columns:1.25fr"],
+  [style*="grid-template-columns: 1.25fr"],
+  [style*="grid-template-columns:.85fr"],
+  [style*="grid-template-columns: .85fr"],
+  [style*="grid-template-columns:.95fr"],
+  [style*="grid-template-columns: .95fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ---------- Grids the prototype layer missed ---------- */
+@media (max-width: 900px) {
+  [style*="grid-template-columns:1fr 1fr"],
+  [style*="grid-template-columns: 1fr 1fr"],
+  [style*="grid-template-columns:repeat(5,1fr)"],
+  [style*="grid-template-columns: repeat(5,1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ---------- Announcement bar ---------- */
+@media (max-width: 760px) {
+  .dl-anno { flex-wrap: wrap; text-align: center; padding: 10px 20px !important; }
+}
+
+/* ---------- Home flywheel band ---------- */
+/* Hover-driven horizontal accordion becomes a stacked, always-open list. */
+@media (max-width: 900px) {
+  .dl-band { flex-direction: column; }
+  .dl-imgcol { display: none; }
+  .dl-lines { flex-direction: column; }
+  .dl-line,
+  .dl-lines:hover .dl-line,
+  .dl-lines:hover .dl-line:hover {
+    flex: none !important;
+    width: auto !important;
+    height: auto !important;
+    background: transparent !important;
+    border-left: 0 !important;
+    border-top: 1px solid rgba(68, 6, 59, .28);
+    flex-direction: column;
+    padding: 26px 24px 30px !important;
+  }
+  .dl-line:first-child { border-top: 0; }
+  .dl-lname {
+    writing-mode: horizontal-tb !important;
+    transform: none !important;
+    font-size: 32px !important;
+    color: #44063B !important;
+  }
+  .dl-lwrite { opacity: 1 !important; flex: none !important; overflow: visible; }
+  .dl-lwrite-in { width: auto !important; max-width: none !important; }
+  .dl-lidx { display: none; }
+  .dl-lcap { display: none; }
+}
+
+/* ---------- Row grids with fixed px columns ---------- */
+/* Curriculum/engagement/pricing tables laid out as `NNNpx 1fr [NNNpx]` rows
+   stack to a single column on small screens. */
+@media (max-width: 760px) {
+  [style*="grid-template-columns:280px"],
+  [style*="grid-template-columns: 280px"],
+  [style*="grid-template-columns:260px"],
+  [style*="grid-template-columns: 260px"],
+  [style*="grid-template-columns:170px"],
+  [style*="grid-template-columns: 170px"],
+  [style*="grid-template-columns:160px"],
+  [style*="grid-template-columns: 160px"],
+  [style*="grid-template-columns:130px"],
+  [style*="grid-template-columns: 130px"],
+  [style*="grid-template-columns:1fr 200px"],
+  [style*="grid-template-columns: 1fr 200px"] {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  /* stacked table rows: the right-aligned value cell reads as a row footer */
+  [style*="grid-template-columns:280px"] [style*="text-align:right"],
+  [style*="grid-template-columns: 280px"] [style*="text-align: right"],
+  [style*="grid-template-columns:260px"] [style*="text-align:right"],
+  [style*="grid-template-columns: 260px"] [style*="text-align: right"] {
+    text-align: left !important;
+  }
+}
+
+/* ---------- Safety rails ---------- */
+@media (max-width: 760px) {
+  table { display: block; overflow-x: auto; }
+  img, svg { max-width: 100%; }
+  /* hero motif SVGs keep their fixed box; scale them down so they stay a
+     corner accent instead of dominating a small screen */
+  [style*="top:-90px"][style*="right:-150px"],
+  [style*="top: -90px"][style*="right: -150px"] {
+    width: 380px !important;
+    height: 380px !important;
+    top: -60px !important;
+    right: -90px !important;
+  }
+  /* modal overlay breathing room */
+  .dl-ov { padding: 24px 12px !important; }
+}

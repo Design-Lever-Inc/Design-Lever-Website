@@ -9,7 +9,7 @@ export const metadata: Metadata = { title: "Press", description: "Design is unde
 export default function PagePress() {
   return (
     <div className="pg-press">
-      <div style={{maxWidth:"1440px",margin:"0 auto",background:"#FDFBF0",overflowX:"clip",position:"absolute",left:"-9px",top:"23px"}}>
+      <div style={{maxWidth:"1440px",margin:"0 auto",background:"#FDFBF0",overflowX:"clip"}}>
         {/* NAV */}
         <SiteNav active="about" />
         {/* HERO */}

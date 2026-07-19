@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "../styles/prototype.css";
+import "../styles/responsive.css";
 import { SiteBehaviors } from "@/components/SiteBehaviors";
 import { ScrollRestore } from "@/components/ScrollRestore";
 

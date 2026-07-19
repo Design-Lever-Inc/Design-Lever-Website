@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MobileMenu } from "./MobileMenu";
 
 const BOOK_CALL_URL = "https://www.conectr.me/s/book-call-q7r";
 
@@ -128,6 +129,7 @@ export function SiteNav({ active = "none" }: { active?: NavSection }) {
           <DropItem href="/press" label="Press" />
         </NavItem>
       </div>
+      <MobileMenu />
       <a
         href={BOOK_CALL_URL}
         target="_blank"

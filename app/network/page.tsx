@@ -190,7 +190,7 @@ export default function PageNetwork() {
                 </div>
               </div>
             </figure>
-            <figure className="dl-tslide" data-i="1" style={{margin:"0",width:"870px",height:"239px",left:"0px",top:"2px"}}>
+            <figure className="dl-tslide" data-i="1" style={{margin:"0"}}>
               <blockquote style={{font:"400 40px/1.24 'Faculty Glyphic',serif",color:"#FDFBF0",margin:"24px 0 40px",maxWidth:"1080px",letterSpacing:"-.01em"}}>"One vetted leader, one fee, six weeks. No agency margin."</blockquote>
               <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:"24px"}}>
                 <div style={{display:"flex",alignItems:"center",gap:"16px"}}>

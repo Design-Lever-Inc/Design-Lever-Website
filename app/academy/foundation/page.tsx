@@ -74,7 +74,7 @@ export default function PageAcademyFoundation() {
           </div>
         </div>
         {/* CURRICULUM */}
-        <div id="curriculum" style={{padding:"118px 64px",borderTop:"1px solid rgba(68,6,59,.16)",width:"872px",height:"804px"}}>
+        <div id="curriculum" style={{padding:"118px 64px",borderTop:"1px solid rgba(68,6,59,.16)"}}>
           <div style={{maxWidth:"820px",marginBottom:"64px"}}>
             <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>The curriculum</span>
             <h2 style={{font:"400 52px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 0",letterSpacing:"-.01em"}}>Five days, five systems you leave with.</h2>
