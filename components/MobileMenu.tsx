@@ -48,6 +48,7 @@ const GROUPS: [string, [string, string][]][] = [
  *  burger button into a full-width cream panel. */
 export function MobileMenu() {
   const [open, setOpen] = useState(false);
+  const [panelTop, setPanelTop] = useState(68);
   const pathname = usePathname();
 
   // close on navigation; lock body scroll while open
@@ -59,18 +60,26 @@ export function MobileMenu() {
     };
   }, [open]);
 
+  // the nav's height varies (announcement bar, wrapped rows): anchor the
+  // panel to the nav's real bottom edge at the moment it opens
+  const toggle = (e: React.MouseEvent) => {
+    const nav = (e.currentTarget as HTMLElement).closest(".dl-nav");
+    if (nav) setPanelTop(Math.max(0, Math.round(nav.getBoundingClientRect().bottom)));
+    setOpen((o) => !o);
+  };
+
   return (
     <div className="dl-mnav">
       <button
         className="dl-mnav-btn"
         aria-expanded={open}
         aria-label={open ? "Close menu" : "Open menu"}
-        onClick={() => setOpen((o) => !o)}
+        onClick={toggle}
       >
         {open ? "CLOSE ×" : "MENU ☰"}
       </button>
       {open && (
-        <div className="dl-mnav-panel">
+        <div className="dl-mnav-panel" style={{ top: panelTop }}>
           {GROUPS.map(([title, links]) => (
             <div key={title} className="dl-mnav-group">
               {links.map(([href, label], i) => (
