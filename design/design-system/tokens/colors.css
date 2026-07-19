@@ -1,0 +1,39 @@
+:root{
+  /* base */
+  --dl-plum: #44063B;          /* primary text, primary buttons, strokes */
+  --dl-plum-deep: #2A0A25;     /* dark feature sections */
+  --dl-cream: #FDFBF0;         /* page + section background (offwhite) */
+  --dl-orange: #FF6D35;        /* accent: eyebrows, CTAs, icons, active nav */
+  --dl-chartreuse: #DEDF4D;    /* stat strips, secondary CTA fills */
+  --dl-pink: #FFBCE8;          /* hero + testimonial sections */
+  --dl-slate: #14191D;         /* dark neutral sections */
+  --dl-green: #25AA84;         /* positive figures, pull quotes */
+  --dl-blue: #3B6FEB;          /* occasional feature section */
+
+  /* ── TEXT-ON-BACKGROUND CONTRAST RULE (hard rule) ──
+     Every background is either LIGHT or DARK. Text/stroke color follows the
+     background, never the section's "theme":
+       LIGHT surfaces  → plum (#44063B) text : cream, pink, chartreuse, orange
+       DARK surfaces   → cream (#FDFBF0) text : plum, deep-plum, slate, blue
+     Orange is an ACCENT on light surfaces (eyebrows, labels, active states),
+     never a light-surface body color. Eyebrows on dark surfaces stay orange.
+     Getting this backwards = the invisible-text bug (light text on pink/cream). */
+
+  /* semantic */
+  --text-primary: var(--dl-plum);
+  --text-secondary: rgba(68,6,59,.66);
+  --text-muted: rgba(68,6,59,.45);
+  --text-on-dark: var(--dl-cream);
+  --text-on-dark-secondary: rgba(253,251,240,.62);
+  --surface-page: var(--dl-cream);
+  --surface-feature-dark: var(--dl-slate);
+  --surface-feature-plum: var(--dl-plum-deep);
+  --surface-feature-blue: var(--dl-blue);
+  --surface-accent: var(--dl-pink);       /* LIGHT — plum text */
+  --surface-stat: var(--dl-chartreuse);   /* LIGHT — plum text */
+  --accent: var(--dl-orange);
+  --filter-active: var(--dl-orange);       /* filter/segment active fill + border (was plum) */
+  --border-hairline: rgba(68,6,59,.16);
+  --border-hairline-dark: rgba(253,251,240,.2);
+  --border-strong: var(--dl-plum);
+}

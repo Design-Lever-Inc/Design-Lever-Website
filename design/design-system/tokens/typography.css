@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Inter+Tight:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500;600&display=swap');
+
+:root{
+  --font-display: 'Faculty Glyphic', serif;   /* headlines, big figures, names */
+  --font-body: 'Inter Tight', sans-serif;     /* body copy only */
+  --font-mono: 'Spline Sans Mono', monospace; /* eyebrows, labels, buttons, data */
+
+  /* type scale (1440 canvas) */
+  --type-hero: 400 82px/1.03 var(--font-display);      /* page H1 */
+  --type-h2: 400 46px/1.08 var(--font-display);        /* section title */
+  --type-h3: 400 24px/1.2 var(--font-display);         /* card / sub-topic title */
+  --type-stat: 400 60px/.9 var(--font-display);        /* big figures */
+  --type-body-lede: 400 20px/1.5 var(--font-body);     /* hero paragraph */
+  --type-body: 400 15px/1.6 var(--font-body);
+  --type-body-sm: 400 14px/1.55 var(--font-body);
+  --type-eyebrow: 400 11px var(--font-mono);           /* + letter-spacing .14em, uppercase, accent color */
+  --type-label: 400 12px var(--font-mono);             /* + letter-spacing .04-.1em */
+  --tracking-eyebrow: .14em;
+  --tracking-label: .06em;
+}

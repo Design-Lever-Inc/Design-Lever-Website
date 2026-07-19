@@ -1,0 +1,23 @@
+:root{
+  /* layout */
+  --page-max: 1440px;
+  --pad-x: 64px;               /* universal horizontal gutter */
+  --section-pad: 110px;        /* vertical rhythm: 104-120px */
+  --gap-grid: 24px;            /* card grids */
+  --gap-cols: 64px;            /* split layouts */
+  --radius: 0;                 /* NO rounded corners, anywhere */
+
+  /* hero illustration: identical box on every hero */
+  --heroart-size: 620px;
+  --heroart-top: -90px;
+  --heroart-right: -150px;
+  --heroart-opacity: .9;
+  --motif-dash: 4 8;           /* uniform dash for ALL motif strokes, every shape, every page */
+
+  /* nav */
+  --nav-pad: 20px 64px;        /* position:sticky; top:0; z-index:50 */
+  --nav-logo-h: 27.6px;        /* logo-full.png height in the nav */
+
+  /* article pages hard rule */
+  --article-label-gap: 40px;   /* space below "← All resources" back-label, before title */
+}
