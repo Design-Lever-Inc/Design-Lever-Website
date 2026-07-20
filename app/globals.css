@@ -75,6 +75,12 @@
   --article-label-gap: 40px;
 }
 
+/* Client logo marquee: sized 15% larger than the prototype's 60px baseline
+   (logo boxes are 184x69). The track/viewport must grow to match or the
+   taller wordmarks clip against the prototype's overflow:hidden. */
+.pg-home .dl-marq,
+.pg-home .dl-marq-track { height: 69px; }
+
 /* Network companies grid collapses on tablet (was JS in the prototype). */
 @media (max-width: 1024px) {
   #dl-net-companies-grid { grid-template-columns: 1fr !important; }
