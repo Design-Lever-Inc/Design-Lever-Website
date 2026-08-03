@@ -1,0 +1,89 @@
+/* ================= Motion layer =================
+   Interaction + entrance motion for Design Lever. The brand is deliberately
+   austere ("small and functional, no bounces, no parallax; hovers are colour
+   shifts"), so this stays disciplined: quiet fades and short rises with
+   editorial easing, one focal motion at a time, everything gated on
+   prefers-reduced-motion.
+
+   Driven by components/MotionScript.tsx, which applies .dl-reveal to
+   off-screen sections (and .dl-reveal-item to their grid children), then adds
+   .dl-in to play the entrance. Hidden state is only ever applied to elements
+   outside the viewport, so there is no flash of hidden content and no
+   dependence on JS for anything above the fold. */
+
+:root {
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --reveal-dur: 0.62s;
+}
+
+/* ---------- Section reveal ---------- */
+.dl-reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  will-change: opacity, transform;
+}
+.dl-reveal.dl-in {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity var(--reveal-dur) var(--ease-out-expo),
+    transform var(--reveal-dur) var(--ease-out-expo);
+}
+/* once settled, drop the compositor hint */
+.dl-reveal.dl-settled { will-change: auto; }
+
+/* ---------- Grid child stagger ---------- */
+/* Layered under the section rise: children fade up in sequence. Opacity +
+   a small rise, delayed by their index (--i) once the parent is in. */
+.dl-reveal-item {
+  opacity: 0;
+  transform: translateY(12px);
+}
+.dl-in .dl-reveal-item {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.5s var(--ease-out-quart),
+    transform 0.5s var(--ease-out-quart);
+  transition-delay: calc(var(--i, 0) * 45ms);
+}
+
+/* ---------- Sticky nav elevation ---------- */
+/* A quiet affordance separating the pinned nav from content once scrolled.
+   Kept to a soft, low shadow (the brand already permits the nav's dropdown a
+   shadow) plus a faint backdrop blur, not a hard drop shadow. */
+.dl-nav {
+  transition: box-shadow 0.25s var(--ease-out-quart), background-color 0.25s var(--ease-out-quart);
+}
+.dl-nav.dl-nav--scrolled {
+  box-shadow: 0 8px 24px -18px rgba(42, 4, 36, 0.45);
+  background-color: rgba(253, 251, 240, 0.92);
+  -webkit-backdrop-filter: saturate(1.1) blur(8px);
+  backdrop-filter: saturate(1.1) blur(8px);
+}
+
+/* ---------- Marquee edge fade ---------- */
+/* Logos dissolve into the cream at both ends instead of hard-cutting. */
+.pg-home .dl-marq {
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+/* ---------- Diagnostic figure ---------- */
+/* The big naira figure counts toward its value; a monospaced tabular feel
+   keeps the width from twitching while digits change. */
+.dl-diag-figure { font-variant-numeric: tabular-nums; }
+
+/* ---------- Respect reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .dl-reveal,
+  .dl-reveal-item {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .dl-nav.dl-nav--scrolled {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}

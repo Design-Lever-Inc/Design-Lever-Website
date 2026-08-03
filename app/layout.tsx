@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "../styles/prototype.css";
 import "../styles/responsive.css";
+import "../styles/motion.css";
 import { SiteBehaviors } from "@/components/SiteBehaviors";
 import { ScrollRestore } from "@/components/ScrollRestore";
+import { MotionScript } from "@/components/MotionScript";
 
 export const metadata: Metadata = {
   title: {
@@ -31,6 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="dl-canvas">{children}</div>
         <SiteBehaviors />
         <ScrollRestore />
+        <MotionScript />
       </body>
     </html>
   );

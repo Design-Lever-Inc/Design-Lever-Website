@@ -1,11 +1,53 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 
 const STORAGE_KEY = "dl_diag_v1";
+
+/** Eases a displayed number toward its target so the headline figure counts
+ *  rather than jumping. Chases the latest target (handles fast slider drags),
+ *  counts up from zero on first paint, and snaps instantly under
+ *  prefers-reduced-motion. */
+function useCountUp(target: number) {
+  const [display, setDisplay] = useState(target);
+  const currentRef = useRef(target);
+  const rafRef = useRef<number | null>(null);
+  const firstRef = useRef(true);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      currentRef.current = target;
+      setDisplay(target);
+      return;
+    }
+    if (firstRef.current) {
+      firstRef.current = false;
+      currentRef.current = 0; // count up from zero on load
+    }
+    const tick = () => {
+      const diff = target - currentRef.current;
+      if (Math.abs(diff) < Math.max(1, Math.abs(target) * 0.0008)) {
+        currentRef.current = target;
+        setDisplay(target);
+        rafRef.current = null;
+        return;
+      }
+      currentRef.current += diff * 0.16;
+      setDisplay(currentRef.current);
+      rafRef.current = requestAnimationFrame(tick);
+    };
+    if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    rafRef.current = requestAnimationFrame(tick);
+    return () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
+  }, [target]);
+
+  return display;
+}
 
 const DEFAULTS = { des: 8, sal: 1200000, eng: 20, engSal: 2200000, rew: 25, att: 2, rep: 7.5 };
 type DiagState = typeof DEFAULTS;
@@ -57,14 +99,15 @@ export default function PageDiagnostic() {
   const rework = s.eng * s.engSal * 12 * (s.rew / 100);
   const attrition = s.att * s.sal * s.rep;
   const total = rework + attrition;
+  const animatedTotal = useCountUp(total);
   const perDes = s.des > 0 ? total / s.des : 0;
   const maxPart = Math.max(rework, attrition, 1);
   const v = {
     ...s,
     salFmt: fmtNaira(s.sal),
     engSalFmt: fmtNaira(s.engSal),
-    totalFmt: fmtNaira(total),
-    usdFmt: fmtUSD(total),
+    totalFmt: fmtNaira(animatedTotal),
+    usdFmt: fmtUSD(animatedTotal),
     perDesFmt: fmtNaira(perDes),
     reworkFmt: fmtNaira(rework),
     attritionFmt: fmtNaira(attrition),
@@ -148,7 +191,7 @@ export default function PageDiagnostic() {
             {/* OUTPUT */}
             <div style={{padding:"56px 52px",display:"flex",flexDirection:"column",backgroundColor:"#44073B"}}>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase",marginBottom:"32px"}}>Estimated annual cost</div>
-              <div style={{font:"400 104px/.86 'Faculty Glyphic',serif",color:"#FF6D35",letterSpacing:"-.03em"}}>{v.totalFmt}</div>
+              <div className="dl-diag-figure" style={{font:"400 104px/.86 'Faculty Glyphic',serif",fontVariantNumeric:"tabular-nums",color:"#FF6D35",letterSpacing:"-.03em"}}>{v.totalFmt}</div>
               <div style={{font:"400 15px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.7)",marginTop:"16px"}}>≈ {v.usdFmt} / year · {v.perDesFmt} per designer</div>
               <div style={{marginTop:"48px",display:"flex",flexDirection:"column",gap:"26px"}}>
                 <div>
