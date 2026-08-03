@@ -145,11 +145,33 @@
   .dl-anno { flex-wrap: wrap; text-align: center; padding: 10px 20px !important; }
 }
 
+/* ---------- Footer social / copyright sub-row ---------- */
+/* The social links and the © line share one space-between row that wraps on
+   narrow screens with no row-gap, so the copyright jams against the links.
+   Give the wrapped rows breathing room and let them align left. */
+@media (max-width: 600px) {
+  .dl-foot-sub {
+    row-gap: 16px;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+}
+
 /* ---------- Home flywheel band ---------- */
-/* Hover-driven horizontal accordion becomes a stacked, always-open list. */
+/* On desktop this is a hover-driven horizontal accordion: hovering a line
+   fills it with that line's accent (--c) and flips its text to cream (--ink).
+   On touch there's no hover, so a tap would trigger that inversion and leave
+   cream text on the pink band — invisible on 3 of the 4 lines. Here it becomes
+   a static, always-open stacked list that stays on the pink band with plum
+   text (per the light-surface contrast rule), and every hover-driven colour
+   change is neutralised. Each line keeps its identity colour as a non-text
+   left accent, so the section retains its character accessibly. */
 @media (max-width: 900px) {
   .dl-band { flex-direction: column; }
   .dl-imgcol { display: none; }
+  /* stray ↗ overlay belongs to the (now hidden) desktop image column */
+  .dl-band > [style*="position:absolute"],
+  .dl-band > [style*="position: absolute"] { display: none !important; }
   .dl-lines { flex-direction: column; }
   .dl-line,
   .dl-lines:hover .dl-line,
@@ -158,20 +180,32 @@
     width: auto !important;
     height: auto !important;
     background: transparent !important;
-    border-left: 0 !important;
-    border-top: 1px solid rgba(68, 6, 59, .28);
+    border-top: 0 !important;
+    border-left: 3px solid var(--c) !important;
     flex-direction: column;
-    padding: 26px 24px 30px !important;
+    padding: 2px 0 2px 20px !important;
+    margin-bottom: 34px;
   }
-  .dl-line:first-child { border-top: 0; }
-  .dl-lname {
+  .dl-lines .dl-line:last-child { margin-bottom: 0; }
+  /* text colours stay dark/branded regardless of the hover inversion */
+  .dl-lname,
+  .dl-lines:hover .dl-line:hover .dl-lname {
     writing-mode: horizontal-tb !important;
     transform: none !important;
-    font-size: 32px !important;
+    font-size: 30px !important;
+    color: #44063B !important;
+    margin-bottom: 16px !important;
+  }
+  .dl-lwrite,
+  .dl-lines:hover .dl-line:hover .dl-lwrite {
+    opacity: 1 !important;
+    flex: none !important;
+    overflow: visible;
     color: #44063B !important;
   }
-  .dl-lwrite { opacity: 1 !important; flex: none !important; overflow: visible; }
   .dl-lwrite-in { width: auto !important; max-width: none !important; }
+  .dl-lblurb { color: rgba(68, 6, 59, .72) !important; margin: 0 0 20px !important; font-size: 15.5px !important; }
+  .dl-lgo { color: #FF6D35 !important; }
   .dl-lidx { display: none; }
   .dl-lcap { display: none; }
 }

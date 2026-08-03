@@ -163,6 +163,7 @@ export function SiteFooter() {
       </div>
       <div style={{ padding: "38px 64px 30px" }}>
         <div
+          className="dl-foot-sub"
           style={{
             display: "flex",
             justifyContent: "space-between",
