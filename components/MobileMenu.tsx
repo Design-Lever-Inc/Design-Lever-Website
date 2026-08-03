@@ -55,8 +55,13 @@ export function MobileMenu() {
   useEffect(() => setOpen(false), [pathname]);
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
+    // flag the open state so the nav's scrolled backdrop-filter can be
+    // dropped: backdrop-filter makes the nav a containing block for the
+    // panel's position:fixed, collapsing it against the nav when scrolled.
+    document.body.classList.toggle("dl-menu-open", open);
     return () => {
       document.body.style.overflow = "";
+      document.body.classList.remove("dl-menu-open");
     };
   }, [open]);
 

@@ -145,6 +145,16 @@
   .dl-anno { flex-wrap: wrap; text-align: center; padding: 10px 20px !important; }
 }
 
+/* ---------- Home testimonial (mobile) ---------- */
+@media (max-width: 760px) {
+  /* the pagination dots read as clutter on a phone and crowd the author
+     row — hide them; the slider still auto-advances and the arrows remain */
+  .dl-tdots { display: none !important; }
+  /* reserve space for the tallest quote so swapping slides doesn't jump the
+     section height (quotes vary in length; the longest runs ~7 lines here) */
+  .dl-tquote { min-height: 300px !important; }
+}
+
 /* ---------- Footer social / copyright sub-row ---------- */
 /* The social links and the © line share one space-between row that wraps on
    narrow screens with no row-gap, so the copyright jams against the links.

@@ -63,6 +63,16 @@
   backdrop-filter: saturate(1.1) blur(8px);
 }
 
+/* While the mobile menu is open, the nav must NOT carry a backdrop-filter:
+   it would become the containing block for the panel's position:fixed and
+   collapse it against the nav. Drop the filter (and its solid bg) so the
+   full-screen panel resolves against the viewport. */
+body.dl-menu-open .dl-nav.dl-nav--scrolled {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  background-color: #FDFBF0 !important;
+}
+
 /* ---------- Marquee edge fade ---------- */
 /* Logos dissolve into the cream at both ends instead of hard-cutting. */
 .pg-home .dl-marq {

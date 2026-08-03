@@ -474,7 +474,7 @@ export default function PageHome() {
               <div className="dl-tarr" onClick={tNext}>→</div>
             </div>
           </div>
-          <blockquote style={{font:"400 40px/1.24 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 44px",maxWidth:"1080px",letterSpacing:"-.01em",minHeight:"200px"}}>{t.quote}</blockquote>
+          <blockquote className="dl-tquote" style={{font:"400 40px/1.24 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 44px",maxWidth:"1080px",letterSpacing:"-.01em",minHeight:"200px"}}>{t.quote}</blockquote>
           <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:"24px"}}>
             <div style={{display:"flex",alignItems:"center",gap:"16px"}}>
               <div style={{width:"52px",height:"52px",border:"1px solid rgba(68,6,59,.6)",display:"flex",alignItems:"center",justifyContent:"center",font:"400 15px 'Spline Sans Mono',monospace",color:"#44063B"}}>{t.initials}</div>
@@ -483,7 +483,7 @@ export default function PageHome() {
                 <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",marginTop:"3px"}}>{t.org}</div>
               </div>
             </div>
-            <div style={{display:"flex",gap:"9px"}}>
+            <div className="dl-tdots" style={{display:"flex",gap:"9px"}}>
               {tDots.map((d, dIdx) => (
                 <Fragment key={dIdx}>
                 <div onClick={d.on} style={d.style}></div>
