@@ -75,6 +75,33 @@
   --article-label-gap: 40px;
 }
 
+/* Legal-page prose (privacy, terms). Single readable column in the design
+   system's type: Faculty Glyphic headings, Inter Tight body, orange links. */
+.dl-legal h2 {
+  font: 400 26px 'Faculty Glyphic', serif;
+  color: #44063B;
+  letter-spacing: -0.01em;
+  margin: 46px 0 14px;
+}
+.dl-legal h2:first-child { margin-top: 0; }
+.dl-legal h3 {
+  font: 400 18px 'Faculty Glyphic', serif;
+  color: #44063B;
+  margin: 28px 0 10px;
+}
+.dl-legal p,
+.dl-legal li {
+  font: 400 15.5px/1.7 'Inter Tight', sans-serif;
+  color: rgba(68, 6, 59, 0.78);
+  margin: 0 0 16px;
+}
+.dl-legal ul { margin: 0 0 18px; padding-left: 20px; }
+.dl-legal li { margin-bottom: 8px; }
+.dl-legal li::marker { color: #FF6D35; }
+.dl-legal a { color: #FF6D35; text-decoration: underline; text-underline-offset: 2px; }
+.dl-legal strong { color: #44063B; font-weight: 600; }
+.dl-legal hr { border: 0; border-top: 1px solid rgba(68, 6, 59, 0.16); margin: 40px 0; }
+
 /* Client logo marquee: sized 15% larger than the prototype's 60px baseline
    (logo boxes are 184x69). The track/viewport must grow to match or the
    taller wordmarks clip against the prototype's overflow:hidden. */
@@ -87,10 +114,17 @@
 }
 
 /* Footer responsive collapse (the prototype did this in JS; CSS is the
-   right home for it). !important beats the inline grid styles. */
+   right home for it). The link grid's own columns are set explicitly here
+   with #id + !important so they win over the generic responsive.css
+   `[style*="1fr 1fr"]` collapse rule, which would otherwise substring-match
+   the links' `1fr 1fr 1fr` and crush all five groups into one column. */
 @media (max-width: 900px) {
   #dl-foot-grid { grid-template-columns: 1fr !important; }
-  #dl-foot-links { justify-self: start !important; }
+  #dl-foot-links {
+    grid-template-columns: 1fr 1fr 1fr !important;
+    justify-self: stretch !important; /* spread the columns across the row */
+    width: 100%;
+  }
 }
 @media (max-width: 600px) {
   #dl-foot-links { grid-template-columns: 1fr 1fr !important; }

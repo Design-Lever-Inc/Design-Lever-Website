@@ -185,8 +185,20 @@ export function SiteFooter() {
               Instagram ↗
             </a>
           </div>
-          <div style={{ font: "400 11px 'Spline Sans Mono',monospace", color: "rgba(253,251,240,.5)", letterSpacing: ".04em" }}>
-            © 2026 Design Lever Inc.
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "20px",
+              flexWrap: "wrap",
+              font: "400 11px 'Spline Sans Mono',monospace",
+              color: "rgba(253,251,240,.5)",
+              letterSpacing: ".04em",
+            }}
+          >
+            <Link href="/privacy" className="dl-link" style={{ textTransform: "uppercase" }}>Privacy</Link>
+            <Link href="/terms" className="dl-link" style={{ textTransform: "uppercase" }}>Terms</Link>
+            <span>© 2026 Design Lever Inc.</span>
           </div>
         </div>
       </div>
