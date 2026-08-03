@@ -108,6 +108,38 @@
   }
 }
 
+/* ---------- Divider-column grids ---------- */
+/* Multi-column `gap:0` grids (how-it-works steps, the LEVER role columns,
+   stage/symptom/blocker) use column border-rights + asymmetric per-cell
+   padding — the first cell flush-left, the rest padded inward for the gutter.
+   When they collapse to one column on mobile that padding leaves the first
+   item flush-left and the rest indented, and the border-rights become stray
+   vertical lines. Reset stacked cells to a single flush-left column with no
+   side dividers. Deliberately excludes 2-up content splits like the
+   diagnostic calculator (`1fr 1fr`), whose panels need their own padding.
+   Both spellings: compact (server HTML) and CSSOM-normalized (post-hydration). */
+@media (max-width: 760px) {
+  [style*="grid-template-columns:repeat(3,1fr)"][style*="gap:0"] > *,
+  [style*="grid-template-columns: repeat(3, 1fr)"][style*="gap: 0"] > *,
+  [style*="grid-template-columns:repeat(4,1fr)"][style*="gap:0"] > *,
+  [style*="grid-template-columns: repeat(4, 1fr)"][style*="gap: 0"] > *,
+  [style*="grid-template-columns:repeat(5,1fr)"][style*="gap:0"] > *,
+  [style*="grid-template-columns: repeat(5, 1fr)"][style*="gap: 0"] > * {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+  }
+  /* 2-up content splits (diagnostic calculator) keep their panel padding but
+     shed the desktop column divider, which becomes a stray vertical line once
+     the two halves stack. Border only — never touch the padding here. */
+  [style*="grid-template-columns:1fr 1fr"][style*="gap:0"] > *,
+  [style*="grid-template-columns: 1fr 1fr"][style*="gap: 0"] > * {
+    border-left: 0 !important;
+    border-right: 0 !important;
+  }
+}
+
 /* ---------- Announcement bar ---------- */
 @media (max-width: 760px) {
   .dl-anno { flex-wrap: wrap; text-align: center; padding: 10px 20px !important; }
