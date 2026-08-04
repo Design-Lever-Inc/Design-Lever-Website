@@ -75,6 +75,82 @@
   --article-label-gap: 40px;
 }
 
+/* Footer site search. Lives on the plum footer, so cream ink on hairline
+   borders; results open upward. Square corners, mono labels, orange accents. */
+.dl-search { max-width: 420px; margin-top: 44px; }
+.dl-search-field { position: relative; }
+.dl-search-icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(253, 251, 240, 0.5);
+  pointer-events: none;
+}
+.dl-search-input {
+  width: 100%;
+  box-sizing: border-box;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(253, 251, 240, 0.35);
+  padding: 12px 4px 12px 26px;
+  font: 400 15px 'Inter Tight', sans-serif;
+  color: #FDFBF0;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.dl-search-input::placeholder { color: rgba(253, 251, 240, 0.45); }
+.dl-search-input:focus { border-color: #FF6D35; }
+.dl-search-field:focus-within .dl-search-icon { color: #FF6D35; }
+
+.dl-search-panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(100% + 10px);
+  max-height: 340px;
+  overflow-y: auto;
+  background: #2A0A25;
+  border: 1px solid rgba(253, 251, 240, 0.16);
+  box-shadow: 0 -20px 60px -24px rgba(0, 0, 0, 0.7);
+  z-index: 20;
+}
+.dl-search-empty {
+  padding: 18px 18px;
+  font: 400 13.5px 'Inter Tight', sans-serif;
+  color: rgba(253, 251, 240, 0.55);
+}
+.dl-search-opt {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2px 14px;
+  padding: 13px 18px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(253, 251, 240, 0.08);
+  transition: background 0.12s;
+}
+.dl-search-opt:last-child { border-bottom: 0; }
+.dl-search-opt--active,
+.dl-search-opt:hover { background: rgba(253, 251, 240, 0.06); }
+.dl-search-opt-title {
+  font: 400 15px 'Inter Tight', sans-serif;
+  color: #FDFBF0;
+}
+.dl-search-opt--active .dl-search-opt-title { color: #FF6D35; }
+.dl-search-opt-type {
+  font: 400 9.5px 'Spline Sans Mono', monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FF6D35;
+  align-self: center;
+  white-space: nowrap;
+}
+.dl-search-opt-desc {
+  grid-column: 1 / -1;
+  font: 400 12.5px/1.45 'Inter Tight', sans-serif;
+  color: rgba(253, 251, 240, 0.55);
+}
+
 /* Legal-page prose (privacy, terms). Single readable column in the design
    system's type: Faculty Glyphic headings, Inter Tight body, orange links. */
 .dl-legal h2 {

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FooterSearch } from "./FooterSearch";
 
 const BOOK_CALL_URL = "https://www.conectr.me/s/book-call-q7r";
 
@@ -108,6 +109,7 @@ export function SiteFooter() {
               Take the diagnostic
             </Link>
           </div>
+          <FooterSearch />
         </div>
         <div
           id="dl-foot-links"
