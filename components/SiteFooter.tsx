@@ -124,7 +124,6 @@ export function SiteFooter() {
           <FootCol
             title="For companies"
             links={[
-              ["/#method", "The LEVER"],
               ["/diagnostic", "Cost diagnostic"],
             ]}
           />

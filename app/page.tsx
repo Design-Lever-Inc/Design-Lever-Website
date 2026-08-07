@@ -228,51 +228,7 @@ export default function PageHome() {
             </div>
           </div>
         </div>
-        {/* LEVER, light cream field, green accents */}
         {/* ENGAGEMENTS & PRICING */}
-        <div id="method" style={{background:"#FDFBF0",padding:"120px 64px",borderTop:"1px solid rgba(68,6,59,.16)",borderStyle:"none"}}>
-          <div style={{marginBottom:"80px"}}>
-            <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>OUR METHOD</span>
-            <h2 style={{font:"400 60px/1.08 'Faculty Glyphic',serif",color:"#44063B",maxWidth:"760px",margin:"26px 0 0",letterSpacing:"-.01em"}}>A documented framework, not a generic playbook.</h2>
-          </div>
-          <div style={{display:"grid",gridTemplateColumns:"repeat(5,1fr)",gap:"0"}}>
-            <div style={{padding:"0 28px 0 0",display:"flex",flexDirection:"column"}}>
-              <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".08em",textTransform:"uppercase",paddingBottom:"16px",borderBottom:"1px solid rgba(68,6,59,.24)"}}>Leverage</div>
-              <div style={{font:"400 clamp(120px,13vw,200px) 'Faculty Glyphic',serif",color:"#44063B",lineHeight:"1",margin:"34px 0 40px"}}>
-                L
-                <p style={{font:"400 13px/1.6 'Inter Tight',sans-serif",color:"rgba(68,6,59,.66)",margin:"0"}}>Diagnose where design has the greatest untapped commercial potential.</p>
-              </div>
-            </div>
-            <div style={{padding:"0 28px",display:"flex",flexDirection:"column"}}>
-              <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".08em",textTransform:"uppercase",paddingBottom:"16px",borderBottom:"1px solid rgba(68,6,59,.24)"}}>Empower</div>
-              <div style={{font:"400 clamp(120px,13vw,200px) 'Faculty Glyphic',serif",color:"#44063B",lineHeight:"1",margin:"34px 0 40px"}}>
-                E
-                <p style={{font:"400 13px/1.6 'Inter Tight',sans-serif",color:"rgba(68,6,59,.66)",margin:"0"}}>Build the culture and internal advocacy that unlocks design team performance.</p>
-              </div>
-            </div>
-            <div style={{padding:"0 28px",display:"flex",flexDirection:"column"}}>
-              <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".08em",textTransform:"uppercase",paddingBottom:"16px",borderBottom:"1px solid rgba(68,6,59,.24)"}}>VELOCITY</div>
-              <div style={{font:"400 clamp(120px,13vw,200px) 'Faculty Glyphic',serif",color:"#44063B",lineHeight:"1",margin:"34px 0 40px"}}>
-                V
-                <p style={{font:"400 13px/1.6 'Inter Tight',sans-serif",color:"rgba(68,6,59,.66)",margin:"0"}}>Systems and rituals that make output faster, more consistent, and predictable.</p>
-              </div>
-            </div>
-            <div style={{padding:"0 28px",display:"flex",flexDirection:"column"}}>
-              <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".08em",textTransform:"uppercase",paddingBottom:"16px",borderBottom:"1px solid rgba(68,6,59,.24)"}}>Elevate</div>
-              <div style={{font:"400 clamp(120px,13vw,200px) 'Faculty Glyphic',serif",color:"#44063B",lineHeight:"1",margin:"34px 0 40px"}}>
-                E
-                <p style={{font:"400 13px/1.6 'Inter Tight',sans-serif",color:"rgba(68,6,59,.66)",margin:"0"}}>Connect design metrics to the P&L, revenue, retention, velocity, churn.</p>
-              </div>
-            </div>
-            <div style={{padding:"0 0 0 28px",display:"flex",flexDirection:"column"}}>
-              <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".08em",textTransform:"uppercase",paddingBottom:"16px",borderBottom:"1px solid rgba(68,6,59,.24)"}}>Replicate</div>
-              <div style={{font:"400 clamp(120px,13vw,200px) 'Faculty Glyphic',serif",color:"#44063B",lineHeight:"1",margin:"34px 0 40px"}}>
-                R
-                <p style={{font:"400 13px/1.6 'Inter Tight',sans-serif",color:"rgba(68,6,59,.66)",margin:"0"}}>Document everything and hand it over, sustained independently afterwards.</p>
-              </div>
-            </div>
-          </div>
-        </div>
         <div id="pricing" style={{padding:"118px 64px",borderTop:"1px solid rgba(68,6,59,.16)"}}>
           <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline",marginBottom:"64px"}}>
             <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>OUR OFFERINGS</span>
