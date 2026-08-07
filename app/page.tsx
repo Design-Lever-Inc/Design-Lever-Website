@@ -148,22 +148,23 @@ export default function PageHome() {
           <div>
             <div className="dl-marq">
               <div className="dl-marq-track">
-                <ImageSlot className="dl-marq-item" id="dl-logo-1" src="/images/logos/client-1.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-2" src="/images/logos/client-2.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-3" src="/images/logos/client-3.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-4" src="/images/logos/client-4.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-5" src="/images/logos/client-5.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-6" src="/images/logos/client-6.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-7" src="/images/logos/client-7.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-8" src="/images/logos/client-8.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-1" src="/images/logos/client-1.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-2" src="/images/logos/client-2.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-3" src="/images/logos/client-3.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-4" src="/images/logos/client-4.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-5" src="/images/logos/client-5.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-6" src="/images/logos/client-6.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-7" src="/images/logos/client-7.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Client logo" />
-                <ImageSlot className="dl-marq-item" id="dl-logo-8" src="/images/logos/client-8.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Client logo" />
+                {/* Client marquee. These are typeset name wordmarks, not the
+                    brands' official logos — drop a real SVG/PNG at the same path
+                    (public/images/logos/client-N.svg) to replace any of them. */}
+                <ImageSlot className="dl-marq-item" id="dl-logo-1" src="/images/logos/client-1.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Terragon" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-2" src="/images/logos/client-2.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Rise" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-3" src="/images/logos/client-3.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Interswitch" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-4" src="/images/logos/client-4.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Traction" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-5" src="/images/logos/client-5.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Nomba" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-6" src="/images/logos/client-6.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Moniepoint" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-7" src="/images/logos/client-7.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Lemfi" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-1" src="/images/logos/client-1.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Terragon" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-2" src="/images/logos/client-2.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Rise" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-3" src="/images/logos/client-3.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Interswitch" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-4" src="/images/logos/client-4.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Traction" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-5" src="/images/logos/client-5.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Nomba" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-6" src="/images/logos/client-6.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Moniepoint" />
+                <ImageSlot className="dl-marq-item" id="dl-logo-7" src="/images/logos/client-7.svg" fit="contain" style={{width:"184px",height:"69px",display:"block"}} placeholder="Lemfi" />
               </div>
             </div>
           </div>
