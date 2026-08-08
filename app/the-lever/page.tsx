@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
+import { ArrowIcon } from "@/components/ArrowIcon";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "The Lever · Community", description: "Entry takes a demonstrated commitment and a one-time fee. The gate keeps the room serious." };
@@ -12,7 +13,7 @@ export default function PageTheLever() {
         {/* NAV */}
         <SiteNav active="network" />
         {/* HERO */}
-        <div style={{background:"#DEDF4D",position:"relative",overflow:"hidden",padding:"96px 64px 100px"}}>
+        <div className="dl-page-hero-texture dl-page-hero-texture--motif" style={{background:"#DEDF4D",position:"relative",overflow:"hidden",padding:"96px 64px 100px"}}>
           <svg viewBox="0 0 360 360" width="620" height="620" fill="none" stroke="#44063B" style={{position:"absolute",top:"-90px",right:"-150px",opacity:".9",pointerEvents:"none"}}>
             <circle cx="180" cy="180" r="150" strokeWidth="1" strokeDasharray="4 8" opacity=".8"></circle>
             <circle cx="180" cy="120" r="26" strokeWidth="1" strokeDasharray="4 8"></circle>
@@ -30,7 +31,7 @@ export default function PageTheLever() {
               Entry takes a demonstrated commitment and a one-time fee. The gate keeps the room serious.
             </p>
             <div style={{display:"flex",alignItems:"center",gap:"28px"}}>
-              <a className="dl-btn" href="#join" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"16px 26px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Request to join →</a>
+              <a className="dl-btn" href="#join" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"16px 26px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Request to join <ArrowIcon direction="down" /></a>
               <a className="dl-link" href="#inside" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"4px"}}>What's inside</a>
             </div>
           </div>
@@ -123,11 +124,11 @@ export default function PageTheLever() {
           <p style={{font:"400 18px/1.55 'Inter Tight',sans-serif",color:"rgba(68,6,59,.7)",margin:"0 auto 42px",maxWidth:"500px"}}>
             Membership is by request and reviewed for commitment to design leadership. Join the founding cohort of The Lever.
           </p>
-          <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase"}}>Request to join →</Link>
+          <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase"}}>Request to join <ArrowIcon /></Link>
         </div>
         {/* FAQ */}
         <div style={{padding:"118px 64px",background:"#FDFBF0"}}>
-          <div style={{display:"grid",gridTemplateColumns:".75fr 1.25fr",gap:"64px",alignItems:"start"}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
             <div>
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>FAQs</span>
               <h2 style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 0",letterSpacing:"-.01em"}}>The Lever, answered.</h2>

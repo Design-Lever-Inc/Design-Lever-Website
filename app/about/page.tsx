@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ImageSlot } from "@/components/ImageSlot";
+import { ArrowIcon } from "@/components/ArrowIcon";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "About", description: "Building up the economic value of design, one data at a time. A commercial company for African designers to lead in boardrooms, and the infrastructure to get " };
@@ -13,7 +14,7 @@ export default function PageAbout() {
         {/* NAV */}
         <SiteNav active="about" />
         {/* HERO */}
-        <div style={{position:"relative",overflow:"hidden",padding:"96px 64px 100px",background:"#FFBCE8"}}>
+        <div className="dl-page-hero-texture dl-page-hero-texture--motif" style={{position:"relative",overflow:"hidden",padding:"96px 64px 100px",background:"#FFBCE8"}}>
           <svg viewBox="0 0 600 600" width="620" height="620" fill="none" stroke="#44063B" style={{position:"absolute",top:"-90px",right:"-150px",opacity:".9",pointerEvents:"none"}}>
             <circle cx="300" cy="300" r="288" strokeWidth="1" strokeDasharray="4 8"></circle>
             {/* lever beam */}
@@ -37,7 +38,7 @@ export default function PageAbout() {
               Building up the economic value of design, one data at a time. A commercial company for African designers to lead in boardrooms, and the infrastructure to get us there.
             </p>
             <div style={{display:"flex",alignItems:"center",gap:"28px"}}>
-              <a className="dl-btn hov-orange" href="#team" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Meet the team →</a>
+              <a className="dl-btn hov-orange" href="#team" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Meet the team <ArrowIcon direction="down" /></a>
               <Link className="dl-link" href="/careers" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid #44063B",paddingBottom:"4px"}}>Careers</Link>
             </div>
           </div>
@@ -168,11 +169,11 @@ export default function PageAbout() {
           <p style={{font:"400 18px/1.55 'Inter Tight',sans-serif",color:"#44073BEB",margin:"0 auto 42px",maxWidth:"500px"}}>
             Start where every engagement starts, with a free, naira-denominated read on the cost of the current situation.
           </p>
-          <Link className="dl-btn" href="/diagnostic" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase",backgroundColor:"#44073B"}}>Open the diagnostic →</Link>
+          <Link className="dl-btn" href="/diagnostic" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase",backgroundColor:"#44073B"}}>Open the diagnostic <ArrowIcon /></Link>
         </div>
         {/* FAQ */}
         <div style={{padding:"118px 64px",background:"#FDFBF0"}}>
-          <div style={{display:"grid",gridTemplateColumns:".75fr 1.25fr",gap:"64px",alignItems:"start"}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
             <div>
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>FAQs</span>
               <h2 style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 0",letterSpacing:"-.01em"}}>About Design Lever, answered.</h2>

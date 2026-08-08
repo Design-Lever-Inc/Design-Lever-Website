@@ -2,9 +2,42 @@ import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ImageSlot } from "@/components/ImageSlot";
+import { ArrowIcon } from "@/components/ArrowIcon";
+import { TestimonialCarousel } from "@/components/TestimonialCarousel";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "Academy · Foundation track", description: "One intensive week that gives senior designers the vocabulary, systems, and commercial framing to lead a function, not just deliver projects." };
+
+const TESTIMONIALS = [
+  {
+    quote: "I came in able to run projects and left able to run a function. Design finally had a seat.",
+    initials: "DA",
+    name: "Damilola Akinwale",
+    designation: "Head of Design",
+    company: "Kora Systems",
+    headshot: "",
+    href: "/resources/case-studies/from-projects-to-function",
+    metrics: [
+      ["4", "Leadership systems adopted"],
+      ["12", "Weeks to promotion"],
+      ["1", "Function operating plan"],
+    ],
+  },
+  {
+    quote: "I stopped guessing. I defend the design budget with numbers now.",
+    initials: "ZB",
+    name: "Zainab Bello",
+    designation: "Product Design Lead",
+    company: "Luma Health",
+    headshot: "",
+    href: "/resources/case-studies/defending-the-design-budget",
+    metrics: [
+      ["18%", "Budget increase secured"],
+      ["3", "Commercial metrics adopted"],
+      ["2", "Board planning cycles"],
+    ],
+  },
+] as const;
 
 export default function PageAcademyFoundation() {
   return (
@@ -13,8 +46,8 @@ export default function PageAcademyFoundation() {
         {/* NAV */}
         <SiteNav active="academy" />
         {/* HERO */}
-        <div style={{position:"relative",overflow:"hidden",padding:"56px 64px 64px",backgroundColor:"#FDFBF0"}}>
-          <div style={{display:"grid",gridTemplateColumns:"1.15fr .85fr",gap:"64px",alignItems:"end"}}>
+        <div className="dl-page-hero-texture" style={{position:"relative",overflow:"hidden",padding:"56px 64px 64px",backgroundColor:"#FDFBF0"}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"end"}}>
             <div>
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>Foundation Programme · Certified Design Leader</span>
               <h1 style={{font:"400 82px/1.02 'Faculty Glyphic',serif",color:"#44063B",letterSpacing:"-.02em",margin:"32px 0 32px",textWrap:"balance"}}>The fundamentals of leading design.</h1>
@@ -22,7 +55,7 @@ export default function PageAcademyFoundation() {
                 One intensive week that gives senior designers the vocabulary, systems, and commercial framing to lead a function, not just deliver projects.
               </p>
               <div style={{display:"flex",alignItems:"center",gap:"24px"}}>
-                <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"16px 26px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Apply for the next cohort →</Link>
+                <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"16px 26px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Apply for the next cohort <ArrowIcon /></Link>
                 <a className="dl-link" href="#curriculum" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"4px"}}>See the curriculum</a>
               </div>
             </div>
@@ -59,7 +92,7 @@ export default function PageAcademyFoundation() {
         </div>
         {/* WHO IT'S FOR */}
         <div style={{padding:"100px 64px",background:"#14191D"}}>
-          <div style={{display:"grid",gridTemplateColumns:".9fr 1.1fr",gap:"64px",alignItems:"start"}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
             <div>
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>Who it's for</span>
               <h2 style={{font:"400 46px/1.12 'Faculty Glyphic',serif",color:"#FDFBF0",margin:"24px 0 0",letterSpacing:"-.01em"}}>You can design. Now you want to lead.</h2>
@@ -122,7 +155,7 @@ export default function PageAcademyFoundation() {
         <div style={{padding:"118px 64px 118px"}}>
           <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline",marginBottom:"44px"}}>
             <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>Taught by practitioners</span>
-            <Link className="dl-btn2" href="/faculty">See full faculty →</Link>
+            <Link className="dl-btn2" href="/faculty">See full faculty <ArrowIcon /></Link>
           </div>
           <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:"24px"}}>
             <div>
@@ -186,63 +219,19 @@ export default function PageAcademyFoundation() {
             </div>
           </div>
         </div>
-        <div className="dl-tsti" data-tidx="0" style={{padding:"110px 64px",position:"relative",overflow:"hidden",backgroundColor:"#FDFBF0"}}>
-          <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:"14px"}}>
-            <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".14em",textTransform:"uppercase"}}>In their words</span>
-            <div style={{display:"flex",gap:"10px"}}>
-              <div className="dl-tarr" data-tnav="-1">←</div>
-              <div className="dl-tarr" data-tnav="1">→</div>
-            </div>
-          </div>
-          <div style={{position:"relative",minHeight:"230px"}}>
-            <figure className="dl-tslide" data-i="0" style={{margin:"0"}}>
-              <blockquote style={{font:"400 40px/1.24 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 40px",maxWidth:"1080px",letterSpacing:"-.01em"}}>
-                "I came in able to run projects and left able to run a function. Design finally had a seat."
-              </blockquote>
-              <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:"24px"}}>
-                <div style={{display:"flex",alignItems:"center",gap:"16px"}}>
-                  <div style={{width:"52px",height:"52px",border:"1px solid rgba(68,6,59,.6)",display:"flex",alignItems:"center",justifyContent:"center",font:"400 15px 'Spline Sans Mono',monospace",color:"#44063B"}}>FG</div>
-                  <div>
-                    <div style={{font:"400 15px 'Spline Sans Mono',monospace",color:"#44063B"}}>Foundation graduate</div>
-                    <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",marginTop:"3px"}}>Head of Design · Lagos fintech</div>
-                  </div>
-                </div>
-                <div style={{display:"flex",gap:"9px"}}>
-                  <div className="dl-tdot" data-tdot="0" style={{background:"#44063B"}}></div>
-                  <div className="dl-tdot" data-tdot="1" style={{background:"transparent"}}></div>
-                </div>
-              </div>
-            </figure>
-            <figure className="dl-tslide" data-i="1" style={{margin:"0"}}>
-              <blockquote style={{font:"400 40px/1.24 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 40px",maxWidth:"1080px",letterSpacing:"-.01em"}}>"I stopped guessing. I defend the design budget with numbers now."</blockquote>
-              <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:"24px"}}>
-                <div style={{display:"flex",alignItems:"center",gap:"16px"}}>
-                  <div style={{width:"52px",height:"52px",border:"1px solid rgba(68,6,59,.6)",display:"flex",alignItems:"center",justifyContent:"center",font:"400 15px 'Spline Sans Mono',monospace",color:"#44063B"}}>FG</div>
-                  <div>
-                    <div style={{font:"400 15px 'Spline Sans Mono',monospace",color:"#44063B"}}>Foundation graduate</div>
-                    <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",marginTop:"3px"}}>Product Design Lead · Health tech</div>
-                  </div>
-                </div>
-                <div style={{display:"flex",gap:"9px"}}>
-                  <div className="dl-tdot" data-tdot="0" style={{background:"#44063B"}}></div>
-                  <div className="dl-tdot" data-tdot="1" style={{background:"transparent"}}></div>
-                </div>
-              </div>
-            </figure>
-          </div>
-        </div>
+        <TestimonialCarousel testimonials={TESTIMONIALS} />
         {/* CTA */}
         <div style={{padding:"130px 64px",background:"#FF6D35",textAlign:"center"}}>
           <h2 style={{font:"400 60px/1.06 'Faculty Glyphic',serif",color:"#44063B",margin:"0 auto 30px",maxWidth:"800px",letterSpacing:"-.015em",textWrap:"balance"}}>Two cohorts a year. Twenty places each.</h2>
           <p style={{font:"400 18px/1.55 'Inter Tight',sans-serif",color:"#44073BEB",margin:"0 auto 42px",maxWidth:"480px"}}>Apply for the next Foundation intake, or ask us anything before you do.</p>
           <div style={{display:"flex",gap:"18px",justifyContent:"center"}}>
-            <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase",backgroundColor:"#44073B"}}>Apply now →</Link>
+            <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase",backgroundColor:"#44073B"}}>Apply now <ArrowIcon /></Link>
             <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44073B",background:"transparent",border:"1px solid rgba(253,251,240,.6)",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase",borderColor:"#44073B99"}}>Ask a question</Link>
           </div>
         </div>
         {/* FAQ */}
         <div style={{padding:"118px 64px",background:"#FDFBF0"}}>
-          <div style={{display:"grid",gridTemplateColumns:".75fr 1.25fr",gap:"64px",alignItems:"start"}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
             <div>
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>FAQs</span>
               <h2 style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 0",letterSpacing:"-.01em"}}>Foundation, answered.</h2>

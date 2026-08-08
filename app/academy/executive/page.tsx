@@ -2,9 +2,42 @@ import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ImageSlot } from "@/components/ImageSlot";
+import { ArrowIcon } from "@/components/ArrowIcon";
+import { TestimonialCarousel } from "@/components/TestimonialCarousel";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "Academy · Executive track", description: "Four weeks for practitioners moving into the most senior and independent roles, design operations, fractional practice, client management, and research method" };
+
+const TESTIMONIALS = [
+  {
+    quote: "By the end of Week 2 I had priced my first fractional engagement. A quarter later the Network placed me.",
+    initials: "CO",
+    name: "Chinedu Okafor",
+    designation: "Fractional Design Director",
+    company: "Independent",
+    headshot: "",
+    href: "/resources/case-studies/pricing-the-first-engagement",
+    metrics: [
+      ["2", "Weeks to price engagement"],
+      ["1", "Quarter to placement"],
+      ["4", "Client systems installed"],
+    ],
+  },
+  {
+    quote: "The room was the value. Twelve operators at my level, and the standard held.",
+    initials: "AM",
+    name: "Amina Mensah",
+    designation: "Design Director",
+    company: "Sankofa Group",
+    headshot: "",
+    href: "/resources/case-studies/the-executive-room",
+    metrics: [
+      ["12", "Senior operators in cohort"],
+      ["4", "Weeks of live practice"],
+      ["3", "Fractional engagements won"],
+    ],
+  },
+] as const;
 
 export default function PageAcademyExecutive() {
   return (
@@ -13,8 +46,8 @@ export default function PageAcademyExecutive() {
         {/* NAV */}
         <SiteNav active="academy" />
         {/* HERO */}
-        <div style={{position:"relative",overflow:"hidden",padding:"56px 64px 64px",backgroundColor:"#FDFBF0"}}>
-          <div style={{display:"grid",gridTemplateColumns:"1.15fr .85fr",gap:"64px",alignItems:"end"}}>
+        <div className="dl-page-hero-texture" style={{position:"relative",overflow:"hidden",padding:"56px 64px 64px",backgroundColor:"#FDFBF0"}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"end"}}>
             <div>
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>Executive Programme · Certified Design Leader</span>
               <h1 style={{font:"400 82px/1.02 'Faculty Glyphic',serif",color:"#44063B",letterSpacing:"-.02em",margin:"32px 0 32px",textWrap:"balance"}}>The full craft of design leadership.</h1>
@@ -22,7 +55,7 @@ export default function PageAcademyExecutive() {
                 Four weeks for practitioners moving into the most senior and independent roles, design operations, fractional practice, client management, and research methodology.
               </p>
               <div style={{display:"flex",alignItems:"center",gap:"24px"}}>
-                <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"16px 26px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Apply for the next cohort →</Link>
+                <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"16px 26px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Apply for the next cohort <ArrowIcon /></Link>
                 <a className="dl-link" href="#curriculum" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"4px"}}>See the curriculum</a>
               </div>
             </div>
@@ -59,7 +92,7 @@ export default function PageAcademyExecutive() {
         </div>
         {/* WHO IT'S FOR */}
         <div style={{padding:"100px 64px",backgroundColor:"#44073B"}}>
-          <div style={{display:"grid",gridTemplateColumns:".9fr 1.1fr",gap:"64px",alignItems:"start"}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
             <div>
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>Who it's for</span>
               <h2 style={{font:"400 46px/1.12 'Faculty Glyphic',serif",color:"#FDFBF0",margin:"24px 0 0",letterSpacing:"-.01em"}}>You already lead, Now you want to scale and learn the right tools.</h2>
@@ -117,7 +150,7 @@ export default function PageAcademyExecutive() {
         <div style={{padding:"118px 64px 118px"}}>
           <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline",marginBottom:"44px"}}>
             <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>Taught by practitioners</span>
-            <Link className="dl-btn2" href="/faculty">See full faculty →</Link>
+            <Link className="dl-btn2" href="/faculty">See full faculty <ArrowIcon /></Link>
           </div>
           <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:"24px"}}>
             <div>
@@ -179,63 +212,19 @@ export default function PageAcademyExecutive() {
             </div>
           </div>
         </div>
-        <div className="dl-tsti" data-tidx="0" style={{padding:"110px 64px",position:"relative",overflow:"hidden",backgroundColor:"#FDFBF0"}}>
-          <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:"14px"}}>
-            <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".14em",textTransform:"uppercase"}}>In their words</span>
-            <div style={{display:"flex",gap:"10px"}}>
-              <div className="dl-tarr" data-tnav="-1">←</div>
-              <div className="dl-tarr" data-tnav="1">→</div>
-            </div>
-          </div>
-          <div style={{position:"relative",minHeight:"230px"}}>
-            <figure className="dl-tslide" data-i="0" style={{margin:"0"}}>
-              <blockquote style={{font:"400 40px/1.24 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 40px",maxWidth:"1080px",letterSpacing:"-.01em"}}>
-                "By the end of Week 2 I had priced my first fractional engagement. A quarter later the Network placed me."
-              </blockquote>
-              <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:"24px"}}>
-                <div style={{display:"flex",alignItems:"center",gap:"16px"}}>
-                  <div style={{width:"52px",height:"52px",border:"1px solid rgba(68,6,59,.6)",display:"flex",alignItems:"center",justifyContent:"center",font:"400 15px 'Spline Sans Mono',monospace",color:"#44063B"}}>EG</div>
-                  <div>
-                    <div style={{font:"400 15px 'Spline Sans Mono',monospace",color:"#44063B"}}>Executive graduate</div>
-                    <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",marginTop:"3px"}}>Fractional Design Leader · Lagos</div>
-                  </div>
-                </div>
-                <div style={{display:"flex",gap:"9px"}}>
-                  <div className="dl-tdot" data-tdot="0" style={{background:"#44063B"}}></div>
-                  <div className="dl-tdot" data-tdot="1" style={{background:"transparent"}}></div>
-                </div>
-              </div>
-            </figure>
-            <figure className="dl-tslide" data-i="1" style={{margin:"0"}}>
-              <blockquote style={{font:"400 40px/1.24 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 40px",maxWidth:"1080px",letterSpacing:"-.01em"}}>"The room was the value. Twelve operators at my level, and the standard held."</blockquote>
-              <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:"24px"}}>
-                <div style={{display:"flex",alignItems:"center",gap:"16px"}}>
-                  <div style={{width:"52px",height:"52px",border:"1px solid rgba(68,6,59,.6)",display:"flex",alignItems:"center",justifyContent:"center",font:"400 15px 'Spline Sans Mono',monospace",color:"#44063B"}}>EG</div>
-                  <div>
-                    <div style={{font:"400 15px 'Spline Sans Mono',monospace",color:"#44063B"}}>Executive graduate</div>
-                    <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",marginTop:"3px"}}>Design Director · Pan-African</div>
-                  </div>
-                </div>
-                <div style={{display:"flex",gap:"9px"}}>
-                  <div className="dl-tdot" data-tdot="0" style={{background:"#44063B"}}></div>
-                  <div className="dl-tdot" data-tdot="1" style={{background:"transparent"}}></div>
-                </div>
-              </div>
-            </figure>
-          </div>
-        </div>
+        <TestimonialCarousel testimonials={TESTIMONIALS} />
         {/* CTA */}
         <div style={{padding:"130px 64px",background:"#FF6D35",textAlign:"center"}}>
           <h2 style={{font:"400 60px/1.06 'Faculty Glyphic',serif",color:"#44063B",margin:"0 auto 30px",maxWidth:"800px",letterSpacing:"-.015em",textWrap:"balance"}}>One cohort a year. Twelve places.</h2>
           <p style={{font:"400 18px/1.55 'Inter Tight',sans-serif",color:"#44073BEB",margin:"0 auto 42px",maxWidth:"480px",width:"394px",height:"55px"}}>Apply for the next Executive intake, or ask us anything before you do.</p>
           <div style={{display:"flex",gap:"18px",justifyContent:"center"}}>
-            <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FF6D35",background:"#FDFBF0",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase"}}>Apply now →</Link>
+            <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FF6D35",background:"#FDFBF0",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase"}}>Apply now <ArrowIcon /></Link>
             <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"transparent",border:"1px solid rgba(253,251,240,.6)",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase"}}>Ask a question</Link>
           </div>
         </div>
         {/* FAQ */}
         <div style={{padding:"118px 64px",background:"#FDFBF0"}}>
-          <div style={{display:"grid",gridTemplateColumns:".75fr 1.25fr",gap:"64px",alignItems:"start"}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
             <div>
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>FAQs</span>
               <h2 style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#44073B",margin:"24px 0 0",letterSpacing:"-.01em"}}>Executive, answered.</h2>

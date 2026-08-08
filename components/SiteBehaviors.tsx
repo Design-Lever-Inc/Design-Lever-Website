@@ -6,8 +6,6 @@ import { useEffect } from "react";
  * scripts. Markup opts in via data attributes; pages without the markup are
  * unaffected.
  *
- *  - Testimonial slider: .dl-tsti[data-tidx] with .dl-tslide[data-i] slides,
- *    [data-tnav] arrows, [data-tdot] dots. Auto-advances every 5.5s.
  *  - Faculty filter pills: [data-fcat] pills set data-filter on #dl-facwrap.
  *  - Bench: [data-bcat] filter pills, [data-exec] roster -> profile view,
  *    .dl-back returns to roster.
@@ -15,32 +13,9 @@ import { useEffect } from "react";
  */
 export function SiteBehaviors() {
   useEffect(() => {
-    const setSlide = (box: Element, nx: number) => {
-      box.setAttribute("data-tidx", String(nx));
-      const ink = box.getAttribute("data-dotink") || "#44063B";
-      box.querySelectorAll<HTMLElement>("[data-tdot]").forEach((d) => {
-        d.style.background = +(d.getAttribute("data-tdot") ?? -1) === nx ? ink : "transparent";
-      });
-    };
-
     const onClick = (e: MouseEvent) => {
       const target = e.target as Element | null;
       if (!target) return;
-
-      // testimonial slider arrows + dots
-      const t = target.closest("[data-tnav],[data-tdot]");
-      if (t) {
-        const box = t.closest(".dl-tsti");
-        if (box) {
-          const n = box.querySelectorAll(".dl-tslide").length;
-          const cur = +(box.getAttribute("data-tidx") ?? 0);
-          const nx = t.hasAttribute("data-tdot")
-            ? +(t.getAttribute("data-tdot") ?? 0)
-            : (cur + +(t.getAttribute("data-tnav") ?? 1) + n) % n;
-          setSlide(box, nx);
-          return;
-        }
-      }
 
       // faculty filter pills
       const f = target.closest("[data-fcat]");
@@ -98,18 +73,9 @@ export function SiteBehaviors() {
       }
     };
 
-    const timer = setInterval(() => {
-      document.querySelectorAll(".dl-tsti").forEach((box) => {
-        const n = box.querySelectorAll(".dl-tslide").length;
-        if (n < 2) return;
-        setSlide(box, (+(box.getAttribute("data-tidx") ?? 0) + 1) % n);
-      });
-    }, 5500);
-
     document.addEventListener("click", onClick);
     return () => {
       document.removeEventListener("click", onClick);
-      clearInterval(timer);
     };
   }, []);
 

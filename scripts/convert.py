@@ -47,7 +47,7 @@ ROUTES = {
 }
 
 TITLES = {
-    "/": "Design Lever Inc. — Africa's first fractional design leadership company",
+    "/": "Design Lever Inc.: Africa's first fractional design leadership company",
     "/academy": "Academy",
     "/academy/foundation": "Academy · Foundation track",
     "/academy/executive": "Academy · Executive track",
@@ -522,7 +522,7 @@ def convert_page(fname):
         head.append('"use client";\n')
         head.extend(imports)
         head.append("")
-        head.append("/* TODO(port): state logic from prototype — see ./_logic.js */")
+        head.append("/* TODO(port): state logic from prototype: see ./_logic.js */")
     else:
         head.extend(imports)
         head.append('import type { Metadata } from "next";')

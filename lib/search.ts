@@ -205,7 +205,7 @@ function scoreEntry(entry: SearchEntry, tokens: string[], raw: string): number {
     if (keys.includes(t)) score += 3;
     if (desc.includes(t)) score += 1;
   }
-  // nudge articles/spotlights up a touch — the footer search is content-first
+  // nudge articles/spotlights up a touch: the footer search is content-first
   if (score > 0 && entry.type !== "Page") score += 0.5;
   return score;
 }

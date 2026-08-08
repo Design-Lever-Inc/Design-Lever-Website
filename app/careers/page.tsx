@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ImageSlot } from "@/components/ImageSlot";
+import { ArrowIcon } from "@/components/ArrowIcon";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "Careers", description: "We hire practitioners who have done the job, not people who talk about it. A small core, senior standard, documented method." };
@@ -13,7 +14,7 @@ export default function PageCareers() {
         {/* NAV */}
         <SiteNav active="about" />
         {/* HERO */}
-        <div style={{position:"relative",overflow:"hidden",padding:"100px 64px 96px"}}>
+        <div className="dl-page-hero-texture" style={{position:"relative",overflow:"hidden",padding:"100px 64px 96px"}}>
           <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:"72px"}}>
             <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>Careers · Join us</span>
           </div>
@@ -35,46 +36,46 @@ export default function PageCareers() {
               <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B"}}>Associate Practitioner</div>
               <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".04em"}}>Fractional</div>
               <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".04em"}}>Lagos / remote</div>
-              <Link className="dl-link" href="/contact" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF6D35",textDecoration:"none",letterSpacing:".06em",textTransform:"uppercase",justifySelf:"end"}}>Apply →</Link>
+              <Link className="dl-link" href="/contact" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF6D35",textDecoration:"none",letterSpacing:".06em",textTransform:"uppercase",justifySelf:"end"}}>Apply <ArrowIcon /></Link>
             </div>
             <div style={{display:"grid",gridTemplateColumns:"1fr 200px 200px 130px",gap:"24px",alignItems:"center",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
               <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B"}}>Research Lead</div>
               <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".04em"}}>Full-time</div>
               <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".04em"}}>Lagos</div>
-              <Link className="dl-link" href="/contact" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF6D35",textDecoration:"none",letterSpacing:".06em",textTransform:"uppercase",justifySelf:"end"}}>Apply →</Link>
+              <Link className="dl-link" href="/contact" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF6D35",textDecoration:"none",letterSpacing:".06em",textTransform:"uppercase",justifySelf:"end"}}>Apply <ArrowIcon /></Link>
             </div>
             <div style={{display:"grid",gridTemplateColumns:"1fr 200px 200px 130px",gap:"24px",alignItems:"center",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
               <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B"}}>Community Lead, The Lever</div>
               <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".04em"}}>Full-time</div>
               <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".04em"}}>Remote</div>
-              <Link className="dl-link" href="/contact" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF6D35",textDecoration:"none",letterSpacing:".06em",textTransform:"uppercase",justifySelf:"end"}}>Apply →</Link>
+              <Link className="dl-link" href="/contact" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF6D35",textDecoration:"none",letterSpacing:".06em",textTransform:"uppercase",justifySelf:"end"}}>Apply <ArrowIcon /></Link>
             </div>
             <div style={{display:"grid",gridTemplateColumns:"1fr 200px 200px 130px",gap:"24px",alignItems:"center",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
               <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B"}}>Academy Faculty</div>
               <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".04em"}}>Rolling</div>
               <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".04em"}}>Africa / diaspora</div>
-              <Link className="dl-link" href="/contact" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF6D35",textDecoration:"none",letterSpacing:".06em",textTransform:"uppercase",justifySelf:"end"}}>Apply →</Link>
+              <Link className="dl-link" href="/contact" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF6D35",textDecoration:"none",letterSpacing:".06em",textTransform:"uppercase",justifySelf:"end"}}>Apply <ArrowIcon /></Link>
             </div>
           </div>
         </div>
         {/* HOW WE HIRE */}
         {/* TEACH WITH US */}
         <div style={{padding:"120px 64px",backgroundColor:"#44073B"}}>
-          <div style={{display:"grid",gridTemplateColumns:"1.1fr .9fr",gap:"72px",alignItems:"center"}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"72px",alignItems:"center"}}>
             <div>
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>Teach with us</span>
               <h2 style={{font:"400 48px/1.08 'Faculty Glyphic',serif",color:"#FDFBF0",margin:"22px 0 22px",letterSpacing:"-.01em"}}>Done the job? Build the people who do it next.</h2>
               <p style={{font:"400 17px/1.65 'Inter Tight',sans-serif",color:"rgba(253,251,240,.7)",margin:"0 0 36px",maxWidth:"440px"}}>
                 We look for senior design leaders to lead sessions and mentor cohorts. One session, or a standing role.
               </p>
-              <Link className="dl-btn hov-cream" href="/faculty" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#FF6D35"}}>See the faculty →</Link>
+              <Link className="dl-btn hov-cream" href="/faculty" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#FF6D35"}}>See the faculty <ArrowIcon /></Link>
             </div>
             <ImageSlot id="dl-careers-teach" src="/images/scenes/careers-teach.jpg" style={{width:"100%",height:"340px",display:"block"}} placeholder="A session in progress" />
           </div>
         </div>
         {/* FAQ */}
         <div style={{padding:"118px 64px",background:"#FDFBF0"}}>
-          <div style={{display:"grid",gridTemplateColumns:".75fr 1.25fr",gap:"64px",alignItems:"start"}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
             <div>
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>FAQs</span>
               <h2 style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 0",letterSpacing:"-.01em"}}>Working here, answered.</h2>

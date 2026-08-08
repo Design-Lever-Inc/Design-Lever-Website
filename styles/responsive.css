@@ -4,7 +4,7 @@
    overrides use [style*=] attribute selectors + !important, the same
    technique as the prototype's own responsive layer.
 
-   NOTE: every style attribute selector appears in two spellings —
+   NOTE: every style attribute selector appears in two spellings:
    compact (`a:b`, server-rendered HTML) and spaced (`a: b`, the browser's
    CSSOM-normalized form after React hydration/re-render). Keep both. */
 
@@ -111,7 +111,7 @@
 /* ---------- Divider-column grids ---------- */
 /* Multi-column `gap:0` grids (how-it-works steps, the LEVER role columns,
    stage/symptom/blocker) use column border-rights + asymmetric per-cell
-   padding — the first cell flush-left, the rest padded inward for the gutter.
+   padding. The first cell is flush-left, with the rest padded inward for the gutter.
    When they collapse to one column on mobile that padding leaves the first
    item flush-left and the rest indented, and the border-rights become stray
    vertical lines. Reset stacked cells to a single flush-left column with no
@@ -132,7 +132,7 @@
   }
   /* 2-up content splits (diagnostic calculator) keep their panel padding but
      shed the desktop column divider, which becomes a stray vertical line once
-     the two halves stack. Border only — never touch the padding here. */
+     the two halves stack. Border only; never touch the padding here. */
   [style*="grid-template-columns:1fr 1fr"][style*="gap:0"] > *,
   [style*="grid-template-columns: 1fr 1fr"][style*="gap: 0"] > * {
     border-left: 0 !important;
@@ -148,35 +148,42 @@
 /* ---------- Home testimonial (mobile) ---------- */
 @media (max-width: 760px) {
   /* the pagination dots read as clutter on a phone and crowd the author
-     row — hide them; the slider still auto-advances and the arrows remain */
+     row, so hide them; the slider still auto-advances and the arrows remain */
   .dl-tdots { display: none !important; }
   /* reserve space for the tallest quote so swapping slides doesn't jump the
      section height (quotes vary in length; the longest runs ~7 lines here) */
   .dl-tquote { min-height: 300px !important; }
 }
 
-/* ---------- Footer social / copyright sub-row ---------- */
-/* The social links and the © line share one space-between row that wraps on
-   narrow screens with no row-gap, so the copyright jams against the links.
-   Give the wrapped rows breathing room and let them align left. */
-@media (max-width: 600px) {
-  .dl-foot-sub {
-    row-gap: 16px;
-    align-items: flex-start !important;
-    justify-content: flex-start !important;
-  }
-}
-
 /* ---------- Home flywheel band ---------- */
 /* On desktop this is a hover-driven horizontal accordion: hovering a line
    fills it with that line's accent (--c) and flips its text to cream (--ink).
    On touch there's no hover, so a tap would trigger that inversion and leave
-   cream text on the pink band — invisible on 3 of the 4 lines. Here it becomes
+   cream text on the pink band, making it invisible on 3 of the 4 lines. Here it becomes
    a static, always-open stacked list that stays on the pink band with plum
    text (per the light-surface contrast rule), and every hover-driven colour
    change is neutralised. Each line keeps its identity colour as a non-text
    left accent, so the section retains its character accessibly. */
+@media (min-width: 901px) and (max-width: 1200px) {
+  /* Keep the accordion at laptop/tablet-landscape widths, but give the active
+     story more room and bring its typography back into the section scale. */
+  .dl-corp-flywheel__head { padding: 88px 48px 50px; }
+  .dl-corp-flywheel__band-wrap { padding: 0 48px 68px; }
+  .dl-imgcol { flex-basis: 27%; min-height: 368px; }
+  .dl-line { gap: 32px; padding: 28px 15px 50px; }
+  .dl-lname { font-size: 36px; }
+  .dl-lwrite-in { width: 280px; max-width: 280px; }
+  .dl-lprop { font-size: 20px; line-height: 1.18; margin-bottom: 13px; }
+  .dl-lblurb { font-size: 15px; line-height: 1.48; margin-bottom: 22px; }
+  .dl-lgo { font-size: 10.5px; }
+  .dl-lcap { left: 16px; right: 14px; bottom: 19px; font-size: 10px; }
+  .dl-lines:hover .dl-line { flex-basis: .5%; }
+  .dl-lines:hover .dl-line:hover { flex-grow: 6; }
+}
+
 @media (max-width: 900px) {
+  .dl-corp-flywheel__head { padding: 76px 40px 42px; }
+  .dl-corp-flywheel__band-wrap { padding: 0 40px 64px; }
   .dl-band { flex-direction: column; }
   .dl-imgcol { display: none; }
   /* stray ↗ overlay belongs to the (now hidden) desktop image column */
@@ -193,8 +200,9 @@
     border-top: 0 !important;
     border-left: 3px solid var(--c) !important;
     flex-direction: column;
-    padding: 2px 0 2px 20px !important;
-    margin-bottom: 34px;
+    gap: 0;
+    padding: 0 0 2px 18px !important;
+    margin-bottom: 28px;
   }
   .dl-lines .dl-line:last-child { margin-bottom: 0; }
   /* text colours stay dark/branded regardless of the hover inversion */
@@ -202,9 +210,13 @@
   .dl-lines:hover .dl-line:hover .dl-lname {
     writing-mode: horizontal-tb !important;
     transform: none !important;
-    font-size: 30px !important;
+    opacity: 1 !important;
+    font: 500 10.5px/1.4 'Spline Sans Mono', monospace !important;
+    letter-spacing: .11em !important;
+    text-transform: uppercase;
     color: #44063B !important;
-    margin-bottom: 16px !important;
+    -webkit-text-stroke: 0 !important;
+    margin-bottom: 11px !important;
   }
   .dl-lwrite,
   .dl-lines:hover .dl-line:hover .dl-lwrite {
@@ -214,10 +226,28 @@
     color: #44063B !important;
   }
   .dl-lwrite-in { width: auto !important; max-width: none !important; }
-  .dl-lblurb { color: rgba(68, 6, 59, .72) !important; margin: 0 0 20px !important; font-size: 15.5px !important; }
+  .dl-lprop { max-width: 520px; margin-bottom: 10px; font-size: 21px; line-height: 1.18; }
+  .dl-lblurb { max-width: 580px; color: rgba(68, 6, 59, .72) !important; margin: 0 0 17px !important; font-size: 15px !important; line-height: 1.48; }
+  .dl-lgo { font-size: 10.5px; }
   .dl-lgo { color: #FF6D35 !important; }
   .dl-lidx { display: none; }
   .dl-lcap { display: none; }
+}
+
+@media (max-width: 600px) {
+  .dl-corp-flywheel__head { padding: 64px 20px 36px; }
+  .dl-corp-flywheel__band-wrap { padding: 0 20px 58px; }
+  .dl-corp-flywheel__head h2 { font-size: clamp(34px, 9.5vw, 40px); }
+  .dl-line,
+  .dl-lines:hover .dl-line,
+  .dl-lines:hover .dl-line:hover {
+    padding-left: 14px !important;
+    margin-bottom: 24px;
+  }
+  .dl-lname,
+  .dl-lines:hover .dl-line:hover .dl-lname { margin-bottom: 8px !important; }
+  .dl-lprop { font-size: 19px; }
+  .dl-lblurb { font-size: 14.5px !important; margin-bottom: 15px !important; }
 }
 
 /* ---------- Row grids with fixed px columns ---------- */

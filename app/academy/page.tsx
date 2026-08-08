@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ImageSlot } from "@/components/ImageSlot";
+import { ArrowIcon } from "@/components/ArrowIcon";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "Academy", description: "The Certified Design Leader programme taught entirely by experienced practitioners, grounded in original African research." };
@@ -13,7 +14,7 @@ export default function PageAcademy() {
         {/* NAV */}
         <SiteNav active="academy" />
         {/* HERO, image forward */}
-        <div style={{position:"relative",overflow:"hidden",padding:"96px 64px 100px",background:"#FF6D35"}}>
+        <div className="dl-page-hero-texture dl-page-hero-texture--motif" style={{position:"relative",overflow:"hidden",padding:"96px 64px 100px",background:"#FF6D35"}}>
           <svg viewBox="0 0 600 600" width="620" height="620" fill="none" stroke="#44063B" style={{position:"absolute",top:"-90px",right:"-150px",opacity:".9",pointerEvents:"none"}}>
             <circle cx="300" cy="300" r="288" strokeWidth="1" strokeDasharray="4 8"></circle>
             <circle cx="300" cy="260" r="150" strokeWidth="1" strokeDasharray="4 8"></circle>
@@ -34,7 +35,7 @@ export default function PageAcademy() {
               <br />
             </p>
             <div style={{display:"flex",alignItems:"center",gap:"28px"}}>
-              <a className="dl-btn hov-orange" href="#tracks" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44073B",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#FDFBF0"}}>See the two tracks →</a>
+              <a className="dl-btn hov-orange" href="#tracks" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44073B",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#FDFBF0"}}>See the two tracks <ArrowIcon direction="down" /></a>
               <a className="dl-link" href="#faculty" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid #44063B",paddingBottom:"4px"}}>Meet the faculty</a>
             </div>
           </div>
@@ -94,7 +95,7 @@ export default function PageAcademy() {
                   </div>
                 </div>
                 <div style={{display:"flex",alignItems:"center",gap:"22px"}}>
-                  <Link className="dl-btn" href="/academy/foundation" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"15px 24px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>View programme →</Link>
+                  <Link className="dl-btn" href="/academy/foundation" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"15px 24px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>View programme <ArrowIcon /></Link>
                   <Link className="dl-link" href="/contact" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"3px"}}>Apply</Link>
                 </div>
               </div>
@@ -127,7 +128,7 @@ export default function PageAcademy() {
                   </div>
                 </div>
                 <div style={{display:"flex",alignItems:"center",gap:"22px"}}>
-                  <Link className="dl-btn" href="/academy/executive" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",padding:"15px 24px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#FF6D35"}}>View programme →</Link>
+                  <Link className="dl-btn" href="/academy/executive" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",padding:"15px 24px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#FF6D35"}}>View programme <ArrowIcon /></Link>
                   <Link className="dl-link" href="/contact" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF6D35",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid rgba(222,223,77,.5)",paddingBottom:"3px"}}>Apply</Link>
                 </div>
               </div>
@@ -148,7 +149,7 @@ export default function PageAcademy() {
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>The faculty</span>
               <h2 style={{font:"400 52px/1.08 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 0",letterSpacing:"-.01em"}}>Taught by design directors in Africa and globally.</h2>
             </div>
-            <a className="dl-link" href="#faculty" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid #44063B",paddingBottom:"4px",width:"216px",height:"19px"}}>Meet the faculty →</a>
+            <a className="dl-link" href="#faculty" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid #44063B",paddingBottom:"4px",width:"216px",height:"19px"}}>Meet the faculty <ArrowIcon direction="down" /></a>
           </div>
           <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:"24px"}}>
             <div className="dl-facultycard">
@@ -177,7 +178,7 @@ export default function PageAcademy() {
             </div>
           </div>
           <div style={{marginTop:"44px"}}>
-            <Link className="dl-btn hov-orange" href="/faculty" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"16px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>View the full faculty →</Link>
+            <Link className="dl-btn hov-orange" href="/faculty" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"16px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>View the full faculty <ArrowIcon /></Link>
           </div>
         </div>
         {/* WHAT MAKES IT WORK */}
@@ -226,7 +227,7 @@ export default function PageAcademy() {
           <p style={{font:"400 18px/1.55 'Inter Tight',sans-serif",color:"rgba(68,6,59,.7)",margin:"0 auto 42px",maxWidth:"500px"}}>
             Cohorts are small and fill on referral. Register your interest for the next Foundation or Executive intake.
           </p>
-          <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase"}}>Register your interest →</Link>
+          <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase"}}>Register your interest <ArrowIcon /></Link>
         </div>
         {/* FOOTER */}
         <SiteFooter />

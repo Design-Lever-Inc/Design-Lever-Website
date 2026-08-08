@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ImageSlot } from "@/components/ImageSlot";
+import { ArrowIcon } from "@/components/ArrowIcon";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "Faculty", description: "Every session is led by a working senior design leader. Nigerian CDOs, directors, and diaspora practitioners. No career academics." };
@@ -13,7 +14,7 @@ export default function PageFaculty() {
         {/* NAV */}
         <SiteNav active="academy" />
         {/* HERO */}
-        <div style={{position:"relative",overflow:"hidden",padding:"80px 64px 0",backgroundColor:"#FDFBF0"}}>
+        <div className="dl-page-hero-texture" style={{position:"relative",overflow:"hidden",padding:"80px 64px 0",backgroundColor:"#FDFBF0"}}>
           <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:"56px"}}>
             <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>The faculty</span>
           </div>
@@ -179,14 +180,14 @@ export default function PageFaculty() {
         </div>
         {/* TEACH WITH US */}
         <div id="teach" style={{padding:"120px 64px",backgroundColor:"#FF6D35"}}>
-          <div style={{display:"grid",gridTemplateColumns:"1.1fr .9fr",gap:"72px",alignItems:"center"}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"72px",alignItems:"center"}}>
             <div>
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>Teach with us</span>
               <h2 style={{font:"400 50px/1.08 'Faculty Glyphic',serif",color:"#44073B",margin:"24px 0 24px",letterSpacing:"-.01em"}}>Help build the next generation of design leaders</h2>
               <p style={{font:"400 17px/1.65 'Inter Tight',sans-serif",color:"#44073BB3",margin:"0 0 36px",maxWidth:"460px"}}>
                 We are always looking for senior design leaders, in Nigeria and across the diaspora, to lead sessions, mentor cohorts, and shape the curriculum.
               </p>
-              <Link className="dl-btn hov-cream" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#44073B"}}>Apply to teach →</Link>
+              <Link className="dl-btn hov-cream" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#44073B"}}>Apply to teach <ArrowIcon /></Link>
             </div>
             <ImageSlot id="dl-fclt-teach" src="/images/scenes/faculty-teach.jpg" style={{width:"100%",height:"360px",display:"block"}} placeholder="A faculty member leading a session" />
           </div>

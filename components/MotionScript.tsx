@@ -2,7 +2,7 @@
 import { useEffect, useLayoutEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 
-// useLayoutEffect on the client (so the hidden state lands before paint — no
+// useLayoutEffect on the client (so the hidden state lands before paint, with no
 // flash), useEffect on the server (React would warn otherwise; it's a no-op).
 const useIsoLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 

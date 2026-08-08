@@ -1,13 +1,46 @@
 import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
+import { ArrowIcon } from "@/components/ArrowIcon";
+import { TestimonialCarousel } from "@/components/TestimonialCarousel";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Network",
   description:
-    "The continent's design leadership, findable. Structured placement on your own terms — practitioners never pay to be placed.",
+    "The continent's design leadership, findable. Structured placement on your own terms; practitioners never pay to be placed.",
 };
+
+const TESTIMONIALS = [
+  {
+    quote: "We needed leadership for a six-month push, not a permanent hire. Matched in a week, one fee.",
+    initials: "KM",
+    name: "Kevin Mwangi",
+    designation: "VP Product",
+    company: "LatticePay",
+    headshot: "",
+    href: "/resources/case-studies/a-six-month-leadership-push",
+    metrics: [
+      ["7", "Days to match"],
+      ["1", "Placement fee"],
+      ["6", "Months of leadership"],
+    ],
+  },
+  {
+    quote: "One vetted leader, one fee, six weeks. No agency margin.",
+    initials: "TA",
+    name: "Tola Adebayo",
+    designation: "Founder & CEO",
+    company: "Marula Market",
+    headshot: "",
+    href: "/resources/case-studies/one-vetted-leader",
+    metrics: [
+      ["1", "Vetted leader"],
+      ["6", "Weeks to start"],
+      ["0", "Agency margin"],
+    ],
+  },
+] as const;
 
 export default function PageNetwork() {
   return (
@@ -16,7 +49,7 @@ export default function PageNetwork() {
         {/* NAV */}
         <SiteNav active="network" />
         {/* HERO */}
-        <div style={{position:"relative",overflow:"hidden",padding:"96px 64px 100px",background:"#DEDF4D"}}>
+        <div className="dl-page-hero-texture dl-page-hero-texture--motif" style={{position:"relative",overflow:"hidden",padding:"96px 64px 100px",background:"#DEDF4D"}}>
           <div style={{position:"relative",maxWidth:"920px",zIndex:"1"}}>
             <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".14em",textTransform:"uppercase"}}>THE NETWORK</span>
             <h1 style={{font:"400 96px/1.0 'Faculty Glyphic',serif",color:"#44063B",letterSpacing:"-.02em",margin:"44px 0 40px",textWrap:"balance"}}>Certified design leaders, matched to companies.</h1>
@@ -24,7 +57,7 @@ export default function PageNetwork() {
               A vetted placement platform, not a freelance marketplace. Practitioners work completely independently, we only earn when a match is made.
             </p>
             <div style={{display:"flex",alignItems:"center",gap:"28px"}}>
-              <a className="dl-btn hov-orange" href="#companies" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>For companies →</a>
+              <a className="dl-btn hov-orange" href="#companies" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>For companies <ArrowIcon direction="down" /></a>
               <a className="dl-link" href="#practitioners" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid #44063B",paddingBottom:"4px"}}>For practitioners</a>
             </div>
           </div>
@@ -55,7 +88,7 @@ export default function PageNetwork() {
               <p style={{font:"400 15px/1.6 'Inter Tight',sans-serif",color:"rgba(68,6,59,.66)",margin:"0 0 28px",maxWidth:"440px"}}>
                 Gated, serious, and evidence-based. Events, the research library, and peers who hold the standard.
               </p>
-              <span style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".04em",textTransform:"uppercase",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"3px"}}>Enter The Lever →</span>
+              <span style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".04em",textTransform:"uppercase",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"3px"}}>Enter The Lever <ArrowIcon /></span>
             </Link>
             <Link className="dl-netcard" href="/talent-hub" style={{display:"block",border:"1px solid rgba(68,6,59,.18)",padding:"44px 40px",textDecoration:"none",transition:"border-color .15s"}}>
               <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#FF6D35" strokeWidth="1.4" style={{display:"block",marginBottom:"22px"}}>
@@ -65,7 +98,7 @@ export default function PageNetwork() {
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".08em",marginBottom:"12px"}}>THE TALENT NETWORK PLATFORM</div>
               <div style={{font:"400 30px 'Faculty Glyphic',serif",color:"#44063B",marginBottom:"14px"}}>Hire fractional design executives.</div>
               <p style={{font:"400 15px/1.6 'Inter Tight',sans-serif",color:"rgba(68,6,59,.66)",margin:"0 0 28px",maxWidth:"440px"}}>Vetted fractional CDOs, VPs and Heads of Design, matched to companies in days.</p>
-              <span style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".04em",textTransform:"uppercase",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"3px"}}>Enter the Talent Hub →</span>
+              <span style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".04em",textTransform:"uppercase",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"3px"}}>Enter the Talent Hub <ArrowIcon /></span>
             </Link>
           </div>
         </div>
@@ -95,7 +128,7 @@ export default function PageNetwork() {
         </div>
         {/* FOR COMPANIES */}
         <div id="companies" style={{padding:"118px 64px",borderTop:"1px solid rgba(68,6,59,.16)"}}>
-          <div id="dl-net-companies-grid" style={{display:"grid",gridTemplateColumns:".9fr 1.1fr",gap:"64px",alignItems:"start"}}>
+          <div id="dl-net-companies-grid" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
             <div>
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>For companies</span>
               <h2 style={{font:"400 46px/1.12 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 22px",letterSpacing:"-.01em"}}>Fractional design leadership, without the search.</h2>
@@ -130,7 +163,7 @@ export default function PageNetwork() {
         </div>
         {/* FOR PRACTITIONERS */}
         <div id="practitioners" style={{padding:"118px 64px",borderTop:"1px solid rgba(68,6,59,.16)"}}>
-          <div style={{display:"grid",gridTemplateColumns:"1.1fr .9fr",gap:"64px",alignItems:"start"}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
             <div style={{borderTop:"1px solid rgba(68,6,59,.2)"}}>
               <div style={{display:"grid",gridTemplateColumns:"280px 1fr",gap:"36px",padding:"28px 0",borderBottom:"1px solid rgba(68,6,59,.16)"}}>
                 <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B"}}>Rigorous vetting</div>
@@ -157,57 +190,13 @@ export default function PageNetwork() {
               <p style={{font:"400 16px/1.65 'Inter Tight',sans-serif",color:"rgba(68,6,59,.66)",margin:"0 0 30px",maxWidth:"440px"}}>
                 The Network is where the continent's design leadership becomes findable, including talent that has left the country. Japa becomes a bridge, not a loss.
               </p>
-              <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"16px 26px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Apply to the Network →</Link>
+              <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"16px 26px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Apply to the Network <ArrowIcon /></Link>
             </div>
           </div>
         </div>
         {/* TESTIMONIAL */}
         {/* CTA */}
-        <div className="dl-tsti" data-tidx="0" data-dotink="#FDFBF0" style={{padding:"110px 64px",position:"relative",overflow:"hidden",backgroundColor:"#44073B"}}>
-          <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:"14px"}}>
-            <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>In their words</span>
-            <div style={{display:"flex",gap:"10px"}}>
-              <div className="dl-tarr" data-tnav="-1" style={{borderColor:"rgba(253,251,240,.4)",color:"#FDFBF0"}}>←</div>
-              <div className="dl-tarr" data-tnav="1" style={{borderColor:"rgba(253,251,240,.4)",color:"#FDFBF0"}}>→</div>
-            </div>
-          </div>
-          <div style={{position:"relative",minHeight:"230px"}}>
-            <figure className="dl-tslide" data-i="0" style={{margin:"0"}}>
-              <blockquote style={{font:"400 40px/1.24 'Faculty Glyphic',serif",color:"#FDFBF0",margin:"24px 0 40px",maxWidth:"1080px",letterSpacing:"-.01em"}}>
-                "We needed leadership for a six-month push, not a permanent hire. Matched in a week, one fee."
-              </blockquote>
-              <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:"24px"}}>
-                <div style={{display:"flex",alignItems:"center",gap:"16px"}}>
-                  <div style={{width:"52px",height:"52px",border:"1px solid rgba(253,251,240,.6)",display:"flex",alignItems:"center",justifyContent:"center",font:"400 15px 'Spline Sans Mono',monospace",color:"#FDFBF0"}}>PL</div>
-                  <div>
-                    <div style={{font:"400 15px 'Spline Sans Mono',monospace",color:"#FDFBF0"}}>Product Lead</div>
-                    <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.6)",marginTop:"3px"}}>Fintech · Nairobi</div>
-                  </div>
-                </div>
-                <div style={{display:"flex",gap:"9px"}}>
-                  <div className="dl-tdot" data-tdot="0" style={{background:"#FDFBF0"}}></div>
-                  <div className="dl-tdot" data-tdot="1" style={{background:"transparent"}}></div>
-                </div>
-              </div>
-            </figure>
-            <figure className="dl-tslide" data-i="1" style={{margin:"0"}}>
-              <blockquote style={{font:"400 40px/1.24 'Faculty Glyphic',serif",color:"#FDFBF0",margin:"24px 0 40px",maxWidth:"1080px",letterSpacing:"-.01em"}}>"One vetted leader, one fee, six weeks. No agency margin."</blockquote>
-              <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:"24px"}}>
-                <div style={{display:"flex",alignItems:"center",gap:"16px"}}>
-                  <div style={{width:"52px",height:"52px",border:"1px solid rgba(253,251,240,.6)",display:"flex",alignItems:"center",justifyContent:"center",font:"400 15px 'Spline Sans Mono',monospace",color:"#FDFBF0"}}>FD</div>
-                  <div>
-                    <div style={{font:"400 15px 'Spline Sans Mono',monospace",color:"#FDFBF0"}}>Founder</div>
-                    <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.6)",marginTop:"3px"}}>Marketplace · Lagos</div>
-                  </div>
-                </div>
-                <div style={{display:"flex",gap:"9px"}}>
-                  <div className="dl-tdot" data-tdot="0" style={{background:"#FDFBF0"}}></div>
-                  <div className="dl-tdot" data-tdot="1" style={{background:"transparent"}}></div>
-                </div>
-              </div>
-            </figure>
-          </div>
-        </div>
+        <TestimonialCarousel testimonials={TESTIMONIALS} />
         <div style={{padding:"130px 64px",background:"#DEDF4D",textAlign:"center"}}>
           <h2 style={{font:"400 62px/1.06 'Faculty Glyphic',serif",color:"#44063B",margin:"0 auto 30px",maxWidth:"840px",letterSpacing:"-.015em",textWrap:"balance"}}>Africa's design leadership, wherever it now lives.</h2>
           <p style={{font:"400 18px/1.55 'Inter Tight',sans-serif",color:"#44073BEB",margin:"0 auto 42px",maxWidth:"500px"}}>
@@ -220,7 +209,7 @@ export default function PageNetwork() {
         </div>
         {/* FAQ */}
         <div style={{padding:"118px 64px",background:"#FDFBF0"}}>
-          <div style={{display:"grid",gridTemplateColumns:".75fr 1.25fr",gap:"64px",alignItems:"start"}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
             <div>
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>FAQs</span>
               <h2 style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 0",letterSpacing:"-.01em"}}>The Network, answered.</h2>

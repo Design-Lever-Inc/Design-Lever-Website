@@ -9,7 +9,7 @@ import { MotionScript } from "@/components/MotionScript";
 
 export const metadata: Metadata = {
   title: {
-    default: "Design Lever Inc. — Africa's first fractional design leadership company",
+    default: "Design Lever Inc. | Africa's first fractional design leadership company",
     template: "%s · Design Lever Inc.",
   },
   description:

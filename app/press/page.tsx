@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ImageSlot } from "@/components/ImageSlot";
+import { ArrowIcon } from "@/components/ArrowIcon";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "Press", description: "Design is undervalued everywhere, but Africa pays the highest price. Design lever is changing that." };
@@ -13,7 +14,7 @@ export default function PagePress() {
         {/* NAV */}
         <SiteNav active="about" />
         {/* HERO */}
-        <div style={{position:"relative",overflow:"hidden",padding:"100px 64px 96px"}}>
+        <div className="dl-page-hero-texture" style={{position:"relative",overflow:"hidden",padding:"100px 64px 96px"}}>
           <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:"72px"}}>
             <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>Press · Media</span>
           </div>
@@ -26,7 +27,7 @@ export default function PagePress() {
         {/* FEATURED IN */}
         {/* STORY */}
         <div style={{padding:"118px 64px",borderTop:"1px solid rgba(68,6,59,.16)"}}>
-          <div style={{display:"grid",gridTemplateColumns:".75fr 1.25fr",gap:"64px",alignItems:"start"}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
             <div>
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>The story</span>
             </div>
@@ -58,7 +59,7 @@ export default function PagePress() {
                 <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",margin:"18px 0 8px"}}>Logo & wordmark</div>
                 <p style={{font:"400 14px/1.55 'Inter Tight',sans-serif",color:"rgba(68,6,59,.64)",margin:"0"}}>Full mark, wordmark, and clear-space rules in SVG and PNG.</p>
               </div>
-              <Link className="dl-link" href="/contact" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",textDecoration:"none",letterSpacing:".06em",textTransform:"uppercase"}}>Request →</Link>
+              <Link className="dl-link" href="/contact" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",textDecoration:"none",letterSpacing:".06em",textTransform:"uppercase"}}>Request <ArrowIcon /></Link>
             </div>
             <div style={{border:"1px solid rgba(68,6,59,.2)",padding:"32px",display:"flex",flexDirection:"column",gap:"16px",minHeight:"210px",justifyContent:"space-between"}}>
               <div>
@@ -69,7 +70,7 @@ export default function PagePress() {
                 <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",margin:"18px 0 8px"}}>Brand facts</div>
                 <p style={{font:"400 14px/1.55 'Inter Tight',sans-serif",color:"rgba(68,6,59,.64)",margin:"0"}}>The numbers, sourced, plus approved boilerplate copy.</p>
               </div>
-              <Link className="dl-link" href="/contact" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",textDecoration:"none",letterSpacing:".06em",textTransform:"uppercase"}}>Request →</Link>
+              <Link className="dl-link" href="/contact" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",textDecoration:"none",letterSpacing:".06em",textTransform:"uppercase"}}>Request <ArrowIcon /></Link>
             </div>
             <div style={{border:"1px solid rgba(68,6,59,.2)",padding:"32px",display:"flex",flexDirection:"column",gap:"16px",minHeight:"210px",justifyContent:"space-between"}}>
               <div>
@@ -81,7 +82,7 @@ export default function PagePress() {
                 <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",margin:"18px 0 8px"}}>Leadership bios</div>
                 <p style={{font:"400 14px/1.55 'Inter Tight',sans-serif",color:"rgba(68,6,59,.64)",margin:"0"}}>Founder and advisor biographies, and headshots.</p>
               </div>
-              <Link className="dl-link" href="/contact" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",textDecoration:"none",letterSpacing:".06em",textTransform:"uppercase"}}>Request →</Link>
+              <Link className="dl-link" href="/contact" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",textDecoration:"none",letterSpacing:".06em",textTransform:"uppercase"}}>Request <ArrowIcon /></Link>
             </div>
             <div style={{border:"1px solid rgba(68,6,59,.2)",padding:"32px",display:"flex",flexDirection:"column",gap:"16px",minHeight:"210px",justifyContent:"space-between"}}>
               <div>
@@ -92,7 +93,7 @@ export default function PagePress() {
                 <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B",margin:"18px 0 8px"}}>The report</div>
                 <p style={{font:"400 14px/1.55 'Inter Tight',sans-serif",color:"rgba(68,6,59,.64)",margin:"0"}}>The annual African Design Leadership Report, open access.</p>
               </div>
-              <Link className="dl-link" href="/contact" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",textDecoration:"none",letterSpacing:".06em",textTransform:"uppercase"}}>Request →</Link>
+              <Link className="dl-link" href="/contact" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",textDecoration:"none",letterSpacing:".06em",textTransform:"uppercase"}}>Request <ArrowIcon /></Link>
             </div>
           </div>
         </div>
@@ -145,7 +146,7 @@ export default function PagePress() {
         <div style={{padding:"130px 64px",background:"#FF6D35",textAlign:"center"}}>
           <h2 style={{font:"400 58px/1.08 'Faculty Glyphic',serif",color:"#FDFBF0",margin:"0 auto 26px",maxWidth:"760px",letterSpacing:"-.015em",textWrap:"balance"}}>Writing about African design?</h2>
           <p style={{font:"400 18px/1.55 'Inter Tight',sans-serif",color:"rgba(253,251,240,.92)",margin:"0 auto 40px",maxWidth:"460px"}}>We answer press same-day, and share data, methodology, and named sources.</p>
-          <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FF6D35",background:"#FDFBF0",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase"}}>press@designleverinc.com →</Link>
+          <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FF6D35",background:"#FDFBF0",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase"}}>press@designleverinc.com <ArrowIcon /></Link>
         </div>
         {/* FOOTER */}
         <SiteFooter />

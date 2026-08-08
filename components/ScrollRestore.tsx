@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 
 /** Per-page scroll persistence, as specified in the handoff: sessionStorage
- *  keyed by pathname. Restores only on a real page load (refresh/return) —
+ *  keyed by pathname. Restores only on a real page load (refresh/return),
  *  client-side navigations must land at the top like any link click, so
  *  there we only record, never restore. */
 export function ScrollRestore() {

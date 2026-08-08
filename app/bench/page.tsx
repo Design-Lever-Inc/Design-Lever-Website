@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ImageSlot } from "@/components/ImageSlot";
+import { ArrowIcon } from "@/components/ArrowIcon";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "The Bench", description: "Fifteen years across payments and banking. Builds design orgs that defend their budget with numbers." };
@@ -16,7 +17,7 @@ export default function PageBench() {
         <div id="dl-benchpage" data-view="roster">
           <div id="dl-roster">
             {/* HERO */}
-            <div style={{padding:"80px 64px 0",backgroundColor:"#FDFBF0"}}>
+            <div className="dl-page-hero-texture" style={{padding:"80px 64px 0",backgroundColor:"#FDFBF0"}}>
               <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:"56px"}}>
                 <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>TALENT NETWORK</span>
               </div>
@@ -76,8 +77,8 @@ export default function PageBench() {
           </div>
           <div className="dl-prof" data-prof="1">
             <div style={{padding:"72px 64px",background:"#2A0A25"}}>
-              <button className="dl-back" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"transparent",border:"1px solid rgba(253,251,240,.4)",padding:"10px 18px",letterSpacing:".08em",textTransform:"uppercase",cursor:"pointer",marginBottom:"48px"}}>← Back to the bench</button>
-              <div style={{display:"grid",gridTemplateColumns:"1.1fr .9fr",gap:"64px",alignItems:"start"}}>
+              <button className="dl-back" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"transparent",border:"1px solid rgba(253,251,240,.4)",padding:"10px 18px",letterSpacing:".08em",textTransform:"uppercase",cursor:"pointer",marginBottom:"48px"}}><ArrowIcon direction="left" /> Back to the bench</button>
+              <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
                 <div>
                   <h1 style={{font:"400 64px/1.04 'Faculty Glyphic',serif",color:"#FDFBF0",margin:"0 0 14px",letterSpacing:"-.02em"}}>Adaeze Okafor</h1>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.6)",letterSpacing:".06em",marginBottom:"24px"}}>FRACTIONAL CDO · LAGOS, NIGERIA</div>
@@ -89,7 +90,7 @@ export default function PageBench() {
                   <p style={{font:"400 18px/1.6 'Inter Tight',sans-serif",color:"rgba(253,251,240,.78)",margin:"0 0 40px",maxWidth:"520px"}}>
                     Fifteen years across payments and banking. Builds design orgs that defend their budget with numbers.
                   </p>
-                  <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"#DEDF4D",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Engage Adaeze →</Link>
+                  <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"#DEDF4D",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Engage Adaeze <ArrowIcon /></Link>
                 </div>
                 <ImageSlot id="dl-prof-1" src="/images/people/adaeze-okafor.jpg" style={{width:"100%",height:"420px",display:"block"}} placeholder="Portrait" />
               </div>
@@ -126,8 +127,8 @@ export default function PageBench() {
           </div>
           <div className="dl-prof" data-prof="2">
             <div style={{padding:"72px 64px",background:"#2A0A25"}}>
-              <button className="dl-back" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"transparent",border:"1px solid rgba(253,251,240,.4)",padding:"10px 18px",letterSpacing:".08em",textTransform:"uppercase",cursor:"pointer",marginBottom:"48px"}}>← Back to the bench</button>
-              <div style={{display:"grid",gridTemplateColumns:"1.1fr .9fr",gap:"64px",alignItems:"start"}}>
+              <button className="dl-back" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"transparent",border:"1px solid rgba(253,251,240,.4)",padding:"10px 18px",letterSpacing:".08em",textTransform:"uppercase",cursor:"pointer",marginBottom:"48px"}}><ArrowIcon direction="left" /> Back to the bench</button>
+              <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
                 <div>
                   <h1 style={{font:"400 64px/1.04 'Faculty Glyphic',serif",color:"#FDFBF0",margin:"0 0 14px",letterSpacing:"-.02em"}}>Tunde Bakare</h1>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.6)",letterSpacing:".06em",marginBottom:"24px"}}>FRACTIONAL CDO · LAGOS / LONDON</div>
@@ -139,7 +140,7 @@ export default function PageBench() {
                   <p style={{font:"400 18px/1.6 'Inter Tight',sans-serif",color:"rgba(253,251,240,.78)",margin:"0 0 40px",maxWidth:"520px"}}>
                     Led design at two unicorns. Specialises in the zero-to-one design leadership install.
                   </p>
-                  <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"#DEDF4D",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Engage Tunde →</Link>
+                  <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"#DEDF4D",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Engage Tunde <ArrowIcon /></Link>
                 </div>
                 <ImageSlot id="dl-prof-2" src="/images/people/tunde-bakare.jpg" style={{width:"100%",height:"420px",display:"block"}} placeholder="Portrait" />
               </div>
@@ -176,8 +177,8 @@ export default function PageBench() {
           </div>
           <div className="dl-prof" data-prof="3">
             <div style={{padding:"72px 64px",background:"#2A0A25"}}>
-              <button className="dl-back" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"transparent",border:"1px solid rgba(253,251,240,.4)",padding:"10px 18px",letterSpacing:".08em",textTransform:"uppercase",cursor:"pointer",marginBottom:"48px"}}>← Back to the bench</button>
-              <div style={{display:"grid",gridTemplateColumns:"1.1fr .9fr",gap:"64px",alignItems:"start"}}>
+              <button className="dl-back" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"transparent",border:"1px solid rgba(253,251,240,.4)",padding:"10px 18px",letterSpacing:".08em",textTransform:"uppercase",cursor:"pointer",marginBottom:"48px"}}><ArrowIcon direction="left" /> Back to the bench</button>
+              <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
                 <div>
                   <h1 style={{font:"400 64px/1.04 'Faculty Glyphic',serif",color:"#FDFBF0",margin:"0 0 14px",letterSpacing:"-.02em"}}>Zainab Mohammed</h1>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.6)",letterSpacing:".06em",marginBottom:"24px"}}>VP DESIGN · ABUJA, NIGERIA</div>
@@ -189,7 +190,7 @@ export default function PageBench() {
                   <p style={{font:"400 18px/1.6 'Inter Tight',sans-serif",color:"rgba(253,251,240,.78)",margin:"0 0 40px",maxWidth:"520px"}}>
                     Runs design where the stakes are clinical. Service design across digital and physical care.
                   </p>
-                  <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"#DEDF4D",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Engage Zainab →</Link>
+                  <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"#DEDF4D",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Engage Zainab <ArrowIcon /></Link>
                 </div>
                 <ImageSlot id="dl-prof-3" src="/images/people/zainab-mohammed.jpg" style={{width:"100%",height:"420px",display:"block"}} placeholder="Portrait" />
               </div>
@@ -226,8 +227,8 @@ export default function PageBench() {
           </div>
           <div className="dl-prof" data-prof="4">
             <div style={{padding:"72px 64px",background:"#2A0A25"}}>
-              <button className="dl-back" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"transparent",border:"1px solid rgba(253,251,240,.4)",padding:"10px 18px",letterSpacing:".08em",textTransform:"uppercase",cursor:"pointer",marginBottom:"48px"}}>← Back to the bench</button>
-              <div style={{display:"grid",gridTemplateColumns:"1.1fr .9fr",gap:"64px",alignItems:"start"}}>
+              <button className="dl-back" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"transparent",border:"1px solid rgba(253,251,240,.4)",padding:"10px 18px",letterSpacing:".08em",textTransform:"uppercase",cursor:"pointer",marginBottom:"48px"}}><ArrowIcon direction="left" /> Back to the bench</button>
+              <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
                 <div>
                   <h1 style={{font:"400 64px/1.04 'Faculty Glyphic',serif",color:"#FDFBF0",margin:"0 0 14px",letterSpacing:"-.02em"}}>Kwame Mensah</h1>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.6)",letterSpacing:".06em",marginBottom:"24px"}}>VP DESIGN · ACCRA, GHANA</div>
@@ -239,7 +240,7 @@ export default function PageBench() {
                   <p style={{font:"400 18px/1.6 'Inter Tight',sans-serif",color:"rgba(253,251,240,.78)",margin:"0 0 40px",maxWidth:"520px"}}>
                     Design systems operator. Makes design output fast, consistent and cheap to maintain.
                   </p>
-                  <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"#DEDF4D",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Engage Kwame →</Link>
+                  <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"#DEDF4D",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Engage Kwame <ArrowIcon /></Link>
                 </div>
                 <ImageSlot id="dl-prof-4" src="/images/people/kwame-mensah.jpg" style={{width:"100%",height:"420px",display:"block"}} placeholder="Portrait" />
               </div>
@@ -276,8 +277,8 @@ export default function PageBench() {
           </div>
           <div className="dl-prof" data-prof="5">
             <div style={{padding:"72px 64px",background:"#2A0A25"}}>
-              <button className="dl-back" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"transparent",border:"1px solid rgba(253,251,240,.4)",padding:"10px 18px",letterSpacing:".08em",textTransform:"uppercase",cursor:"pointer",marginBottom:"48px"}}>← Back to the bench</button>
-              <div style={{display:"grid",gridTemplateColumns:"1.1fr .9fr",gap:"64px",alignItems:"start"}}>
+              <button className="dl-back" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"transparent",border:"1px solid rgba(253,251,240,.4)",padding:"10px 18px",letterSpacing:".08em",textTransform:"uppercase",cursor:"pointer",marginBottom:"48px"}}><ArrowIcon direction="left" /> Back to the bench</button>
+              <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
                 <div>
                   <h1 style={{font:"400 64px/1.04 'Faculty Glyphic',serif",color:"#FDFBF0",margin:"0 0 14px",letterSpacing:"-.02em"}}>Amara Diallo</h1>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.6)",letterSpacing:".06em",marginBottom:"24px"}}>HEAD OF DESIGN · DAKAR, SENEGAL</div>
@@ -289,7 +290,7 @@ export default function PageBench() {
                   <p style={{font:"400 18px/1.6 'Inter Tight',sans-serif",color:"rgba(253,251,240,.78)",margin:"0 0 40px",maxWidth:"520px"}}>
                     Consumer growth designer turned leader. Ties brand work directly to acquisition cost.
                   </p>
-                  <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"#DEDF4D",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Engage Amara →</Link>
+                  <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"#DEDF4D",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Engage Amara <ArrowIcon /></Link>
                 </div>
                 <ImageSlot id="dl-prof-5" src="/images/people/amara-diallo.jpg" style={{width:"100%",height:"420px",display:"block"}} placeholder="Portrait" />
               </div>
@@ -326,8 +327,8 @@ export default function PageBench() {
           </div>
           <div className="dl-prof" data-prof="6">
             <div style={{padding:"72px 64px",background:"#2A0A25"}}>
-              <button className="dl-back" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"transparent",border:"1px solid rgba(253,251,240,.4)",padding:"10px 18px",letterSpacing:".08em",textTransform:"uppercase",cursor:"pointer",marginBottom:"48px"}}>← Back to the bench</button>
-              <div style={{display:"grid",gridTemplateColumns:"1.1fr .9fr",gap:"64px",alignItems:"start"}}>
+              <button className="dl-back" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"transparent",border:"1px solid rgba(253,251,240,.4)",padding:"10px 18px",letterSpacing:".08em",textTransform:"uppercase",cursor:"pointer",marginBottom:"48px"}}><ArrowIcon direction="left" /> Back to the bench</button>
+              <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
                 <div>
                   <h1 style={{font:"400 64px/1.04 'Faculty Glyphic',serif",color:"#FDFBF0",margin:"0 0 14px",letterSpacing:"-.02em"}}>Femi Adeyemi</h1>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.6)",letterSpacing:".06em",marginBottom:"24px"}}>HEAD OF DESIGN · LAGOS, NIGERIA</div>
@@ -339,7 +340,7 @@ export default function PageBench() {
                   <p style={{font:"400 18px/1.6 'Inter Tight',sans-serif",color:"rgba(253,251,240,.78)",margin:"0 0 40px",maxWidth:"520px"}}>
                     Designs for operators, not just users. Dashboards, dispatch, and the messy middle of logistics.
                   </p>
-                  <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"#DEDF4D",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Engage Femi →</Link>
+                  <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"#DEDF4D",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Engage Femi <ArrowIcon /></Link>
                 </div>
                 <ImageSlot id="dl-prof-6" src="/images/people/femi-adeyemi.jpg" style={{width:"100%",height:"420px",display:"block"}} placeholder="Portrait" />
               </div>
@@ -376,8 +377,8 @@ export default function PageBench() {
           </div>
           <div className="dl-prof" data-prof="7">
             <div style={{padding:"72px 64px",background:"#2A0A25"}}>
-              <button className="dl-back" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"transparent",border:"1px solid rgba(253,251,240,.4)",padding:"10px 18px",letterSpacing:".08em",textTransform:"uppercase",cursor:"pointer",marginBottom:"48px"}}>← Back to the bench</button>
-              <div style={{display:"grid",gridTemplateColumns:"1.1fr .9fr",gap:"64px",alignItems:"start"}}>
+              <button className="dl-back" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"transparent",border:"1px solid rgba(253,251,240,.4)",padding:"10px 18px",letterSpacing:".08em",textTransform:"uppercase",cursor:"pointer",marginBottom:"48px"}}><ArrowIcon direction="left" /> Back to the bench</button>
+              <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
                 <div>
                   <h1 style={{font:"400 64px/1.04 'Faculty Glyphic',serif",color:"#FDFBF0",margin:"0 0 14px",letterSpacing:"-.02em"}}>Nadia Hassan</h1>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.6)",letterSpacing:".06em",marginBottom:"24px"}}>FRACTIONAL CDO · CAIRO / REMOTE</div>
@@ -389,7 +390,7 @@ export default function PageBench() {
                   <p style={{font:"400 18px/1.6 'Inter Tight',sans-serif",color:"rgba(253,251,240,.78)",margin:"0 0 40px",maxWidth:"520px"}}>
                     Enterprise design transformation. Comfortable with procurement, compliance and 200-page RFPs.
                   </p>
-                  <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"#DEDF4D",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Engage Nadia →</Link>
+                  <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"#DEDF4D",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Engage Nadia <ArrowIcon /></Link>
                 </div>
                 <ImageSlot id="dl-prof-7" src="/images/people/nadia-hassan.jpg" style={{width:"100%",height:"420px",display:"block"}} placeholder="Portrait" />
               </div>
@@ -426,8 +427,8 @@ export default function PageBench() {
           </div>
           <div className="dl-prof" data-prof="8">
             <div style={{padding:"72px 64px",background:"#2A0A25"}}>
-              <button className="dl-back" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"transparent",border:"1px solid rgba(253,251,240,.4)",padding:"10px 18px",letterSpacing:".08em",textTransform:"uppercase",cursor:"pointer",marginBottom:"48px"}}>← Back to the bench</button>
-              <div style={{display:"grid",gridTemplateColumns:"1.1fr .9fr",gap:"64px",alignItems:"start"}}>
+              <button className="dl-back" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"transparent",border:"1px solid rgba(253,251,240,.4)",padding:"10px 18px",letterSpacing:".08em",textTransform:"uppercase",cursor:"pointer",marginBottom:"48px"}}><ArrowIcon direction="left" /> Back to the bench</button>
+              <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
                 <div>
                   <h1 style={{font:"400 64px/1.04 'Faculty Glyphic',serif",color:"#FDFBF0",margin:"0 0 14px",letterSpacing:"-.02em"}}>Sipho Ndlovu</h1>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.6)",letterSpacing:".06em",marginBottom:"24px"}}>HEAD OF DESIGN · JOHANNESBURG, SA</div>
@@ -439,7 +440,7 @@ export default function PageBench() {
                   <p style={{font:"400 18px/1.6 'Inter Tight',sans-serif",color:"rgba(253,251,240,.78)",margin:"0 0 40px",maxWidth:"520px"}}>
                     Research-led design in regulated industries. Turns compliance constraints into design advantages.
                   </p>
-                  <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"#DEDF4D",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Engage Sipho →</Link>
+                  <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"#DEDF4D",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Engage Sipho <ArrowIcon /></Link>
                 </div>
                 <ImageSlot id="dl-prof-8" src="/images/people/sipho-ndlovu.jpg" style={{width:"100%",height:"420px",display:"block"}} placeholder="Portrait" />
               </div>
@@ -477,7 +478,7 @@ export default function PageBench() {
           {/* CTA */}
           <div style={{padding:"120px 64px",background:"#DEDF4D",textAlign:"center"}}>
             <h2 style={{font:"400 56px/1.08 'Faculty Glyphic',serif",color:"#44063B",margin:"0 auto 26px",maxWidth:"820px",letterSpacing:"-.015em",textWrap:"balance"}}>Brief us. Meet a shortlist in two weeks.</h2>
-            <Link className="dl-btn" href="/talent-hub#apply" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase",backgroundColor:"#44073B"}}>Brief the Talent Hub →</Link>
+            <Link className="dl-btn" href="/talent-hub#apply" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase",backgroundColor:"#44073B"}}>Brief the Talent Hub <ArrowIcon /></Link>
           </div>
         </div>
         {/* FOOTER */}

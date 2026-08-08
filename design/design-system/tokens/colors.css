@@ -29,8 +29,8 @@
   --surface-feature-dark: var(--dl-slate);
   --surface-feature-plum: var(--dl-plum-deep);
   --surface-feature-blue: var(--dl-blue);
-  --surface-accent: var(--dl-pink);       /* LIGHT — plum text */
-  --surface-stat: var(--dl-chartreuse);   /* LIGHT — plum text */
+  --surface-accent: var(--dl-pink);       /* LIGHT: plum text */
+  --surface-stat: var(--dl-chartreuse);   /* LIGHT: plum text */
   --accent: var(--dl-orange);
   --filter-active: var(--dl-orange);       /* filter/segment active fill + border (was plum) */
   --border-hairline: rgba(68,6,59,.16);

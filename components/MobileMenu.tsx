@@ -2,11 +2,13 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ArrowIcon } from "./ArrowIcon";
 
-const BOOK_CALL_URL = "https://www.conectr.me/s/book-call-q7r";
+const BOOK_CALL_URL = "https://www.conectr.me/s/design-intelligence-call-dh";
 
 const GROUPS: [string, [string, string][]][] = [
   ["Home", [["/", "Home"]]],
+  ["Practice", [["/practice", "Practice"]]],
   [
     "Academy",
     [
@@ -100,7 +102,7 @@ export function MobileMenu() {
             </div>
           ))}
           <a href={BOOK_CALL_URL} target="_blank" rel="noopener" className="dl-mnav-cta">
-            Book a call →
+            Book a call <ArrowIcon />
           </a>
         </div>
       )}

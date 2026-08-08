@@ -1,208 +1,112 @@
 import Link from "next/link";
 import { FooterSearch } from "./FooterSearch";
 
-const BOOK_CALL_URL = "https://www.conectr.me/s/book-call-q7r";
+type FooterLink = readonly [href: string, label: string];
 
-const colHeadStyle = {
-  font: "400 10px 'Spline Sans Mono',monospace",
-  color: "#FF6D35",
-  letterSpacing: ".12em",
-  textTransform: "uppercase",
-  marginBottom: "16px",
-} as const;
+/** Footer directory. Some labels point at the nearest existing route where a
+ *  dedicated page doesn't exist yet (Courses → /academy, Editorial →
+ *  /research#articles, Partnerships → /contact) — swap the href when the real
+ *  page ships. */
+const FOOTER_GROUPS: ReadonlyArray<{ title: string; links: ReadonlyArray<FooterLink> }> = [
+  {
+    title: "For companies",
+    links: [
+      ["/practice", "Fractional Design Leadership"],
+      ["/talent-hub", "Hire a Design Leader"],
+      ["/diagnostic", "Design Health Diagnostic"],
+    ],
+  },
+  {
+    title: "Academy",
+    links: [
+      ["/academy/foundation", "Foundation"],
+      ["/academy/executive", "Executive"],
+      ["/faculty", "Faculty"],
+      ["/academy", "Courses"],
+    ],
+  },
+  {
+    title: "Network",
+    links: [
+      ["/talent-hub", "Fractional talent"],
+      ["/the-lever", "Lever Community"],
+      ["/bench", "Executive bench"],
+    ],
+  },
+  {
+    title: "Intelligence",
+    links: [
+      ["/research", "Research"],
+      ["/research#articles", "Editorial"],
+      ["/research#reports", "Reports"],
+      ["/articles/why-the-cdo-role-keeps-failing", "Articles"],
+      ["/spotlights/a-cdo-who-stayed", "Spotlights"],
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      ["/about", "About"],
+      ["/careers", "Careers"],
+      ["/contact", "Partnerships"],
+      ["/press", "Press"],
+      ["/contact", "Contact"],
+    ],
+  },
+];
 
-const colListStyle = { display: "flex", flexDirection: "column", gap: "11px" } as const;
-
-const socialStyle = {
-  font: "400 11px 'Spline Sans Mono',monospace",
-  letterSpacing: ".04em",
-  textTransform: "uppercase",
-} as const;
-
-function FootCol({ title, links }: { title: string; links: [string, string][] }) {
-  return (
-    <div className="dl-fcol">
-      <div style={colHeadStyle}>{title}</div>
-      <div style={colListStyle}>
-        {links.map(([href, label]) => (
-          <Link key={href + label} href={href}>{label}</Link>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-/** Canonical footer, identical on every page: plum, 1fr auto grid, five link
- *  columns, social row + copyright. Collapses at 900px / 600px (see CSS). */
+/** Canonical site footer: a full-width plum band on the usual page gutter
+ *  (no inset box). Tagline + location and search on the left, the site
+ *  directory on the right, a utility base row beneath. */
 export function SiteFooter() {
   return (
-    <div style={{ background: "#44063B", overflow: "hidden" }}>
-      <div
-        id="dl-foot-grid"
-        style={{
-          padding: "84px 64px 60px",
-          display: "grid",
-          gridTemplateColumns: "1fr auto",
-          gap: "77px",
-          borderBottom: "1px solid rgba(253,251,240,.16)",
-        }}
-      >
-        <div>
-          <div
-            style={{
-              font: "400 11px 'Spline Sans Mono',monospace",
-              color: "#FF6D35",
-              letterSpacing: ".14em",
-              textTransform: "uppercase",
-              marginBottom: "22px",
-            }}
-          >
-            Ready when you are
+    <footer className="dl-ftr">
+      <div className="dl-ftr-top">
+        <div className="dl-ftr-brand">
+          <h2 className="dl-ftr-title">Make design count.</h2>
+          <p className="dl-ftr-place">Lagos, Nigeria</p>
+          <div className="dl-ftr-search">
+            <FooterSearch />
           </div>
-          <h2
-            style={{
-              font: "400 52px/1.05 'Faculty Glyphic',serif",
-              color: "#FDFBF0",
-              margin: "0 0 34px",
-              letterSpacing: "-.01em",
-              maxWidth: "520px",
-            }}
-          >
-            Design leadership infrastructure for Africa.
-          </h2>
-          <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
-            <a
-              href={BOOK_CALL_URL}
-              target="_blank"
-              rel="noopener"
-              className="dl-btn hov-cream-plum"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "10px",
-                font: "400 12px 'Spline Sans Mono',monospace",
-                color: "#44063B",
-                background: "#FF6D35",
-                padding: "16px 26px",
-                textDecoration: "none",
-                letterSpacing: ".04em",
-                textTransform: "uppercase",
-              }}
-            >
-              Book a call →
-            </a>
-            <Link
-              href="/diagnostic"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "10px",
-                font: "400 12px 'Spline Sans Mono',monospace",
-                color: "#FDFBF0",
-                border: "1px solid rgba(253,251,240,.4)",
-                padding: "16px 26px",
-                textDecoration: "none",
-                letterSpacing: ".04em",
-                textTransform: "uppercase",
-              }}
-            >
-              Take the diagnostic
-            </Link>
-          </div>
-          <FooterSearch />
         </div>
-        <div
-          id="dl-foot-links"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr 1fr",
-            gap: "40px 72px",
-            alignSelf: "end",
-            justifySelf: "end",
-          }}
-        >
-          <FootCol
-            title="For companies"
-            links={[
-              ["/diagnostic", "Cost diagnostic"],
-            ]}
-          />
-          <FootCol
-            title="Network"
-            links={[
-              ["/the-lever", "The Lever"],
-              ["/talent-hub", "Talent Hub"],
-              ["/bench", "The bench"],
-            ]}
-          />
-          <FootCol
-            title="Academy"
-            links={[
-              ["/academy/foundation", "Foundation"],
-              ["/academy/executive", "Executive"],
-              ["/faculty", "Faculty"],
-            ]}
-          />
-          <FootCol
-            title="Research"
-            links={[
-              ["/research", "Research"],
-              ["/articles/why-the-cdo-role-keeps-failing", "The Lever journal"],
-              ["/spotlights/a-cdo-who-stayed", "Spotlights"],
-            ]}
-          />
-          <FootCol
-            title="More"
-            links={[
-              ["/about", "About"],
-              ["/careers", "Careers"],
-              ["/press", "Press"],
-              ["/contact", "Contact us"],
-            ]}
-          />
-        </div>
+
+        <nav className="dl-ftr-cols" aria-label="Footer">
+          {FOOTER_GROUPS.map((group) => (
+            <div className="dl-ftr-col" key={group.title}>
+              <div className="dl-ftr-head">{group.title}</div>
+              <div className="dl-ftr-links">
+                {group.links.map(([href, label]) => (
+                  <Link key={href + label} href={href}>
+                    {label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ))}
+        </nav>
       </div>
-      <div style={{ padding: "38px 64px 30px" }}>
-        <div
-          className="dl-foot-sub"
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            marginBottom: "22px",
-          }}
-        >
-          <div
-            className="dl-fcol"
-            style={{ display: "flex", gap: "22px", alignItems: "center", fontFamily: "'Spline Sans Mono',monospace" }}
-          >
-            <a href="https://www.linkedin.com/company/design-lever-inc" target="_blank" rel="noopener" style={socialStyle}>
-              LinkedIn ↗
-            </a>
-            <a href="https://x.com/designleverinc" target="_blank" rel="noopener" style={socialStyle}>
-              X / Twitter ↗
-            </a>
-            <a href="https://www.instagram.com/designleverinc" target="_blank" rel="noopener" style={socialStyle}>
-              Instagram ↗
-            </a>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "20px",
-              flexWrap: "wrap",
-              font: "400 11px 'Spline Sans Mono',monospace",
-              color: "rgba(253,251,240,.5)",
-              letterSpacing: ".04em",
-            }}
-          >
-            <Link href="/privacy" className="dl-link" style={{ textTransform: "uppercase" }}>Privacy</Link>
-            <Link href="/terms" className="dl-link" style={{ textTransform: "uppercase" }}>Terms</Link>
-            <span>© 2026 Design Lever Inc.</span>
-          </div>
+
+      <div className="dl-ftr-base">
+        <div className="dl-ftr-group" aria-label="Social">
+          <a href="https://www.linkedin.com/company/design-lever-inc" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+          <span className="dl-ftr-sep" aria-hidden="true">·</span>
+          <a href="https://www.instagram.com/designleverinc" target="_blank" rel="noopener noreferrer">
+            Instagram
+          </a>
         </div>
+
+        <div className="dl-ftr-group">
+          <Link href="/privacy">Privacy</Link>
+          <span className="dl-ftr-sep" aria-hidden="true">·</span>
+          <Link href="/terms">Terms</Link>
+          <span className="dl-ftr-sep" aria-hidden="true">·</span>
+          <Link href="/cookies">Cookies</Link>
+        </div>
+
+        <div className="dl-ftr-copy">Design Lever Inc · © 2026</div>
       </div>
-    </div>
+    </footer>
   );
 }

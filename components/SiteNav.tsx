@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { MobileMenu } from "./MobileMenu";
+import { ArrowIcon } from "./ArrowIcon";
 
-const BOOK_CALL_URL = "https://www.conectr.me/s/book-call-q7r";
+const BOOK_CALL_URL = "https://www.conectr.me/s/design-intelligence-call-dh";
 
-type NavSection = "home" | "academy" | "network" | "research" | "about" | "none";
+type NavSection = "home" | "practice" | "academy" | "network" | "research" | "about" | "none";
 
 const navLinkStyle = {
   font: "400 12px 'Spline Sans Mono',monospace",
@@ -109,6 +110,7 @@ export function SiteNav({ active = "none" }: { active?: NavSection }) {
         style={{ display: "flex", alignItems: "center", gap: "2px", marginLeft: "auto", marginRight: "28px" }}
       >
         <NavItem href="/" label="Home" isActive={active === "home"} />
+        <NavItem href="/practice" label="Practice" isActive={active === "practice"} />
         <NavItem href="/academy" label="Academy" isActive={active === "academy"}>
           <DropItem href="/academy/foundation" label="Foundation track" />
           <DropItem href="/academy/executive" label="Executive track" />
@@ -146,7 +148,7 @@ export function SiteNav({ active = "none" }: { active?: NavSection }) {
           whiteSpace: "nowrap",
         }}
       >
-        Book a call →
+        Book a call <ArrowIcon />
       </a>
     </div>
   );

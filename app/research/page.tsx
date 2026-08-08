@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
+import { ArrowIcon } from "@/components/ArrowIcon";
 
 const EMPTY_FORM = { name: "", email: "", topic: "Take the practitioner survey", message: "" };
 
@@ -62,7 +63,7 @@ export default function PageResearch() {
         {/* NAV */}
         <SiteNav active="research" />
         {/* HERO */}
-        <div style={{position:"relative",overflow:"hidden",padding:"96px 64px 100px",backgroundColor:"#3B6FEB"}}>
+        <div className="dl-page-hero-texture dl-page-hero-texture--on-dark dl-page-hero-texture--motif" style={{position:"relative",overflow:"hidden",padding:"96px 64px 100px",backgroundColor:"#3B6FEB"}}>
           <svg viewBox="0 0 600 600" width="620" height="620" fill="none" stroke="rgba(253,251,240,.75)" style={{position:"absolute",top:"-90px",right:"-150px",opacity:".9",pointerEvents:"none"}}>
             <circle cx="300" cy="300" r="288" strokeWidth="1" strokeDasharray="4 8"></circle>
             <line x1="140" y1="440" x2="470" y2="440" strokeWidth="1" strokeDasharray="4 8"></line>
@@ -82,7 +83,7 @@ export default function PageResearch() {
               No published research links design investment to business outcomes in African companies. This report closes that gap.
             </p>
             <div style={{display:"flex",alignItems:"center",gap:"28px"}}>
-              <a className="dl-btn hov-blue-cream" href="#streams" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44073B",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#FDFBF0"}}>The three data streams →</a>
+              <a className="dl-btn hov-blue-cream" href="#streams" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44073B",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#FDFBF0"}}>The three data streams <ArrowIcon direction="down" /></a>
               <a className="dl-link" href="#report" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid #FDFBF0",paddingBottom:"4px"}}>The annual report</a>
             </div>
           </div>
@@ -180,7 +181,7 @@ export default function PageResearch() {
             </div>
           </div>
           {/* Flagship report, cover + detail (image ≥ 4 cols) */}
-          <div style={{display:"grid",gridTemplateColumns:"1fr 1.15fr",gap:"48px",alignItems:"stretch",marginBottom:"64px"}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"48px",alignItems:"stretch",marginBottom:"64px"}}>
             <div style={{position:"relative",minHeight:"440px",display:"flex",flexDirection:"column",justifyContent:"space-between",padding:"40px",backgroundColor:"#3B6FEB"}}>
               <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start"}}>
                 <span style={{font:"400 10.5px 'Spline Sans Mono',monospace",color:"#FDFBF0",letterSpacing:".14em",textTransform:"uppercase"}}>Flagship report · 2026</span>
@@ -213,7 +214,7 @@ export default function PageResearch() {
                   <span>CC BY 4.0 · free to cite</span>
                 </div>
               </div>
-              <a className="dl-btn" onClick={openForm} href="mailto:research@designleverinc.com?subject=Notify%20me%20when%20Volume%2001%20publishes" style={{alignSelf:"flex-start",marginTop:"28px",display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"15px 24px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#3B6FEB"}}>Notify me when it lands →</a>
+              <a className="dl-btn" onClick={openForm} href="mailto:research@designleverinc.com?subject=Notify%20me%20when%20Volume%2001%20publishes" style={{alignSelf:"flex-start",marginTop:"28px",display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"15px 24px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#3B6FEB"}}>Notify me when it lands <ArrowIcon direction="right" /></a>
             </div>
           </div>
           {/* Working papers list */}
@@ -310,7 +311,7 @@ export default function PageResearch() {
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>Spotlights</span>
               <h2 style={{font:"400 52px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 0",letterSpacing:"-.01em",maxWidth:"700px"}}>The people and companies behind the numbers.</h2>
             </div>
-            <div className="dl-spotsplit" style={{display:"grid",gridTemplateColumns:".95fr 1.05fr",gap:"64px",alignItems:"stretch"}}>
+            <div className="dl-spotsplit" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"stretch"}}>
               <div style={{display:"flex",flexDirection:"column",justifyContent:"center"}}>
                 <Link className="dl-spotitem" href="/spotlights/a-cdo-who-stayed" style={{borderTop:"1.5px solid #44063B"}}>
                   <div style={{minWidth:"0"}}>
@@ -318,7 +319,7 @@ export default function PageResearch() {
                     <div style={{font:"400 26px/1.15 'Faculty Glyphic',serif",color:"#44063B",marginBottom:"8px"}}>A CDO who stayed back home</div>
                     <p style={{font:"400 14px/1.55 'Inter Tight',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>What it took to keep a senior design leader past the two-year mark.</p>
                   </div>
-                  <span className="dl-spotarrow" style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B",flex:"none"}}>→</span>
+                  <span className="dl-spotarrow" style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B",flex:"none"}}><ArrowIcon /></span>
                 </Link>
                 <Link className="dl-spotitem" href="/spotlights/investing-before-the-case-studies">
                   <div style={{minWidth:"0"}}>
@@ -326,7 +327,7 @@ export default function PageResearch() {
                     <div style={{font:"400 26px/1.15 'Faculty Glyphic',serif",color:"#44063B",marginBottom:"8px"}}>Investing before the case studies</div>
                     <p style={{font:"400 14px/1.55 'Inter Tight',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>A founder on backing design leadership without a benchmark to point to.</p>
                   </div>
-                  <span className="dl-spotarrow" style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B",flex:"none"}}>→</span>
+                  <span className="dl-spotarrow" style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B",flex:"none"}}><ArrowIcon /></span>
                 </Link>
                 <Link className="dl-spotitem" href="/spotlights/leading-from-abroad">
                   <div style={{minWidth:"0"}}>
@@ -334,7 +335,7 @@ export default function PageResearch() {
                     <div style={{font:"400 26px/1.15 'Faculty Glyphic',serif",color:"#44063B",marginBottom:"8px"}}>Leading from abroad</div>
                     <p style={{font:"400 14px/1.55 'Inter Tight',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>How an African design leader kept building on the continent after japa.</p>
                   </div>
-                  <span className="dl-spotarrow" style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B",flex:"none"}}>→</span>
+                  <span className="dl-spotarrow" style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B",flex:"none"}}><ArrowIcon /></span>
                 </Link>
                 <Link className="dl-spotitem" href="/spotlights/from-bottleneck-to-pace-setter">
                   <div style={{minWidth:"0"}}>
@@ -342,7 +343,7 @@ export default function PageResearch() {
                     <div style={{font:"400 26px/1.15 'Faculty Glyphic',serif",color:"#44063B",marginBottom:"8px"}}>From bottleneck to pace-setter</div>
                     <p style={{font:"400 14px/1.55 'Inter Tight',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>A health-tech team on the quarter their design function changed gear.</p>
                   </div>
-                  <span className="dl-spotarrow" style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B",flex:"none"}}>→</span>
+                  <span className="dl-spotarrow" style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B",flex:"none"}}><ArrowIcon /></span>
                 </Link>
               </div>
               <div style={{position:"relative",minHeight:"620px",overflow:"hidden"}}>
@@ -426,7 +427,7 @@ export default function PageResearch() {
               </div>
             </div>
             <div style={{marginTop:"44px"}}>
-              <a className="dl-btn hov-blue-cream" onClick={openForm} href="mailto:research@designleverinc.com?subject=Take%20the%20salary%20survey" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#14191D",padding:"16px 26px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#FF6D35"}}>Add your numbers to the dataset →</a>
+              <a className="dl-btn hov-blue-cream" onClick={openForm} href="mailto:research@designleverinc.com?subject=Take%20the%20salary%20survey" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#14191D",padding:"16px 26px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#FF6D35"}}>Add your numbers to the dataset <ArrowIcon direction="right" /></a>
             </div>
           </div>
         </div>
@@ -444,39 +445,39 @@ export default function PageResearch() {
               <div style={{font:"400 40px 'Faculty Glyphic',serif",color:"#FF6D35",lineHeight:"1",marginBottom:"20px"}}>01</div>
               <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B",marginBottom:"10px"}}>Take the survey</div>
               <p style={{font:"400 13.5px/1.6 'Inter Tight',sans-serif",color:"#44063B9E",margin:"0 0 18px"}}>Ten minutes toward the 500-response practitioner dataset.</p>
-              <a className="dl-link" onClick={openForm} href="mailto:research@designleverinc.com?subject=Take%20the%20practitioner%20survey" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".04em"}}>START →</a>
+              <a className="dl-link" onClick={openForm} href="mailto:research@designleverinc.com?subject=Take%20the%20practitioner%20survey" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".04em"}}>START <ArrowIcon direction="right" /></a>
             </div>
             <div style={{padding:"34px 26px",borderRight:"1px solid rgba(253,251,240,.14)",borderColor:"#FAF9F500"}}>
               <div style={{font:"400 40px 'Faculty Glyphic',serif",color:"#FF6D35",lineHeight:"1",marginBottom:"20px"}}>02</div>
               <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B",marginBottom:"10px"}}>Nominate a company</div>
               <p style={{font:"400 13.5px/1.6 'Inter Tight',sans-serif",color:"#44063B9E",margin:"0 0 18px"}}>Put forward a founder who has invested in design for a 30-minute interview.</p>
-              <a className="dl-link" onClick={openForm} href="mailto:research@designleverinc.com?subject=Nominate%20a%20company" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".04em"}}>NOMINATE →</a>
+              <a className="dl-link" onClick={openForm} href="mailto:research@designleverinc.com?subject=Nominate%20a%20company" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".04em"}}>NOMINATE <ArrowIcon direction="right" /></a>
             </div>
             <div style={{padding:"34px 26px",borderRight:"1px solid rgba(253,251,240,.14)"}}>
               <div style={{font:"400 40px 'Faculty Glyphic',serif",color:"#FF6D35",lineHeight:"1",marginBottom:"20px"}}>03</div>
               <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B",marginBottom:"10px"}}>Share your data</div>
               <p style={{font:"400 13.5px/1.6 'Inter Tight',sans-serif",color:"#44063B9E",margin:"0 0 18px"}}>Contribute anonymised design metrics, attrition, rework, velocity.</p>
               <a className="dl-link" onClick={openForm} href="mailto:research@designleverinc.com?subject=Share%20engagement%20data" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".04em"}}>SHARE</a>
-              <a className="dl-link" href="mailto:research@designleverinc.com?subject=Nominate%20a%20company" style={{color:"rgb(68, 6, 59)",fontStyle:"normal",fontVariant:"normal",fontSizeAdjust:"none",fontLanguageOverride:"normal",fontKerning:"auto",fontOpticalSizing:"auto",fontFeatureSettings:"normal",fontVariationSettings:"normal",fontStretch:"normal",fontSize:"11px",lineHeight:"normal",fontFamily:"\"Spline Sans Mono\", monospace",textDecoration:"none",letterSpacing:"0.04em"}}>→</a>
+              <a className="dl-link" href="mailto:research@designleverinc.com?subject=Nominate%20a%20company" style={{color:"rgb(68, 6, 59)",fontStyle:"normal",fontVariant:"normal",fontSizeAdjust:"none",fontLanguageOverride:"normal",fontKerning:"auto",fontOpticalSizing:"auto",fontFeatureSettings:"normal",fontVariationSettings:"normal",fontStretch:"normal",fontSize:"11px",lineHeight:"normal",fontFamily:"\"Spline Sans Mono\", monospace",textDecoration:"none",letterSpacing:"0.04em"}}><ArrowIcon /></a>
             </div>
             <div style={{padding:"34px 0 34px 26px"}}>
               <div style={{font:"400 40px 'Faculty Glyphic',serif",color:"#FF6D35",lineHeight:"1",marginBottom:"20px"}}>04</div>
               <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B",marginBottom:"10px"}}>Co-author or review</div>
               <p style={{font:"400 13.5px/1.6 'Inter Tight',sans-serif",color:"#44063B9E",margin:"0 0 18px"}}>Peer-review a paper or co-author with the research team.</p>
-              <a className="dl-link" onClick={openForm} href="mailto:research@designleverinc.com?subject=Co-author%20/%20peer%20review" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".04em"}}>GET IN TOUCH →</a>
+              <a className="dl-link" onClick={openForm} href="mailto:research@designleverinc.com?subject=Co-author%20/%20peer%20review" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".04em"}}>GET IN TOUCH <ArrowIcon direction="right" /></a>
             </div>
           </div>
         </div>
         {/* CTA */}
         <div id="report" style={{padding:"118px 64px",borderTop:"1px solid rgba(68,6,59,.16)"}}>
-          <div style={{display:"grid",gridTemplateColumns:"1.1fr .9fr",gap:"64px",alignItems:"center"}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"center"}}>
             <div>
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>The annual report</span>
               <h2 style={{font:"400 50px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 22px",letterSpacing:"-.01em"}}>The African Design Leadership Report.</h2>
               <p style={{font:"400 16px/1.65 'Inter Tight',sans-serif",color:"rgba(68,6,59,.66)",margin:"0 0 26px",maxWidth:"460px"}}>
                 All three streams publish annually, open-access under Creative Commons, with Àsà Design, TechCabal Insights and Future London Academy.
               </p>
-              <a className="dl-link" onClick={openForm} href="mailto:research@designleverinc.com?subject=African%20Design%20Leadership%20Report" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"4px"}}>Read the first edition when it lands →</a>
+              <a className="dl-link" onClick={openForm} href="mailto:research@designleverinc.com?subject=African%20Design%20Leadership%20Report" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"4px"}}>Read the first edition when it lands <ArrowIcon direction="right" /></a>
             </div>
             <div style={{border:"1px solid rgba(68,6,59,.2)",padding:"44px 40px"}}>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",letterSpacing:".06em",textTransform:"uppercase",marginBottom:"24px"}}>Published with</div>
@@ -493,11 +494,11 @@ export default function PageResearch() {
           <p style={{font:"400 18px/1.55 'Inter Tight',sans-serif",color:"rgba(253,251,240,.9)",margin:"0 auto 42px",maxWidth:"520px"}}>
             Contribute to the survey, nominate a company for an interview, or be notified when the report publishes.
           </p>
-          <a className="dl-btn hov-blue-cream" onClick={openForm} href="mailto:research@designleverinc.com?subject=Contribute%20to%20the%20research" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44073B",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase",backgroundColor:"#FDFBF0"}}>Contribute to the research →</a>
+          <a className="dl-btn hov-blue-cream" onClick={openForm} href="mailto:research@designleverinc.com?subject=Contribute%20to%20the%20research" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44073B",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase",backgroundColor:"#FDFBF0"}}>Contribute to the research <ArrowIcon direction="right" /></a>
         </div>
         {/* FAQ */}
         <div style={{padding:"118px 64px",backgroundColor:"#FDFBF0"}}>
-          <div style={{display:"grid",gridTemplateColumns:".75fr 1.25fr",gap:"64px",alignItems:"start"}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
             <div>
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#3B6FEB",letterSpacing:".14em",textTransform:"uppercase"}}>FAQs</span>
               <h2 style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 0",letterSpacing:"-.01em"}}>The research, answered.</h2>
@@ -610,7 +611,7 @@ export default function PageResearch() {
                   </label>
                   <textarea className="dl-field" value={form.message} onChange={setMessage} placeholder="Context, a company to nominate, a dataset you can share…"></textarea>
                 </div>
-                <div className="dl-btn dl-seg hov-plum" onClick={submitForm} style={{marginTop:"30px",textAlign:"center",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"17px",letterSpacing:".05em",textTransform:"uppercase"}}>Send my contribution →</div>
+                <div className="dl-btn dl-seg hov-plum" onClick={submitForm} style={{marginTop:"30px",textAlign:"center",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"17px",letterSpacing:".05em",textTransform:"uppercase"}}>Send my contribution <ArrowIcon direction="right" /></div>
                 <p style={{font:"400 11.5px/1.5 'Inter Tight',sans-serif",color:"rgba(68,6,59,.45)",textAlign:"center",margin:"16px 0 0"}}>Open access · Creative Commons · your data is never sold</p>
               </div>
               </>

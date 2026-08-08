@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
+import { ArrowIcon } from "@/components/ArrowIcon";
 
 const STORAGE_KEY = "dl_diag_v1";
 
@@ -121,7 +122,7 @@ export default function PageDiagnostic() {
         {/* NAV */}
         <SiteNav active="none" />
         {/* HERO */}
-        <div style={{position:"relative",overflow:"hidden",padding:"96px 64px 64px",backgroundColor:"#FDFBF0"}}>
+        <div className="dl-page-hero-texture" style={{position:"relative",overflow:"hidden",padding:"96px 64px 64px",backgroundColor:"#FDFBF0"}}>
           <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:"64px"}}>
             <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>DIAGNOSTIC</span>
           </div>
@@ -190,7 +191,7 @@ export default function PageDiagnostic() {
             </div>
             {/* OUTPUT */}
             <div style={{padding:"56px 52px",display:"flex",flexDirection:"column",backgroundColor:"#44073B"}}>
-              <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase",marginBottom:"32px"}}>Estimated annual cost</div>
+              <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase",marginBottom:"32px"}}>Estimated annual cost of design inefficiency</div>
               <div className="dl-diag-figure" style={{font:"400 104px/.86 'Faculty Glyphic',serif",fontVariantNumeric:"tabular-nums",color:"#FF6D35",letterSpacing:"-.03em"}}>{v.totalFmt}</div>
               <div style={{font:"400 15px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.7)",marginTop:"16px"}}>≈ {v.usdFmt} / year · {v.perDesFmt} per designer</div>
               <div style={{marginTop:"48px",display:"flex",flexDirection:"column",gap:"26px"}}>
@@ -217,7 +218,7 @@ export default function PageDiagnostic() {
                 <p style={{font:"400 13px/1.6 'Inter Tight',sans-serif",color:"rgba(253,251,240,.5)",margin:"0 0 24px",maxWidth:"420px"}}>
                   Estimates based on Design Lever's engagement benchmarks and Cognitive Market Research, 2024. Directional, not an audit, a Health Assessment produces the real figure.
                 </p>
-                <a className="dl-btn" href="#book" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#14191D",padding:"16px 26px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#FF6D35"}}>Turn this into a real number →</a>
+                <a className="dl-btn" href="#book" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#14191D",padding:"16px 26px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#FF6D35"}}>Turn this into a real number <ArrowIcon direction="down" /></a>
               </div>
             </div>
           </div>
@@ -249,11 +250,11 @@ export default function PageDiagnostic() {
           <p style={{font:"400 18px/1.55 'Inter Tight',sans-serif",color:"#44073BEB",margin:"0 auto 42px",maxWidth:"520px"}}>
             A free Design Team Health Assessment replaces this estimate with a real, defensible figure, and shows you what to do about it.
           </p>
-          <Link className="dl-btn" href="/" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase",backgroundColor:"#44073B"}}>Book the assessment →</Link>
+          <Link className="dl-btn" href="/" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase",backgroundColor:"#44073B"}}>Book the assessment <ArrowIcon /></Link>
         </div>
         {/* FAQ */}
         <div style={{padding:"118px 64px",background:"#FDFBF0"}}>
-          <div style={{display:"grid",gridTemplateColumns:".75fr 1.25fr",gap:"64px",alignItems:"start"}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
             <div>
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>FAQs</span>
               <h2 style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 0",letterSpacing:"-.01em"}}>The diagnostic, answered.</h2>

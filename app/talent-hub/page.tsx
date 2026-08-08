@@ -5,6 +5,7 @@ import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ImageSlot } from "@/components/ImageSlot";
+import { ArrowIcon } from "@/components/ArrowIcon";
 
 const EMPTY_FORM = {
   company: "", name: "", email: "", need: "", cadence: "2 days/wk", timeline: "",
@@ -95,12 +96,12 @@ export default function PageTalentHub() {
         <div className="dl-anno">
           <span>Interview a fractional design leader this week.</span>
           {" "}
-          <a href="https://www.conectr.me/s/book-call-q7r" target="_blank" rel="noopener">Book a free call →</a>
+          <a href="https://www.conectr.me/s/design-intelligence-call-dh" target="_blank" rel="noopener noreferrer">Book a free call <ArrowIcon /></a>
         </div>
         {/* NAV */}
         <SiteNav active="network" />
         {/* HERO, plum executive field */}
-        <div style={{background:"#44063B",padding:"96px 64px 100px",position:"relative",overflow:"hidden"}}>
+        <div className="dl-page-hero-texture dl-page-hero-texture--on-dark dl-page-hero-texture--motif" style={{background:"#44063B",padding:"96px 64px 100px",position:"relative",overflow:"hidden"}}>
           <svg viewBox="0 0 520 520" width="540" height="540" fill="none" stroke="#FDFBF0" style={{position:"absolute",top:"-70px",right:"-120px",opacity:".28"}}>
             <circle cx="260" cy="260" r="250" strokeWidth="1" strokeDasharray="4 8"></circle>
             <circle cx="180" cy="260" r="70" strokeWidth="1"></circle>
@@ -115,7 +116,7 @@ export default function PageTalentHub() {
               CDOs, VPs and Heads of Design, available part-time. Bring executive-level design leadership into your company without a permanent hire or an agency in between.
             </p>
             <div style={{display:"flex",alignItems:"center",gap:"28px"}}>
-              <Link className="dl-btn hov-cream" href="/bench" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#DEDF4D"}}>Browse the bench →</Link>
+              <Link className="dl-btn hov-cream" href="/bench" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#DEDF4D"}}>Browse the bench <ArrowIcon /></Link>
               <a className="dl-link" href="#apply" onClick={openJoin} style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid rgba(253,251,240,.5)",paddingBottom:"4px"}}>Join as an executive</a>
             </div>
           </div>
@@ -141,7 +142,7 @@ export default function PageTalentHub() {
         </div>
         {/* HOW IT WORKS */}
         <div style={{padding:"118px 64px",borderTop:"1px solid rgba(68,6,59,.16)"}}>
-          <div style={{display:"grid",gridTemplateColumns:".9fr 1.1fr",gap:"64px",alignItems:"start"}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
             <div>
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#7A2A6E",letterSpacing:".14em",textTransform:"uppercase"}}>For companies</span>
               <h2 style={{font:"400 48px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 22px",letterSpacing:"-.01em"}}>Executive design leadership, sized to your stage.</h2>
@@ -187,7 +188,7 @@ export default function PageTalentHub() {
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF6D35",letterSpacing:".14em",textTransform:"uppercase"}}>The bench</span>
               <h2 style={{font:"400 52px/1.08 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 0",letterSpacing:"-.01em",width:"628px",height:"108px"}}>A curated roster of design executives.</h2>
             </div>
-            <Link className="dl-btn2" href="/bench" style={{display:"inline-flex",alignItems:"center",gap:"9px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"transparent",border:"1px solid rgba(253,251,240,.5)",padding:"12px 22px",textDecoration:"none",letterSpacing:".06em",textTransform:"uppercase",borderColor:"#44073B80",borderStyle:"none"}}>See the full bench →</Link>
+            <Link className="dl-btn2" href="/bench" style={{display:"inline-flex",alignItems:"center",gap:"9px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"transparent",border:"1px solid rgba(253,251,240,.5)",padding:"12px 22px",textDecoration:"none",letterSpacing:".06em",textTransform:"uppercase",borderColor:"#44073B80",borderStyle:"none"}}>See the full bench <ArrowIcon /></Link>
           </div>
           <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:"24px"}}>
             <div className="dl-exec">
@@ -306,7 +307,7 @@ export default function PageTalentHub() {
         </div>
         {/* FOR EXECUTIVES */}
         <div id="apply" style={{padding:"118px 64px",borderTop:"1px solid rgba(68,6,59,.16)"}}>
-          <div style={{display:"grid",gridTemplateColumns:"1.1fr .9fr",gap:"64px",alignItems:"start"}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
             <div style={{borderTop:"1px solid rgba(68,6,59,.2)"}}>
               <div style={{display:"grid",gridTemplateColumns:"260px 1fr",gap:"36px",padding:"28px 0",borderBottom:"1px solid rgba(68,6,59,.16)"}}>
                 <div style={{font:"400 22px 'Faculty Glyphic',serif",color:"#44063B"}}>Director-level or above</div>
@@ -333,7 +334,7 @@ export default function PageTalentHub() {
               <p style={{font:"400 16px/1.65 'Inter Tight',sans-serif",color:"rgba(68,6,59,.66)",margin:"0 0 30px",maxWidth:"440px"}}>
                 Join the bench and let matched mandates come to you, vetted companies, clear briefs, and complete independence. You are never contracted to Design Lever.
               </p>
-              <Link className="dl-btn hov-plum-mid" href="/contact" onClick={openJoin} style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"16px 26px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Apply to the bench →</Link>
+              <Link className="dl-btn hov-plum-mid" href="/contact" onClick={openJoin} style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"16px 26px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Apply to the bench <ArrowIcon direction="right" /></Link>
             </div>
           </div>
         </div>
@@ -348,7 +349,7 @@ export default function PageTalentHub() {
         </div>
         {/* FAQ */}
         <div style={{padding:"118px 64px",background:"#FDFBF0"}}>
-          <div style={{display:"grid",gridTemplateColumns:".75fr 1.25fr",gap:"64px",alignItems:"start"}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
             <div>
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#7A2A6E",letterSpacing:".14em",textTransform:"uppercase"}}>FAQs</span>
               <h2 style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 0",letterSpacing:"-.01em"}}>The Talent Hub, answered.</h2>
@@ -468,7 +469,7 @@ export default function PageTalentHub() {
                     <option>Just exploring</option>
                   </select>
                 </div>
-                <div className="dl-btn dl-seg hov-plum-mid" onClick={submitForm} style={{marginTop:"30px",textAlign:"center",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"17px",letterSpacing:".05em",textTransform:"uppercase"}}>Send the brief →</div>
+                <div className="dl-btn dl-seg hov-plum-mid" onClick={submitForm} style={{marginTop:"30px",textAlign:"center",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"17px",letterSpacing:".05em",textTransform:"uppercase"}}>Send the brief <ArrowIcon direction="right" /></div>
                 <p style={{font:"400 11.5px/1.5 'Inter Tight',sans-serif",color:"rgba(68,6,59,.45)",textAlign:"center",margin:"16px 0 0"}}>Matched shortlist in ~2 weeks · one 20% placement fee, company-side only</p>
               </div>
               </>
@@ -523,7 +524,7 @@ export default function PageTalentHub() {
                     ))}
                   </div>
                 </div>
-                <div className="dl-btn dl-seg hov-plum-mid" onClick={submitForm} style={{marginTop:"30px",textAlign:"center",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"17px",letterSpacing:".05em",textTransform:"uppercase"}}>Apply to the bench →</div>
+                <div className="dl-btn dl-seg hov-plum-mid" onClick={submitForm} style={{marginTop:"30px",textAlign:"center",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"17px",letterSpacing:".05em",textTransform:"uppercase"}}>Apply to the bench <ArrowIcon direction="right" /></div>
                 <p style={{font:"400 11.5px/1.5 'Inter Tight',sans-serif",color:"rgba(68,6,59,.45)",textAlign:"center",margin:"16px 0 0"}}>Director-level and above · you're never contracted to Design Lever</p>
               </div>
               </>
