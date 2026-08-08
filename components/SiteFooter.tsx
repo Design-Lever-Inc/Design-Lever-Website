@@ -1,46 +1,49 @@
 import Link from "next/link";
+import { ArrowIcon } from "./ArrowIcon";
 import { FooterSearch } from "./FooterSearch";
+
+const BOOK_CALL_URL = "https://www.conectr.me/s/design-intelligence-call-dh";
 
 type FooterLink = readonly [href: string, label: string];
 
-/** Footer directory. Some labels point at the nearest existing route where a
- *  dedicated page doesn't exist yet (Courses → /academy, Editorial →
- *  /research#articles, Partnerships → /contact) — swap the href when the real
- *  page ships. */
-const FOOTER_GROUPS: ReadonlyArray<{ title: string; links: ReadonlyArray<FooterLink> }> = [
+const FOOTER_GROUPS: ReadonlyArray<{
+  title: string;
+  links: ReadonlyArray<FooterLink>;
+}> = [
   {
-    title: "For companies",
+    title: "Practice",
     links: [
-      ["/practice", "Fractional Design Leadership"],
-      ["/talent-hub", "Hire a Design Leader"],
-      ["/diagnostic", "Design Health Diagnostic"],
+      ["/practice", "Overview"],
+      ["/practice#pricing", "Engagement models"],
+      ["/diagnostic", "Cost diagnostic"],
+      ["/practice#start", "How it works"],
     ],
   },
   {
     title: "Academy",
     links: [
+      ["/academy", "Overview"],
       ["/academy/foundation", "Foundation"],
       ["/academy/executive", "Executive"],
       ["/faculty", "Faculty"],
-      ["/academy", "Courses"],
     ],
   },
   {
     title: "Network",
     links: [
-      ["/talent-hub", "Fractional talent"],
-      ["/the-lever", "Lever Community"],
+      ["/network", "Overview"],
+      ["/the-lever", "The Lever"],
+      ["/talent-hub", "Talent Hub"],
       ["/bench", "Executive bench"],
     ],
   },
   {
-    title: "Intelligence",
+    title: "Research",
     links: [
-      ["/research", "Research"],
-      ["/research#articles", "Editorial"],
-      ["/research#reports", "Reports"],
-      ["/articles/why-the-cdo-role-keeps-failing", "Articles"],
-      ["/spotlights/a-cdo-who-stayed", "Spotlights"],
+      ["/research", "Overview"],
+      ["/research#reports", "Reports & papers"],
+      ["/research#articles", "Articles"],
+      ["/research#spotlights", "Spotlights"],
     ],
   },
   {
@@ -48,64 +51,87 @@ const FOOTER_GROUPS: ReadonlyArray<{ title: string; links: ReadonlyArray<FooterL
     links: [
       ["/about", "About"],
       ["/careers", "Careers"],
-      ["/contact", "Partnerships"],
       ["/press", "Press"],
-      ["/contact", "Contact"],
+      ["/contact", "Contact us"],
     ],
   },
 ];
 
-/** Canonical site footer: a full-width plum band on the usual page gutter
- *  (no inset box). Tagline + location and search on the left, the site
- *  directory on the right, a utility base row beneath. */
+function FootRow({ title, links }: { title: string; links: ReadonlyArray<FooterLink> }) {
+  const [overview, ...secondaryLinks] = links;
+
+  return (
+    <div className="dl-footer-directory__row">
+      <Link className="dl-footer-directory__main" href={overview[0]}>
+        <span>{title}</span>
+      </Link>
+      <div className="dl-footer-directory__links">
+        {secondaryLinks.map(([href, label]) => (
+          <Link key={href + label} href={href}>
+            {label}
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/** Canonical site footer: one conversion prompt, structured site directory,
+ * search and a compact utility base within a ruled plum composition. */
 export function SiteFooter() {
   return (
-    <footer className="dl-ftr">
-      <div className="dl-ftr-top">
-        <div className="dl-ftr-brand">
-          <h2 className="dl-ftr-title">Make design count.</h2>
-          <p className="dl-ftr-place">Lagos, Nigeria</p>
-          <div className="dl-ftr-search">
-            <FooterSearch />
+    <footer className="dl-site-footer">
+      <div className="dl-footer-plate">
+        <div className="dl-footer-plate__top">
+          <div className="dl-footer-intro">
+            <span className="dl-footer-eyebrow">Find your next move</span>
+            <h2>What does your design function need next?</h2>
+            <p>Start with the problem. We will help you find the right leadership, talent, programme or evidence.</p>
+            <a
+              href={BOOK_CALL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="dl-footer-action"
+            >
+              Book a discovery call <ArrowIcon />
+            </a>
+          </div>
+
+          <div className="dl-footer-directory">
+            <div className="dl-footer-directory__search">
+              <FooterSearch />
+            </div>
+            <nav aria-label="Footer navigation">
+              {FOOTER_GROUPS.map((group) => (
+                <FootRow key={group.title} title={group.title} links={group.links} />
+              ))}
+            </nav>
           </div>
         </div>
 
-        <nav className="dl-ftr-cols" aria-label="Footer">
-          {FOOTER_GROUPS.map((group) => (
-            <div className="dl-ftr-col" key={group.title}>
-              <div className="dl-ftr-head">{group.title}</div>
-              <div className="dl-ftr-links">
-                {group.links.map(([href, label]) => (
-                  <Link key={href + label} href={href}>
-                    {label}
-                  </Link>
-                ))}
-              </div>
+        <div className="dl-footer-plate__base">
+          <div className="dl-footer-meta">
+            <div className="dl-footer-socials" aria-label="Social media">
+              <a href="https://www.linkedin.com/company/design-lever-inc" target="_blank" rel="noopener noreferrer">
+                LinkedIn <ArrowIcon />
+              </a>
+              <a href="https://x.com/designleverinc" target="_blank" rel="noopener noreferrer">
+                X <ArrowIcon />
+              </a>
+              <a href="https://www.instagram.com/designleverinc" target="_blank" rel="noopener noreferrer">
+                Instagram <ArrowIcon />
+              </a>
             </div>
-          ))}
-        </nav>
-      </div>
 
-      <div className="dl-ftr-base">
-        <div className="dl-ftr-group" aria-label="Social">
-          <a href="https://www.linkedin.com/company/design-lever-inc" target="_blank" rel="noopener noreferrer">
-            LinkedIn
-          </a>
-          <span className="dl-ftr-sep" aria-hidden="true">·</span>
-          <a href="https://www.instagram.com/designleverinc" target="_blank" rel="noopener noreferrer">
-            Instagram
-          </a>
+            <div className="dl-footer-legal">
+              <div className="dl-footer-legal__links">
+                <Link href="/privacy">Privacy</Link>
+                <Link href="/terms">Terms</Link>
+              </div>
+              <span>© 2026 Design Lever Inc.</span>
+            </div>
+          </div>
         </div>
-
-        <div className="dl-ftr-group">
-          <Link href="/privacy">Privacy</Link>
-          <span className="dl-ftr-sep" aria-hidden="true">·</span>
-          <Link href="/terms">Terms</Link>
-          <span className="dl-ftr-sep" aria-hidden="true">·</span>
-          <Link href="/cookies">Cookies</Link>
-        </div>
-
-        <div className="dl-ftr-copy">Design Lever Inc · © 2026</div>
       </div>
     </footer>
   );
