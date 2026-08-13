@@ -11,6 +11,7 @@ export type TestimonialItem = {
   designation: string;
   company: string;
   headshot?: string;
+  headshotPosition?: string;
   href: string;
   metrics: readonly (readonly [value: string, label: string])[];
 };
@@ -85,6 +86,7 @@ export function TestimonialCarousel({
                     className="dl-case-avatar dl-case-avatar--image"
                     src={item.headshot}
                     alt={`${item.name}, ${item.designation} at ${item.company}`}
+                    style={{ objectPosition: item.headshotPosition ?? "center" }}
                   />
                 ) : (
                   <div className="dl-case-avatar" aria-hidden="true">{item.initials}</div>

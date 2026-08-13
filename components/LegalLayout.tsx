@@ -23,7 +23,7 @@ export function LegalLayout({
             <span
               style={{
                 font: "400 11px 'Spline Sans Mono',monospace",
-                color: "#FF6D35",
+                color: "#FF7D44",
                 letterSpacing: ".14em",
                 textTransform: "uppercase",
               }}
@@ -32,7 +32,7 @@ export function LegalLayout({
             </span>
             <h1
               style={{
-                font: "400 64px/1.04 'Faculty Glyphic',serif",
+                font: "400 60px/1.04 'Faculty Glyphic',serif",
                 color: "#44063B",
                 letterSpacing: "-.02em",
                 margin: "26px 0 22px",
@@ -51,7 +51,7 @@ export function LegalLayout({
             >
               Last updated · {updated}
             </div>
-            <p style={{ font: "400 18px/1.6 'Inter Tight',sans-serif", color: "rgba(68,6,59,.78)", margin: "28px 0 0" }}>
+            <p style={{ font: "400 18px/1.6 'Roboto Flex',sans-serif", color: "rgba(68,6,59,.78)", margin: "28px 0 0" }}>
               {intro}
             </p>
           </div>

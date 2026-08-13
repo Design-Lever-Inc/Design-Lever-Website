@@ -41,7 +41,7 @@ export default function PageCookies() {
       <h2>Managing it</h2>
       <p>
         You can clear this data at any time through your browser settings, and you can browse with local storage
-        disabled — the site still works, the diagnostic simply won&rsquo;t remember your inputs between visits.
+        disabled. The site still works, but the diagnostic won&rsquo;t remember your inputs between visits.
       </p>
 
       <h2>Third-party links</h2>

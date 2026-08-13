@@ -38,7 +38,7 @@
 
 .dl-mnav-link {
   display: block;
-  font: 400 15px 'Inter Tight', sans-serif;
+  font: 400 15px 'Roboto Flex', sans-serif;
   color: #44063B;
   text-decoration: none;
   padding: 9px 0 9px 18px;
@@ -47,18 +47,18 @@
   font: 400 12px 'Spline Sans Mono', monospace;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: #FF6D35;
+  color: #FF7D44;
   padding-left: 0;
 }
-.dl-mnav-link[aria-current="page"] { color: #FF6D35; }
+.dl-mnav-link[aria-current="page"] { color: #FF7D44; }
 
 .dl-mnav-cta {
   display: block;
   margin-top: 24px;
   text-align: center;
   font: 400 12px 'Spline Sans Mono', monospace;
-  color: #FDFBF0;
-  background: #FF6D35;
+  color: #44063B;
+  background: #FF7D44;
   padding: 16px;
   text-decoration: none;
   letter-spacing: .04em;
@@ -104,6 +104,28 @@
   [style*="grid-template-columns: 1fr 1fr"],
   [style*="grid-template-columns:repeat(5,1fr)"],
   [style*="grid-template-columns: repeat(5,1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  .dl-talent-apply-summary {
+    order: -1;
+  }
+}
+
+/* ---------- Image / person-card grids ---------- */
+/* Person and image cards are authored as inline repeat(4,1fr) with a visible
+   gap. They need their column count reduced on smaller screens (the gap:0
+   divider grids are handled separately, so they're excluded here). Both
+   spellings: compact server HTML and CSSOM-normalized post-hydration. */
+@media (max-width: 900px) {
+  [style*="grid-template-columns:repeat(4,1fr)"]:not([style*="gap:0"]):not([style*="gap: 0"]),
+  [style*="grid-template-columns: repeat(4, 1fr)"]:not([style*="gap:0"]):not([style*="gap: 0"]) {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 560px) {
+  [style*="grid-template-columns:repeat(4,1fr)"]:not([style*="gap:0"]):not([style*="gap: 0"]),
+  [style*="grid-template-columns: repeat(4, 1fr)"]:not([style*="gap:0"]):not([style*="gap: 0"]) {
     grid-template-columns: 1fr !important;
   }
 }
@@ -164,8 +186,8 @@
    text (per the light-surface contrast rule), and every hover-driven colour
    change is neutralised. Each line keeps its identity colour as a non-text
    left accent, so the section retains its character accessibly. */
-@media (min-width: 901px) and (max-width: 1200px) {
-  /* Keep the accordion at laptop/tablet-landscape widths, but give the active
+@media (min-width: 1025px) and (max-width: 1200px) {
+  /* Keep the accordion at laptop widths, but give the active
      story more room and bring its typography back into the section scale. */
   .dl-corp-flywheel__head { padding: 88px 48px 50px; }
   .dl-corp-flywheel__band-wrap { padding: 0 48px 68px; }
@@ -175,20 +197,29 @@
   .dl-lwrite-in { width: 280px; max-width: 280px; }
   .dl-lprop { font-size: 20px; line-height: 1.18; margin-bottom: 13px; }
   .dl-lblurb { font-size: 15px; line-height: 1.48; margin-bottom: 22px; }
-  .dl-lgo { font-size: 10.5px; }
+  .dl-lgo { font-size: 11px; }
   .dl-lcap { left: 16px; right: 14px; bottom: 19px; font-size: 10px; }
   .dl-lines:hover .dl-line { flex-basis: .5%; }
   .dl-lines:hover .dl-line:hover { flex-grow: 6; }
 }
 
-@media (max-width: 900px) {
-  .dl-corp-flywheel__head { padding: 76px 40px 42px; }
-  .dl-corp-flywheel__band-wrap { padding: 0 40px 64px; }
+/* Drive the flywheel by input capability, not just width: any touch / coarse-
+   pointer device (or <=1024px) gets the always-open stacked list, since the
+   hover accordion is unusable without a hover state. Only true mouse devices
+   above 1024px keep the interactive accordion. */
+@media (max-width: 1024px), (hover: none) and (pointer: coarse) {
+  /* Full-bleed pink band; the section background already runs edge-to-edge, so
+     the head + band only carry a comfortable reading gutter. */
+  .dl-corp-flywheel__head { padding: 56px 24px 28px; }
+  .dl-corp-flywheel__band-wrap { padding: 0 24px 56px; }
   .dl-band { flex-direction: column; }
   .dl-imgcol { display: none; }
   /* stray ↗ overlay belongs to the (now hidden) desktop image column */
   .dl-band > [style*="position:absolute"],
-  .dl-band > [style*="position: absolute"] { display: none !important; }
+  .dl-band > [style*="position: absolute"],
+  .dl-corp-flywheel__arrow { display: none !important; }
+  /* Editorial single-column list: each line is a card divided by a hairline,
+     with its identity colour as a left accent. */
   .dl-lines { flex-direction: column; }
   .dl-line,
   .dl-lines:hover .dl-line,
@@ -197,26 +228,44 @@
     width: auto !important;
     height: auto !important;
     background: transparent !important;
-    border-top: 0 !important;
-    border-left: 3px solid var(--c) !important;
+    border-top: 1px solid rgba(68, 6, 59, .18) !important;
+    border-left: 0 !important;
     flex-direction: column;
     gap: 0;
-    padding: 0 0 2px 18px !important;
-    margin-bottom: 28px;
+    padding: 30px 0 32px 22px !important;
+    margin-bottom: 0 !important;
   }
-  .dl-lines .dl-line:last-child { margin-bottom: 0; }
-  /* text colours stay dark/branded regardless of the hover inversion */
+  /* The business-line colours sit on a pink surface here. Their original
+     full-height borders read as controls but do not meet non-text contrast.
+     Keep the category cue as a short rail, using accessible dark variants,
+     while the entire row remains the generously sized link target. */
+  .dl-line { --rail-color: #44063B; }
+  .dl-line:nth-child(1) { --rail-color: #0A7156; }
+  .dl-line:nth-child(2) { --rail-color: #A03F18; }
+  .dl-line:nth-child(3) { --rail-color: #667000; }
+  .dl-line:nth-child(4) { --rail-color: #245CCB; }
+  .dl-line::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 4px;
+    height: 42px;
+    background: var(--rail-color);
+  }
+  .dl-lines .dl-line:first-child { border-top: 0 !important; }
+  /* text stays plum regardless of the desktop hover inversion */
   .dl-lname,
   .dl-lines:hover .dl-line:hover .dl-lname {
     writing-mode: horizontal-tb !important;
     transform: none !important;
     opacity: 1 !important;
-    font: 500 10.5px/1.4 'Spline Sans Mono', monospace !important;
-    letter-spacing: .11em !important;
+    font: 500 11px/1.4 'Spline Sans Mono', monospace !important;
+    letter-spacing: .12em !important;
     text-transform: uppercase;
     color: #44063B !important;
     -webkit-text-stroke: 0 !important;
-    margin-bottom: 11px !important;
+    margin-bottom: 14px !important;
   }
   .dl-lwrite,
   .dl-lines:hover .dl-line:hover .dl-lwrite {
@@ -226,28 +275,22 @@
     color: #44063B !important;
   }
   .dl-lwrite-in { width: auto !important; max-width: none !important; }
-  .dl-lprop { max-width: 520px; margin-bottom: 10px; font-size: 21px; line-height: 1.18; }
-  .dl-lblurb { max-width: 580px; color: rgba(68, 6, 59, .72) !important; margin: 0 0 17px !important; font-size: 15px !important; line-height: 1.48; }
-  .dl-lgo { font-size: 10.5px; }
-  .dl-lgo { color: #FF6D35 !important; }
+  .dl-lprop { max-width: 32ch; margin-bottom: 12px; font-size: 22px; line-height: 1.25; }
+  /* one body-copy size, editorial line-height */
+  .dl-lblurb { max-width: 60ch; color: rgba(68, 6, 59, .72) !important; margin: 0 0 20px !important; font-size: 16px !important; line-height: 1.6; }
+  /* CTA in plum, not orange — orange on pink fails contrast (~1.9:1) */
+  .dl-lgo { font-size: 12px; color: #44063B !important; border-bottom-color: #44063B !important; }
   .dl-lidx { display: none; }
   .dl-lcap { display: none; }
 }
 
 @media (max-width: 600px) {
-  .dl-corp-flywheel__head { padding: 64px 20px 36px; }
-  .dl-corp-flywheel__band-wrap { padding: 0 20px 58px; }
   .dl-corp-flywheel__head h2 { font-size: clamp(34px, 9.5vw, 40px); }
   .dl-line,
   .dl-lines:hover .dl-line,
-  .dl-lines:hover .dl-line:hover {
-    padding-left: 14px !important;
-    margin-bottom: 24px;
-  }
-  .dl-lname,
-  .dl-lines:hover .dl-line:hover .dl-lname { margin-bottom: 8px !important; }
-  .dl-lprop { font-size: 19px; }
-  .dl-lblurb { font-size: 14.5px !important; margin-bottom: 15px !important; }
+  .dl-lines:hover .dl-line:hover { padding: 26px 0 28px 18px !important; }
+  .dl-line::before { top: 26px; }
+  .dl-lprop { font-size: 20px; }
 }
 
 /* ---------- Row grids with fixed px columns ---------- */
@@ -351,7 +394,50 @@
 @media (max-width: 760px) {
   [style*="top:-90px"][style*="right:-150px"],
   [style*="top: -90px"][style*="right: -150px"] {
-    opacity: .45 !important;
+    opacity: .3 !important;
+  }
+}
+
+/* ---------- Hero / banner height ---------- */
+/* Page heroes run 96/100px top + ~100px bottom on desktop; that's too tall on
+   tablets and phones. Compress on smaller screens. */
+@media (max-width: 1024px) {
+  [style*="padding:96px 64px 100px"], [style*="padding: 96px 64px 100px"],
+  [style*="padding:100px 64px 96px"], [style*="padding: 100px 64px 96px"],
+  [style*="padding:96px 64px 90px"], [style*="padding: 96px 64px 90px"] {
+    padding-top: 60px !important;
+    padding-bottom: 64px !important;
+  }
+}
+@media (max-width: 600px) {
+  [style*="padding:96px 64px 100px"], [style*="padding: 96px 64px 100px"],
+  [style*="padding:100px 64px 96px"], [style*="padding: 100px 64px 96px"],
+  [style*="padding:96px 64px 90px"], [style*="padding: 96px 64px 90px"] {
+    padding-top: 44px !important;
+    padding-bottom: 48px !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+
+/* ---------- Inner article / spotlight pages ---------- */
+/* The essay body is a `minmax(0,760px) 1fr` grid (prose + margin notes). It
+   must stack before the note column gets too narrow to read. */
+@media (max-width: 900px) {
+  [style*="grid-template-columns:minmax(0,760px) 1fr"],
+  [style*="grid-template-columns: minmax(0, 760px) 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+}
+/* Reading gutters: 64px sides waste a phone's width. Bring these article
+   sections to a 24px gutter. */
+@media (max-width: 760px) {
+  [style*="padding:110px 64px 0"], [style*="padding: 110px 64px 0"],
+  [style*="padding:56px 64px 0"], [style*="padding: 56px 64px 0"],
+  [style*="padding:72px 64px 40px"], [style*="padding: 72px 64px 40px"] {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
   }
 }
 

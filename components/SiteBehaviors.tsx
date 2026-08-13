@@ -26,7 +26,7 @@ export function SiteBehaviors() {
           grid.setAttribute("data-filter", cat);
           document.querySelectorAll<HTMLElement>("[data-fcat]").forEach((p) => {
             const on = p.getAttribute("data-fcat") === cat;
-            p.style.background = on ? "#FF6D35" : "transparent";
+            p.style.background = on ? "#FF7D44" : "transparent";
             p.style.color = on ? "#FDFBF0" : "#44063B";
             p.style.borderColor = on ? "#44063B" : "rgba(68,6,59,.35)";
           });
@@ -42,9 +42,9 @@ export function SiteBehaviors() {
           document.getElementById("dl-bench")?.setAttribute("data-bfilter", b.getAttribute("data-bcat") ?? "all");
           document.querySelectorAll<HTMLElement>("[data-bcat]").forEach((p) => {
             const on = p === b;
-            p.style.background = on ? "#FF6D35" : "transparent";
+            p.style.background = on ? "#FF7D44" : "transparent";
             p.style.color = on ? "#FDFBF0" : "#44063B";
-            p.style.borderColor = on ? "#FF6D35" : "rgba(68,6,59,.35)";
+            p.style.borderColor = on ? "#FF7D44" : "rgba(68,6,59,.35)";
           });
           return;
         }

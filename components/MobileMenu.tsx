@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowIcon } from "./ArrowIcon";
 
 const BOOK_CALL_URL = "https://www.conectr.me/s/design-intelligence-call-dh";
 
@@ -102,7 +101,7 @@ export function MobileMenu() {
             </div>
           ))}
           <a href={BOOK_CALL_URL} target="_blank" rel="noopener" className="dl-mnav-cta">
-            Book a call <ArrowIcon />
+            Book a call
           </a>
         </div>
       )}

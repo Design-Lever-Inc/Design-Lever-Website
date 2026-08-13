@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { MobileMenu } from "./MobileMenu";
-import { ArrowIcon } from "./ArrowIcon";
 
 const BOOK_CALL_URL = "https://www.conectr.me/s/design-intelligence-call-dh";
 
@@ -67,7 +66,7 @@ function NavItem({
     <div className="dl-navitem" style={{ position: "relative" }}>
       <Link
         className={isActive ? "dl-navlink dl-navlink--active" : "dl-navlink"}
-        style={{ ...navLinkStyle, color: isActive ? "#FF6D35" : "#44063B" }}
+        style={{ ...navLinkStyle, color: isActive ? "#FF7D44" : "#44063B" }}
         href={href}
       >
         {label}
@@ -126,10 +125,7 @@ export function SiteNav({ active = "none" }: { active?: NavSection }) {
           <DropItem href="/research#playbooks" label="Playbooks" />
           <DropItem href="/research#data" label="Data & rates" />
         </NavItem>
-        <NavItem href="/about" label="About" isActive={active === "about"}>
-          <DropItem href="/careers" label="Careers" />
-          <DropItem href="/press" label="Press" />
-        </NavItem>
+        <NavItem href="/about" label="About" isActive={active === "about"} />
       </div>
       <MobileMenu />
       <a
@@ -139,8 +135,8 @@ export function SiteNav({ active = "none" }: { active?: NavSection }) {
         className="dl-navcta"
         style={{
           font: "400 12px 'Spline Sans Mono',monospace",
-          color: "#FDFBF0",
-          background: "#FF6D35",
+          color: "#44063B",
+          background: "#FF7D44",
           padding: "14px 24px",
           textDecoration: "none",
           letterSpacing: ".04em",
@@ -148,7 +144,7 @@ export function SiteNav({ active = "none" }: { active?: NavSection }) {
           whiteSpace: "nowrap",
         }}
       >
-        Book a call <ArrowIcon />
+        Book a call
       </a>
     </div>
   );
