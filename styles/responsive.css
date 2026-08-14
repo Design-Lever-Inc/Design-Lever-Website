@@ -218,8 +218,7 @@
   .dl-band > [style*="position:absolute"],
   .dl-band > [style*="position: absolute"],
   .dl-corp-flywheel__arrow { display: none !important; }
-  /* Editorial single-column list: each line is a card divided by a hairline,
-     with its identity colour as a left accent. */
+  /* Editorial single-column list: each line is a card divided by a hairline. */
   .dl-lines { flex-direction: column; }
   .dl-line,
   .dl-lines:hover .dl-line,
@@ -234,24 +233,6 @@
     gap: 0;
     padding: 30px 0 32px 22px !important;
     margin-bottom: 0 !important;
-  }
-  /* The business-line colours sit on a pink surface here. Their original
-     full-height borders read as controls but do not meet non-text contrast.
-     Keep the category cue as a short rail, using accessible dark variants,
-     while the entire row remains the generously sized link target. */
-  .dl-line { --rail-color: #44063B; }
-  .dl-line:nth-child(1) { --rail-color: #0A7156; }
-  .dl-line:nth-child(2) { --rail-color: #A03F18; }
-  .dl-line:nth-child(3) { --rail-color: #667000; }
-  .dl-line:nth-child(4) { --rail-color: #245CCB; }
-  .dl-line::before {
-    content: '';
-    position: absolute;
-    top: 30px;
-    left: 0;
-    width: 4px;
-    height: 42px;
-    background: var(--rail-color);
   }
   .dl-lines .dl-line:first-child { border-top: 0 !important; }
   /* text stays plum regardless of the desktop hover inversion */
@@ -289,7 +270,6 @@
   .dl-line,
   .dl-lines:hover .dl-line,
   .dl-lines:hover .dl-line:hover { padding: 26px 0 28px 18px !important; }
-  .dl-line::before { top: 26px; }
   .dl-lprop { font-size: 20px; }
 }
 
