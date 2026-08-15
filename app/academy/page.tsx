@@ -12,36 +12,36 @@ const WAITLIST = "https://tally.so/r/J9rOWY";
 
 const FACULTY = [
   {
-    img: "/images/people/fac-1.jpg",
-    name: "Adaeze Okonkwo",
+    img: "/images/people/fac-1.webp",
+    name: "Emeka Nwachukwu",
     role: "Head of Design",
     country: "Nigeria",
     company: "Flutterwave",
-    bio: "Adaeze Okonkwo, Head of Design at Flutterwave, will identify how to build design-centric organisations, discerning the ingredients of a sustainable creative culture that enables real cross-functional collaboration.",
+    bio: "Emeka Nwachukwu, Head of Design at Flutterwave, will identify how to build design-centric organisations, discerning the ingredients of a sustainable creative culture that enables real cross-functional collaboration.",
   },
   {
-    img: "/images/people/fac-2.jpg",
-    name: "Tunde Balogun",
+    img: "/images/people/fac-2.webp",
+    name: "Olu Bankole",
     role: "Design Director",
     country: "Nigeria",
     company: "Paystack",
-    bio: "Tunde Balogun, Design Director at Paystack, brings the systems behind scaling a design function inside a fast-growing fintech, from hiring and craft standards to the operating rhythm of a team.",
+    bio: "Olu Bankole, Design Director at Paystack, brings the systems behind scaling a design function inside a fast-growing fintech, from hiring and craft standards to the operating rhythm of a team.",
   },
   {
-    img: "/images/people/fac-3.jpg",
-    name: "Lerato Mokoena",
+    img: "/images/people/fac-3.webp",
+    name: "Amaka Obi",
     role: "VP, Product Design",
-    country: "South Africa",
-    company: "Standard Bank",
-    bio: "Lerato Mokoena, VP of Product Design at Standard Bank, leads on connecting design decisions to commercial outcomes and communicating the impact of design in the language of the board.",
+    country: "Nigeria",
+    company: "MTN Group",
+    bio: "Amaka Obi, VP of Product Design at MTN Group, leads on connecting design decisions to commercial outcomes and communicating the impact of design in the language of the board.",
   },
   {
-    img: "/images/people/fac-4.jpg",
-    name: "Kwame Mensah",
+    img: "/images/people/fac-4.webp",
+    name: "Chidi Okafor",
     role: "Principal Design Lead",
-    country: "Ghana",
+    country: "Nigeria",
     company: "Google",
-    bio: "Kwame Mensah, Principal Design Lead at Google, teaches how senior practitioners turn craft into organisational influence across product, engineering and leadership.",
+    bio: "Chidi Okafor, Principal Design Lead at Google, teaches how senior practitioners turn craft into organisational influence across product, engineering and leadership.",
   },
 ];
 
@@ -79,7 +79,7 @@ export default function PageAcademy() {
           </div>
         </div>
         {/* HERO IMAGE */}
-        <ImageSlot id="dl-ac-hero" src="/images/scenes/fly-academy.png" style={{width:"100%",height:"520px",display:"block"}} placeholder="Hero image, a cohort in session / design leaders at work" />
+        <ImageSlot id="dl-ac-hero" src="/images/scenes/fly-academy.webp" style={{width:"100%",height:"520px",display:"block"}} placeholder="Hero image, a cohort in session / design leaders at work" />
         {/* WHY, senior is not the end */}
         <div style={{padding:"118px 64px"}}>
           <div style={{marginBottom:"64px"}}>
@@ -155,7 +155,7 @@ export default function PageAcademy() {
           <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"32px"}}>
             {/* Foundation */}
             <div className="dl-card" style={{border:"1px solid rgba(68,6,59,.18)",background:"#FDFBF0"}}>
-              <ImageSlot id="dl-ac-found" src="/images/scenes/foundation-workshop.png" style={{width:"100%",height:"300px",display:"block"}} placeholder="Foundation cohort image" />
+              <ImageSlot id="dl-ac-found" src="/images/scenes/foundation-workshop.webp" style={{width:"100%",height:"300px",display:"block"}} placeholder="Foundation cohort image" />
               <div style={{padding:"36px 36px 40px"}}>
                 <div style={{marginBottom:"22px"}}>
                   <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".06em",marginBottom:"10px"}}>FOUNDATION PROGRAMME</div>
@@ -198,7 +198,7 @@ export default function PageAcademy() {
             </div>
             {/* Executive */}
             <div className="dl-card" style={{border:"1px solid #44063B",background:"#44063B"}}>
-              <ImageSlot id="dl-ac-exec" src="/images/scenes/executive-hero.png" style={{width:"100%",height:"300px",display:"block"}} placeholder="Executive cohort image" />
+              <ImageSlot id="dl-ac-exec" src="/images/scenes/executive-hero.webp" style={{width:"100%",height:"300px",display:"block"}} placeholder="Executive cohort image" />
               <div style={{padding:"36px 36px 40px"}}>
                 <div style={{marginBottom:"22px"}}>
                   <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".06em",marginBottom:"10px"}}>EXECUTIVE PROGRAMME</div>
@@ -261,9 +261,6 @@ export default function PageAcademy() {
             {FACULTY.map((f, i) => (
               <PersonRevealCard key={i} id={`dl-fac-${i + 1}`} src={f.img} name={f.name} role={f.role} country={f.country} company={f.company} bio={f.bio} placeholder="Faculty photo" />
             ))}
-          </div>
-          <div style={{marginTop:"44px"}}>
-            <Link className="dl-btn hov-orange" href="/faculty" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"16px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>View the full faculty <ArrowIcon /></Link>
           </div>
         </div>
         {/* WHAT IT LEADS TO */}

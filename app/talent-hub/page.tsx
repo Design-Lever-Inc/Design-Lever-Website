@@ -31,8 +31,8 @@ const chipStyle = (active: boolean): CSSProperties => ({
   padding: "9px 15px",
   cursor: "pointer",
   font: "400 12px 'Spline Sans Mono',monospace",
-  border: `1px solid ${active ? "#7A2A6E" : "rgba(68,6,59,.28)"}`,
-  background: active ? "#7A2A6E" : "transparent",
+  border: `1px solid ${active ? "#FF7D44" : "rgba(68,6,59,.28)"}`,
+  background: active ? "#FF7D44" : "transparent",
   color: active ? "#FDFBF0" : "#44063B",
 });
 
@@ -117,7 +117,7 @@ export default function PageTalentHub() {
               CDOs, VPs and Heads of Design available for defined fractional and advisory engagements.
             </p>
             <div style={{display:"flex",alignItems:"center",gap:"28px"}}>
-              <Link className="dl-btn hov-cream" href="/bench" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#DEDF4D"}}>Find a design leader <ArrowIcon /></Link>
+              <Link className="dl-btn hov-cream" href="/bench" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#FF7D44"}}>Find a design leader <ArrowIcon /></Link>
               <a className="dl-link" href="#apply" onClick={openJoin} style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid rgba(253,251,240,.5)",paddingBottom:"4px"}}>Join the Talent Hub</a>
             </div>
           </div>
@@ -126,7 +126,7 @@ export default function PageTalentHub() {
         <div style={{padding:"118px 64px",borderTop:"1px solid rgba(68,6,59,.16)",borderBottom:"1px solid rgba(68,6,59,.16)"}}>
           <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
             <div>
-              <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#7A2A6E",letterSpacing:".14em",textTransform:"uppercase"}}>For companies</span>
+              <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>For companies</span>
               <h2 style={{font:"400 48px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 22px",letterSpacing:"-.01em"}}>Executive design leadership, sized to your stage.</h2>
               <p style={{font:"400 16px/1.65 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.66)",margin:"0",maxWidth:"440px"}}>
                 You are not ready for a full-time CDO, but a senior designer cannot set direction across the company. The Talent Hub sits exactly in between: a proven design executive, part-time, accountable to a business outcome.
@@ -174,25 +174,25 @@ export default function PageTalentHub() {
             <Link className="dl-link" href="/bench" style={{display:"inline-flex",alignItems:"center",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"transparent",padding:"0 0 4px",textDecoration:"none",letterSpacing:".06em",borderBottom:"1px solid rgba(68,6,59,.4)"}}>View all design leaders</Link>
           </div>
           <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:"24px"}}>
-            <PersonRevealCard id="dl-th-exec1" src="/images/people/th-1.jpg" name="Adaeze Okafor" role="Fractional CDO" country="Nigeria" company="Ex-fintech · 14 yrs" bio="Built and led design across two Series-B fintechs. Strongest on design ops and commercial framing." className="dl-exec" placeholder="Executive portrait">
+            <PersonRevealCard id="dl-th-exec1" src="/images/people/th-1.webp" name="Ngozi Balogun" role="Fractional CDO" country="Nigeria" company="Ex-fintech · 14 yrs" bio="Built and led design across two Series-B fintechs. Strongest on design ops and commercial framing." className="dl-exec" placeholder="Executive portrait">
               <div style={{display:"flex",gap:"8px",flexWrap:"wrap",marginTop:"16px"}}>
                 <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44073BB3",border:"1px solid rgba(253,251,240,.25)",padding:"4px 10px",borderColor:"#44073B40"}}>Design ops</span>
                 <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44073BB3",border:"1px solid rgba(253,251,240,.25)",padding:"4px 10px",borderColor:"#44073B40"}}>0→1 teams</span>
               </div>
             </PersonRevealCard>
-            <PersonRevealCard id="dl-th-exec2" src="/images/people/th-2.jpg" name="Zainab Mohammed" role="VP, Design" country="Nigeria" company="Ex-health tech · 16 yrs" bio="Scaled a design org from 4 to 30. Deep on hiring, career frameworks, and retention." className="dl-exec" placeholder="Executive portrait">
+            <PersonRevealCard id="dl-th-exec2" src="/images/people/th-2.webp" name="Tobi Adeyemi" role="VP, Design" country="Nigeria" company="Ex-health tech · 16 yrs" bio="Scaled a design org from 4 to 30. Deep on hiring, career frameworks, and retention." className="dl-exec" placeholder="Executive portrait">
               <div style={{display:"flex",gap:"8px",flexWrap:"wrap",marginTop:"16px"}}>
                 <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44073BB3",border:"1px solid rgba(253,251,240,.25)",padding:"4px 10px",borderColor:"#44073B40"}}>Org design</span>
                 <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44073BB3",border:"1px solid rgba(253,251,240,.25)",padding:"4px 10px",borderColor:"#44073B40"}}>Hiring</span>
               </div>
             </PersonRevealCard>
-            <PersonRevealCard id="dl-th-exec3" src="/images/people/th-3.jpg" name="Nadia Hassan" role="Head of Design" country="Kenya" company="Diaspora · 12 yrs" bio="Global product design leader. Bridges African teams with international product standards." className="dl-exec" placeholder="Executive portrait">
+            <PersonRevealCard id="dl-th-exec3" src="/images/people/th-3.webp" name="Wanjiru Kariuki" role="Head of Design" country="Kenya" company="Diaspora · 12 yrs" bio="Global product design leader. Bridges African teams with international product standards." className="dl-exec" placeholder="Executive portrait">
               <div style={{display:"flex",gap:"8px",flexWrap:"wrap",marginTop:"16px"}}>
                 <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44073BB3",border:"1px solid rgba(253,251,240,.25)",padding:"4px 10px",borderColor:"#44073B40"}}>Product</span>
                 <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44073BB3",border:"1px solid rgba(253,251,240,.25)",padding:"4px 10px",borderColor:"#44073B40"}}>Craft</span>
               </div>
             </PersonRevealCard>
-            <PersonRevealCard id="dl-th-exec4" src="/images/people/th-4.jpg" name="Kwame Mensah" role="Design Director" country="Ghana" company="Ex-e-commerce · 13 yrs" bio="Ran design for a pan-African marketplace. Strong on research ops and multi-brand systems." className="dl-exec" placeholder="Executive portrait">
+            <PersonRevealCard id="dl-th-exec4" src="/images/people/th-4.webp" name="Kojo Asante" role="Design Director" country="Ghana" company="Ex-e-commerce · 13 yrs" bio="Ran design for a pan-African marketplace. Strong on research ops and multi-brand systems." className="dl-exec" placeholder="Executive portrait">
               <div style={{display:"flex",gap:"8px",flexWrap:"wrap",marginTop:"16px"}}>
                 <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44073BB3",border:"1px solid rgba(253,251,240,.25)",padding:"4px 10px",borderColor:"#44073B40"}}>Research</span>
                 <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44073BB3",border:"1px solid rgba(253,251,240,.25)",padding:"4px 10px",borderColor:"#44073B40"}}>Systems</span>
@@ -268,12 +268,12 @@ export default function PageTalentHub() {
             </div>
             <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"20px"}}>
               <div style={{background:"#FDFBF0",padding:"36px 32px"}}>
-                <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#7A2A6E",letterSpacing:".06em",marginBottom:"16px"}}>COMPANY PAYS</div>
+                <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".06em",marginBottom:"16px"}}>COMPANY PAYS</div>
                 <div style={{font:"400 60px/.9 'Faculty Glyphic',serif",color:"#44063B",letterSpacing:"-.02em"}}>20%</div>
                 <p style={{font:"400 16px/1.6 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.66)",margin:"18px 0 0"}}>of the first month's engagement value, charged once on a confirmed match.</p>
               </div>
               <div style={{background:"#FDFBF0",padding:"36px 32px"}}>
-                <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#7A2A6E",letterSpacing:".06em",marginBottom:"16px"}}>PRACTITIONER PAYS</div>
+                <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".06em",marginBottom:"16px"}}>PRACTITIONER PAYS</div>
                 <div style={{font:"400 60px/.9 'Faculty Glyphic',serif",color:"#44063B",letterSpacing:"-.02em"}}>₦0</div>
                 <p style={{font:"400 16px/1.6 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.66)",margin:"18px 0 0"}}>Executives never pay a fee to get placed. Ever.</p>
               </div>
@@ -304,7 +304,7 @@ export default function PageTalentHub() {
               </div>
             </div>
             <div className="dl-talent-apply-summary">
-              <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#7A2A6E",letterSpacing:".14em",textTransform:"uppercase"}}>For executives</span>
+              <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>For executives</span>
               <h2 style={{font:"400 46px/1.12 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 22px",letterSpacing:"-.01em"}}>Build a portfolio career at executive level.</h2>
               <p style={{font:"400 16px/1.65 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.66)",margin:"0 0 30px",maxWidth:"440px"}}>
                 Join the bench and let matched mandates come to you, vetted companies, clear briefs, and complete independence. You are never contracted to Design Lever.
@@ -326,7 +326,7 @@ export default function PageTalentHub() {
         <div style={{padding:"118px 64px",background:"#FDFBF0"}}>
           <div className="dl-faq-grid" style={{display:"grid",gap:"64px",alignItems:"start"}}>
             <div>
-              <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#7A2A6E",letterSpacing:".14em",textTransform:"uppercase"}}>FAQs</span>
+              <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>FAQs</span>
               <h2 style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 0",letterSpacing:"-.01em"}}>The Talent Hub, answered.</h2>
             </div>
             <div style={{borderTop:"1.5px solid #44063B"}}>

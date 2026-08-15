@@ -437,3 +437,16 @@
   /* modal overlay breathing room */
   .dl-ov { padding: 24px 12px !important; }
 }
+
+/* ---------- Portrait framing ---------- */
+/* Person/profile photos are cover-cropped into fixed boxes; default center
+   cropping cuts foreheads off on wider/shorter crops. Bias the crop toward the
+   top so heads stay in frame across breakpoints. */
+.dl-facphoto img,
+[id^="dl-prof-"],
+[id^="dl-th-exec"],
+[id^="dl-fac-"],
+[id^="dl-fnd-"],
+[id^="dl-exe-"] {
+  object-position: 50% 18% !important;
+}

@@ -9,26 +9,26 @@ import type { Metadata } from "next";
 export const metadata: Metadata = { title: "Faculty", description: "Every session is led by a working senior design leader. Nigerian CDOs, directors, and diaspora practitioners. No career academics." };
 
 const FACULTY_ROSTER = [
-  ["mentors", "Adaeze Okonkwo", "CDO · Nigerian scale-up", "Nigeria"],
-  ["mentors", "Tunde Balogun", "VP Design · Global fintech", "Nigeria"],
-  ["mentors", "Zainab Bello", "Head of Design · Health tech", "Nigeria"],
-  ["mentors", "Chinedu Okafor", "Fractional CDO · Multiple", "Nigeria"],
-  ["advisors", "Amara Diallo", "Former CPO · Payments", "Senegal"],
-  ["advisors", "Femi Adeyemi", "Design Partner · VC", "Nigeria"],
-  ["advisors", "Nadia Hassan", "Professor of Practice · Diaspora", "Kenya"],
-  ["advisors", "Sipho Ndlovu", "Founder · Design studio", "South Africa"],
-  ["teachers", "Lerato Mokoena", "Design Director · Global fintech", "South Africa"],
-  ["teachers", "Kwame Mensah", "Design Leader · Diaspora", "Ghana"],
-  ["teachers", "Damilola Akinwale", "Product Design VP · Scale-up", "Nigeria"],
-  ["teachers", "Amina Mensah", "Creative Director · Banking", "Ghana"],
-  ["teachers", "Kofi Boateng", "Design Ops Lead · Marketplace", "Ghana"],
-  ["teachers", "Njeri Mwangi", "Research Director · Telco", "Kenya"],
-  ["teachers", "Thandiwe Dlamini", "Staff Designer · Big tech", "South Africa"],
-  ["teachers", "Ifeoma Eze", "Brand Lead · Consumer", "Nigeria"],
-  ["partners", "Moussa Diop", "Guest Critic · Brand", "Senegal"],
-  ["partners", "Ayomide Cole", "Workshop Lead · Research", "Nigeria"],
-  ["partners", "Fatou Bâ", "Mentor · Career", "Senegal"],
-  ["partners", "Tariq Abubakar", "Speaker · Strategy", "Nigeria"],
+  ["mentors", "Emeka Nwachukwu", "CDO · Nigerian scale-up", "Nigeria"],
+  ["mentors", "Olu Bankole", "VP Design · Global fintech", "Nigeria"],
+  ["mentors", "Amaka Obi", "Head of Design · Health tech", "Nigeria"],
+  ["mentors", "Chidi Okafor", "Fractional CDO · Multiple", "Nigeria"],
+  ["advisors", "Amara Sow", "Former CPO · Payments", "Senegal"],
+  ["advisors", "Kofi Anku", "Design Partner · VC", "Ghana"],
+  ["advisors", "Nadia Cherif", "Professor of Practice · Diaspora", "Tunisia"],
+  ["advisors", "Sipho Ndlela", "Founder · Design studio", "South Africa"],
+  ["teachers", "Thabo Molefe", "Design Director · Global fintech", "South Africa"],
+  ["teachers", "Kwabena Boateng", "Design Leader · Diaspora", "Ghana"],
+  ["teachers", "Damilola Balogun", "Product Design VP · Scale-up", "Nigeria"],
+  ["teachers", "Leila Diop", "Creative Director · Banking", "Senegal"],
+  ["teachers", "Kofi Mensah", "Design Ops Lead · Marketplace", "Ghana"],
+  ["teachers", "Yusuf Bello", "Research Director · Telco", "Nigeria"],
+  ["teachers", "Sizwe Dlamini", "Staff Designer · Big tech", "South Africa"],
+  ["teachers", "Ifeanyi Eze", "Brand Lead · Consumer", "Nigeria"],
+  ["partners", "David Chen", "Guest Critic · Brand", "Singapore"],
+  ["partners", "Ayo Cole", "Workshop Lead · Research", "Nigeria"],
+  ["partners", "Segun Adewale", "Mentor · Career", "Nigeria"],
+  ["partners", "Baba Diallo", "Speaker · Strategy", "Mali"],
 ] as const;
 
 export default function PageFaculty() {
@@ -61,7 +61,7 @@ export default function PageFaculty() {
               <PersonRevealCard
                 key={`${category}-${index}`}
                 id={`dl-fac-${index + 1}`}
-                src={`/images/people/fac-${index + 1}.jpg`}
+                src={`/images/people/fac-${index + 1}.webp`}
                 name={name}
                 role={role}
                 country={country}
@@ -111,7 +111,7 @@ export default function PageFaculty() {
               </p>
               <Link className="dl-btn hov-cream-plum" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#44073B"}}>Apply to teach <ArrowIcon /></Link>
             </div>
-            <ImageSlot id="dl-fclt-teach" src="/images/scenes/faculty-teach-executive.png" style={{width:"100%",height:"360px",display:"block",objectPosition:"72% center"}} placeholder="A faculty member leading a session" />
+            <ImageSlot id="dl-fclt-teach" src="/images/scenes/faculty-teach-executive.webp" style={{width:"100%",height:"360px",display:"block",objectPosition:"72% center"}} placeholder="A faculty member leading a session" />
           </div>
         </div>
         {/* FOOTER */}

@@ -16,7 +16,7 @@ const TESTIMONIALS = [
     name: "Damilola Akinwale",
     designation: "Head of Design",
     company: "Kora Systems",
-    headshot: "/images/testimonials/damilola-akinwale.png",
+    headshot: "/images/testimonials/damilola-akinwale.webp",
     href: "/resources/case-studies/from-projects-to-function",
     metrics: [
       ["04", "Leadership systems adopted"],
@@ -30,7 +30,7 @@ const TESTIMONIALS = [
     name: "Zainab Bello",
     designation: "Product Design Lead",
     company: "Luma Health",
-    headshot: "/images/testimonials/zainab-bello.jpg",
+    headshot: "/images/testimonials/zainab-bello.webp",
     href: "/resources/case-studies/defending-the-design-budget",
     metrics: [
       ["18%", "Budget increase secured"],
@@ -89,7 +89,7 @@ export default function PageAcademyFoundation() {
         </div>
         {/* HERO IMAGE */}
         <div style={{padding:"0"}}>
-          <ImageSlot id="dl-fnd-hero" src="/images/scenes/foundation-workshop.png" style={{width:"100%",height:"460px",display:"block"}} placeholder="Foundation cohort, a week in session" />
+          <ImageSlot id="dl-fnd-hero" src="/images/scenes/foundation-workshop.webp" style={{width:"100%",height:"460px",display:"block"}} placeholder="Foundation cohort, a week in session" />
         </div>
         {/* WHO IT'S FOR */}
         <div style={{padding:"100px 64px",background:"#14191D"}}>
@@ -172,10 +172,10 @@ export default function PageAcademyFoundation() {
             </Link>
           </div>
           <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:"24px"}}>
-            <PersonRevealCard id="dl-fnd-fac1" src="/images/people/fac-1.jpg" name="Damilola Akinwale" role="CDO · Nigerian scale-up" country="Nigeria" placeholder="Faculty photo" />
-            <PersonRevealCard id="dl-fnd-fac2" src="/images/people/fac-3.jpg" name="Zainab Bello" role="Design Director · Global fintech" country="Nigeria" placeholder="Faculty photo" />
-            <PersonRevealCard id="dl-fnd-fac3" src="/images/people/fac-5.jpg" name="Nana Osei" role="Design Leader · Diaspora" country="Ghana" placeholder="Faculty photo" />
-            <PersonRevealCard id="dl-fnd-fac4" src="/images/people/fac-18.jpg" name="Amina Mensah" role="Head of Design · Health tech" country="Ghana" placeholder="Faculty photo" />
+            <PersonRevealCard id="dl-fnd-fac1" src="/images/people/fac-1.webp" name="Emeka Nwachukwu" role="CDO · Nigerian scale-up" country="Nigeria" placeholder="Faculty photo" />
+            <PersonRevealCard id="dl-fnd-fac2" src="/images/people/fac-3.webp" name="Amaka Obi" role="Head of Design · Health tech" country="Nigeria" placeholder="Faculty photo" />
+            <PersonRevealCard id="dl-fnd-fac3" src="/images/people/fac-5.webp" name="Amara Sow" role="Former CPO · Payments" country="Senegal" placeholder="Faculty photo" />
+            <PersonRevealCard id="dl-fnd-fac4" src="/images/people/fac-18.webp" name="Ayo Cole" role="Workshop Lead · Research" country="Nigeria" placeholder="Faculty photo" />
           </div>
         </div>
         {/* WHAT YOU LEAVE WITH */}

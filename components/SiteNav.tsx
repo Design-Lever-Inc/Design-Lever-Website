@@ -99,7 +99,7 @@ export function SiteNav({ active = "none" }: { active?: NavSection }) {
     >
       <Link href="/" style={{ display: "flex", alignItems: "center", gap: "14px", textDecoration: "none" }}>
         <img
-          src="/assets/logo-full.png"
+          src="/assets/logo-full.webp"
           alt="Design Lever Inc."
           style={{ height: "27.6px", width: "auto", display: "block" }}
         />

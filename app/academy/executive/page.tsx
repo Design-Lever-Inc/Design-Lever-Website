@@ -16,7 +16,7 @@ const TESTIMONIALS = [
     name: "Chinedu Okafor",
     designation: "Fractional Design Director",
     company: "Independent",
-    headshot: "/images/testimonials/chinedu-okafor.png",
+    headshot: "/images/testimonials/chinedu-okafor.webp",
     href: "/resources/case-studies/pricing-the-first-engagement",
     metrics: [
       ["02", "Weeks to price engagement"],
@@ -30,7 +30,7 @@ const TESTIMONIALS = [
     name: "Amina Mensah",
     designation: "Design Director",
     company: "Sankofa Group",
-    headshot: "/images/testimonials/amina-mensah.png",
+    headshot: "/images/testimonials/amina-mensah.webp",
     href: "/resources/case-studies/the-executive-room",
     metrics: [
       ["12", "Senior operators in cohort"],
@@ -89,7 +89,7 @@ export default function PageAcademyExecutive() {
         </div>
         {/* HERO IMAGE */}
         <div style={{padding:"0 64px 100px"}}>
-          <ImageSlot id="dl-exe-hero" src="/images/scenes/executive-hero.png" style={{width:"100%",height:"460px",display:"block"}} placeholder="Executive cohort, senior practitioners at work" />
+          <ImageSlot id="dl-exe-hero" src="/images/scenes/executive-hero.webp" style={{width:"100%",height:"460px",display:"block"}} placeholder="Executive cohort, senior practitioners at work" />
         </div>
         {/* WHO IT'S FOR */}
         <div style={{padding:"100px 64px",backgroundColor:"#44073B"}}>
@@ -160,10 +160,10 @@ export default function PageAcademyExecutive() {
             </Link>
           </div>
           <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:"24px"}}>
-            <PersonRevealCard id="dl-exe-fac1" src="/images/people/fac-4.jpg" name="Chinedu Okafor" role="Fractional CDO · Pan-African" country="Nigeria" placeholder="Faculty photo" />
-            <PersonRevealCard id="dl-exe-fac2" src="/images/people/fac-7.jpg" name="Amina Mensah" role="Head of Design · Global product" country="Ghana" placeholder="Faculty photo" />
-            <PersonRevealCard id="dl-exe-fac3" src="/images/people/fac-2.jpg" name="Lerato Mokoena" role="Research Lead · Design Lever" country="South Africa" placeholder="Faculty photo" />
-            <PersonRevealCard id="dl-exe-fac4" src="/images/people/fac-8.jpg" name="Kwame Mensah" role="VP Design · Scale-up" country="Ghana" placeholder="Faculty photo" />
+            <PersonRevealCard id="dl-exe-fac1" src="/images/people/fac-4.webp" name="Chidi Okafor" role="Fractional CDO · Pan-African" country="Nigeria" placeholder="Faculty photo" />
+            <PersonRevealCard id="dl-exe-fac2" src="/images/people/fac-7.webp" name="Nadia Cherif" role="Professor of Practice · Diaspora" country="Tunisia" placeholder="Faculty photo" />
+            <PersonRevealCard id="dl-exe-fac3" src="/images/people/fac-2.webp" name="Olu Bankole" role="VP Design · Global fintech" country="Nigeria" placeholder="Faculty photo" />
+            <PersonRevealCard id="dl-exe-fac4" src="/images/people/fac-8.webp" name="Sipho Ndlela" role="Founder · Design studio" country="South Africa" placeholder="Faculty photo" />
           </div>
         </div>
         {/* WHAT YOU LEAVE WITH */}

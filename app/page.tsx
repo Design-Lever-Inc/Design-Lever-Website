@@ -80,13 +80,13 @@ const AUDIENCES = [
 // Optical sizing: real logos carry different weights and baked-in padding, so
 // each is tuned to read at the same visual size rather than a uniform height.
 const CLIENT_LOGOS = [
-  ["2", "Rise", "/images/logos/rise.png", 26],
-  ["3", "Interswitch", "/images/logos/interswitch.png", 26],
-  ["4", "Traction", "/images/logos/traction.png", 24],
-  ["1", "Terragon", "/images/logos/terragon.png", 40],
-  ["6", "Moniepoint", "/images/logos/moniepoint.png", 28],
-  ["7", "Lemfi", "/images/logos/lemfi.png", 22],
-  ["5", "Nomba", "/images/logos/nomba.png", 26],
+  ["2", "Rise", "/images/logos/rise.webp", 26],
+  ["3", "Interswitch", "/images/logos/interswitch.webp", 26],
+  ["4", "Traction", "/images/logos/traction.webp", 24],
+  ["1", "Terragon", "/images/logos/terragon.webp", 40],
+  ["6", "Moniepoint", "/images/logos/moniepoint.webp", 28],
+  ["7", "Lemfi", "/images/logos/lemfi.webp", 22],
+  ["5", "Nomba", "/images/logos/nomba.webp", 26],
 ] as const;
 
 export default function CorporateHomePage() {
@@ -186,10 +186,10 @@ export default function CorporateHomePage() {
                   </Link>
                 </div>
                 <div className="dl-imgcol">
-                  <ImageSlot className="dl-img dl-img-1" id="dl-fly-1" src="/images/scenes/fly-practice.png" style={{display:"block"}} placeholder="Practice, a design leader at work" />
-                  <ImageSlot className="dl-img dl-img-2" id="dl-fly-2" src="/images/scenes/fly-academy.png" style={{display:"block"}} placeholder="Academy, a cohort learning" />
-                  <ImageSlot className="dl-img dl-img-3" id="dl-fly-3" src="/images/scenes/fly-network.png" style={{display:"block"}} placeholder="Network, the community" />
-                  <ImageSlot className="dl-img dl-img-4" id="dl-fly-4" src="/images/scenes/fly-research.png" style={{display:"block"}} placeholder="Research, the report" />
+                  <ImageSlot className="dl-img dl-img-1" id="dl-fly-1" src="/images/scenes/fly-practice.webp" style={{display:"block"}} placeholder="Practice, a design leader at work" />
+                  <ImageSlot className="dl-img dl-img-2" id="dl-fly-2" src="/images/scenes/fly-academy.webp" style={{display:"block"}} placeholder="Academy, a cohort learning" />
+                  <ImageSlot className="dl-img dl-img-3" id="dl-fly-3" src="/images/scenes/fly-network.webp" style={{display:"block"}} placeholder="Network, the community" />
+                  <ImageSlot className="dl-img dl-img-4" id="dl-fly-4" src="/images/scenes/fly-research.webp" style={{display:"block"}} placeholder="Research, the report" />
                 </div>
               </div>
             </div>

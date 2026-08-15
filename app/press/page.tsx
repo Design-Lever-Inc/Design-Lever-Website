@@ -42,7 +42,7 @@ export default function PagePress() {
                 Design Lever is the design leadership infrastructure company: fractional at executive level, credentialed through a pathway, proven by open evidence.
               </p>
               <CopyBoilerplate text="Design Lever is the design leadership infrastructure company: fractional at executive level, credentialed through a pathway, proven by open evidence." />
-              <ImageSlot id="dl-press-founder" src="/images/press-founder.jpg" fit="cover" style={{width:"100%",height:"320px",display:"block",margin:"32px 0",objectPosition:"center 20%"}} placeholder="Founder portrait" />
+              <ImageSlot id="dl-press-founder" src="/images/press-founder.webp" fit="cover" style={{width:"100%",height:"320px",display:"block",margin:"32px 0",objectPosition:"center 20%"}} placeholder="Founder portrait" />
               <p style={{font:"400 16px/1.7 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.7)",margin:"0",maxWidth:"720px"}}>
                 Design leadership is a structural bottleneck to 18% annual ICT growth. We install it, certify it, and publish the return as open research.
               </p>

@@ -18,7 +18,7 @@ export default function PageAbout() {
         <div className="dl-page-hero-texture dl-page-hero-texture--on-dark dl-page-hero-texture--motif dl-about-hero-grid-right dl-company-family-hero" style={{position:"relative",overflow:"hidden",padding:"96px 64px 100px",background:"#44063B"}}>
           <div style={{position:"relative",maxWidth:"920px",zIndex:"1"}}>
             <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>ABOUT · THE COMPANY</span>
-            <h1 style={{font:"400 96px/1.0 'Faculty Glyphic',serif",color:"#FDFBF0",letterSpacing:"-.02em",margin:"44px 0 40px",textWrap:"balance",maxWidth:"755px"}}>Built to make design count.</h1>
+            <h1 style={{font:"400 96px/1.0 'Faculty Glyphic',serif",color:"#FDFBF0",letterSpacing:"-.02em",margin:"44px 0 40px",textWrap:"balance",maxWidth:"755px"}}>On a mission to make design count.</h1>
             <p style={{font:"400 20px/1.5 'Roboto Flex',sans-serif",color:"rgba(253,251,240,.72)",maxWidth:"560px",margin:"0 0 48px"}}>
               Design Lever is building the leadership, systems, professional pathways and evidence that give design more commercial authority in Africa.
             </p>
@@ -30,7 +30,7 @@ export default function PageAbout() {
         </div>
         {/* HERO IMAGE */}
         <div style={{padding:"0"}}>
-          <ImageSlot id="dl-abt-hero" src="/images/scenes/about-hero.png" style={{width:"100%",height:"620px",display:"block",transform:"scaleX(-1)"}} placeholder="The team at work" />
+          <ImageSlot id="dl-abt-hero" src="/images/scenes/about-hero.webp" style={{width:"100%",height:"620px",display:"block",transform:"scaleX(-1)"}} placeholder="The team at work" />
         </div>
         {/* MANIFESTO */}
         <div style={{padding:"120px 64px",backgroundColor:"#44063B"}}>
@@ -120,7 +120,7 @@ export default function PageAbout() {
             </div>
             <div style={{borderTop:"1.5px solid #44063B",paddingTop:"30px",display:"flex",flexDirection:"column",justifyContent:"space-between"}}>
               <div>
-                <p style={{font:"400 46px/1.16 'Faculty Glyphic',serif",color:"#44063B",letterSpacing:"-.01em",margin:"0 0 34px",maxWidth:"740px"}}>Dreamt in London and birthed in Lagos.</p>
+                <p style={{font:"400 46px/1.16 'Faculty Glyphic',serif",color:"#44063B",letterSpacing:"-.01em",margin:"0 0 34px",maxWidth:"740px"}}>Dreamt in London, birthed in Lagos.</p>
                 <div className="dl-about-origin-copy" style={{display:"grid",gridTemplateColumns:"repeat(2,minmax(0,1fr))",gap:"28px",maxWidth:"820px"}}>
                   <p style={{font:"400 16px/1.6 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.7)",margin:"0"}}>The idea took shape while Bolutife Awakan was studying design leadership in London and reflecting on years spent building brands, teams and design functions across different markets. The pattern was consistent: strong designers were everywhere, but the structures that helped them become stronger leaders were not.</p>
                   <p style={{font:"400 16px/1.6 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.7)",margin:"0"}}>Design Lever was built in Lagos to close that gap in practice. First through companies, then through leadership education, professional networks and the evidence produced along the way. What started as a question about better design careers became a company built around better design leadership.</p>
@@ -136,10 +136,10 @@ export default function PageAbout() {
             <p style={{font:"400 16px/1.6 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.66)",maxWidth:"620px",margin:"0"}}>We hire people who have done the work, not people who only talk about it. A small team, senior standards and documented methods.</p>
           </div>
           <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:"24px"}}>
-            <PersonRevealCard id="dl-team-1" src="/images/bolutife-awakan.png" name="Bolutife Awakan" role="Founder & Principal" country="Nigeria, UK" bio="Leads every engagement and owns the LEVER method. CDO-level experience across Nigerian health-tech and fintech." placeholder="Team photo, Founder" />
-            <PersonRevealCard id="dl-team-2" src="/images/kachi-kalu.jpg" name="Kachi Kalu" role="Head, Partnerships" country="Nigeria" placeholder="Team photo, Head of Partnerships" />
-            <PersonRevealCard id="dl-team-3" src="/images/emmanuel-michael.jpg" name="Emmanuel Michael" role="Head, Strategy" country="Nigeria" placeholder="Team photo, Head of Strategy" />
-            <PersonRevealCard id="dl-team-4" src="/images/tolulope-adeoye.jpg" name="Tolulope Adeoye" role="Head, Operations" country="Nigeria" placeholder="Team photo, Head of Operations" />
+            <PersonRevealCard id="dl-team-1" src="/images/bolutife-awakan.webp" name="Bolutife Awakan" role="Founder & Principal" country="Nigeria, UK" bio="Leads every engagement and owns the LEVER method. CDO-level experience across Nigerian health-tech and fintech." placeholder="Team photo, Founder" />
+            <PersonRevealCard id="dl-team-2" src="/images/kachi-kalu.webp" name="Kachi Kalu" role="Head, Partnerships" country="Nigeria" placeholder="Team photo, Head of Partnerships" />
+            <PersonRevealCard id="dl-team-3" src="/images/emmanuel-michael.webp" name="Emmanuel Michael" role="Head, Strategy" country="Nigeria" placeholder="Team photo, Head of Strategy" />
+            <PersonRevealCard id="dl-team-4" src="/images/tolulope-adeoye.webp" name="Tolulope Adeoye" role="Head, Operations" country="Nigeria" placeholder="Team photo, Head of Operations" />
           </div>
         </div>
         {/* ADVISORS */}
@@ -148,10 +148,10 @@ export default function PageAbout() {
             <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>Advisors</span>
           </div>
           <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:"24px"}}>
-            <PersonRevealCard id="dl-adv-1" src="/images/people/adv-1.jpg" name="Victor Fatanmi" role="CEO, FourthCanvas" country="Nigeria" tone="dark" placeholder="Advisor photo" />
-            <PersonRevealCard id="dl-adv-2" src="/images/people/adv-2.jpg" name="Paul Otu" role="Group Head of Design, Interswitch" country="Nigeria" tone="dark" placeholder="Advisor photo" />
-            <PersonRevealCard id="dl-adv-3" src="/images/people/adv-3.jpg" name="Cat Drew" role="CDO, Design Council" country="United Kingdom" tone="dark" placeholder="Advisor photo" />
-            <PersonRevealCard id="dl-adv-4" src="/images/people/adv-4.jpg" name="Paul Wright" role="Head of Strategy, Uber EMEA" country="United Kingdom" tone="dark" placeholder="Advisor photo" />
+            <PersonRevealCard id="dl-adv-1" src="/images/people/adv-1.webp" name="Victor Fatanmi" role="CEO, FourthCanvas" country="Nigeria" tone="dark" placeholder="Advisor photo" />
+            <PersonRevealCard id="dl-adv-2" src="/images/people/adv-2.webp" name="Paul Otu" role="Group Head of Design, Interswitch" country="Nigeria" tone="dark" placeholder="Advisor photo" />
+            <PersonRevealCard id="dl-adv-3" src="/images/people/adv-3.webp" name="Cat Drew" role="CDO, Design Council" country="United Kingdom" tone="dark" placeholder="Advisor photo" />
+            <PersonRevealCard id="dl-adv-4" src="/images/people/adv-4.webp" name="Paul Wright" role="Head of Strategy, Uber EMEA" country="United Kingdom" tone="dark" placeholder="Advisor photo" />
           </div>
         </div>
         {/* CTA */}

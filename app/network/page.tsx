@@ -18,7 +18,7 @@ const TESTIMONIALS = [
     name: "Kevin Mwangi",
     designation: "VP Product",
     company: "LatticePay",
-    headshot: "/images/testimonials/kevin-mwangi.png",
+    headshot: "/images/testimonials/kevin-mwangi.webp",
     href: "/resources/case-studies/a-six-month-leadership-push",
     metrics: [
       ["07", "Days to match"],
@@ -32,7 +32,7 @@ const TESTIMONIALS = [
     name: "Tola Adebayo",
     designation: "Founder & CEO",
     company: "Marula Market",
-    headshot: "/images/testimonials/tola-adebayo.png",
+    headshot: "/images/testimonials/tola-adebayo.webp",
     href: "/resources/case-studies/one-vetted-leader",
     metrics: [
       ["01", "Vetted leader"],
