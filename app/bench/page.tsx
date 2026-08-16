@@ -82,12 +82,12 @@ export default function PageBench() {
               </div>
             </div>
             <div style={{padding:"96px 64px"}}>
-              <h2 style={{font:"400 44px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 40px",letterSpacing:"-.01em"}}>Experience.</h2>
+              <h2 style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 40px",letterSpacing:"-.01em"}}>Experience.</h2>
               <div style={{borderTop:"1.5px solid #44063B"}}>
                 <div style={{display:"grid",gridTemplateColumns:"260px 1fr 180px",gap:"36px",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B"}}>Global fintech</div>
                   <div>
-                    <div style={{font:"400 15px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Chief Design Officer</div>
+                    <div style={{font:"400 16px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Chief Design Officer</div>
                     <p style={{font:"400 16px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>Built a 30-person org across 4 markets. Design now reports at board level.</p>
                   </div>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",justifySelf:"end"}}>2022 – present</div>
@@ -95,7 +95,7 @@ export default function PageBench() {
                 <div style={{display:"grid",gridTemplateColumns:"260px 1fr 180px",gap:"36px",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B"}}>Payments scale-up</div>
                   <div>
-                    <div style={{font:"400 15px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>VP Design</div>
+                    <div style={{font:"400 16px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>VP Design</div>
                     <p style={{font:"400 16px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>Took design from 4 to 22. Cut release rework by a third.</p>
                   </div>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",justifySelf:"end"}}>2018 – 2022</div>
@@ -103,7 +103,7 @@ export default function PageBench() {
                 <div style={{display:"grid",gridTemplateColumns:"260px 1fr 180px",gap:"36px",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B"}}>Design studio</div>
                   <div>
-                    <div style={{font:"400 15px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Founder</div>
+                    <div style={{font:"400 16px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Founder</div>
                     <p style={{font:"400 16px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>Ran a 12-person studio serving banks across West Africa.</p>
                   </div>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",justifySelf:"end"}}>2012 – 2018</div>
@@ -132,12 +132,12 @@ export default function PageBench() {
               </div>
             </div>
             <div style={{padding:"96px 64px"}}>
-              <h2 style={{font:"400 44px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 40px",letterSpacing:"-.01em"}}>Experience.</h2>
+              <h2 style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 40px",letterSpacing:"-.01em"}}>Experience.</h2>
               <div style={{borderTop:"1.5px solid #44063B"}}>
                 <div style={{display:"grid",gridTemplateColumns:"260px 1fr 180px",gap:"36px",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B"}}>Marketplace unicorn</div>
                   <div>
-                    <div style={{font:"400 15px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Head of Design</div>
+                    <div style={{font:"400 16px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Head of Design</div>
                     <p style={{font:"400 16px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>First design executive. Installed measurement and hiring systems.</p>
                   </div>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",justifySelf:"end"}}>2021 – present</div>
@@ -145,7 +145,7 @@ export default function PageBench() {
                 <div style={{display:"grid",gridTemplateColumns:"260px 1fr 180px",gap:"36px",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B"}}>Global e-commerce</div>
                   <div>
-                    <div style={{font:"400 15px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Design Director</div>
+                    <div style={{font:"400 16px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Design Director</div>
                     <p style={{font:"400 16px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>Led 3 product areas and the design platform team.</p>
                   </div>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",justifySelf:"end"}}>2017 – 2021</div>
@@ -153,7 +153,7 @@ export default function PageBench() {
                 <div style={{display:"grid",gridTemplateColumns:"260px 1fr 180px",gap:"36px",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B"}}>Agency</div>
                   <div>
-                    <div style={{font:"400 15px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Creative Lead</div>
+                    <div style={{font:"400 16px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Creative Lead</div>
                     <p style={{font:"400 16px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>Brand and product for consumer startups.</p>
                   </div>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",justifySelf:"end"}}>2013 – 2017</div>
@@ -182,12 +182,12 @@ export default function PageBench() {
               </div>
             </div>
             <div style={{padding:"96px 64px"}}>
-              <h2 style={{font:"400 44px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 40px",letterSpacing:"-.01em"}}>Experience.</h2>
+              <h2 style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 40px",letterSpacing:"-.01em"}}>Experience.</h2>
               <div style={{borderTop:"1.5px solid #44063B"}}>
                 <div style={{display:"grid",gridTemplateColumns:"260px 1fr 180px",gap:"36px",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B"}}>Health platform</div>
                   <div>
-                    <div style={{font:"400 15px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>VP Design</div>
+                    <div style={{font:"400 16px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>VP Design</div>
                     <p style={{font:"400 16px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>Design leadership across 3 countries and 2 regulators.</p>
                   </div>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",justifySelf:"end"}}>2022 – present</div>
@@ -195,7 +195,7 @@ export default function PageBench() {
                 <div style={{display:"grid",gridTemplateColumns:"260px 1fr 180px",gap:"36px",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B"}}>Telco</div>
                   <div>
-                    <div style={{font:"400 15px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Design Manager</div>
+                    <div style={{font:"400 16px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Design Manager</div>
                     <p style={{font:"400 16px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>Rebuilt the design system serving 40M subscribers.</p>
                   </div>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",justifySelf:"end"}}>2019 – 2022</div>
@@ -203,7 +203,7 @@ export default function PageBench() {
                 <div style={{display:"grid",gridTemplateColumns:"260px 1fr 180px",gap:"36px",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B"}}>NGO consortium</div>
                   <div>
-                    <div style={{font:"400 15px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Service Designer</div>
+                    <div style={{font:"400 16px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Service Designer</div>
                     <p style={{font:"400 16px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>Field service design for primary care delivery.</p>
                   </div>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",justifySelf:"end"}}>2016 – 2019</div>
@@ -232,12 +232,12 @@ export default function PageBench() {
               </div>
             </div>
             <div style={{padding:"96px 64px"}}>
-              <h2 style={{font:"400 44px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 40px",letterSpacing:"-.01em"}}>Experience.</h2>
+              <h2 style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 40px",letterSpacing:"-.01em"}}>Experience.</h2>
               <div style={{borderTop:"1.5px solid #44063B"}}>
                 <div style={{display:"grid",gridTemplateColumns:"260px 1fr 180px",gap:"36px",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B"}}>B2B SaaS</div>
                   <div>
-                    <div style={{font:"400 15px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>VP Design</div>
+                    <div style={{font:"400 16px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>VP Design</div>
                     <p style={{font:"400 16px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>Design velocity doubled; headcount flat.</p>
                   </div>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",justifySelf:"end"}}>2021 – present</div>
@@ -245,7 +245,7 @@ export default function PageBench() {
                 <div style={{display:"grid",gridTemplateColumns:"260px 1fr 180px",gap:"36px",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B"}}>Banking group</div>
                   <div>
-                    <div style={{font:"400 15px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Principal Designer</div>
+                    <div style={{font:"400 16px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Principal Designer</div>
                     <p style={{font:"400 16px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>One design system across 9 country apps.</p>
                   </div>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",justifySelf:"end"}}>2018 – 2021</div>
@@ -253,7 +253,7 @@ export default function PageBench() {
                 <div style={{display:"grid",gridTemplateColumns:"260px 1fr 180px",gap:"36px",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B"}}>Startup</div>
                   <div>
-                    <div style={{font:"400 15px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>First designer</div>
+                    <div style={{font:"400 16px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>First designer</div>
                     <p style={{font:"400 16px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>Everything from brand to front-end.</p>
                   </div>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",justifySelf:"end"}}>2015 – 2018</div>
@@ -282,12 +282,12 @@ export default function PageBench() {
               </div>
             </div>
             <div style={{padding:"96px 64px"}}>
-              <h2 style={{font:"400 44px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 40px",letterSpacing:"-.01em"}}>Experience.</h2>
+              <h2 style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 40px",letterSpacing:"-.01em"}}>Experience.</h2>
               <div style={{borderTop:"1.5px solid #44063B"}}>
                 <div style={{display:"grid",gridTemplateColumns:"260px 1fr 180px",gap:"36px",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B"}}>Consumer app</div>
                   <div>
-                    <div style={{font:"400 15px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Head of Design</div>
+                    <div style={{font:"400 16px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Head of Design</div>
                     <p style={{font:"400 16px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>Brand refresh cut CAC 18%.</p>
                   </div>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",justifySelf:"end"}}>2022 – present</div>
@@ -295,7 +295,7 @@ export default function PageBench() {
                 <div style={{display:"grid",gridTemplateColumns:"260px 1fr 180px",gap:"36px",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B"}}>Media group</div>
                   <div>
-                    <div style={{font:"400 15px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Design Lead</div>
+                    <div style={{font:"400 16px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Design Lead</div>
                     <p style={{font:"400 16px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>Led a 9-person brand and product team.</p>
                   </div>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",justifySelf:"end"}}>2019 – 2022</div>
@@ -303,7 +303,7 @@ export default function PageBench() {
                 <div style={{display:"grid",gridTemplateColumns:"260px 1fr 180px",gap:"36px",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B"}}>Freelance</div>
                   <div>
-                    <div style={{font:"400 15px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Brand Designer</div>
+                    <div style={{font:"400 16px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Brand Designer</div>
                     <p style={{font:"400 16px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>Identity systems for 30+ startups.</p>
                   </div>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",justifySelf:"end"}}>2016 – 2019</div>
@@ -332,12 +332,12 @@ export default function PageBench() {
               </div>
             </div>
             <div style={{padding:"96px 64px"}}>
-              <h2 style={{font:"400 44px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 40px",letterSpacing:"-.01em"}}>Experience.</h2>
+              <h2 style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 40px",letterSpacing:"-.01em"}}>Experience.</h2>
               <div style={{borderTop:"1.5px solid #44063B"}}>
                 <div style={{display:"grid",gridTemplateColumns:"260px 1fr 180px",gap:"36px",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B"}}>Logistics scale-up</div>
                   <div>
-                    <div style={{font:"400 15px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Head of Design</div>
+                    <div style={{font:"400 16px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Head of Design</div>
                     <p style={{font:"400 16px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>Ops tooling design cut dispatch errors 40%.</p>
                   </div>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",justifySelf:"end"}}>2021 – present</div>
@@ -345,7 +345,7 @@ export default function PageBench() {
                 <div style={{display:"grid",gridTemplateColumns:"260px 1fr 180px",gap:"36px",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B"}}>Ride-hailing</div>
                   <div>
-                    <div style={{font:"400 15px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Senior PD</div>
+                    <div style={{font:"400 16px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Senior PD</div>
                     <p style={{font:"400 16px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>Driver-side experience across 3 markets.</p>
                   </div>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",justifySelf:"end"}}>2018 – 2021</div>
@@ -353,7 +353,7 @@ export default function PageBench() {
                 <div style={{display:"grid",gridTemplateColumns:"260px 1fr 180px",gap:"36px",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B"}}>Consultancy</div>
                   <div>
-                    <div style={{font:"400 15px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Designer</div>
+                    <div style={{font:"400 16px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Designer</div>
                     <p style={{font:"400 16px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>Enterprise data products.</p>
                   </div>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",justifySelf:"end"}}>2015 – 2018</div>
@@ -382,12 +382,12 @@ export default function PageBench() {
               </div>
             </div>
             <div style={{padding:"96px 64px"}}>
-              <h2 style={{font:"400 44px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 40px",letterSpacing:"-.01em"}}>Experience.</h2>
+              <h2 style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 40px",letterSpacing:"-.01em"}}>Experience.</h2>
               <div style={{borderTop:"1.5px solid #44063B"}}>
                 <div style={{display:"grid",gridTemplateColumns:"260px 1fr 180px",gap:"36px",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B"}}>Enterprise software</div>
                   <div>
-                    <div style={{font:"400 15px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Design Executive</div>
+                    <div style={{font:"400 16px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Design Executive</div>
                     <p style={{font:"400 16px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>Design function installed across 5 business units.</p>
                   </div>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",justifySelf:"end"}}>2020 – present</div>
@@ -395,7 +395,7 @@ export default function PageBench() {
                 <div style={{display:"grid",gridTemplateColumns:"260px 1fr 180px",gap:"36px",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B"}}>Bank</div>
                   <div>
-                    <div style={{font:"400 15px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Head of CX</div>
+                    <div style={{font:"400 16px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Head of CX</div>
                     <p style={{font:"400 16px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>CX measurement adopted at board level.</p>
                   </div>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",justifySelf:"end"}}>2016 – 2020</div>
@@ -403,7 +403,7 @@ export default function PageBench() {
                 <div style={{display:"grid",gridTemplateColumns:"260px 1fr 180px",gap:"36px",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B"}}>Studio</div>
                   <div>
-                    <div style={{font:"400 15px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Design Director</div>
+                    <div style={{font:"400 16px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Design Director</div>
                     <p style={{font:"400 16px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>Led delivery for regional financial clients.</p>
                   </div>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",justifySelf:"end"}}>2012 – 2016</div>
@@ -432,12 +432,12 @@ export default function PageBench() {
               </div>
             </div>
             <div style={{padding:"96px 64px"}}>
-              <h2 style={{font:"400 44px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 40px",letterSpacing:"-.01em"}}>Experience.</h2>
+              <h2 style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 40px",letterSpacing:"-.01em"}}>Experience.</h2>
               <div style={{borderTop:"1.5px solid #44063B"}}>
                 <div style={{display:"grid",gridTemplateColumns:"260px 1fr 180px",gap:"36px",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B"}}>Insurer</div>
                   <div>
-                    <div style={{font:"400 15px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Head of Design</div>
+                    <div style={{font:"400 16px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Head of Design</div>
                     <p style={{font:"400 16px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>Claims redesign lifted NPS 22 points.</p>
                   </div>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",justifySelf:"end"}}>2022 – present</div>
@@ -445,7 +445,7 @@ export default function PageBench() {
                 <div style={{display:"grid",gridTemplateColumns:"260px 1fr 180px",gap:"36px",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B"}}>Fintech</div>
                   <div>
-                    <div style={{font:"400 15px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Research Lead</div>
+                    <div style={{font:"400 16px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Research Lead</div>
                     <p style={{font:"400 16px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>Built the research practice from zero.</p>
                   </div>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",justifySelf:"end"}}>2019 – 2022</div>
@@ -453,7 +453,7 @@ export default function PageBench() {
                 <div style={{display:"grid",gridTemplateColumns:"260px 1fr 180px",gap:"36px",padding:"30px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
                   <div style={{font:"400 20px 'Faculty Glyphic',serif",color:"#44063B"}}>University</div>
                   <div>
-                    <div style={{font:"400 15px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Lecturer</div>
+                    <div style={{font:"400 16px 'Roboto Flex',sans-serif",color:"#44063B",marginBottom:"8px"}}>Lecturer</div>
                     <p style={{font:"400 16px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>Design methods, part-time.</p>
                   </div>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",justifySelf:"end"}}>2016 – 2019</div>
@@ -463,11 +463,11 @@ export default function PageBench() {
           </div>
           {/* CTA */}
           <div style={{padding:"120px 64px",background:"#DEDF4D",textAlign:"center"}}>
-            <h2 style={{font:"400 56px/1.08 'Faculty Glyphic',serif",color:"#44063B",margin:"0 auto 26px",maxWidth:"820px",letterSpacing:"-.015em",textWrap:"balance"}}>Brief us. Meet a shortlist in two weeks.</h2>
+            <h2 style={{font:"400 60px/1.08 'Faculty Glyphic',serif",color:"#44063B",margin:"0 auto 26px",maxWidth:"820px",letterSpacing:"-.015em",textWrap:"balance"}}>Brief us. Meet a shortlist in two weeks.</h2>
             <p style={{font:"400 18px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.78)",margin:"0 auto 38px",maxWidth:"560px"}}>
               Tell us the mandate and meet two or three vetted design leaders matched to your company’s needs.
             </p>
-            <Link className="dl-btn" href="/talent-hub#apply" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase",backgroundColor:"#44073B"}}>Brief the Talent Hub <ArrowIcon /></Link>
+            <Link className="dl-btn" href="/talent-hub#apply" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase",backgroundColor:"#44063B"}}>Brief the Talent Hub <ArrowIcon /></Link>
           </div>
         </div>
         {/* FOOTER */}

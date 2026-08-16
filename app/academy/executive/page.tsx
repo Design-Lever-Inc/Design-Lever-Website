@@ -92,7 +92,7 @@ export default function PageAcademyExecutive() {
           <ImageSlot id="dl-exe-hero" src="/images/scenes/executive-hero.webp" style={{width:"100%",height:"460px",display:"block"}} placeholder="Executive cohort, senior practitioners at work" />
         </div>
         {/* WHO IT'S FOR */}
-        <div style={{padding:"100px 64px",backgroundColor:"#44073B"}}>
+        <div style={{padding:"100px 64px",backgroundColor:"#44063B"}}>
           <div className="dl-executive-audience-grid" style={{display:"grid",gridTemplateColumns:"minmax(0, 2fr) minmax(0, 3fr)",gap:"64px",alignItems:"start"}}>
             <div>
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>Who it's for</span>
@@ -205,10 +205,10 @@ export default function PageAcademyExecutive() {
         {/* CTA */}
         <div style={{padding:"130px 64px",background:"#FF7D44",textAlign:"center"}}>
           <h2 style={{font:"400 60px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"0 auto 30px",maxWidth:"800px",letterSpacing:"-.015em",textWrap:"balance"}}>One cohort a year. Twelve places.</h2>
-          <p style={{font:"400 18px/1.55 'Roboto Flex',sans-serif",color:"#44073BEB",margin:"0 auto 42px",maxWidth:"480px"}}>Apply for the next Executive intake, or ask us anything before you do.</p>
+          <p style={{font:"400 18px/1.55 'Roboto Flex',sans-serif",color:"#44063BEB",margin:"0 auto 42px",maxWidth:"480px"}}>Apply for the next Executive intake, or ask us anything before you do.</p>
           <div style={{display:"flex",gap:"24px",justifyContent:"center",alignItems:"center"}}>
-            <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44073B",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase"}}>Apply now</Link>
-            <Link className="dl-link" href="/academy/foundation" style={{display:"inline-flex",alignItems:"center",font:"400 12px/1.2 'Spline Sans Mono',monospace",color:"#44073B",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"4px"}}>Explore Foundation track</Link>
+            <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase"}}>Apply now</Link>
+            <Link className="dl-link" href="/academy/foundation" style={{display:"inline-flex",alignItems:"center",font:"400 12px/1.2 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"4px"}}>Explore Foundation track</Link>
           </div>
         </div>
         {/* FAQ */}
@@ -216,7 +216,7 @@ export default function PageAcademyExecutive() {
           <div className="dl-faq-grid" style={{display:"grid",gap:"64px",alignItems:"start"}}>
             <div>
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>FAQs</span>
-              <h2 style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#44073B",margin:"24px 0 0",letterSpacing:"-.01em"}}>Executive, answered.</h2>
+              <h2 style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 0",letterSpacing:"-.01em"}}>Executive, answered.</h2>
             </div>
             <div style={{borderTop:"1.5px solid #44063B"}}>
               <details className="dl-faq" name="dlfaq">

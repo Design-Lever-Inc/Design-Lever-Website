@@ -7,7 +7,7 @@ a{color:inherit}
 .dl-navlink--active{color:#44063B}
 .dl-caret{width:6px;height:6px;border-right:1.4px solid currentColor;border-bottom:1.4px solid currentColor;transform:rotate(45deg);margin-top:-3px;transition:transform .2s}
 .dl-navitem:hover .dl-caret{transform:rotate(-135deg);margin-top:1px}
-.dl-di-t{font:400 15px 'Roboto Flex',sans-serif;color:#FDFBF0}
+.dl-di-t{font:400 16px 'Roboto Flex',sans-serif;color:#FDFBF0}
 .dl-di-s{font:400 12px 'Roboto Flex',sans-serif;color:rgba(253,251,240,.5);margin-top:2px}
 .dl-navcta{font:400 12px 'Spline Sans Mono',monospace;color:#44063B;background:#FF7D44;padding:14px 24px;text-decoration:none;letter-spacing:.04em;text-transform:uppercase;transition:background .15s,color .15s;white-space:nowrap}
 details.dl-faq{border-bottom:1px solid rgba(68,6,59,.16)}

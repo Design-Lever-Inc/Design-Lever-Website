@@ -219,10 +219,10 @@ export default function PageAcademyFoundation() {
         {/* CTA */}
         <div style={{padding:"130px 64px",background:"#FF7D44",textAlign:"center"}}>
           <h2 style={{font:"400 60px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"0 auto 30px",maxWidth:"800px",letterSpacing:"-.015em",textWrap:"balance"}}>Two cohorts a year. Twenty places each.</h2>
-          <p style={{font:"400 18px/1.55 'Roboto Flex',sans-serif",color:"#44073BEB",margin:"0 auto 42px",maxWidth:"480px"}}>Apply for the next Foundation intake, or ask us anything before you do.</p>
+          <p style={{font:"400 18px/1.55 'Roboto Flex',sans-serif",color:"#44063BEB",margin:"0 auto 42px",maxWidth:"480px"}}>Apply for the next Foundation intake, or ask us anything before you do.</p>
           <div style={{display:"flex",gap:"24px",justifyContent:"center",alignItems:"center"}}>
-            <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase",backgroundColor:"#44073B"}}>Apply now <ArrowIcon /></Link>
-            <Link className="dl-link" href="/academy/executive" style={{display:"inline-flex",alignItems:"center",font:"400 12px/1.2 'Spline Sans Mono',monospace",color:"#44073B",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"4px"}}>Explore Executive track</Link>
+            <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase",backgroundColor:"#44063B"}}>Apply now <ArrowIcon /></Link>
+            <Link className="dl-link" href="/academy/executive" style={{display:"inline-flex",alignItems:"center",font:"400 12px/1.2 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"4px"}}>Explore Executive track</Link>
           </div>
         </div>
         {/* FAQ */}

@@ -132,7 +132,7 @@ export default function PageTheLever() {
           <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"72px",alignItems:"center"}}>
             <div>
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>The joining fee</span>
-              <h2 style={{font:"400 50px/1.08 'Faculty Glyphic',serif",color:"#FDFBF0",margin:"24px 0 26px",letterSpacing:"-.01em"}}>A paid membership by design.</h2>
+              <h2 style={{font:"400 46px/1.08 'Faculty Glyphic',serif",color:"#FDFBF0",margin:"24px 0 26px",letterSpacing:"-.01em"}}>A paid membership by design.</h2>
               <p style={{font:"400 16px/1.65 'Roboto Flex',sans-serif",color:"rgba(253,251,240,.7)",margin:"0",maxWidth:"440px"}}>
                 A paid model helps keep The Lever curated, independent and useful to the people in it. Membership is built for quality, not volume.
               </p>
@@ -150,7 +150,7 @@ export default function PageTheLever() {
         </div>
         {/* CTA */}
         <div id="join" style={{padding:"130px 64px",background:"#DEDF4D",textAlign:"center"}}>
-          <h2 style={{font:"400 62px/1.06 'Faculty Glyphic',serif",color:"#44063B",margin:"0 auto 30px",maxWidth:"820px",letterSpacing:"-.015em",textWrap:"balance"}}>Join a room built for your level of practice.</h2>
+          <h2 style={{font:"400 60px/1.06 'Faculty Glyphic',serif",color:"#44063B",margin:"0 auto 30px",maxWidth:"820px",letterSpacing:"-.015em",textWrap:"balance"}}>Join a room built for your level of practice.</h2>
           <p style={{font:"400 18px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.7)",margin:"0 auto 42px",maxWidth:"500px"}}>
             Membership is reviewed. The founding cohort of The Lever is now taking requests to join.
           </p>

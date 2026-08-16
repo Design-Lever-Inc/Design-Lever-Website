@@ -105,11 +105,11 @@ export default function PageFaculty() {
           <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"72px",alignItems:"center"}}>
             <div>
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>Teach with us</span>
-              <h2 style={{font:"400 50px/1.08 'Faculty Glyphic',serif",color:"#44073B",margin:"24px 0 24px",letterSpacing:"-.01em"}}>Help build the next generation of design leaders</h2>
-              <p style={{font:"400 16px/1.65 'Roboto Flex',sans-serif",color:"#44073BB3",margin:"0 0 36px",maxWidth:"460px"}}>
+              <h2 style={{font:"400 46px/1.08 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 24px",letterSpacing:"-.01em"}}>Help build the next generation of design leaders</h2>
+              <p style={{font:"400 16px/1.65 'Roboto Flex',sans-serif",color:"#44063BB3",margin:"0 0 36px",maxWidth:"460px"}}>
                 We are always looking for senior design leaders, in Nigeria and across the diaspora, to lead sessions, mentor cohorts, and shape the curriculum.
               </p>
-              <Link className="dl-btn hov-cream-plum" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#44073B"}}>Apply to teach <ArrowIcon /></Link>
+              <Link className="dl-btn hov-cream-plum" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#44063B"}}>Apply to teach <ArrowIcon /></Link>
             </div>
             <ImageSlot id="dl-fclt-teach" src="/images/scenes/faculty-teach-executive.webp" style={{width:"100%",height:"360px",display:"block",objectPosition:"72% center"}} placeholder="A faculty member leading a session" />
           </div>

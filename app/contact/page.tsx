@@ -92,7 +92,7 @@ export default function PageContact() {
                   <textarea id="dl-cmsg" rows={5} style={{width:"100%",boxSizing:"border-box",font:"400 16px 'Roboto Flex',sans-serif",color:"#44063B",background:"transparent",border:"1px solid rgba(68,6,59,.35)",padding:"15px 16px",outline:"none"}}></textarea>
                 </div>
                 <div style={{display:"flex",alignItems:"center",gap:"18px"}}>
-                  <button id="dl-send" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#FF7D44",padding:"16px 28px",border:"0",cursor:"pointer",letterSpacing:".05em",textTransform:"uppercase"}}>Send <ArrowIcon direction="right" /></button>
+                  <button id="dl-send" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",background:"#FF7D44",padding:"16px 28px",border:"0",cursor:"pointer",letterSpacing:".05em",textTransform:"uppercase"}}>Send <ArrowIcon direction="right" /></button>
                   <span id="dl-cnote" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF7D44"}}></span>
                 </div>
               </div>

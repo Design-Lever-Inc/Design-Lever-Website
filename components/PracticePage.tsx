@@ -205,7 +205,7 @@ export default function PracticePage() {
           </div>
         </div>
         {/* RECOGNISE THE PROBLEM */}
-        <div style={{padding:"118px 64px",backgroundColor:"#44073B"}}>
+        <div style={{padding:"118px 64px",backgroundColor:"#44063B"}}>
           <div style={{marginBottom:"72px"}}>
             <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>Recognise the problem</span>
             <h2 style={{font:"400 60px/1.1 'Faculty Glyphic',serif",color:"#FDFBF0",maxWidth:"820px",margin:"24px 0 20px",letterSpacing:"-.01em"}}>

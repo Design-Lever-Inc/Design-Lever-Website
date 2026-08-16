@@ -132,10 +132,10 @@ export default function PageDiagnostic() {
           </p>
         </div>
         {/* CALCULATOR */}
-        <div style={{padding:"0 64px 64px",backgroundColor:"#44073B"}}>
+        <div style={{padding:"0 64px 64px",backgroundColor:"#44063B"}}>
           <div style={{background:"#14191D",display:"grid",gridTemplateColumns:"1fr 1fr"}}>
             {/* INPUTS */}
-            <div style={{padding:"56px 52px",borderRight:"1px solid rgba(253,251,240,.14)",backgroundColor:"#44073B"}}>
+            <div style={{padding:"56px 52px",borderRight:"1px solid rgba(253,251,240,.14)",backgroundColor:"#44063B"}}>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase",marginBottom:"44px"}}>Your inputs</div>
               <div style={{display:"flex",flexDirection:"column",gap:"38px"}}>
                 <div>
@@ -190,9 +190,9 @@ export default function PageDiagnostic() {
               </div>
             </div>
             {/* OUTPUT */}
-            <div style={{padding:"56px 52px",display:"flex",flexDirection:"column",backgroundColor:"#44073B"}}>
+            <div style={{padding:"56px 52px",display:"flex",flexDirection:"column",backgroundColor:"#44063B"}}>
               <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase",marginBottom:"32px"}}>Estimated annual cost of design inefficiency</div>
-              <div className="dl-diag-figure" style={{font:"400 104px/.86 'Faculty Glyphic',serif",fontVariantNumeric:"tabular-nums",color:"#FF7D44",letterSpacing:"-.03em"}}>{v.totalFmt}</div>
+              <div className="dl-diag-figure" style={{font:"400 96px/.86 'Faculty Glyphic',serif",fontVariantNumeric:"tabular-nums",color:"#FF7D44",letterSpacing:"-.03em"}}>{v.totalFmt}</div>
               <div style={{font:"400 15px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.7)",marginTop:"16px"}}>≈ {v.usdFmt} / year · {v.perDesFmt} per designer</div>
               <div style={{marginTop:"48px",display:"flex",flexDirection:"column",gap:"26px"}}>
                 <div>
@@ -227,18 +227,18 @@ export default function PageDiagnostic() {
         <div style={{padding:"118px 64px",borderTop:"1px solid rgba(68,6,59,.16)"}}>
           <div style={{maxWidth:"820px",marginBottom:"64px"}}>
             <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>How the estimate works</span>
-            <h2 style={{font:"400 48px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 0",letterSpacing:"-.01em"}}>Two costs, both grounded in benchmarks.</h2>
+            <h2 style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 0",letterSpacing:"-.01em"}}>Two costs, both grounded in benchmarks.</h2>
           </div>
           <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"0",borderTop:"1.5px solid #44063B"}}>
             <div style={{padding:"36px 40px 40px 0",borderRight:"1px solid rgba(68,6,59,.16)"}}>
               <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B",marginBottom:"14px"}}>Engineering rework</div>
-              <p style={{font:"400 15px/1.65 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.66)",margin:"0 0 18px"}}>
+              <p style={{font:"400 16px/1.65 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.66)",margin:"0 0 18px"}}>
                 Design inconsistency and missing standards push work back to engineering. Studies put this at 20–30% of sprint capacity, we apply your figure to the affected engineers' salaries.
               </p>
             </div>
             <div style={{padding:"36px 0 40px 40px"}}>
               <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B",marginBottom:"14px"}}>Senior attrition</div>
-              <p style={{font:"400 15px/1.65 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.66)",margin:"0 0 18px"}}>
+              <p style={{font:"400 16px/1.65 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.66)",margin:"0 0 18px"}}>
                 Senior designers stay 12–18 months without a leader, and cost 6–9 months of salary to replace. We multiply your exits by the replacement cost you set.
               </p>
             </div>
@@ -246,11 +246,11 @@ export default function PageDiagnostic() {
         </div>
         {/* BOOK CTA */}
         <div id="book" style={{padding:"130px 64px",background:"#FF7D44",textAlign:"center"}}>
-          <h2 style={{font:"400 62px/1.06 'Faculty Glyphic',serif",color:"#44063B",margin:"0 auto 30px",maxWidth:"860px",letterSpacing:"-.015em",textWrap:"balance"}}>Your design team is costing you money, and it isn't their fault.</h2>
-          <p style={{font:"400 18px/1.55 'Roboto Flex',sans-serif",color:"#44073BEB",margin:"0 auto 42px",maxWidth:"520px"}}>
+          <h2 style={{font:"400 60px/1.06 'Faculty Glyphic',serif",color:"#44063B",margin:"0 auto 30px",maxWidth:"860px",letterSpacing:"-.015em",textWrap:"balance"}}>Your design team is costing you money, and it isn't their fault.</h2>
+          <p style={{font:"400 18px/1.55 'Roboto Flex',sans-serif",color:"#44063BEB",margin:"0 auto 42px",maxWidth:"520px"}}>
             A free Design Team Health Assessment replaces this estimate with a real, defensible figure, and shows you what to do about it.
           </p>
-          <Link className="dl-btn" href="/" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase",backgroundColor:"#44073B"}}>Book the assessment <ArrowIcon /></Link>
+          <Link className="dl-btn" href="/" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase",backgroundColor:"#44063B"}}>Book the assessment <ArrowIcon /></Link>
         </div>
         {/* FAQ */}
         <div style={{padding:"118px 64px",background:"#FDFBF0"}}>

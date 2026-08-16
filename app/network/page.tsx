@@ -53,7 +53,7 @@ export default function PageNetwork() {
           <div style={{position:"relative",maxWidth:"920px",zIndex:"1"}}>
             <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".14em",textTransform:"uppercase"}}>THE NETWORK</span>
             <h1 style={{font:"400 96px/1.0 'Faculty Glyphic',serif",color:"#44063B",letterSpacing:"-.02em",margin:"44px 0 40px",textWrap:"balance"}}>The network for Africa’s senior design leaders.</h1>
-            <p style={{font:"400 21px/1.5 'Roboto Flex',sans-serif",color:"#44063B",maxWidth:"560px",margin:"0 0 48px"}}>
+            <p style={{font:"400 20px/1.5 'Roboto Flex',sans-serif",color:"#44063B",maxWidth:"560px",margin:"0 0 48px"}}>
               A professional network for community, fractional opportunities and companies looking for experienced design leadership.
             </p>
             <div style={{display:"flex",alignItems:"center",gap:"28px"}}>
@@ -151,13 +151,13 @@ export default function PageNetwork() {
         {/* CTA */}
         <TestimonialCarousel testimonials={TESTIMONIALS} />
         <div style={{padding:"130px 64px",background:"#DEDF4D",textAlign:"center"}}>
-          <h2 style={{font:"400 62px/1.06 'Faculty Glyphic',serif",color:"#44063B",margin:"0 auto 30px",maxWidth:"840px",letterSpacing:"-.015em",textWrap:"balance"}}>Africa’s design leadership, wherever it now lives.</h2>
-          <p style={{font:"400 18px/1.55 'Roboto Flex',sans-serif",color:"#44073BEB",margin:"0 auto 42px",maxWidth:"500px"}}>
+          <h2 style={{font:"400 60px/1.06 'Faculty Glyphic',serif",color:"#44063B",margin:"0 auto 30px",maxWidth:"840px",letterSpacing:"-.015em",textWrap:"balance"}}>Africa’s design leadership, wherever it now lives.</h2>
+          <p style={{font:"400 18px/1.55 'Roboto Flex',sans-serif",color:"#44063BEB",margin:"0 auto 42px",maxWidth:"500px"}}>
             Whether you are hiring fractional leadership or ready to be placed, the Network is the match layer.
           </p>
           <div style={{display:"flex",gap:"24px",justifyContent:"center",alignItems:"center"}}>
-            <a className="dl-btn" href="/talent-hub" style={{display:"inline-flex",alignItems:"center",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase",backgroundColor:"#44073B"}}>Find a Design Leader</a>
-            <a className="dl-link" href="/talent-hub#apply" style={{display:"inline-flex",alignItems:"center",font:"400 12px/1.2 'Spline Sans Mono',monospace",color:"#44073B",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"4px"}}>Join the Network</a>
+            <a className="dl-btn" href="/talent-hub" style={{display:"inline-flex",alignItems:"center",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase",backgroundColor:"#44063B"}}>Find a Design Leader</a>
+            <a className="dl-link" href="/talent-hub#apply" style={{display:"inline-flex",alignItems:"center",font:"400 12px/1.2 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"4px"}}>Join the Network</a>
           </div>
         </div>
         {/* FAQ */}

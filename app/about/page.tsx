@@ -143,7 +143,7 @@ export default function PageAbout() {
           </div>
         </div>
         {/* ADVISORS */}
-        <div style={{padding:"118px 64px",backgroundColor:"#44073B"}}>
+        <div style={{padding:"118px 64px",backgroundColor:"#44063B"}}>
           <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline",marginBottom:"60px"}}>
             <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>Advisors</span>
           </div>
@@ -157,8 +157,8 @@ export default function PageAbout() {
         {/* CTA */}
         <div style={{padding:"130px 64px",textAlign:"center",backgroundColor:"#FFBCE8"}}>
           <h2 style={{font:"400 60px/1.06 'Faculty Glyphic',serif",color:"#44063B",margin:"0 auto 30px",maxWidth:"820px",letterSpacing:"-.015em",textWrap:"balance"}}>Design leadership as national economic infrastructure.</h2>
-          <p style={{font:"400 18px/1.55 'Roboto Flex',sans-serif",color:"#44073BEB",margin:"0 auto 42px",maxWidth:"500px"}}>Partner with us to build stronger design leadership across companies, careers and the wider ecosystem.</p>
-          <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase",backgroundColor:"#44073B"}}>Partner with us <ArrowIcon /></Link>
+          <p style={{font:"400 18px/1.55 'Roboto Flex',sans-serif",color:"#44063BEB",margin:"0 auto 42px",maxWidth:"500px"}}>Partner with us to build stronger design leadership across companies, careers and the wider ecosystem.</p>
+          <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase",backgroundColor:"#44063B"}}>Partner with us <ArrowIcon /></Link>
         </div>
         {/* FAQ */}
         <div style={{padding:"118px 64px",background:"#FDFBF0"}}>

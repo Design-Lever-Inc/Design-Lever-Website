@@ -199,7 +199,7 @@ export default function PageResearch() {
             <div style={{display:"flex",flexDirection:"column",justifyContent:"center"}}>
               <div style={{display:"inline-flex",alignSelf:"flex-start",gap:"8px",marginBottom:"22px"}}>
                 <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",border:"1px solid #FF7D44",padding:"5px 11px"}}>ANNUAL REPORT</span>
-                <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#FF7D44",padding:"5px 11px"}}>IN PRODUCTION</span>
+                <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",background:"#FF7D44",padding:"5px 11px"}}>IN PRODUCTION</span>
               </div>
               <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.72)",margin:"0 0 28px",maxWidth:"520px"}}>
                 The annual view of how design leadership is developing across African companies and careers, bringing together practitioner data, company interviews and evidence from Design Lever engagements.
@@ -500,7 +500,7 @@ export default function PageResearch() {
           <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.82)",margin:"0 auto 42px",maxWidth:"520px"}}>
             Design Lever publishes public research so companies, practitioners, educators and institutions can use, test and challenge the work. Where data cannot be published, that limitation is stated.
           </p>
-          <a className="dl-btn hov-blue-cream" href="#reports" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44073B",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase",backgroundColor:"#FDFBF0"}}>Read our research principles <ArrowIcon direction="right" /></a>
+          <a className="dl-btn hov-blue-cream" href="#reports" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase",backgroundColor:"#FDFBF0"}}>Read our research principles <ArrowIcon direction="right" /></a>
         </div>
         {/* FAQ */}
         <div style={{padding:"118px 64px",backgroundColor:"#FDFBF0"}}>

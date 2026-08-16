@@ -60,7 +60,7 @@ export default function PageCareers() {
         </div>
         {/* HOW WE HIRE */}
         {/* TEACH WITH US */}
-        <div style={{padding:"120px 64px",backgroundColor:"#44073B"}}>
+        <div style={{padding:"120px 64px",backgroundColor:"#44063B"}}>
           <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"72px",alignItems:"center"}}>
             <div>
               <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>Teach with us</span>
