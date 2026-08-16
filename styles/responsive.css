@@ -450,3 +450,58 @@
 [id^="dl-exe-"] {
   object-position: 50% 18% !important;
 }
+
+/* ============================================================
+   UNIFIED TYPE SCALE
+   One system across every page family, desktop + mobile.
+   Loads after globals, so it wins the per-family hero rules.
+   ============================================================ */
+
+/* Hero display (h1): 96px on every page on desktop */
+.dl-page-hero-texture h1,
+.dl-network-family-hero h1,
+.dl-company-family-hero h1,
+.dl-corp-hero__copy h1 {
+  font-size: 96px !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.025em !important;
+}
+@media (max-width: 1024px) {
+  .dl-page-hero-texture h1,
+  .dl-network-family-hero h1,
+  .dl-company-family-hero h1,
+  .dl-corp-hero__copy h1 { font-size: clamp(48px, 8.2vw, 80px) !important; }
+}
+@media (max-width: 600px) {
+  .dl-page-hero-texture h1,
+  .dl-network-family-hero h1,
+  .dl-company-family-hero h1,
+  .dl-corp-hero__copy h1 {
+    font-size: clamp(34px, 10.5vw, 50px) !important;
+    line-height: 1.06 !important;
+  }
+}
+
+/* Section headings (h2): one responsive scale across all content pages */
+@media (max-width: 900px) {
+  :is(.pg-home, .pg-corporate-home, .pg-about, .pg-careers, .pg-press, .pg-contact,
+      .pg-academy, .pg-academy-foundation, .pg-academy-executive, .pg-faculty,
+      .pg-network, .pg-talent-hub, .pg-bench, .pg-the-lever, .pg-research)
+    h2:not(.dl-site-footer h2) {
+    font-size: clamp(30px, 5.6vw, 46px) !important;
+    line-height: 1.12 !important;
+  }
+}
+
+/* ============================================================
+   Remove hero motif graphics on mobile (the dashed line-art
+   overlays read as clutter on a phone).
+   ============================================================ */
+@media (max-width: 760px) {
+  .dl-page-hero-texture > svg,
+  .dl-network-family-hero > svg,
+  .dl-company-family-hero > svg {
+    display: none !important;
+  }
+  .dl-page-hero-texture--motif::before { display: none !important; }
+}
