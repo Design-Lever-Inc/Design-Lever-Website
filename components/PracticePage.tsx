@@ -149,17 +149,7 @@ export default function PracticePage() {
         {/* NAV */}
         <SiteNav active="practice" />
         {/* HERO, blush pink field */}
-        <div className="dl-page-hero-texture dl-page-hero-texture--motif" style={{background:"#21B58B",padding:"96px 64px 100px",position:"relative",overflow:"hidden"}}>
-          <svg viewBox="0 0 600 600" width="620" height="620" fill="none" stroke="#44063B" style={{position:"absolute",top:"-90px",right:"-150px",opacity:".9"}}>
-            <circle cx="300" cy="300" r="288" strokeWidth="1" strokeDasharray="4 8"></circle>
-            <circle cx="300" cy="300" r="230" strokeWidth="1" strokeDasharray="4 8"></circle>
-            <circle cx="300" cy="300" r="140" strokeWidth="1" strokeDasharray="4 8"></circle>
-            <circle cx="300" cy="300" r="60" strokeWidth="1" strokeDasharray="4 8"></circle>
-            <line x1="300" y1="12" x2="300" y2="588" strokeWidth="1" strokeDasharray="4 8"></line>
-            <line x1="12" y1="300" x2="588" y2="300" strokeWidth="1" strokeDasharray="4 8"></line>
-            <line x1="96" y1="96" x2="504" y2="504" strokeWidth="1" strokeDasharray="4 8"></line>
-            <line x1="504" y1="96" x2="96" y2="504" strokeWidth="1" strokeDasharray="4 8"></line>
-          </svg>
+        <div className="dl-page-hero-texture" style={{background:"#21B58B",padding:"96px 64px 100px",position:"relative",overflow:"hidden"}}>
           <div style={{position:"relative",maxWidth:"920px",zIndex:"1"}}>
             <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".14em",textTransform:"uppercase"}}>AFRICA'S FIRST DESIGN LEADERSHIP COMPANY</span>
             <h1 style={{font:"400 96px/1 'Faculty Glyphic',serif",color:"#44063B",letterSpacing:"-.02em",margin:"44px 0 40px",width:"816px",height:"263px"}}>Fractional design<br />leadership for<br />businesses.</h1>

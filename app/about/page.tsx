@@ -15,7 +15,17 @@ export default function PageAbout() {
         {/* NAV */}
         <SiteNav active="about" />
         {/* HERO */}
-        <div className="dl-page-hero-texture dl-page-hero-texture--on-dark dl-page-hero-texture--motif dl-about-hero-grid-right dl-company-family-hero" style={{position:"relative",overflow:"hidden",padding:"96px 64px 100px",background:"#44063B"}}>
+        <div className="dl-page-hero-texture dl-page-hero-texture--on-dark dl-about-hero-grid-right dl-company-family-hero" style={{position:"relative",overflow:"hidden",padding:"96px 64px 100px",background:"#44063B"}}>
+          <svg viewBox="0 0 600 600" width="620" height="620" fill="none" stroke="#FDFBF0" style={{position:"absolute",top:"-90px",right:"-150px",opacity:".14"}}>
+            <circle cx="300" cy="300" r="288" strokeWidth="1" strokeDasharray="4 8"></circle>
+            <circle cx="300" cy="300" r="230" strokeWidth="1" strokeDasharray="4 8"></circle>
+            <circle cx="300" cy="300" r="140" strokeWidth="1" strokeDasharray="4 8"></circle>
+            <circle cx="300" cy="300" r="60" strokeWidth="1" strokeDasharray="4 8"></circle>
+            <line x1="300" y1="12" x2="300" y2="588" strokeWidth="1" strokeDasharray="4 8"></line>
+            <line x1="12" y1="300" x2="588" y2="300" strokeWidth="1" strokeDasharray="4 8"></line>
+            <line x1="96" y1="96" x2="504" y2="504" strokeWidth="1" strokeDasharray="4 8"></line>
+            <line x1="504" y1="96" x2="96" y2="504" strokeWidth="1" strokeDasharray="4 8"></line>
+          </svg>
           <div style={{position:"relative",maxWidth:"920px",zIndex:"1"}}>
             <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>ABOUT · THE COMPANY</span>
             <h1 style={{font:"400 96px/1.0 'Faculty Glyphic',serif",color:"#FDFBF0",letterSpacing:"-.02em",margin:"44px 0 40px",textWrap:"balance",maxWidth:"755px"}}>On a mission to make design count.</h1>

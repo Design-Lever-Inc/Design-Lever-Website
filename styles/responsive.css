@@ -466,6 +466,13 @@
   line-height: 1.02 !important;
   letter-spacing: -0.025em !important;
 }
+/* Home hero: keep the headline on 3 lines through the mid-desktop band,
+   where a fixed 96px would drop "infrastructure." to a 4th line. */
+@media (min-width: 1101px) and (max-width: 1347px) {
+  .dl-corp-hero__copy h1 {
+    font-size: clamp(74px, calc(8.4vw - 18px), 96px) !important;
+  }
+}
 @media (max-width: 1024px) {
   .dl-page-hero-texture h1,
   .dl-network-family-hero h1,
