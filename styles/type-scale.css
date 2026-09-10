@@ -1,0 +1,137 @@
+/* Design Lever's single semantic type-scale authority.
+   Component styles own colour, spacing and special display roles; this file
+   owns the shared hero, section, subsection and lede hierarchy. */
+
+:is(
+  .pg-corporate-home, .pg-home, .pg-about, .pg-careers, .pg-press,
+  .pg-contact, .pg-academy, .pg-academy-foundation,
+  .pg-academy-executive, .pg-faculty, .pg-network, .pg-talent-hub,
+  .pg-bench, .pg-the-lever, .pg-research, .pg-diagnostic
+) h2:not(.dl-site-footer h2) {
+  font-family: var(--font-display) !important;
+  font-size: var(--type-size-section) !important;
+  font-weight: 400 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.015em !important;
+  text-wrap: balance;
+}
+
+:is(
+  .pg-corporate-home, .pg-home, .pg-about, .pg-careers, .pg-press,
+  .pg-contact, .pg-academy, .pg-academy-foundation,
+  .pg-academy-executive, .pg-faculty, .pg-network, .pg-talent-hub,
+  .pg-bench, .pg-the-lever, .pg-research, .pg-diagnostic
+) h3:not(.dl-site-footer h3) {
+  font-family: var(--font-display) !important;
+  font-size: var(--type-size-subsection) !important;
+  font-weight: 400 !important;
+  line-height: 1.18 !important;
+  letter-spacing: -0.01em !important;
+  text-wrap: balance;
+}
+
+details.dl-faq summary .dl-q {
+  font-family: var(--font-display) !important;
+  font-size: var(--type-size-question) !important;
+  font-weight: 400 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.01em !important;
+  text-wrap: balance;
+}
+
+details.dl-faq .dl-a {
+  max-width: 47.5rem;
+  font-family: var(--font-body) !important;
+  font-size: var(--type-size-body) !important;
+  font-weight: 400 !important;
+  line-height: 1.65 !important;
+}
+
+.dl-corp-hero__copy h1,
+.dl-page-hero-texture h1,
+.dl-network-family-hero h1,
+.dl-company-family-hero h1 {
+  width: auto !important;
+  height: auto !important;
+  max-width: 10.5ch !important;
+  font-family: var(--font-display) !important;
+  font-size: var(--type-size-hero) !important;
+  font-weight: 400 !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.025em !important;
+  text-wrap: balance;
+}
+
+.dl-corp-hero__copy > p,
+.dl-page-hero-texture p,
+.dl-network-family-hero p,
+.dl-company-family-hero p {
+  max-width: 62ch !important;
+  font-family: var(--font-body) !important;
+  font-size: var(--type-size-lede) !important;
+  font-weight: 400 !important;
+  line-height: 1.55 !important;
+  text-wrap: pretty;
+}
+
+.dl-site-footer .dl-footer-intro h2 {
+  font-family: var(--font-display) !important;
+  font-size: var(--type-size-title-sub) !important;
+  font-weight: 400 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.015em !important;
+}
+
+@media (max-width: 64rem) {
+  :root {
+    --type-size-hero: clamp(3.5rem, 8vw, 4.5rem);
+    --type-size-section: clamp(2.375rem, 5.6vw, 3rem);
+  }
+}
+
+/* Tablet heroes have a full-width copy column, so retain a readable display
+   measure instead of carrying the deliberately narrow desktop cap. */
+@media (min-width: 37.501rem) and (max-width: 64rem) {
+  .dl-corp-hero__copy h1,
+  .dl-page-hero-texture h1,
+  .dl-network-family-hero h1,
+  .dl-company-family-hero h1 {
+    max-width: 14ch !important;
+  }
+}
+
+@media (max-width: 37.5rem) {
+  :root {
+    --type-size-hero: clamp(3rem, 14vw, 3.5rem);
+    --type-size-section: clamp(2rem, 9vw, 2.25rem);
+    --type-size-title-sub: 2.25rem;
+    --type-size-subsection: 1.375rem;
+    --type-size-question: 1.125rem;
+    --type-size-lede: 1.125rem;
+  }
+
+  details.dl-faq summary {
+    min-height: 4rem;
+    box-sizing: border-box;
+    padding-block: 1.25rem;
+  }
+
+  .dl-corp-hero__copy h1,
+  .dl-page-hero-texture h1,
+  .dl-network-family-hero h1,
+  .dl-company-family-hero h1 {
+    max-width: 9.5ch !important;
+    margin-top: 1.875rem !important;
+    margin-bottom: 1.625rem !important;
+    line-height: 1.01 !important;
+  }
+
+  :is(
+    .pg-corporate-home, .pg-home, .pg-about, .pg-careers, .pg-press,
+    .pg-contact, .pg-academy, .pg-academy-foundation,
+    .pg-academy-executive, .pg-faculty, .pg-network, .pg-talent-hub,
+    .pg-bench, .pg-the-lever, .pg-research, .pg-diagnostic
+  ) h2:not(.dl-site-footer h2) {
+    max-width: 18ch;
+  }
+}

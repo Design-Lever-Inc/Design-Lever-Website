@@ -1,0 +1,77 @@
+"use client";
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const BOOK_CALL_URL = "https://www.conectr.me/s/design-intelligence-call-dh";
+
+const GROUPS: [string, [string, string][]][] = [
+  ["Home", [["/", "Home"]]],
+  ["Practice", [["/practice", "Practice"]]],
+  ["About", [["/about", "About"]]],
+];
+
+/** Touch-friendly menu for small screens: the hover dropdowns of the desktop
+ *  nav don't exist on touch, so under 900px the menu collapses behind a
+ *  burger button into a full-width cream panel. */
+export function MobileMenu() {
+  const [open, setOpen] = useState(false);
+  const [panelTop, setPanelTop] = useState(68);
+  const pathname = usePathname();
+
+  // Lock body scroll while the panel is open. Navigation unmounts this menu,
+  // so it closes naturally without scheduling a state update in an effect.
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    // flag the open state so the nav's scrolled backdrop-filter can be
+    // dropped: backdrop-filter makes the nav a containing block for the
+    // panel's position:fixed, collapsing it against the nav when scrolled.
+    document.body.classList.toggle("dl-menu-open", open);
+    return () => {
+      document.body.style.overflow = "";
+      document.body.classList.remove("dl-menu-open");
+    };
+  }, [open]);
+
+  // the nav's height varies (announcement bar, wrapped rows): anchor the
+  // panel to the nav's real bottom edge at the moment it opens
+  const toggle = (e: React.MouseEvent) => {
+    const nav = (e.currentTarget as HTMLElement).closest(".dl-nav");
+    if (nav) setPanelTop(Math.max(0, Math.round(nav.getBoundingClientRect().bottom)));
+    setOpen((o) => !o);
+  };
+
+  return (
+    <div className="dl-mnav">
+      <button
+        className="dl-mnav-btn"
+        aria-expanded={open}
+        aria-label={open ? "Close menu" : "Open menu"}
+        onClick={toggle}
+      >
+        {open ? "CLOSE ×" : "MENU ☰"}
+      </button>
+      {open && (
+        <div className="dl-mnav-panel" style={{ top: panelTop }}>
+          {GROUPS.map(([title, links]) => (
+            <div key={title} className="dl-mnav-group">
+              {links.map(([href, label], i) => (
+                <Link
+                  key={href}
+                  href={href}
+                  className={i === 0 ? "dl-mnav-link dl-mnav-link--head" : "dl-mnav-link"}
+                  aria-current={pathname === href ? "page" : undefined}
+                >
+                  {label}
+                </Link>
+              ))}
+            </div>
+          ))}
+          <a href={BOOK_CALL_URL} target="_blank" rel="noopener" className="dl-mnav-cta">
+            Book a call
+          </a>
+        </div>
+      )}
+    </div>
+  );
+}
