@@ -19,9 +19,9 @@ const TESTIMONIALS = [
     headshot: "/images/testimonials/damilola-akinwale.webp",
     href: "/resources/case-studies/from-projects-to-function",
     metrics: [
-      ["04", "Leadership systems adopted"],
+      ["4", "Leadership systems adopted"],
       ["12", "Weeks to promotion"],
-      ["01", "Function operating plan"],
+      ["1", "Function operating plan"],
     ],
   },
   {
@@ -34,8 +34,8 @@ const TESTIMONIALS = [
     href: "/resources/case-studies/defending-the-design-budget",
     metrics: [
       ["18%", "Budget increase secured"],
-      ["03", "Commercial metrics adopted"],
-      ["02", "Board planning cycles"],
+      ["3", "Commercial metrics adopted"],
+      ["2", "Board planning cycles"],
     ],
   },
 ] as const;
@@ -50,38 +50,38 @@ export default function PageAcademyFoundation() {
         <div className="dl-page-hero-texture" style={{position:"relative",overflow:"hidden",padding:"96px 64px 100px",backgroundColor:"#FDFBF0"}}>
           <div style={{display:"grid",gridTemplateColumns:"minmax(0,7fr) minmax(0,3fr)",gap:"90px",alignItems:"end"}}>
             <div>
-              <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>Foundation Programme</span>
+              <span style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#B8430F",letterSpacing:".14em",textTransform:"uppercase"}}>Foundation Programme</span>
               <h1 style={{font:"400 96px/1 'Faculty Glyphic',serif",color:"#44063B",letterSpacing:"-.02em",margin:"38px 0 34px",textWrap:"balance",maxWidth:"900px"}}>Learn the fundamentals of leading design.</h1>
               <p style={{font:"400 20px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.66)",maxWidth:"620px",margin:"0 0 40px"}}>
                 One intensive week that gives experienced designers the vocabulary, systems, and commercial framing to build the foundations for leading a design team.
               </p>
               <div style={{display:"flex",alignItems:"center",gap:"24px"}}>
-                <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"16px 26px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Apply for the next cohort <ArrowIcon /></Link>
-                <a className="dl-link" href="#curriculum" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"4px"}}>See the curriculum</a>
+                <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"500 15px/1.2 'Roboto Flex',sans-serif",color:"#FDFBF0",background:"#44063B",padding:"16px 26px",textDecoration:"none"}}>Apply for the next cohort <ArrowIcon /></Link>
+                <a className="dl-link" href="#curriculum" style={{font:"500 15px/1.2 'Roboto Flex',sans-serif",color:"#44063B",textDecoration:"none",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"4px"}}>See the curriculum</a>
               </div>
             </div>
             <div style={{border:"1px solid rgba(68,6,59,.2)"}}>
-              <div style={{display:"flex",justifyContent:"space-between",padding:"20px 26px",borderBottom:"1px solid rgba(68,6,59,.14)",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B"}}>
-                <span style={{color:"rgba(68,6,59,.55)"}}>Duration</span>
+              <div style={{display:"flex",justifyContent:"space-between",padding:"20px 26px",borderBottom:"1px solid rgba(68,6,59,.14)",font:"400 13px 'Spline Sans Mono',monospace",color:"#44063B"}}>
+                <span style={{color:"rgba(68,6,59,.6)"}}>Duration</span>
                 <span>1 week, full-time</span>
               </div>
-              <div style={{display:"flex",justifyContent:"space-between",padding:"20px 26px",borderBottom:"1px solid rgba(68,6,59,.14)",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B"}}>
-                <span style={{color:"rgba(68,6,59,.55)"}}>Format</span>
+              <div style={{display:"flex",justifyContent:"space-between",padding:"20px 26px",borderBottom:"1px solid rgba(68,6,59,.14)",font:"400 13px 'Spline Sans Mono',monospace",color:"#44063B"}}>
+                <span style={{color:"rgba(68,6,59,.6)"}}>Format</span>
                 <span>Live · hybrid</span>
               </div>
-              <div style={{display:"flex",justifyContent:"space-between",padding:"20px 26px",borderBottom:"1px solid rgba(68,6,59,.14)",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B"}}>
-                <span style={{color:"rgba(68,6,59,.55)"}}>Cohort</span>
-                <span>Max 20 · 2 per year</span>
+              <div style={{display:"flex",justifyContent:"space-between",padding:"20px 26px",borderBottom:"1px solid rgba(68,6,59,.14)",font:"400 13px 'Spline Sans Mono',monospace",color:"#44063B"}}>
+                <span style={{color:"rgba(68,6,59,.6)"}}>Cohort</span>
+                <span>20 seats · 2 cohorts a year</span>
               </div>
-              <div style={{display:"flex",justifyContent:"space-between",padding:"20px 26px",borderBottom:"1px solid rgba(68,6,59,.14)",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B"}}>
-                <span style={{color:"rgba(68,6,59,.55)"}}>Entry</span>
+              <div style={{display:"flex",justifyContent:"space-between",padding:"20px 26px",borderBottom:"1px solid rgba(68,6,59,.14)",font:"400 13px 'Spline Sans Mono',monospace",color:"#44063B"}}>
+                <span style={{color:"rgba(68,6,59,.6)"}}>Entry</span>
                 <span>5+ years experience</span>
               </div>
               <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",padding:"24px 26px",backgroundColor:"#FF7D44"}}>
-                <span style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B"}}>Tuition</span>
+                <span style={{font:"400 13px 'Spline Sans Mono',monospace",color:"#44063B"}}>Tuition</span>
                 <span style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B"}}>
                   ₦400K
-                  <span style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)"}}>/ $250</span>
+                  <span> / $250</span>
                 </span>
               </div>
             </div>
@@ -95,7 +95,7 @@ export default function PageAcademyFoundation() {
         <div style={{padding:"100px 64px",background:"#14191D"}}>
           <div className="dl-foundation-audience-grid" style={{display:"grid",gridTemplateColumns:"minmax(0, 2fr) minmax(0, 3fr)",gap:"64px",alignItems:"start"}}>
             <div>
-              <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>Who it's for</span>
+              <span style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>Who it's for</span>
               <h2 style={{font:"400 46px/1.12 'Faculty Glyphic',serif",color:"#FDFBF0",margin:"24px 0 0",letterSpacing:"-.01em"}}>You can design. Now you want to lead.</h2>
             </div>
             <div style={{borderTop:"1px solid rgba(253,251,240,.22)"}}>
@@ -117,40 +117,40 @@ export default function PageAcademyFoundation() {
         {/* CURRICULUM */}
         <div id="curriculum" style={{padding:"118px 64px",borderTop:"1px solid rgba(68,6,59,.16)"}}>
           <div style={{maxWidth:"820px",marginBottom:"64px"}}>
-            <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>The curriculum</span>
+            <span style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#B8430F",letterSpacing:".14em",textTransform:"uppercase"}}>The curriculum</span>
             <h2 style={{font:"400 60px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 0",letterSpacing:"-.01em"}}>Five days, five practical foundations you leave with.</h2>
           </div>
           <div style={{borderTop:"1.5px solid #44063B"}}>
             <div style={{display:"grid",gridTemplateColumns:"130px 300px 1fr",gap:"40px",alignItems:"baseline",padding:"32px 0",borderBottom:"1px solid rgba(68,6,59,.16)"}}>
-              <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF7D44"}}>DAY 01</div>
+              <div style={{font:"400 13px 'Spline Sans Mono',monospace",color:"#B8430F"}}>DAY 01</div>
               <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B"}}>Leadership fundamentals</div>
               <p style={{font:"400 16px/1.65 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.66)",margin:"0",maxWidth:"600px"}}>
                 What design leadership actually is, the CDO mandate, and where design sits in a company's decisions.
               </p>
             </div>
             <div style={{display:"grid",gridTemplateColumns:"130px 300px 1fr",gap:"40px",alignItems:"baseline",padding:"32px 0",borderBottom:"1px solid rgba(68,6,59,.16)"}}>
-              <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF7D44"}}>DAY 02</div>
+              <div style={{font:"400 13px 'Spline Sans Mono',monospace",color:"#B8430F"}}>DAY 02</div>
               <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B"}}>The business of design</div>
               <p style={{font:"400 16px/1.65 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.66)",margin:"0",maxWidth:"600px"}}>
                 How design connects to revenue, retention and velocity, and how to speak to a CEO in their language.
               </p>
             </div>
             <div style={{display:"grid",gridTemplateColumns:"130px 300px 1fr",gap:"40px",alignItems:"baseline",padding:"32px 0",borderBottom:"1px solid rgba(68,6,59,.16)"}}>
-              <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF7D44"}}>DAY 03</div>
+              <div style={{font:"400 13px 'Spline Sans Mono',monospace",color:"#B8430F"}}>DAY 03</div>
               <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B"}}>Performance metrics</div>
               <p style={{font:"400 16px/1.65 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.66)",margin:"0",maxWidth:"600px"}}>
                 Making design visible on the P&L: the metrics that matter and how to present return on design investment.
               </p>
             </div>
             <div style={{display:"grid",gridTemplateColumns:"130px 300px 1fr",gap:"40px",alignItems:"baseline",padding:"32px 0",borderBottom:"1px solid rgba(68,6,59,.16)"}}>
-              <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF7D44"}}>DAY 04</div>
+              <div style={{font:"400 13px 'Spline Sans Mono',monospace",color:"#B8430F"}}>DAY 04</div>
               <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B"}}>Leading people & culture</div>
               <p style={{font:"400 16px/1.65 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.66)",margin:"0",maxWidth:"600px"}}>
                 Building the quality bar, growth pathways and the culture that keeps great designers from leaving.
               </p>
             </div>
             <div style={{display:"grid",gridTemplateColumns:"130px 300px 1fr",gap:"40px",alignItems:"baseline",padding:"32px 0"}}>
-              <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF7D44"}}>DAY 05</div>
+              <div style={{font:"400 13px 'Spline Sans Mono',monospace",color:"#B8430F"}}>DAY 05</div>
               <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B"}}>Systems & leadership plan</div>
               <p style={{font:"400 16px/1.65 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.66)",margin:"0",maxWidth:"600px"}}>
                 Design operations, standards and rituals, applied to your own team in a capstone you take back to work.
@@ -162,11 +162,11 @@ export default function PageAcademyFoundation() {
         {/* FACULTY */}
         <div style={{padding:"118px 64px 118px"}}>
           <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline",marginBottom:"44px"}}>
-            <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>Taught by practitioners</span>
+            <span style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#B8430F",letterSpacing:".14em",textTransform:"uppercase"}}>Taught by practitioners</span>
             <Link
               className="dl-link"
               href="/faculty"
-              style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"4px"}}
+              style={{font:"500 15px/1.2 'Roboto Flex',sans-serif",color:"#44063B",textDecoration:"none",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"4px"}}
             >
               See full faculty
             </Link>
@@ -180,7 +180,7 @@ export default function PageAcademyFoundation() {
         </div>
         {/* WHAT YOU LEAVE WITH */}
         <div style={{padding:"100px 64px",backgroundColor:"#14191D"}}>
-          <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>What you leave with</span>
+          <span style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>What you leave with</span>
           <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:"0",marginTop:"44px",borderTop:"1px solid rgba(253,251,240,.2)"}}>
             <div style={{padding:"34px 28px 34px 0",borderRight:"1px solid rgba(253,251,240,.14)"}}>
               <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#FF7D44" strokeWidth="1.4" style={{display:"block",marginBottom:"16px"}}>
@@ -216,20 +216,11 @@ export default function PageAcademyFoundation() {
           </div>
         </div>
         <TestimonialCarousel testimonials={TESTIMONIALS} />
-        {/* CTA */}
-        <div style={{padding:"130px 64px",background:"#FF7D44",textAlign:"center"}}>
-          <h2 style={{font:"400 60px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"0 auto 30px",maxWidth:"800px",letterSpacing:"-.015em",textWrap:"balance"}}>Two cohorts a year. Twenty places each.</h2>
-          <p style={{font:"400 18px/1.55 'Roboto Flex',sans-serif",color:"#44063BEB",margin:"0 auto 42px",maxWidth:"480px"}}>Apply for the next Foundation intake, or ask us anything before you do.</p>
-          <div style={{display:"flex",gap:"24px",justifyContent:"center",alignItems:"center"}}>
-            <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase",backgroundColor:"#44063B"}}>Apply now <ArrowIcon /></Link>
-            <Link className="dl-link" href="/academy/executive" style={{display:"inline-flex",alignItems:"center",font:"400 12px/1.2 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"4px"}}>Explore Executive track</Link>
-          </div>
-        </div>
         {/* FAQ */}
         <div style={{padding:"118px 64px",background:"#FDFBF0"}}>
           <div className="dl-faq-grid" style={{display:"grid",gap:"64px",alignItems:"start"}}>
             <div>
-              <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>FAQs</span>
+              <span style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#B8430F",letterSpacing:".14em",textTransform:"uppercase"}}>FAQs</span>
               <h2 style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 0",letterSpacing:"-.01em"}}>Foundation, answered.</h2>
             </div>
             <div style={{borderTop:"1.5px solid #44063B"}}>
@@ -275,12 +266,21 @@ export default function PageAcademyFoundation() {
                   <span className="dl-plus">+</span>
                 </summary>
                 <p className="dl-a">
-                  Foundation gives you the language and systems to lead a function.
+                  Foundation gives you the language and systems to lead a function.{" "}
                   <Link className="dl-link" href="/academy/executive" style={{color:"#44063B",textDecoration:"underline",textUnderlineOffset:"3px"}}>Executive</Link>
-                  is a four-week deep dive into design operations, fractional practice and research methodology for the most senior roles.
+                  {" "}is a four-week deep dive into design operations, fractional practice and research methodology for the most senior roles.
                 </p>
               </details>
             </div>
+          </div>
+        </div>
+        {/* CTA */}
+        <div style={{padding:"130px 64px",background:"#FF7D44",textAlign:"center"}}>
+          <h2 style={{font:"400 60px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"0 auto 30px",maxWidth:"800px",letterSpacing:"-.015em",textWrap:"balance"}}>Two cohorts a year. Twenty places each.</h2>
+          <p style={{font:"400 18px/1.55 'Roboto Flex',sans-serif",color:"#44063BEB",margin:"0 auto 42px",maxWidth:"480px"}}>Apply for the next Foundation intake, or ask us anything before you do.</p>
+          <div style={{display:"flex",gap:"24px",justifyContent:"center",alignItems:"center"}}>
+            <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"500 15px/1.2 'Roboto Flex',sans-serif",color:"#FDFBF0",padding:"18px 32px",textDecoration:"none",backgroundColor:"#44063B"}}>Apply now <ArrowIcon /></Link>
+            <Link className="dl-link" href="/academy/executive" style={{display:"inline-flex",alignItems:"center",font:"500 15px/1.2 'Roboto Flex',sans-serif",color:"#44063B",textDecoration:"none",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"4px"}}>Explore Executive track</Link>
           </div>
         </div>
         {/* FOOTER */}

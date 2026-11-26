@@ -25,21 +25,21 @@ export default function PageTheLever() {
             <circle cx="180" cy="180" r="6" fill="#FF7D44" stroke="none"></circle>
           </svg>
           <div style={{position:"relative",maxWidth:"920px",zIndex:"1"}}>
-            <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",letterSpacing:".14em",textTransform:"uppercase"}}>THE LEVER COMMUNITY</span>
+            <span style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.7)",letterSpacing:".14em",textTransform:"uppercase"}}>THE LEVER COMMUNITY</span>
             <h1 style={{font:"400 80px/1.04 'Faculty Glyphic',serif",color:"#44063B",letterSpacing:"-.02em",margin:"40px 0 40px",textWrap:"balance",width:"668px",height:"241px"}}>A professional home for executive design leaders.</h1>
-            <p style={{font:"400 20px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.66)",maxWidth:"560px",margin:"0 0 46px"}}>
+            <p style={{font:"400 20px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.7)",maxWidth:"560px",margin:"0 0 46px"}}>
               Peer connection, practitioner events, research access and opportunities for senior design leaders across Africa and the diaspora.
             </p>
             <div style={{display:"flex",alignItems:"center",gap:"28px"}}>
-              <a className="dl-btn" href="#join" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"16px 26px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Request to join <ArrowIcon direction="down" /></a>
-              <a className="dl-link" href="#inside" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"4px"}}>What's inside</a>
+              <a className="dl-btn" href="#join" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"500 15px/1.2 'Roboto Flex',sans-serif",color:"#FDFBF0",background:"#44063B",padding:"16px 26px",textDecoration:"none"}}>Request to join <ArrowIcon direction="down" /></a>
+              <a className="dl-link" href="#inside" style={{font:"500 15px/1.2 'Roboto Flex',sans-serif",color:"#44063B",textDecoration:"none",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"4px"}}>What's inside</a>
             </div>
           </div>
         </div>
         {/* WHO IT IS FOR */}
         <section className="dl-network-standard" style={{padding:"118px 64px",background:"#FDFBF0",borderTop:"1px solid rgba(68,6,59,.16)"}}>
           <div style={{marginBottom:"56px"}}>
-            <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#7A2A6E",letterSpacing:".14em",textTransform:"uppercase"}}>Who it is for</span>
+            <span style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#7A2A6E",letterSpacing:".14em",textTransform:"uppercase"}}>Who it is for</span>
             <h2 style={{font:"400 46px/1.08 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 0",letterSpacing:"-.01em",maxWidth:"760px"}}>Built for experienced practitioners.</h2>
           </div>
           <div className="dl-network-standard-grid" style={{display:"grid",gridTemplateColumns:"repeat(3, 1fr)",borderTop:"1.5px solid #44063B"}}>
@@ -58,7 +58,7 @@ export default function PageTheLever() {
         {/* WHAT'S INSIDE */}
         <div id="inside" style={{padding:"118px 64px",borderTop:"1px solid rgba(68,6,59,.16)"}}>
           <div style={{maxWidth:"820px",marginBottom:"64px"}}>
-            <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>What members receive</span>
+            <span style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#B8430F",letterSpacing:".14em",textTransform:"uppercase"}}>What members receive</span>
             <h2 style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 0",letterSpacing:"-.01em"}}>Peer connection at a serious professional level.</h2>
           </div>
           <div className="dl-lever-benefits" style={{borderTop:"1px solid rgba(68,6,59,.2)"}}>
@@ -131,16 +131,17 @@ export default function PageTheLever() {
         <div style={{padding:"118px 64px",background:"#14191D"}}>
           <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"72px",alignItems:"center"}}>
             <div>
-              <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>The joining fee</span>
+              <span style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>The joining fee</span>
               <h2 style={{font:"400 46px/1.08 'Faculty Glyphic',serif",color:"#FDFBF0",margin:"24px 0 26px",letterSpacing:"-.01em"}}>A paid membership by design.</h2>
               <p style={{font:"400 16px/1.65 'Roboto Flex',sans-serif",color:"rgba(253,251,240,.7)",margin:"0",maxWidth:"440px"}}>
                 A paid model helps keep The Lever curated, independent and useful to the people in it. Membership is built for quality, not volume.
               </p>
             </div>
             <div style={{border:"1px solid rgba(253,251,240,.22)",padding:"48px 44px 44px"}}>
-              <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".06em",marginBottom:"20px"}}>ANNUAL MEMBERSHIP</div>
+              <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".06em",marginBottom:"20px"}}>ANNUAL MEMBERSHIP</div>
               <div style={{display:"flex",alignItems:"baseline",gap:"16px"}}>
                 <div style={{font:"400 96px/.85 'Faculty Glyphic',serif",color:"#FDFBF0",letterSpacing:"-.03em"}}>₦100K</div>
+                <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#FDFBF0",marginTop:"12px"}}>≈ $70</div>
               </div>
               <p style={{font:"400 16px/1.6 'Roboto Flex',sans-serif",color:"rgba(253,251,240,.62)",margin:"26px 0 0"}}>
                 Billed annually. Academy participants receive their first year of membership at no cost, then renew at the standard annual rate.
@@ -148,19 +149,11 @@ export default function PageTheLever() {
             </div>
           </div>
         </div>
-        {/* CTA */}
-        <div id="join" style={{padding:"130px 64px",background:"#DEDF4D",textAlign:"center"}}>
-          <h2 style={{font:"400 60px/1.06 'Faculty Glyphic',serif",color:"#44063B",margin:"0 auto 30px",maxWidth:"820px",letterSpacing:"-.015em",textWrap:"balance"}}>Join a room built for your level of practice.</h2>
-          <p style={{font:"400 18px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.7)",margin:"0 auto 42px",maxWidth:"500px"}}>
-            Membership is reviewed. The founding cohort of The Lever is now taking requests to join.
-          </p>
-          <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase"}}>Request to join <ArrowIcon /></Link>
-        </div>
         {/* FAQ */}
         <div style={{padding:"118px 64px",background:"#FDFBF0"}}>
           <div className="dl-faq-grid" style={{display:"grid",gap:"64px",alignItems:"start"}}>
             <div>
-              <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>FAQs</span>
+              <span style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#B8430F",letterSpacing:".14em",textTransform:"uppercase"}}>FAQs</span>
               <h2 style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 0",letterSpacing:"-.01em"}}>The Lever, answered.</h2>
             </div>
             <div style={{borderTop:"1.5px solid #44063B"}}>
@@ -188,7 +181,7 @@ export default function PageTheLever() {
                   <span className="dl-plus">+</span>
                 </summary>
                 <p className="dl-a">
-                  Yes. Membership costs ₦100K to join and ₦100K each year to renew. Renewal maintains access to the peer network, member gatherings, research, practitioner conversations and community opportunities.
+                  Yes. Membership costs ₦100K (about $70) to join and ₦100K each year to renew. Renewal maintains access to the peer network, member gatherings, research, practitioner conversations and community opportunities.
                 </p>
               </details>
               <details className="dl-faq" name="dlfaq">
@@ -220,6 +213,14 @@ export default function PageTheLever() {
               </details>
             </div>
           </div>
+        </div>
+        {/* CTA */}
+        <div id="join" style={{padding:"130px 64px",background:"#DEDF4D",textAlign:"center"}}>
+          <h2 style={{font:"400 60px/1.06 'Faculty Glyphic',serif",color:"#44063B",margin:"0 auto 30px",maxWidth:"820px",letterSpacing:"-.015em",textWrap:"balance"}}>Join a room built for your level of practice.</h2>
+          <p style={{font:"400 18px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.7)",margin:"0 auto 42px",maxWidth:"500px"}}>
+            Membership is reviewed. The founding cohort of The Lever is now taking requests to join.
+          </p>
+          <Link className="dl-btn" href="/contact" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"500 15px/1.2 'Roboto Flex',sans-serif",color:"#FDFBF0",background:"#44063B",padding:"18px 32px",textDecoration:"none"}}>Request to join <ArrowIcon /></Link>
         </div>
         {/* FOOTER */}
         <SiteFooter />
