@@ -6,10 +6,8 @@ const BOOK_CALL_URL = "https://www.conectr.me/s/design-intelligence-call-dh";
 type NavSection = "home" | "practice" | "academy" | "network" | "research" | "about" | "none";
 
 const navLinkStyle = {
-  font: "400 12px 'Spline Sans Mono',monospace",
+  font: "500 15px/1.2 'Roboto Flex',sans-serif",
   textDecoration: "none",
-  letterSpacing: ".1em",
-  textTransform: "uppercase",
   padding: "14px 16px",
   display: "flex",
   alignItems: "center",
@@ -37,10 +35,8 @@ const dropStyle = {
 const dropItemStyle = { display: "block", padding: "13px 18px", textDecoration: "none" } as const;
 
 const dropItemTextStyle = {
-  font: "400 11px 'Spline Sans Mono',monospace",
+  font: "400 15px/1.3 'Roboto Flex',sans-serif",
   color: "#FDFBF0",
-  letterSpacing: ".08em",
-  textTransform: "uppercase",
 } as const;
 
 function DropItem({ href, label }: { href: string; label: string }) {
@@ -66,7 +62,7 @@ function NavItem({
     <div className="dl-navitem" style={{ position: "relative" }}>
       <Link
         className={isActive ? "dl-navlink dl-navlink--active" : "dl-navlink"}
-        style={{ ...navLinkStyle, color: isActive ? "#FF7D44" : "#44063B" }}
+        style={{ ...navLinkStyle, color: isActive ? "#B8430F" : "#44063B" }}
         href={href}
       >
         {label}
@@ -80,7 +76,7 @@ function NavItem({
   );
 }
 
-/** Canonical sticky nav: cream, hairline bottom border, logo left, mono links
+/** Canonical sticky nav: cream, hairline bottom border, logo left, links
  *  pushed right against the orange CTA. Dropdowns on hover, no chevrons. */
 export function SiteNav({ active = "none" }: { active?: NavSection }) {
   return (
@@ -134,13 +130,11 @@ export function SiteNav({ active = "none" }: { active?: NavSection }) {
         rel="noopener"
         className="dl-navcta"
         style={{
-          font: "400 12px 'Spline Sans Mono',monospace",
+          font: "500 15px/1.2 'Roboto Flex',sans-serif",
           color: "#44063B",
           background: "#FF7D44",
           padding: "14px 24px",
           textDecoration: "none",
-          letterSpacing: ".04em",
-          textTransform: "uppercase",
           whiteSpace: "nowrap",
         }}
       >

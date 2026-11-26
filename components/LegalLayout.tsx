@@ -1,5 +1,23 @@
+import { Children, cloneElement, isValidElement, type ReactElement, type ReactNode } from "react";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
+
+const slugify = (text: string) =>
+  text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+/** Give each top-level <h2> an id and collect them for the contents list. */
+function withSectionIds(children: ReactNode) {
+  const toc: { id: string; label: string }[] = [];
+  const content = Children.map(children, (child) => {
+    if (isValidElement<{ children?: ReactNode }>(child) && child.type === "h2" && typeof child.props.children === "string") {
+      const id = slugify(child.props.children);
+      toc.push({ id, label: child.props.children });
+      return cloneElement(child as ReactElement<{ id?: string }>, { id });
+    }
+    return child;
+  });
+  return { content, toc };
+}
 
 /** Shared chrome + typography wrapper for the legal pages (privacy, terms).
  *  Prose elements inside are styled by the `.dl-legal` rules in globals.css. */
@@ -12,8 +30,9 @@ export function LegalLayout({
   title: string;
   updated: string;
   intro: string;
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
+  const { content, toc } = withSectionIds(children);
   return (
     <div className="pg-legal">
       <div style={{ maxWidth: "1440px", margin: "0 auto", background: "#FDFBF0", overflowX: "clip" }}>
@@ -22,8 +41,8 @@ export function LegalLayout({
           <div style={{ maxWidth: "760px" }}>
             <span
               style={{
-                font: "400 11px 'Spline Sans Mono',monospace",
-                color: "#FF7D44",
+                font: "400 12px 'Spline Sans Mono',monospace",
+                color: "#B8430F",
                 letterSpacing: ".14em",
                 textTransform: "uppercase",
               }}
@@ -43,8 +62,8 @@ export function LegalLayout({
             </h1>
             <div
               style={{
-                font: "400 12px 'Spline Sans Mono',monospace",
-                color: "rgba(68,6,59,.55)",
+                font: "400 13px 'Spline Sans Mono',monospace",
+                color: "rgba(68,6,59,.6)",
                 letterSpacing: ".04em",
                 textTransform: "uppercase",
               }}
@@ -56,10 +75,20 @@ export function LegalLayout({
             </p>
           </div>
         </div>
-        <div style={{ padding: "16px 64px 110px" }}>
+        <div className="dl-legal-body" style={{ padding: "16px 64px 110px" }}>
           <div className="dl-legal" style={{ maxWidth: "760px" }}>
-            {children}
+            {content}
           </div>
+          {toc.length > 2 && (
+            <nav className="dl-legal-toc" aria-label="On this page">
+              <div className="dl-legal-toc__title">On this page</div>
+              {toc.map(({ id, label }) => (
+                <a key={id} href={`#${id}`}>
+                  {label}
+                </a>
+              ))}
+            </nav>
+          )}
         </div>
         <SiteFooter />
       </div>

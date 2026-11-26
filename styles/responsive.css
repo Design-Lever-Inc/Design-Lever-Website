@@ -12,7 +12,7 @@
 .dl-mnav { display: none; }
 
 .dl-mnav-btn {
-  font: 400 12px 'Spline Sans Mono', monospace;
+  font: 400 13px 'Spline Sans Mono', monospace;
   letter-spacing: .08em;
   color: #44063B;
   background: transparent;
@@ -44,25 +44,23 @@
   padding: 9px 0 9px 18px;
 }
 .dl-mnav-link--head {
-  font: 400 12px 'Spline Sans Mono', monospace;
+  font: 400 13px 'Spline Sans Mono', monospace;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: #FF7D44;
+  color: #44063B;
   padding-left: 0;
 }
-.dl-mnav-link[aria-current="page"] { color: #FF7D44; }
+.dl-mnav-link[aria-current="page"] { color: var(--dl-orange-text); }
 
 .dl-mnav-cta {
   display: block;
   margin-top: 24px;
   text-align: center;
-  font: 400 12px 'Spline Sans Mono', monospace;
+  font: 500 15px/1.2 'Roboto Flex', sans-serif;
   color: #44063B;
   background: #FF7D44;
   padding: 16px;
   text-decoration: none;
-  letter-spacing: .04em;
-  text-transform: uppercase;
 }
 
 @media (max-width: 900px) {
@@ -241,7 +239,7 @@
     writing-mode: horizontal-tb !important;
     transform: none !important;
     opacity: 1 !important;
-    font: 500 11px/1.4 'Spline Sans Mono', monospace !important;
+    font: 500 12px/1.4 'Spline Sans Mono', monospace !important;
     letter-spacing: .12em !important;
     text-transform: uppercase;
     color: #44063B !important;
@@ -511,4 +509,9 @@
     display: none !important;
   }
   .dl-page-hero-texture--motif::before { display: none !important; }
+}
+
+/* Diagnostic: the results panel follows the inputs on desktop only. */
+@media (max-width: 900px) {
+  .dl-diag-sticky { position: static !important; }
 }

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ArrowIcon } from "@/components/ArrowIcon";
+import { HeroFactCard } from "@/components/HeroFactCard";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
 
 const TESTIMONIALS = [
@@ -33,7 +34,7 @@ const TESTIMONIALS = [
     metrics: [
       ["40%", "Faster release cycle"],
       ["50%", "Design-caused rework reduced"],
-      ["03", "Months to set the release pace"],
+      ["3", "Months to set the release pace"],
     ],
   },
   {
@@ -60,7 +61,7 @@ const TESTIMONIALS = [
     href: "/resources/case-studies/a-system-that-stayed",
     metrics: [
       ["12", "Months running independently"],
-      ["00", "Missed operating cycles"],
+      ["0", "Missed operating cycles"],
       ["100%", "Systems documented"],
     ],
   },
@@ -135,7 +136,7 @@ export default function PracticePage() {
       flex: 1,
       textAlign: "center",
       padding: "12px 0",
-      font: "400 12px 'Spline Sans Mono',monospace",
+      font: "400 13px 'Spline Sans Mono',monospace",
       border: `1px solid ${form.size === v ? "#44063B" : "rgba(68,6,59,.28)"}`,
       background: form.size === v ? "#44063B" : "transparent",
       color: form.size === v ? "#FDFBF0" : "#44063B",
@@ -150,24 +151,41 @@ export default function PracticePage() {
         <SiteNav active="practice" />
         {/* HERO, blush pink field */}
         <div className="dl-page-hero-texture" style={{background:"#21B58B",padding:"96px 64px 100px",position:"relative",overflow:"hidden"}}>
-          <div style={{position:"relative",maxWidth:"920px",zIndex:"1"}}>
-            <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".14em",textTransform:"uppercase"}}>AFRICA'S FIRST DESIGN LEADERSHIP COMPANY</span>
-            <h1 style={{font:"400 96px/1 'Faculty Glyphic',serif",color:"#44063B",letterSpacing:"-.02em",margin:"44px 0 40px",width:"816px",height:"263px"}}>Fractional design<br />leadership for<br />businesses.</h1>
+          <div className="dl-hero-split">
+          <div>
+            <span style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".14em",textTransform:"uppercase"}}>AFRICA'S FIRST DESIGN LEADERSHIP COMPANY</span>
+            <h1 style={{font:"400 96px/1 'Faculty Glyphic',serif",color:"#44063B",letterSpacing:"-.02em",margin:"44px 0 40px",maxWidth:"816px"}}>Fractional design<br />leadership for<br />businesses.</h1>
             <div style={{boxSizing:"border-box",display:"flex",flexDirection:"column",gap:"12px"}}>
-              <p style={{font:"400 20px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.78)",maxWidth:"560px",margin:"0 0 48px"}}>
+              <p style={{font:"400 20px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.8)",maxWidth:"560px",margin:"0 0 48px"}}>
                 A fractional design executive embeds inside your company, builds the systems that make design commercially productive, and hands them over running.
               </p>
             </div>
             <div style={{display:"flex",alignItems:"center",gap:"28px"}}>
-              <a className="dl-btn hov-orange" href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>BOOK A CALL</a>
-              <a className="dl-link" href="#pricing" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid #44063B",paddingBottom:"4px"}}>take a health assessment</a>
+              <a className="dl-btn hov-orange" href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"500 15px/1.2 'Roboto Flex',sans-serif",color:"#FDFBF0",background:"#44063B",padding:"17px 28px",textDecoration:"none"}}>Book a call</a>
+              <a className="dl-link" href="#pricing" style={{font:"500 15px/1.2 'Roboto Flex',sans-serif",color:"#44063B",textDecoration:"none",borderBottom:"1px solid #44063B",paddingBottom:"4px"}}>Take a health assessment</a>
             </div>
+          </div>
+          <HeroFactCard
+            title="A typical engagement"
+            rows={[
+              ["Model", "Founding"],
+              ["Length", "4 months, fixed term"],
+              ["Leader", "Embedded fractional CDO"],
+            ]}
+            highlight={{ label: "Investment", value: "₦24M", note: "≈ $17K" }}
+          >
+            <ul>
+              <li>Priorities become clear</li>
+              <li>Decisions move faster</li>
+              <li>Systems handed over running</li>
+            </ul>
+          </HeroFactCard>
           </div>
         </div>
         {/* WHO IT'S FOR */}
         <div id="practice" style={{padding:"118px 64px",borderTop:"1px solid rgba(68,6,59,.16)"}}>
           <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline",marginBottom:"56px"}}>
-            <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>Who this is built for</span>
+            <span style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#B8430F",letterSpacing:".14em",textTransform:"uppercase"}}>Who this is built for</span>
             <span style={{font:"400 16px 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.6)",maxWidth:"340px",textAlign:"right"}}>
               <br />
             </span>
@@ -175,19 +193,19 @@ export default function PracticePage() {
           <h2 style={{font:"400 60px/1.1 'Faculty Glyphic',serif",color:"#44063B",maxWidth:"900px",margin:"0 0 68px",letterSpacing:"-.01em"}}>Growth-stage companies with designers already on staff.</h2>
           <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:"0",borderTop:"1px solid rgba(68,6,59,.2)"}}>
             <div style={{padding:"36px 32px 34px 0",borderRight:"1px solid rgba(68,6,59,.16)"}}>
-              <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".04em",textTransform:"uppercase",marginBottom:"18px"}}>Stage</div>
+              <div style={{font:"400 13px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".04em",textTransform:"uppercase",marginBottom:"18px"}}>Stage</div>
               <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"#44063B",margin:"0"}}>
                 Series A–C companies with design already embedded across product, brand, marketing, and communications. The team exists, the challenge is alignment and performance.
               </p>
             </div>
             <div style={{padding:"36px 32px 34px",borderRight:"1px solid rgba(68,6,59,.16)"}}>
-              <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".04em",textTransform:"uppercase",marginBottom:"18px"}}>The problem</div>
+              <div style={{font:"400 13px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".04em",textTransform:"uppercase",marginBottom:"18px"}}>The problem</div>
               <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"#44063B",margin:"0"}}>
                 Design is fragmented across functions with different priorities and standards, work is produced in silos and often reworked. Leadership struggles to see clear commercial impact from design.
               </p>
             </div>
             <div style={{padding:"36px 0 34px 32px"}}>
-              <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".04em",textTransform:"uppercase",marginBottom:"18px"}}>The gap</div>
+              <div style={{font:"400 13px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".04em",textTransform:"uppercase",marginBottom:"18px"}}>The gap</div>
               <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"#44063B",margin:"0"}}>
                 No executive-level ownership of design. A need for someone to unify standards, align teams, and make design commercially accountable without hiring a full-time CDO too early.
               </p>
@@ -197,7 +215,7 @@ export default function PracticePage() {
         {/* RECOGNISE THE PROBLEM */}
         <div style={{padding:"118px 64px",backgroundColor:"#44063B"}}>
           <div style={{marginBottom:"72px"}}>
-            <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>Recognise the problem</span>
+            <span style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>Recognise the problem</span>
             <h2 style={{font:"400 60px/1.1 'Faculty Glyphic',serif",color:"#FDFBF0",maxWidth:"820px",margin:"24px 0 20px",letterSpacing:"-.01em"}}>
               Executive design leadership, not another senior designer.
             </h2>
@@ -207,19 +225,19 @@ export default function PracticePage() {
           </div>
           <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:"0",borderTop:"1px solid rgba(253,251,240,.2)"}}>
             <div style={{padding:"30px 24px 30px 0",borderRight:"1px solid rgba(253,251,240,.14)"}}>
-              <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF7D44",marginBottom:"12px",textTransform:"uppercase"}}>Vision & strategy</div>
+              <div style={{font:"400 13px 'Spline Sans Mono',monospace",color:"#FF7D44",marginBottom:"12px",textTransform:"uppercase"}}>Vision & strategy</div>
               <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(253,251,240,.62)",margin:"0"}}>Sets the three-year design direction and connects it to business strategy.</p>
             </div>
             <div style={{padding:"30px 24px",borderRight:"1px solid rgba(253,251,240,.14)"}}>
-              <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF7D44",marginBottom:"12px",textTransform:"uppercase"}}>Commercial accountability</div>
+              <div style={{font:"400 13px 'Spline Sans Mono',monospace",color:"#FF7D44",marginBottom:"12px",textTransform:"uppercase"}}>Commercial accountability</div>
               <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(253,251,240,.62)",margin:"0"}}>Makes design visible on the P&L and presents its return to the CEO and board.</p>
             </div>
             <div style={{padding:"30px 24px",borderRight:"1px solid rgba(253,251,240,.14)"}}>
-              <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF7D44",marginBottom:"12px",textTransform:"uppercase"}}>Talent & culture</div>
+              <div style={{font:"400 13px 'Spline Sans Mono',monospace",color:"#FF7D44",marginBottom:"12px",textTransform:"uppercase"}}>Talent & culture</div>
               <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(253,251,240,.62)",margin:"0"}}>Owns why great designers join, how they grow, and the reason they stay.</p>
             </div>
             <div style={{padding:"30px 0 30px 24px"}}>
-              <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF7D44",marginBottom:"12px",textTransform:"uppercase"}}>Standards & governance</div>
+              <div style={{font:"400 13px 'Spline Sans Mono',monospace",color:"#FF7D44",marginBottom:"12px",textTransform:"uppercase"}}>Standards & governance</div>
               <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(253,251,240,.62)",margin:"0"}}>Holds the quality bar across every function, including where no designers sit.</p>
             </div>
           </div>
@@ -261,7 +279,7 @@ export default function PracticePage() {
         {/* ENGAGEMENTS & PRICING */}
         <div id="pricing" style={{padding:"118px 64px",borderTop:"1px solid rgba(68,6,59,.16)"}}>
           <div style={{marginBottom:"64px"}}>
-            <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>Engagement models</span>
+            <span style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#B8430F",letterSpacing:".14em",textTransform:"uppercase"}}>Engagement models</span>
             <h2 style={{font:"400 60px/1.1 'Faculty Glyphic',serif",color:"#44063B",maxWidth:"820px",margin:"24px 0 20px",letterSpacing:"-.01em"}}>
               Built around the problem, not a fixed retainer.
             </h2>
@@ -276,7 +294,7 @@ export default function PracticePage() {
                 Companies with design talent but no leadership structure, we build the function from zero.
               </p>
               <div style={{textAlign:"right"}}>
-                <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",marginBottom:"4px"}}>usually</div>
+                <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",marginBottom:"4px"}}>Usually</div>
                 <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B"}}>4 months</div>
               </div>
             </div>
@@ -286,7 +304,7 @@ export default function PracticePage() {
                 Broken design functions, high attrition, team dysfunction, inconsistent output that needs resetting.
               </p>
               <div style={{textAlign:"right"}}>
-                <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",marginBottom:"4px"}}>usually</div>
+                <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",marginBottom:"4px"}}>Usually</div>
                 <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B"}}>3–5 months</div>
               </div>
             </div>
@@ -294,7 +312,7 @@ export default function PracticePage() {
               <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B"}}>Scale</div>
               <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.66)",margin:"0"}}>Preparing a functioning design team for the next phase of growth and complexity.</p>
               <div style={{textAlign:"right"}}>
-                <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",marginBottom:"4px"}}>usually</div>
+                <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",marginBottom:"4px"}}>Usually</div>
                 <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B"}}>5–8 months</div>
               </div>
             </div>
@@ -304,7 +322,7 @@ export default function PracticePage() {
                 One specific, high-urgency design leadership problem. Usually with a fixed scope and fee.
               </p>
               <div style={{textAlign:"right"}}>
-                <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",marginBottom:"4px"}}>fixed</div>
+                <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",marginBottom:"4px"}}>Fixed scope</div>
                 <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B"}}>4–8 weeks</div>
               </div>
             </div>
@@ -314,8 +332,8 @@ export default function PracticePage() {
                 Post-engagement continuity, or a lightweight ongoing senior design perspective at the top.
               </p>
               <div style={{textAlign:"right"}}>
-                <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",marginBottom:"4px"}}>monthly</div>
-                <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B"}}>4-8 hours</div>
+                <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",marginBottom:"4px"}}>Billed monthly</div>
+                <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B"}}>4–8 hours a month</div>
               </div>
             </div>
           </div>
@@ -324,7 +342,7 @@ export default function PracticePage() {
         <div style={{padding:"110px 64px",backgroundColor:"#21B58B"}}>
           <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"72px",alignItems:"center"}}>
             <div>
-              <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".14em",textTransform:"uppercase"}}>Cost advantage</span>
+              <span style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".14em",textTransform:"uppercase"}}>Cost advantage</span>
               <h2 style={{font:"400 60px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 0",letterSpacing:"-.01em"}}>
                 Get the leadership required for your stage without paying indefinitely.
               </h2>
@@ -332,19 +350,21 @@ export default function PracticePage() {
             <div style={{background:"#FDFBF0",padding:"44px 44px 40px"}}>
               <div style={{display:"grid",gridTemplateColumns:"1fr",gap:"0"}}>
                 <div style={{paddingBottom:"26px",borderBottom:"1px solid rgba(68,6,59,.16)"}}>
-                  <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",letterSpacing:".04em",textTransform:"uppercase",marginBottom:"12px"}}>Permanent senior design leader</div>
-                  <div style={{font:"400 60px/1 'Faculty Glyphic',serif",color:"rgba(68,6,59,.4)",letterSpacing:"-.02em"}}>₦32–60M</div>
+                  <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".04em",textTransform:"uppercase",marginBottom:"12px"}}>Permanent senior design leader</div>
+                  <div style={{font:"400 60px/1 'Faculty Glyphic',serif",color:"#44063B",letterSpacing:"-.02em"}}>₦32–60M<span style={{font:"400 18px 'Roboto Flex',sans-serif",letterSpacing:"0",marginLeft:"10px"}}>every year</span></div>
+                  <div style={{font:"400 16px 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.78)",marginTop:"8px"}}>≈ $23–43K</div>
                   <div className="dl-comparison-details">
-                    <div><div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.45)",letterSpacing:".08em",textTransform:"uppercase",marginBottom:"5px"}}>Role level</div><div style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.72)"}}>CDO or VP Design</div></div>
-                    <div><div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.45)",letterSpacing:".08em",textTransform:"uppercase",marginBottom:"5px"}}>Period</div><div style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.72)"}}>12 months, recurring</div></div>
+                    <div><div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".08em",textTransform:"uppercase",marginBottom:"5px"}}>Role level</div><div style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.72)"}}>CDO or VP Design</div></div>
+                    <div><div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".08em",textTransform:"uppercase",marginBottom:"5px"}}>Period</div><div style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.72)"}}>12 months, recurring</div></div>
                   </div>
                 </div>
                 <div style={{paddingTop:"26px"}}>
-                  <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".04em",textTransform:"uppercase",marginBottom:"12px"}}>Design Lever engagement</div>
-                  <div style={{font:"400 60px/1 'Faculty Glyphic',serif",color:"#44063B",letterSpacing:"-.02em"}}>₦24M</div>
+                  <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#B8430F",letterSpacing:".04em",textTransform:"uppercase",marginBottom:"12px"}}>Design Lever engagement</div>
+                  <div style={{font:"400 60px/1 'Faculty Glyphic',serif",color:"#44063B",letterSpacing:"-.02em"}}>₦24M<span style={{font:"400 18px 'Roboto Flex',sans-serif",letterSpacing:"0",marginLeft:"10px"}}>once</span></div>
+                  <div style={{font:"400 16px 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.78)",marginTop:"8px"}}>≈ $17K</div>
                   <div className="dl-comparison-details">
-                    <div><div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.45)",letterSpacing:".08em",textTransform:"uppercase",marginBottom:"5px"}}>Role level</div><div style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.72)"}}>Embedded fractional CDO</div></div>
-                    <div><div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.45)",letterSpacing:".08em",textTransform:"uppercase",marginBottom:"5px"}}>Period</div><div style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.72)"}}>4 months, fixed term</div></div>
+                    <div><div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".08em",textTransform:"uppercase",marginBottom:"5px"}}>Role level</div><div style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.72)"}}>Embedded fractional CDO</div></div>
+                    <div><div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".08em",textTransform:"uppercase",marginBottom:"5px"}}>Period</div><div style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.72)"}}>4 months, fixed term</div></div>
                   </div>
                 </div>
               </div>
@@ -352,111 +372,100 @@ export default function PracticePage() {
           </div>
         </div>
         {/* HOW IT WORKS */}
-        <div id="start" style={{padding:"120px 64px",borderTop:"1px solid rgba(68,6,59,.16)"}}>
+        <div id="start" style={{padding:"120px 64px 96px",borderTop:"1px solid rgba(68,6,59,.16)"}}>
           <div style={{maxWidth:"820px",marginBottom:"72px"}}>
-            <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>How it works</span>
+            <span style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#B8430F",letterSpacing:".14em",textTransform:"uppercase"}}>How it works</span>
             <h2 style={{font:"400 60px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 0",letterSpacing:"-.01em"}}>It begins with a call.</h2>
           </div>
           <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:"0",borderTop:"1px solid rgba(68,6,59,.2)"}}>
             <div style={{padding:"36px 40px 40px 0",borderRight:"1px solid rgba(68,6,59,.16)"}}>
-              <div style={{font:"400 46px 'Faculty Glyphic',serif",color:"#FF7D44",lineHeight:"1",marginBottom:"22px"}}>01</div>
+              <div style={{font:"400 46px 'Faculty Glyphic',serif",color:"#B8430F",lineHeight:"1",marginBottom:"22px"}}>01</div>
               <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B",marginBottom:"12px"}}>Discovery call</div>
+              <div style={{display:"inline-block",font:"400 13px 'Spline Sans Mono',monospace",color:"#44063B",border:"1px solid rgba(68,6,59,.3)",padding:"5px 10px",marginBottom:"14px"}}>30 minutes</div>
               <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.66)",margin:"0"}}>
                 A focused conversation about the company, the team and the outcome leadership needs to produce.
               </p>
             </div>
             <div style={{padding:"36px 40px 40px",borderRight:"1px solid rgba(68,6,59,.16)"}}>
-              <div style={{font:"400 46px 'Faculty Glyphic',serif",color:"#FF7D44",lineHeight:"1",marginBottom:"22px"}}>02</div>
+              <div style={{font:"400 46px 'Faculty Glyphic',serif",color:"#B8430F",lineHeight:"1",marginBottom:"22px"}}>02</div>
               <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B",marginBottom:"12px"}}>Diagnosis</div>
+              <div style={{display:"inline-block",font:"400 13px 'Spline Sans Mono',monospace",color:"#44063B",border:"1px solid rgba(68,6,59,.3)",padding:"5px 10px",marginBottom:"14px"}}>About 2 weeks</div>
               <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.66)",margin:"0"}}>
                 We assess the design function, quantify the current cost and define the outcome and success measures.
               </p>
             </div>
             <div style={{padding:"36px 0 40px 40px"}}>
-              <div style={{font:"400 46px 'Faculty Glyphic',serif",color:"#FF7D44",lineHeight:"1",marginBottom:"22px"}}>03</div>
+              <div style={{font:"400 46px 'Faculty Glyphic',serif",color:"#B8430F",lineHeight:"1",marginBottom:"22px"}}>03</div>
               <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B",marginBottom:"12px"}}>Leader or engagement</div>
+              <div style={{display:"inline-block",font:"400 13px 'Spline Sans Mono',monospace",color:"#44063B",border:"1px solid rgba(68,6,59,.3)",padding:"5px 10px",marginBottom:"14px"}}>Leader in place in about 6 weeks</div>
               <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.66)",margin:"0"}}>
                 We place the right design leader or scope the engagement required to deliver the defined outcome.
               </p>
             </div>
           </div>
           <div style={{marginTop:"60px",display:"flex",alignItems:"center",gap:"28px"}}>
-            <a className="dl-btn hov-orange" href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"18px 30px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase"}}>BOOK A CALL <ArrowIcon /></a>
+            <a className="dl-btn hov-orange" href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"500 15px/1.2 'Roboto Flex',sans-serif",color:"#FDFBF0",background:"#44063B",padding:"18px 30px",textDecoration:"none"}}>Book a call <ArrowIcon /></a>
           </div>
         </div>
         {/* COST CALCULATOR */}
         <div style={{padding:"120px 64px",background:"#44063B"}}>
           <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"96px",alignItems:"center"}}>
             <div>
-              <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>Cost calculator</span>
+              <span style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>Cost calculator</span>
               <h2 style={{font:"400 60px/1.1 'Faculty Glyphic',serif",color:"#FDFBF0",margin:"26px 0 28px",letterSpacing:"-.01em"}}>
                 What is design<br />without leadership<br />costing you?
               </h2>
               <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(253,251,240,.68)",margin:"0 0 40px",maxWidth:"400px"}}>
                 A structured estimate of the cost sitting inside your current design function. Move the sliders.
               </p>
-              <Link className="dl-btn hov-pink" href="/diagnostic" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",padding:"16px 26px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#FF7D44"}}>Open the full diagnostic <ArrowIcon /></Link>
+              <Link className="dl-btn hov-pink" href="/diagnostic" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"500 15px/1.2 'Roboto Flex',sans-serif",color:"#44063B",padding:"16px 26px",textDecoration:"none",backgroundColor:"#FF7D44"}}>Open the full diagnostic <ArrowIcon /></Link>
             </div>
             <div>
               <div style={{display:"flex",flexDirection:"column",gap:"26px",marginBottom:"40px"}}>
                 <label style={{display:"block"}}>
-                  <div style={{display:"flex",justifyContent:"space-between",font:"400 11px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.7)",letterSpacing:".04em",textTransform:"uppercase",marginBottom:"12px"}}>
+                  <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline",font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.78)",letterSpacing:".04em",textTransform:"uppercase",marginBottom:"8px"}}>
                     <span>Designers on the team</span>
-                    <span style={{color:"#FF7D44"}}>{c.des}</span>
+                    <span style={{color:"#FF7D44",font:"400 20px/1 'Spline Sans Mono',monospace",letterSpacing:"0"}}>{c.des}</span>
                   </div>
                   <input type="range" min="1" max="30" value={c.des} onChange={cDes} style={{width:"100%"}} />
                 </label>
                 <label style={{display:"block"}}>
-                  <div style={{display:"flex",justifyContent:"space-between",font:"400 11px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.7)",letterSpacing:".04em",textTransform:"uppercase",marginBottom:"12px"}}>
+                  <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline",font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.78)",letterSpacing:".04em",textTransform:"uppercase",marginBottom:"8px"}}>
                     <span>Avg designer salary / mo</span>
-                    <span style={{color:"#FF7D44"}}>{c.salFmt}</span>
+                    <span style={{color:"#FF7D44",font:"400 20px/1 'Spline Sans Mono',monospace",letterSpacing:"0"}}>{c.salFmt}</span>
                   </div>
                   <input type="range" min="300000" max="4000000" step="100000" value={c.sal} onChange={cSal} style={{width:"100%"}} />
                 </label>
                 <div style={{display:"flex",gap:"40px"}}>
                   <label style={{flex:"1"}}>
-                    <div style={{display:"flex",justifyContent:"space-between",font:"400 11px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.7)",letterSpacing:".04em",textTransform:"uppercase",marginBottom:"12px"}}>
+                    <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline",font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.78)",letterSpacing:".04em",textTransform:"uppercase",marginBottom:"8px"}}>
                       <span>Rework %</span>
-                      <span style={{color:"#FF7D44"}}>{c.rew}%</span>
+                      <span style={{color:"#FF7D44",font:"400 20px/1 'Spline Sans Mono',monospace",letterSpacing:"0"}}>{c.rew}%</span>
                     </div>
                     <input type="range" min="0" max="40" value={c.rew} onChange={cRew} style={{width:"100%"}} />
                   </label>
                   <label style={{flex:"1"}}>
-                    <div style={{display:"flex",justifyContent:"space-between",font:"400 11px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.7)",letterSpacing:".04em",textTransform:"uppercase",marginBottom:"12px"}}>
+                    <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline",font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.78)",letterSpacing:".04em",textTransform:"uppercase",marginBottom:"8px"}}>
                       <span>Senior exits / yr</span>
-                      <span style={{color:"#FF7D44"}}>{c.att}</span>
+                      <span style={{color:"#FF7D44",font:"400 20px/1 'Spline Sans Mono',monospace",letterSpacing:"0"}}>{c.att}</span>
                     </div>
                     <input type="range" min="0" max="8" value={c.att} onChange={cAtt} style={{width:"100%"}} />
                   </label>
                 </div>
               </div>
               <div style={{borderTop:"1px solid rgba(253,251,240,.3)",paddingTop:"26px"}}>
-                <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.55)",letterSpacing:".1em",textTransform:"uppercase",marginBottom:"12px"}}>Estimated annual cost of design inefficiency</div>
+                <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.55)",letterSpacing:".1em",textTransform:"uppercase",marginBottom:"12px"}}>Estimated annual cost of design inefficiency</div>
                 <div style={{font:"400 60px/1 'Faculty Glyphic',serif",color:"#FF7D44",letterSpacing:"-.02em"}}>{c.totalFmt}</div>
-                <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FFBCE8",marginTop:"10px"}}>≈ {c.usdFmt} / year</div>
+                <div style={{font:"400 13px 'Spline Sans Mono',monospace",color:"#FFBCE8",marginTop:"10px"}}>≈ {c.usdFmt} / year</div>
               </div>
             </div>
           </div>
-        </div>
-        {/* PRIMARY CTA */}
-        <div style={{padding:"140px 64px",background:"#21B58B",textAlign:"center"}}>
-          <svg viewBox="0 0 60 60" width="36" height="36" fill="none" stroke="#44063B" strokeWidth="1.4" style={{marginBottom:"40px"}}>
-            <line x1="30" y1="8" x2="30" y2="52"></line>
-            <line x1="8" y1="30" x2="52" y2="30"></line>
-            <line x1="14.5" y1="14.5" x2="45.5" y2="45.5"></line>
-            <line x1="14.5" y1="45.5" x2="45.5" y2="14.5"></line>
-          </svg>
-          <h2 style={{font:"400 60px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"0 auto 32px",maxWidth:"900px",letterSpacing:"-.015em",textWrap:"balance"}}>Your design team can only perform as well as the system around it.</h2>
-          <p style={{font:"400 18px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.7)",margin:"0 auto 44px",maxWidth:"480px"}}>
-            Without clear leadership, designers spend more time reacting, reworking and aligning than producing value.
-          </p>
-          <a className="dl-btn hov-plum" href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase"}}>BOOK A DISCOVERY CALL <ArrowIcon /></a>
         </div>
         {/* FAQ */}
         <div style={{padding:"118px 64px",background:"#FDFBF0"}}>
           <div className="dl-faq-grid" style={{display:"grid",gap:"64px",alignItems:"start"}}>
             <div>
-              <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase"}}>FAQs</span>
+              <span style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#B8430F",letterSpacing:".14em",textTransform:"uppercase"}}>FAQs</span>
               <h2 style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 0",letterSpacing:"-.01em"}}>Questions, answered.</h2>
             </div>
             <div style={{borderTop:"1.5px solid #44063B"}}>
@@ -508,6 +517,20 @@ export default function PracticePage() {
             </div>
           </div>
         </div>
+        {/* PRIMARY CTA */}
+        <div style={{padding:"140px 64px",background:"#21B58B",textAlign:"center"}}>
+          <svg viewBox="0 0 60 60" width="36" height="36" fill="none" stroke="#44063B" strokeWidth="1.4" style={{marginBottom:"40px"}}>
+            <line x1="30" y1="8" x2="30" y2="52"></line>
+            <line x1="8" y1="30" x2="52" y2="30"></line>
+            <line x1="14.5" y1="14.5" x2="45.5" y2="45.5"></line>
+            <line x1="14.5" y1="45.5" x2="45.5" y2="14.5"></line>
+          </svg>
+          <h2 style={{font:"400 60px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"0 auto 32px",maxWidth:"900px",letterSpacing:"-.015em",textWrap:"balance"}}>Your design team can only perform as well as the system around it.</h2>
+          <p style={{font:"400 18px/1.55 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.8)",margin:"0 auto 44px",maxWidth:"480px"}}>
+            Without clear leadership, designers spend more time reacting, reworking and aligning than producing value.
+          </p>
+          <a className="dl-btn hov-plum" href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"500 15px/1.2 'Roboto Flex',sans-serif",color:"#FDFBF0",background:"#44063B",padding:"18px 32px",textDecoration:"none"}}>Book a discovery call <ArrowIcon /></a>
+        </div>
         {/* FOOTER */}
         <SiteFooter />
       </div>
@@ -517,7 +540,7 @@ export default function PracticePage() {
           <div className="dl-panel" onClick={stop}>
             <div style={{background:"#44063B",padding:"28px 36px",display:"flex",justifyContent:"space-between",alignItems:"flex-start"}}>
               <div>
-                <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase",marginBottom:"10px"}}>Free · no obligation</div>
+                <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".14em",textTransform:"uppercase",marginBottom:"10px"}}>Free · no obligation</div>
                 <div style={{font:"400 24px/1.2 'Faculty Glyphic',serif",color:"#FDFBF0"}}>Design Team Health Assessment</div>
               </div>
               <div onClick={closeForm} style={{cursor:"pointer",font:"400 24px 'Faculty Glyphic',serif",color:"rgba(253,251,240,.7)",lineHeight:".7",flex:"none",marginLeft:"20px"}}>×</div>
@@ -526,13 +549,13 @@ export default function PracticePage() {
               <>
               <div style={{padding:"66px 36px",textAlign:"center"}}>
                 <div style={{width:"58px",height:"58px",border:"1.5px solid #44063B",borderRadius:"0",display:"flex",alignItems:"center",justifyContent:"center",margin:"0 auto 26px"}}>
-                  <span style={{font:"400 24px 'Faculty Glyphic',serif",color:"#FF7D44"}}>✓</span>
+                  <span style={{font:"400 24px 'Faculty Glyphic',serif",color:"#B8430F"}}>✓</span>
                 </div>
                 <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B",marginBottom:"14px"}}>Request received.</div>
                 <p style={{font:"400 16px/1.6 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.66)",maxWidth:"380px",margin:"0 auto 30px"}}>
                   We'll be in touch within two working days to schedule your assessment and walk you through the naira cost model.
                 </p>
-                <div className="dl-btn dl-seg" onClick={closeForm} style={{display:"inline-block",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"15px 28px",letterSpacing:".04em",textTransform:"uppercase"}}>Back to site</div>
+                <div className="dl-btn dl-seg" onClick={closeForm} style={{display:"inline-block",font:"500 15px/1.2 'Roboto Flex',sans-serif",color:"#FDFBF0",background:"#44063B",padding:"15px 28px"}}>Back to site</div>
               </div>
               </>
             )}
@@ -578,8 +601,8 @@ export default function PracticePage() {
                   <label className="dl-lbl">What's the biggest design challenge right now?</label>
                   <textarea className="dl-field" value={form.challenge} onChange={setChallenge} placeholder="A sentence or two is plenty."></textarea>
                 </div>
-                <div className="dl-btn dl-seg hov-orange" onClick={submitForm} style={{marginTop:"30px",textAlign:"center",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"17px",letterSpacing:".05em",textTransform:"uppercase"}}>Request my assessment <ArrowIcon direction="right" /></div>
-                <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.45)",textAlign:"center",margin:"16px 0 0"}}>Takes 30 minutes · remote · no cost</p>
+                <div className="dl-btn dl-seg hov-orange" onClick={submitForm} style={{marginTop:"30px",textAlign:"center",font:"500 15px/1.2 'Roboto Flex',sans-serif",color:"#FDFBF0",background:"#44063B",padding:"17px"}}>Request my assessment <ArrowIcon direction="right" /></div>
+                <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.6)",textAlign:"center",margin:"16px 0 0"}}>Takes 30 minutes · remote · no cost</p>
               </div>
               </>
             )}

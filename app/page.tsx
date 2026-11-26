@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import type { CSSProperties } from "react";
 import Link from "next/link";
 import { ArrowIcon } from "@/components/ArrowIcon";
-import { ImageSlot } from "@/components/ImageSlot";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteNav } from "@/components/SiteNav";
+import { WhichDoINeed } from "@/components/WhichDoINeed";
 
 export const metadata: Metadata = {
   title: "Africa's first design leadership infrastructure",
@@ -12,9 +11,19 @@ export const metadata: Metadata = {
     "Design Lever deploys experienced design leadership, develops future executives, connects senior practitioners, and builds intelligence for Africa's design economy.",
 };
 
+const BOOK_CALL_URL = "https://www.conectr.me/s/design-intelligence-call-dh";
+
+/** Hero routes by audience; each tab carries the colour of the line it leads to. */
+const HERO_AUDIENCES = [
+  { title: "I run a company", copy: "Put senior design leadership to work.", href: "/practice", line: "practice" },
+  { title: "I'm a designer", copy: "Grow into design leadership.", href: "/academy", line: "academy" },
+  { title: "I fund or research", copy: "Use the evidence on African design.", href: "/research", line: "research" },
+] as const;
+
 const BUSINESS_LINES = [
   {
     slug: "practice",
+    caption: "Fractional design leadership",
     name: "Practice",
     proposition: "Put experienced design leadership inside companies.",
     description:
@@ -23,6 +32,7 @@ const BUSINESS_LINES = [
   },
   {
     slug: "academy",
+    caption: "Learning & certification",
     name: "Academy",
     proposition: "Develop designers who can lead beyond the craft.",
     description:
@@ -31,6 +41,7 @@ const BUSINESS_LINES = [
   },
   {
     slug: "network",
+    caption: "Platform & community",
     name: "Network",
     proposition: "Connect senior African talent to opportunities.",
     description:
@@ -39,6 +50,7 @@ const BUSINESS_LINES = [
   },
   {
     slug: "research",
+    caption: "Evidence & documentation",
     name: "Research",
     proposition: "Build the evidence behind the African design economy.",
     description:
@@ -50,15 +62,17 @@ const BUSINESS_LINES = [
 const AUDIENCES = [
   {
     label: "For companies",
+    line: "practice",
     title: "Put experienced design leadership and fractional talent to work.",
     copy: "Access an embedded executive for a defined business outcome, or hire vetted fractional talent through the Network.",
     links: [
       ["/practice", "Explore Practice"],
-      ["/network", "Hire through Network"],
+      ["/talent-hub", "Hire through Network"],
     ],
   },
   {
     label: "For designers",
+    line: "academy",
     title: "Build leadership capability and access opportunity.",
     copy: "Develop beyond the craft, join a senior practitioner network, and find meaningful leadership work.",
     links: [
@@ -68,6 +82,7 @@ const AUDIENCES = [
   },
   {
     label: "For institutions",
+    line: "research",
     title: "Understand and strengthen the design economy.",
     copy: "Use the evidence, partner on research, and help document design's contribution across Africa.",
     links: [
@@ -79,12 +94,13 @@ const AUDIENCES = [
 
 // Optical sizing: real logos carry different weights and baked-in padding, so
 // each is tuned to read at the same visual size rather than a uniform height.
+// Logos render as single-colour plum via a CSS mask over the transparent asset.
 const CLIENT_LOGOS = [
   ["2", "Rise", "/images/logos/rise.webp", 26],
   ["3", "Interswitch", "/images/logos/interswitch.webp", 26],
   ["4", "Traction", "/images/logos/traction.webp", 24],
   ["1", "Terragon", "/images/logos/terragon.webp", 40],
-  ["6", "Moniepoint", "/images/logos/moniepoint.webp", 28],
+  ["6", "Moniepoint", "/images/logos/moniepoint.webp", 34],
   ["7", "Lemfi", "/images/logos/lemfi.webp", 22],
   ["5", "Nomba", "/images/logos/nomba.webp", 26],
 ] as const;
@@ -104,14 +120,17 @@ export default function CorporateHomePage() {
                 We are championing and building the structural and leadership systems required to make design drive revenue and operational value in African businesses.
               </p>
               <div className="dl-corp-actions">
-                <a className="dl-corp-button dl-corp-button--orange" href="#system">Explore Design Lever</a>
-                <Link className="dl-corp-text-link dl-corp-text-link--light" href="/practice">Work with us</Link>
+                <a className="dl-corp-button dl-corp-button--orange" href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">Book a discovery call</a>
+                <a className="dl-corp-text-link dl-corp-text-link--light" href="#system">Explore Design Lever</a>
               </div>
             </div>
-            <nav className="dl-corp-hero__map" aria-label="Design Lever business lines">
-              {BUSINESS_LINES.map((line) => (
-                <Link key={line.slug} href={`/${line.slug}`} className={`dl-corp-hero__line dl-corp-hero__line--${line.slug}`}>
-                  <span>{line.name}</span>
+            <nav className="dl-corp-hero__map" aria-label="Where to start">
+              {HERO_AUDIENCES.map((a) => (
+                <Link key={a.href} href={a.href} className={`dl-corp-hero__line dl-corp-hero__line--${a.line}`}>
+                  <span className="dl-corp-hero__line-text">
+                    <strong>{a.title}</strong>
+                    <small>{a.copy}</small>
+                  </span>
                   <ArrowIcon />
                 </Link>
               ))}
@@ -133,78 +152,41 @@ export default function CorporateHomePage() {
 
           <section id="system" className="dl-corp-flywheel" aria-labelledby="corporate-system-title">
             <div className="dl-corp-flywheel__head">
-              <span className="dl-corp-eyebrow" style={{color:"#44063B"}}>Our ecosystem</span>
+              <span className="dl-corp-eyebrow">Our ecosystem</span>
               <h2 id="corporate-system-title">One company, four connecting lines.</h2>
             </div>
             <div className="dl-corp-flywheel__band-wrap">
-              <div className="dl-band">
-                <ArrowIcon className="dl-corp-flywheel__arrow" direction="right" />
-                <div className="dl-lines">
-                  <Link className="dl-line" href="/practice" style={{"--c":"#21B58B","--ink":"#44063B"} as CSSProperties}>
-                    <div className="dl-lname">Practice</div>
-                    <div className="dl-lwrite">
-                      <div className="dl-lwrite-in">
-                        <h3 className="dl-lprop">{BUSINESS_LINES[0].proposition}</h3>
-                        <p className="dl-lblurb">{BUSINESS_LINES[0].description}</p>
-                        <span className="dl-lgo">{BUSINESS_LINES[0].cta}</span>
-                      </div>
-                    </div>
-                    <div className="dl-lcap">Fractional Design Leadership</div>
+            <div className="dl-corp-lines-grid">
+              {BUSINESS_LINES.map((line) => (
+                <article key={line.slug} className={`dl-corp-line-card dl-corp-line-card--${line.slug}`}>
+                  <div className="dl-corp-line-card__head">{line.caption}</div>
+                  <h3>{line.name}</h3>
+                  <p className="dl-corp-line-card__prop">{line.proposition}</p>
+                  <p>{line.description}</p>
+                  <Link href={`/${line.slug}`}>
+                    {line.cta} <ArrowIcon direction="right" />
                   </Link>
-                  <Link className="dl-line" href="/academy" style={{"--c":"#FF7D44","--ink":"#44063B"} as CSSProperties}>
-                    <div className="dl-lname">Academy</div>
-                    <div className="dl-lwrite">
-                      <div className="dl-lwrite-in">
-                        <h3 className="dl-lprop">{BUSINESS_LINES[1].proposition}</h3>
-                        <p className="dl-lblurb">{BUSINESS_LINES[1].description}</p>
-                        <span className="dl-lgo">{BUSINESS_LINES[1].cta}</span>
-                      </div>
-                    </div>
-                    <div className="dl-lcap">Learning &amp; certification</div>
-                  </Link>
-                  <Link className="dl-line" href="/network" style={{"--c":"#DEDF4D","--ink":"#44063B"} as CSSProperties}>
-                    <div className="dl-lname">Network</div>
-                    <div className="dl-lwrite">
-                      <div className="dl-lwrite-in">
-                        <h3 className="dl-lprop">{BUSINESS_LINES[2].proposition}</h3>
-                        <p className="dl-lblurb">{BUSINESS_LINES[2].description}</p>
-                        <span className="dl-lgo">{BUSINESS_LINES[2].cta}</span>
-                      </div>
-                    </div>
-                    <div className="dl-lcap">Platform &amp; community</div>
-                  </Link>
-                  <Link className="dl-line" href="/research" style={{"--c":"#4F83FF","--ink":"#44063B"} as CSSProperties}>
-                    <div className="dl-lname">Research</div>
-                    <div className="dl-lwrite">
-                      <div className="dl-lwrite-in">
-                        <h3 className="dl-lprop">{BUSINESS_LINES[3].proposition}</h3>
-                        <p className="dl-lblurb">{BUSINESS_LINES[3].description}</p>
-                        <span className="dl-lgo">{BUSINESS_LINES[3].cta}</span>
-                      </div>
-                    </div>
-                    <div className="dl-lcap">Evidence &amp; documentation</div>
-                  </Link>
-                </div>
-                <div className="dl-imgcol">
-                  <ImageSlot className="dl-img dl-img-1" id="dl-fly-1" src="/images/scenes/fly-practice.webp" style={{display:"block"}} placeholder="Practice, a design leader at work" />
-                  <ImageSlot className="dl-img dl-img-2" id="dl-fly-2" src="/images/scenes/fly-academy.webp" style={{display:"block"}} placeholder="Academy, a cohort learning" />
-                  <ImageSlot className="dl-img dl-img-3" id="dl-fly-3" src="/images/scenes/fly-network.webp" style={{display:"block"}} placeholder="Network, the community" />
-                  <ImageSlot className="dl-img dl-img-4" id="dl-fly-4" src="/images/scenes/fly-research.webp" style={{display:"block"}} placeholder="Research, the report" />
-                </div>
-              </div>
+                </article>
+              ))}
+            </div>
             </div>
           </section>
 
           <section className="dl-corp-evidence" aria-labelledby="corporate-evidence-title">
             <div className="dl-corp-evidence__copy">
               <span className="dl-corp-eyebrow">Grounded in the market</span>
-              <h2 id="corporate-evidence-title">Design leadership experience across teams.</h2>
+              <h2 id="corporate-evidence-title">Our leaders have built design teams at these companies.</h2>
             </div>
             <div className="dl-corp-evidence__logos">
               {CLIENT_LOGOS.slice(0, 6).map(([id, name, src, h]) => (
                 <div key={id} className="dl-corp-evidence__logo">
                   {src ? (
-                    <img className="dl-corp-evidence__logo-img" src={src} alt={name} style={{ maxHeight: `${h}px` }} />
+                    <span
+                      className="dl-corp-evidence__logo-img"
+                      role="img"
+                      aria-label={name}
+                      style={{ height: `${h}px`, WebkitMaskImage: `url("${src}")`, maskImage: `url("${src}")` }}
+                    />
                   ) : (
                     <span className="dl-corp-evidence__logo-ph">{name}</span>
                   )}
@@ -220,7 +202,7 @@ export default function CorporateHomePage() {
             </div>
             <div className="dl-corp-audiences__grid">
               {AUDIENCES.map((audience) => (
-                <article key={audience.label} className="dl-corp-audience">
+                <article key={audience.label} className={`dl-corp-audience dl-corp-audience--${audience.line}`}>
                   <span>{audience.label}</span>
                   <h3>{audience.title}</h3>
                   <p>{audience.copy}</p>
@@ -233,6 +215,8 @@ export default function CorporateHomePage() {
               ))}
             </div>
           </section>
+
+          <WhichDoINeed />
 
           <section className="dl-corp-cta" aria-labelledby="corporate-cta-title">
             <span className="dl-corp-eyebrow">Build with us</span>

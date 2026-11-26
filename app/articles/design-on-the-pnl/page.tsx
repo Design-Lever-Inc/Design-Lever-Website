@@ -14,9 +14,9 @@ export default function PageArticlesDesignOnThePnl() {
         <SiteNav active="research" />
         {/* ARTICLE HERO */}
         <div style={{padding:"110px 64px 0",maxWidth:"900px"}}>
-          <Link href="/research" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".1em",textTransform:"uppercase",textDecoration:"none",lineHeight:"1.2"}}><ArrowIcon direction="left" /> All resources</Link>
+          <Link href="/research" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#B8430F",letterSpacing:".1em",textTransform:"uppercase",textDecoration:"none",lineHeight:"1.2"}}><ArrowIcon direction="left" /> All resources</Link>
           <h1 style={{font:"400 60px/1.06 'Faculty Glyphic',serif",color:"#44063B",letterSpacing:"-.02em",margin:"0 0 32px",textWrap:"balance"}}>Design on the P&L, in Nigeria.</h1>
-          <div style={{display:"flex",gap:"28px",alignItems:"center",font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".02em"}}>
+          <div style={{display:"flex",gap:"28px",alignItems:"center",font:"400 13px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".02em"}}>
             <span>By the Design Lever research team</span>
             <span>·</span>
             <span>8 min read</span>
@@ -45,14 +45,14 @@ export default function PageArticlesDesignOnThePnl() {
             <p style={{font:"400 16px/1.75 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.78)",margin:"0 0 26px"}}>One page, once a quarter, same format every time. The discipline is the credibility.</p>
           </div>
           <aside style={{position:"sticky",top:"100px"}}>
-            <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.5)",letterSpacing:".12em",textTransform:"uppercase",marginBottom:"16px"}}>In this piece</div>
+            <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".12em",textTransform:"uppercase",marginBottom:"16px"}}>In this piece</div>
             <nav className="dl-toc" style={{display:"flex",flexDirection:"column"}}>
               <a href="#a-overview">Overview</a>
               <a href="#a-tenure">Choosing the numbers</a>
               <a href="#a-window">Reporting rhythm</a>
             </nav>
-            <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.5)",letterSpacing:".12em",textTransform:"uppercase",margin:"34px 0 14px"}}>Share</div>
-            <div style={{display:"flex",flexDirection:"column",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace"}}>
+            <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".12em",textTransform:"uppercase",margin:"34px 0 14px"}}>Share</div>
+            <div style={{display:"flex",flexDirection:"column",gap:"10px",font:"400 13px 'Spline Sans Mono',monospace"}}>
               <a className="dl-link" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.designleverinc.com" target="_blank" rel="noopener" style={{color:"#44063B",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>LinkedIn <ArrowIcon /></a>
               <a className="dl-link" href="https://x.com/intent/post?url=https%3A%2F%2Fwww.designleverinc.com" target="_blank" rel="noopener" style={{color:"#44063B",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>X / Twitter <ArrowIcon /></a>
               <Link className="dl-link" href="/contact" style={{color:"#44063B",textDecoration:"none",letterSpacing:".04em"}}>Email <ArrowIcon /></Link>
@@ -62,7 +62,7 @@ export default function PageArticlesDesignOnThePnl() {
         {/* CONTRIBUTE STRIP */}
         <div style={{padding:"64px",background:"#FFBCE8",margin:"40px 64px 0",display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:"24px"}}>
           <div style={{font:"400 24px/1.15 'Faculty Glyphic',serif",color:"#44063B",maxWidth:"520px"}}>This essay draws on the open dataset. Add your numbers to it.</div>
-          <Link href="/research#data" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#FF7D44",background:"#FDFBF0",padding:"16px 26px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Contribute to the research <ArrowIcon /></Link>
+          <Link href="/research#data" style={{font:"400 13px 'Spline Sans Mono',monospace",color:"#B8430F",background:"#FDFBF0",padding:"16px 26px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>Contribute to the research <ArrowIcon /></Link>
         </div>
         {/* FOOTER */}
         <SiteFooter />

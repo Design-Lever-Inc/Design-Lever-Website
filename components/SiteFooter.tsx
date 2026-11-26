@@ -2,8 +2,6 @@ import Link from "next/link";
 import { ArrowIcon } from "./ArrowIcon";
 import { FooterSearch } from "./FooterSearch";
 
-const BOOK_CALL_URL = "https://www.conectr.me/s/design-intelligence-call-dh";
-
 type FooterLink = readonly [href: string, label: string];
 
 type FooterGroup = {
@@ -16,7 +14,7 @@ const FOOTER_GROUPS: ReadonlyArray<FooterGroup> = [
     title: "For companies",
     links: [
       ["/practice", "Fractional Design Leadership"],
-      ["/network#companies", "Hire a Design Leader"],
+      ["/talent-hub", "Hire a Design Leader"],
       ["/diagnostic", "Design Health Diagnostic"],
     ],
   },
@@ -41,7 +39,6 @@ const FOOTER_GROUPS: ReadonlyArray<FooterGroup> = [
     title: "Intelligence",
     links: [
       ["/research", "Research"],
-      ["/research#articles", "Editorial"],
       ["/research#reports", "Reports"],
       ["/research#articles", "Articles"],
       ["/research#spotlights", "Spotlights"],
@@ -55,6 +52,14 @@ const FOOTER_GROUPS: ReadonlyArray<FooterGroup> = [
       ["/contact", "Partnerships"],
       ["/press", "Press"],
       ["/contact", "Contact"],
+    ],
+  },
+  {
+    title: "Get in touch",
+    links: [
+      ["mailto:hello@designleverinc.com", "hello@designleverinc.com"],
+      ["mailto:press@designleverinc.com", "press@designleverinc.com"],
+      ["mailto:research@designleverinc.com", "research@designleverinc.com"],
     ],
   },
 ];
@@ -74,23 +79,16 @@ function FootGroup({ title, links, cell }: FooterGroup & { cell: number }) {
   );
 }
 
-/** Canonical site footer: one conversion prompt, structured site directory,
- * search and a compact utility base within a ruled plum composition. */
+/** Canonical site footer: brand statement, structured site directory, search
+ * and a compact utility base within a ruled plum composition. It carries no
+ * call to action so each page ends on a single closing CTA of its own. */
 export function SiteFooter() {
   return (
     <footer className="dl-site-footer">
       <div className="dl-footer-main">
         <div className="dl-footer-intro">
-          <h2>Let&apos;s help you find your next move</h2>
-          <p>Start with the problem. We will help you find the right leadership, talent, programme or evidence.</p>
-          <a
-            href={BOOK_CALL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="dl-footer-action"
-          >
-            Book a discovery call
-          </a>
+          <h2>Make design count.</h2>
+          <p>Design leadership for African businesses: practice, academy, network and research. Built in Lagos.</p>
         </div>
 
         <div className="dl-footer-directory">
@@ -101,7 +99,6 @@ export function SiteFooter() {
             {FOOTER_GROUPS.map((group, index) => (
               <FootGroup key={group.title} title={group.title} links={group.links} cell={index + 1} />
             ))}
-            <div className="dl-footer-directory__box dl-footer-directory__box--empty" data-cell={6} aria-hidden="true" />
           </nav>
         </div>
       </div>

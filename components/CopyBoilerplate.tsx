@@ -15,17 +15,15 @@ export function CopyBoilerplate({ text }: { text: string }) {
       onClick={copy}
       className="dl-link"
       style={{
-        font: "400 11px 'Spline Sans Mono',monospace",
-        color: "#FF7D44",
+        font: "500 15px/1.2 'Roboto Flex',sans-serif",
+        color: "#B8430F",
         background: "transparent",
         border: "0",
         padding: "0",
         cursor: "pointer",
-        letterSpacing: ".06em",
-        textTransform: "uppercase",
       }}
     >
-      {copied ? "Copied ✓" : "Copy boilerplate →"}
+      {copied ? "Copied ✓" : "Copy boilerplate"}
     </button>
   );
 }

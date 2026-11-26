@@ -52,7 +52,7 @@ export function ImageSlot({
     >
       <span
         style={{
-          font: "400 11px 'Spline Sans Mono',monospace",
+          font: "400 12px 'Spline Sans Mono',monospace",
           letterSpacing: ".08em",
           textTransform: "uppercase",
           color: "rgba(68,6,59,.55)",
