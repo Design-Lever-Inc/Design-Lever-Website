@@ -1,0 +1,5 @@
+/* Contact fields suppress the site-wide focus outline inline. */
+#dl-cform :is(input, select, textarea):focus-visible {
+  outline: 2px solid #44063B !important;
+  outline-offset: 2px;
+}
