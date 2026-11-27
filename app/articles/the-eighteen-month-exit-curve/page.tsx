@@ -2,13 +2,21 @@ import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ArrowIcon } from "@/components/ArrowIcon";
-import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { articleJsonLd, articleMetadata, type ArticleSeo } from "@/lib/seo";
 
-export const metadata: Metadata = { title: "The eighteen-month exit curve", description: "Senior designers do not leave for money first. They leave when the ceiling is structural." };
+const SEO: ArticleSeo = {
+  title: "The eighteen-month exit curve",
+  description: "Senior designers do not leave for money first. They leave when the ceiling is structural.",
+  path: "/articles/the-eighteen-month-exit-curve",
+};
+
+export const metadata = articleMetadata(SEO);
 
 export default function PageArticlesTheEighteenMonthExitCurve() {
   return (
     <div className="pg-articles-the-eighteen-month-exit-curve">
+      <JsonLd data={articleJsonLd(SEO)} />
       <div style={{maxWidth:"1440px",margin:"0 auto",background:"#FDFBF0",overflowX:"clip"}}>
         {/* NAV */}
         <SiteNav active="research" />

@@ -868,7 +868,7 @@ a > .dl-arrow-icon--left:first-child,
   line-height: 1.55 !important;
 }
 
-:is(.pg-network, .pg-the-lever, .pg-talent-hub, .pg-bench) h2:not(.dl-site-footer h2) {
+:is(.pg-network, .pg-the-lever, .pg-talent-hub, .pg-bench) h2:not(.dl-site-footer h2, .dl-prof-name) {
   font-size: clamp(38px, 3.65vw, 52px) !important;
   line-height: 1.08 !important;
   letter-spacing: -0.015em !important;

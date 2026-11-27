@@ -2,13 +2,21 @@ import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ArrowIcon } from "@/components/ArrowIcon";
-import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { articleJsonLd, articleMetadata, type ArticleSeo } from "@/lib/seo";
 
-export const metadata: Metadata = { title: "Design on the P&L, in Nigeria", description: "A design function is defensible when it is tied to numbers a board already reads. Everything else is decoration." };
+const SEO: ArticleSeo = {
+  title: "Design on the P&L, in Nigeria",
+  description: "A design function is defensible when it is tied to numbers a board already reads. Everything else is decoration.",
+  path: "/articles/design-on-the-pnl",
+};
+
+export const metadata = articleMetadata(SEO);
 
 export default function PageArticlesDesignOnThePnl() {
   return (
     <div className="pg-articles-design-on-the-pnl">
+      <JsonLd data={articleJsonLd(SEO)} />
       <div style={{maxWidth:"1440px",margin:"0 auto",background:"#FDFBF0",overflowX:"clip"}}>
         {/* NAV */}
         <SiteNav active="research" />

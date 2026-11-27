@@ -2,13 +2,21 @@ import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ArrowIcon } from "@/components/ArrowIcon";
-import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { articleJsonLd, articleMetadata, type ArticleSeo } from "@/lib/seo";
 
-export const metadata: Metadata = { title: "Investing before the case studies", description: "There was no African benchmark to point to. This founder invested in design leadership anyway." };
+const SEO: ArticleSeo = {
+  title: "Investing before the case studies",
+  description: "There was no African benchmark to point to. This founder invested in design leadership anyway.",
+  path: "/spotlights/investing-before-the-case-studies",
+};
+
+export const metadata = articleMetadata(SEO);
 
 export default function PageSpotlightsInvestingBeforeTheCaseStudies() {
   return (
     <div className="pg-spotlights-investing-before-the-case-studies">
+      <JsonLd data={articleJsonLd(SEO)} />
       <div style={{maxWidth:"1440px",margin:"0 auto",background:"#FDFBF0",overflowX:"clip"}}>
         {/* NAV */}
         <SiteNav active="research" />

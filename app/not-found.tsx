@@ -4,7 +4,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { ArrowIcon } from "@/components/ArrowIcon";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Page not found" };
+export const metadata: Metadata = { title: "Page not found", alternates: { canonical: null }, openGraph: { url: undefined } };
 
 export default function NotFound() {
   return (

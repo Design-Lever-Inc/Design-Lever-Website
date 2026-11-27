@@ -3,11 +3,13 @@ import type { CSSProperties } from "react";
 import Link from "next/link";
 import { ArrowIcon } from "@/components/ArrowIcon";
 import { ImageSlot } from "@/components/ImageSlot";
+import { JsonLd } from "@/components/JsonLd";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteNav } from "@/components/SiteNav";
+import { organizationJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Africa's first design leadership infrastructure",
+  title: { absolute: "Design Lever Inc. | Africa's first design leadership infrastructure" },
   description:
     "Design Lever deploys experienced design leadership, develops future executives, connects senior practitioners, and builds intelligence for Africa's design economy.",
 };
@@ -92,6 +94,7 @@ const CLIENT_LOGOS = [
 export default function CorporateHomePage() {
   return (
     <div className="pg-corporate-home">
+      <JsonLd data={organizationJsonLd()} />
       <div className="dl-corp-canvas">
         <SiteNav active="home" />
 

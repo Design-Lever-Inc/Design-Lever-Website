@@ -2,13 +2,21 @@ import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ArrowIcon } from "@/components/ArrowIcon";
-import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { articleJsonLd, articleMetadata, type ArticleSeo } from "@/lib/seo";
 
-export const metadata: Metadata = { title: "From bottleneck to pace-setter", description: "One quarter after installing design leadership, the slowest function in the company set the release pace." };
+const SEO: ArticleSeo = {
+  title: "From bottleneck to pace-setter",
+  description: "One quarter after installing design leadership, the slowest function in the company set the release pace.",
+  path: "/spotlights/from-bottleneck-to-pace-setter",
+};
+
+export const metadata = articleMetadata(SEO);
 
 export default function PageSpotlightsFromBottleneckToPaceSetter() {
   return (
     <div className="pg-spotlights-from-bottleneck-to-pace-setter">
+      <JsonLd data={articleJsonLd(SEO)} />
       <div style={{maxWidth:"1440px",margin:"0 auto",background:"#FDFBF0",overflowX:"clip"}}>
         {/* NAV */}
         <SiteNav active="research" />
