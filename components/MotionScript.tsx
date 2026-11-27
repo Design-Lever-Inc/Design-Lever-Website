@@ -38,13 +38,16 @@ export function MotionScript() {
 
     const revealed: HTMLElement[] = [];
     const observed: HTMLElement[] = [];
-    let aboveFoldIndex = 0;
 
     sections.forEach((section) => {
+      // Keep every section already visible in the first viewport settled.
+      // Only off-screen content gets the initial hidden state.
+      if (section.getBoundingClientRect().top < vh) return;
+
       section.classList.add("dl-reveal");
       revealed.push(section);
 
-      // stagger the children of any grid with several items (rosters, stats)
+      // Stagger grid children only when their parent reveals on scroll.
       section.querySelectorAll<HTMLElement>('[style*="grid"]').forEach((grid) => {
         const kids = Array.from(grid.children) as HTMLElement[];
         if (kids.length >= 3 && kids.length <= 40) {
@@ -55,15 +58,7 @@ export function MotionScript() {
         }
       });
 
-      const top = section.getBoundingClientRect().top;
-      if (top < vh * 0.85) {
-        // in / near the first viewport: play on load with a gentle stagger
-        const delay = Math.min(aboveFoldIndex, 4) * 90;
-        aboveFoldIndex += 1;
-        window.setTimeout(() => play(section), delay);
-      } else {
-        observed.push(section);
-      }
+      observed.push(section);
     });
 
     function play(el: HTMLElement) {
