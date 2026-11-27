@@ -44,7 +44,7 @@ export default function PagePrivacy() {
         </li>
         <li>
           <strong>Usage analytics.</strong> We use PostHog (EU-hosted) in cookieless mode to count page views, where
-          visitors come from, approximate location (country), device type, and clicks on key buttons. It stores
+          visitors come from, device and browser type, and clicks on key buttons. It stores
           nothing in your browser and does not identify you or recognise you between days.
         </li>
       </ul>
