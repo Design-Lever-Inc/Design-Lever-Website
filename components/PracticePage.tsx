@@ -160,7 +160,7 @@ export default function PracticePage() {
             </div>
             <div style={{display:"flex",alignItems:"center",gap:"28px"}}>
               <a className="dl-btn hov-orange" href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",background:"#44063B",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase"}}>BOOK A CALL</a>
-              <a className="dl-link" href="#pricing" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid #44063B",paddingBottom:"4px"}}>take a health assessment</a>
+              <a className="dl-link" href="/diagnostic" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid #44063B",paddingBottom:"4px"}}>take a health assessment</a>
             </div>
           </div>
         </div>

@@ -84,7 +84,7 @@ export default function PageResearch() {
                 Original research, benchmarks and analysis on design leadership, talent, careers and commercial performance across African businesses.
               </p>
               <div style={{display:"flex",alignItems:"center",gap:"28px"}}>
-                <a className="dl-btn hov-blue-cream" href="#reports" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#44063B"}}>Read the latest research <ArrowIcon direction="down" /></a>
+                <a className="dl-btn hov-blue-cream" href="#streams" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"17px 28px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#44063B"}}>Read the latest research <ArrowIcon direction="down" /></a>
                 <a className="dl-link" href="#data" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",letterSpacing:".03em",borderBottom:"1px solid #44063B",paddingBottom:"4px"}}>Browse the evidence</a>
               </div>
             </div>
@@ -500,7 +500,7 @@ export default function PageResearch() {
           <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.82)",margin:"0 auto 42px",maxWidth:"520px"}}>
             Design Lever publishes public research so companies, practitioners, educators and institutions can use, test and challenge the work. Where data cannot be published, that limitation is stated.
           </p>
-          <a className="dl-btn hov-blue-cream" href="#reports" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase",backgroundColor:"#FDFBF0"}}>Read our research principles <ArrowIcon direction="right" /></a>
+          <a className="dl-btn hov-blue-cream" href="#streams" style={{display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",padding:"18px 32px",textDecoration:"none",letterSpacing:".05em",textTransform:"uppercase",backgroundColor:"#FDFBF0"}}>Read our research principles <ArrowIcon direction="right" /></a>
         </div>
         {/* FAQ */}
         <div style={{padding:"118px 64px",backgroundColor:"#FDFBF0"}}>
