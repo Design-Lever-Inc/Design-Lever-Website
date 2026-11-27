@@ -3,6 +3,7 @@ import "./globals.css";
 import "../styles/prototype.css";
 import "../styles/responsive.css";
 import "../styles/motion.css";
+import "../styles/accessibility.css";
 import { SiteBehaviors } from "@/components/SiteBehaviors";
 import { ScrollRestore } from "@/components/ScrollRestore";
 import { MotionScript } from "@/components/MotionScript";
