@@ -354,19 +354,19 @@ export default function PageResearch() {
               <div style={{position:"relative",minHeight:"620px",overflow:"hidden"}}>
                 <div className="dl-spotimg" data-i="1">
                   <img src="/assets/img/spot-1.svg" alt="" style={{width:"100%",height:"100%",display:"block",objectFit:"cover"}} />
-                  <div style={{position:"absolute",left:"0",bottom:"0",background:"#FDFBF0",padding:"12px 18px",font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".08em"}}>A CDO WHO STAYED BACK HOME</div>
+                  <Link href="/spotlights/a-cdo-who-stayed" style={{position:"absolute",left:"0",bottom:"0",background:"#FDFBF0",padding:"12px 18px",font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".08em",textDecoration:"none"}}>A CDO WHO STAYED BACK HOME</Link>
                 </div>
                 <div className="dl-spotimg" data-i="2">
                   <img src="/assets/img/spot-2.svg" alt="" style={{width:"100%",height:"100%",display:"block",objectFit:"cover"}} />
-                  <div style={{position:"absolute",left:"0",bottom:"0",background:"#FDFBF0",padding:"12px 18px",font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".08em"}}>INVESTING BEFORE THE CASE STUDIES</div>
+                  <Link href="/spotlights/investing-before-the-case-studies" style={{position:"absolute",left:"0",bottom:"0",background:"#FDFBF0",padding:"12px 18px",font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".08em",textDecoration:"none"}}>INVESTING BEFORE THE CASE STUDIES</Link>
                 </div>
                 <div className="dl-spotimg" data-i="3">
                   <img src="/assets/img/spot-3.svg" alt="" style={{width:"100%",height:"100%",display:"block",objectFit:"cover"}} />
-                  <div style={{position:"absolute",left:"0",bottom:"0",background:"#FDFBF0",padding:"12px 18px",font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".08em"}}>LEADING FROM ABROAD</div>
+                  <Link href="/spotlights/leading-from-abroad" style={{position:"absolute",left:"0",bottom:"0",background:"#FDFBF0",padding:"12px 18px",font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".08em",textDecoration:"none"}}>LEADING FROM ABROAD</Link>
                 </div>
                 <div className="dl-spotimg" data-i="4">
                   <img src="/assets/img/spot-4.svg" alt="" style={{width:"100%",height:"100%",display:"block",objectFit:"cover"}} />
-                  <div style={{position:"absolute",left:"0",bottom:"0",background:"#FDFBF0",padding:"12px 18px",font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".08em"}}>FROM BOTTLENECK TO PACE-SETTER</div>
+                  <Link href="/spotlights/from-bottleneck-to-pace-setter" style={{position:"absolute",left:"0",bottom:"0",background:"#FDFBF0",padding:"12px 18px",font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".08em",textDecoration:"none"}}>FROM BOTTLENECK TO PACE-SETTER</Link>
                 </div>
               </div>
             </div>
