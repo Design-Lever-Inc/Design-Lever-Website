@@ -12,7 +12,7 @@ export default function PagePrivacy() {
   return (
     <LegalLayout
       title="Privacy policy."
-      updated="3 August 2026"
+      updated="27 November 2026"
       intro="This policy explains what personal data Design Lever Inc. collects when you use designleverinc.com, why we collect it, and the choices and rights you have over it."
     >
       <h2>Who we are</h2>
@@ -34,12 +34,18 @@ export default function PagePrivacy() {
         <li>
           <strong>Diagnostic inputs.</strong> The cost diagnostic runs entirely in your browser. The figures you enter
           are saved in your browser&rsquo;s local storage on your own device so the tool remembers them on your next
-          visit. They are not sent to us unless you choose to submit them with an enquiry.
+          visit. The figures are not sent to us unless you choose to submit them with an enquiry; our analytics only
+          records that the tool was used, with the team size and the estimated cost it showed.
         </li>
         <li>
           <strong>Technical information.</strong> Like most websites, our hosting provider may automatically log basic
           technical data such as IP address, browser type, and pages visited, for security and to keep the site
           running.
+        </li>
+        <li>
+          <strong>Usage analytics.</strong> We use PostHog (EU-hosted) in cookieless mode to count page views, where
+          visitors come from, approximate location (country), device type, and clicks on key buttons. It stores
+          nothing in your browser and does not identify you or recognise you between days.
         </li>
       </ul>
 
@@ -58,14 +64,15 @@ export default function PagePrivacy() {
       <h2>Cookies and local storage</h2>
       <p>
         We keep this simple. The site uses your browser&rsquo;s local and session storage for functional purposes only:
-        to remember your diagnostic inputs and to restore your scroll position as you move between pages. We do not use
-        advertising or cross-site tracking cookies. You can clear this data at any time through your browser settings.
+        to remember your diagnostic inputs and to restore your scroll position as you move between pages. Our analytics
+        is cookieless. We do not use advertising, analytics or cross-site tracking cookies. You can clear this data at
+        any time through your browser settings. See our <Link href="/cookies">cookie policy</Link> for details.
       </p>
 
       <h2>Who we share it with</h2>
       <p>
-        We share personal data only with service providers who help us operate, such as our website host and the
-        scheduling and form tools we use to arrange calls and receive enquiries. These providers act on our
+        We share personal data only with service providers who help us operate, such as our website host, our
+        analytics provider (PostHog), and the scheduling and form tools we use to arrange calls and receive enquiries. These providers act on our
         instructions. We may also disclose information where we are legally required to do so.
       </p>
 

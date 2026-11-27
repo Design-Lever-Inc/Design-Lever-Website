@@ -6,6 +6,7 @@ import "../styles/motion.css";
 import { SiteBehaviors } from "@/components/SiteBehaviors";
 import { ScrollRestore } from "@/components/ScrollRestore";
 import { MotionScript } from "@/components/MotionScript";
+import { Analytics } from "@/components/Analytics";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -46,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SiteBehaviors />
         <ScrollRestore />
         <MotionScript />
+        <Analytics />
       </body>
     </html>
   );

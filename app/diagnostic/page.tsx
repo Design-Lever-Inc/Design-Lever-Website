@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { track } from "@/components/Analytics";
 import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -68,6 +69,8 @@ function fmtUSD(n: number) {
 
 export default function PageDiagnostic() {
   const [s, setS] = useState<DiagState>(DEFAULTS);
+  const touched = useRef(false);
+  const reported = useRef(false);
 
   // inputs persist across visits (as in the prototype)
   useEffect(() => {
@@ -80,6 +83,7 @@ export default function PageDiagnostic() {
   const set =
     (k: keyof DiagState, isFloat = false) =>
     (e: React.ChangeEvent<HTMLInputElement>) => {
+      touched.current = true;
       const val = isFloat ? parseFloat(e.target.value) : parseInt(e.target.value, 10);
       setS((cur) => {
         const next = { ...cur, [k]: val };
@@ -101,6 +105,16 @@ export default function PageDiagnostic() {
   const attrition = s.att * s.sal * s.rep;
   const total = rework + attrition;
   const animatedTotal = useCountUp(total);
+
+  // Analytics: once per visit, after the visitor stops adjusting the sliders.
+  useEffect(() => {
+    if (!touched.current || reported.current) return;
+    const t = setTimeout(() => {
+      reported.current = true;
+      track("diagnostic_used", { designers: s.des, annual_cost_ngn: Math.round(total) });
+    }, 3000);
+    return () => clearTimeout(t);
+  }, [s, total]);
   const perDes = s.des > 0 ? total / s.des : 0;
   const maxPart = Math.max(rework, attrition, 1);
   const v = {

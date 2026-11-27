@@ -5,14 +5,14 @@ import { LegalLayout } from "@/components/LegalLayout";
 export const metadata: Metadata = {
   title: "Cookie Policy",
   description:
-    "How designleverinc.com uses browser storage. We keep it minimal: functional local and session storage only, no tracking or advertising cookies.",
+    "How designleverinc.com uses browser storage and cookieless analytics. Functional local and session storage only, no tracking or advertising cookies.",
 };
 
 export default function PageCookies() {
   return (
     <LegalLayout
       title="Cookie policy."
-      updated="3 August 2026"
+      updated="27 November 2026"
       intro="We keep this simple. designleverinc.com does not use tracking or advertising cookies, and does not track you across sites."
     >
       <h2>What we use</h2>
@@ -23,8 +23,8 @@ export default function PageCookies() {
       <ul>
         <li>
           <strong>Diagnostic inputs.</strong> The cost diagnostic saves the figures you enter in local storage on your
-          own device, so the tool remembers them on your next visit. They stay on your device and are not sent to us
-          unless you submit them with an enquiry.
+          own device, so the tool remembers them on your next visit. The figures themselves stay on your device; our
+          analytics only counts that the tool was used, with the team size and the estimated cost it showed.
         </li>
         <li>
           <strong>Scroll position.</strong> We use session storage to restore where you were on a page when you return
@@ -32,10 +32,19 @@ export default function PageCookies() {
         </li>
       </ul>
 
+      <h2>Analytics, without cookies</h2>
+      <p>
+        We use PostHog, hosted in the EU, to understand how the site is used: which pages are read, where visitors
+        come from, and which buttons are clicked (for example booking a call or downloading a report). It runs in
+        cookieless mode: it stores nothing in your browser and does not recognise you between days. Visits are
+        counted using a temporary, anonymous identifier calculated on PostHog&rsquo;s servers, which cannot be used to
+        identify you or follow you to other sites.
+      </p>
+
       <h2>What we don&rsquo;t use</h2>
       <p>
-        No advertising cookies, no cross-site tracking, no third-party analytics profiling. We do not sell or share this
-        data, and there is no cookie wall to click through.
+        No advertising cookies, no analytics cookies, no cross-site tracking and no profiling. We do not sell or share
+        this data, and there is no cookie wall to click through.
       </p>
 
       <h2>Managing it</h2>
