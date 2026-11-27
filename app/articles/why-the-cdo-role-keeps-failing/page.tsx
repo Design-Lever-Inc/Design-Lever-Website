@@ -2,13 +2,21 @@ import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ArrowIcon } from "@/components/ArrowIcon";
-import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { articleJsonLd, articleMetadata, type ArticleSeo } from "@/lib/seo";
 
-export const metadata: Metadata = { title: "Why the CDO role keeps failing in Nigeria", description: "The full-time Chief Design Officer is the right role at the wrong moment for most Nigerian growth-stage companies. The mandate is sound; the hire, at Series A" };
+const SEO: ArticleSeo = {
+  title: "Why the CDO role keeps failing in Nigeria",
+  description: "The full-time Chief Design Officer is the right role at the wrong moment for most Nigerian growth-stage companies. The mandate is sound; the hire, at Series A to C, rarely survives contact with reality.",
+  path: "/articles/why-the-cdo-role-keeps-failing",
+};
+
+export const metadata = articleMetadata(SEO);
 
 export default function PageArticlesWhyTheCdoRoleKeepsFailing() {
   return (
     <div className="pg-articles-why-the-cdo-role-keeps-failing">
+      <JsonLd data={articleJsonLd(SEO)} />
       <div style={{maxWidth:"1440px",margin:"0 auto",background:"#FDFBF0",overflowX:"clip"}}>
         {/* NAV */}
         <SiteNav active="research" />

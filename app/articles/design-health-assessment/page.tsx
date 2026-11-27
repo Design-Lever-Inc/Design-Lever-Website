@@ -2,13 +2,21 @@ import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ArrowIcon } from "@/components/ArrowIcon";
-import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { articleJsonLd, articleMetadata, type ArticleSeo } from "@/lib/seo";
 
-export const metadata: Metadata = { title: "What a design health assessment actually finds", description: "Five costs show up in almost every leaderless design function. None of them appear on a design budget line." };
+const SEO: ArticleSeo = {
+  title: "What a design health assessment actually finds",
+  description: "Five costs show up in almost every leaderless design function. None of them appear on a design budget line.",
+  path: "/articles/design-health-assessment",
+};
+
+export const metadata = articleMetadata(SEO);
 
 export default function PageArticlesDesignHealthAssessment() {
   return (
     <div className="pg-articles-design-health-assessment">
+      <JsonLd data={articleJsonLd(SEO)} />
       <div style={{maxWidth:"1440px",margin:"0 auto",background:"#FDFBF0",overflowX:"clip"}}>
         {/* NAV */}
         <SiteNav active="research" />

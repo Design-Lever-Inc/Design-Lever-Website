@@ -2,13 +2,21 @@ import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ArrowIcon } from "@/components/ArrowIcon";
-import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { articleJsonLd, articleMetadata, type ArticleSeo } from "@/lib/seo";
 
-export const metadata: Metadata = { title: "Leading from abroad", description: "Japa took the designer. It did not have to take the leadership." };
+const SEO: ArticleSeo = {
+  title: "Leading from abroad",
+  description: "Japa took the designer. It did not have to take the leadership.",
+  path: "/spotlights/leading-from-abroad",
+};
+
+export const metadata = articleMetadata(SEO);
 
 export default function PageSpotlightsLeadingFromAbroad() {
   return (
     <div className="pg-spotlights-leading-from-abroad">
+      <JsonLd data={articleJsonLd(SEO)} />
       <div style={{maxWidth:"1440px",margin:"0 auto",background:"#FDFBF0",overflowX:"clip"}}>
         {/* NAV */}
         <SiteNav active="research" />

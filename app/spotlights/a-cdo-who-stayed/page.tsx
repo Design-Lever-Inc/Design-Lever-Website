@@ -2,13 +2,21 @@ import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ArrowIcon } from "@/components/ArrowIcon";
-import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { articleJsonLd, articleMetadata, type ArticleSeo } from "@/lib/seo";
 
-export const metadata: Metadata = { title: "A CDO who stayed back home", description: "Most senior design leaders leave. This one stayed past the two-year mark, and the difference was structural." };
+const SEO: ArticleSeo = {
+  title: "A CDO who stayed back home",
+  description: "Most senior design leaders leave. This one stayed past the two-year mark, and the difference was structural.",
+  path: "/spotlights/a-cdo-who-stayed",
+};
+
+export const metadata = articleMetadata(SEO);
 
 export default function PageSpotlightsACdoWhoStayed() {
   return (
     <div className="pg-spotlights-a-cdo-who-stayed">
+      <JsonLd data={articleJsonLd(SEO)} />
       <div style={{maxWidth:"1440px",margin:"0 auto",background:"#FDFBF0",overflowX:"clip"}}>
         {/* NAV */}
         <SiteNav active="research" />

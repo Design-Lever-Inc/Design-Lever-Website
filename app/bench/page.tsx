@@ -66,7 +66,7 @@ export default function PageBench() {
               <button className="dl-back" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",background:"transparent",border:"1px solid rgba(68,6,59,.4)",padding:"10px 18px",letterSpacing:".08em",textTransform:"uppercase",cursor:"pointer",marginBottom:"48px"}}><ArrowIcon direction="left" /> Back to the bench</button>
               <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
                 <div>
-                  <h1 style={{font:"400 60px/1.04 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 14px",letterSpacing:"-.02em"}}>Adaeze Okafor</h1>
+                  <h2 className="dl-prof-name" style={{font:"400 60px/1.04 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 14px",letterSpacing:"-.02em"}}>Adaeze Okafor</h2>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".06em",marginBottom:"24px"}}>FRACTIONAL CDO · LAGOS, NIGERIA</div>
                   <div style={{display:"flex",gap:"8px",flexWrap:"wrap",marginBottom:"32px"}}>
                     <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",border:"1px solid rgba(68,6,59,.35)",padding:"7px 14px",letterSpacing:".04em"}}>Fintech</span>
@@ -116,7 +116,7 @@ export default function PageBench() {
               <button className="dl-back" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",background:"transparent",border:"1px solid rgba(68,6,59,.4)",padding:"10px 18px",letterSpacing:".08em",textTransform:"uppercase",cursor:"pointer",marginBottom:"48px"}}><ArrowIcon direction="left" /> Back to the bench</button>
               <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
                 <div>
-                  <h1 style={{font:"400 60px/1.04 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 14px",letterSpacing:"-.02em"}}>Tunde Bakare</h1>
+                  <h2 className="dl-prof-name" style={{font:"400 60px/1.04 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 14px",letterSpacing:"-.02em"}}>Tunde Bakare</h2>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".06em",marginBottom:"24px"}}>FRACTIONAL CDO · LAGOS / LONDON</div>
                   <div style={{display:"flex",gap:"8px",flexWrap:"wrap",marginBottom:"32px"}}>
                     <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",border:"1px solid rgba(68,6,59,.35)",padding:"7px 14px",letterSpacing:".04em"}}>Marketplaces</span>
@@ -166,7 +166,7 @@ export default function PageBench() {
               <button className="dl-back" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",background:"transparent",border:"1px solid rgba(68,6,59,.4)",padding:"10px 18px",letterSpacing:".08em",textTransform:"uppercase",cursor:"pointer",marginBottom:"48px"}}><ArrowIcon direction="left" /> Back to the bench</button>
               <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
                 <div>
-                  <h1 style={{font:"400 60px/1.04 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 14px",letterSpacing:"-.02em"}}>Zainab Mohammed</h1>
+                  <h2 className="dl-prof-name" style={{font:"400 60px/1.04 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 14px",letterSpacing:"-.02em"}}>Zainab Mohammed</h2>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".06em",marginBottom:"24px"}}>VP DESIGN · ABUJA, NIGERIA</div>
                   <div style={{display:"flex",gap:"8px",flexWrap:"wrap",marginBottom:"32px"}}>
                     <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",border:"1px solid rgba(68,6,59,.35)",padding:"7px 14px",letterSpacing:".04em"}}>Health tech</span>
@@ -216,7 +216,7 @@ export default function PageBench() {
               <button className="dl-back" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",background:"transparent",border:"1px solid rgba(68,6,59,.4)",padding:"10px 18px",letterSpacing:".08em",textTransform:"uppercase",cursor:"pointer",marginBottom:"48px"}}><ArrowIcon direction="left" /> Back to the bench</button>
               <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
                 <div>
-                  <h1 style={{font:"400 60px/1.04 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 14px",letterSpacing:"-.02em"}}>Kwame Mensah</h1>
+                  <h2 className="dl-prof-name" style={{font:"400 60px/1.04 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 14px",letterSpacing:"-.02em"}}>Kwame Mensah</h2>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".06em",marginBottom:"24px"}}>VP DESIGN · ACCRA, GHANA</div>
                   <div style={{display:"flex",gap:"8px",flexWrap:"wrap",marginBottom:"32px"}}>
                     <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",border:"1px solid rgba(68,6,59,.35)",padding:"7px 14px",letterSpacing:".04em"}}>B2B SaaS</span>
@@ -266,7 +266,7 @@ export default function PageBench() {
               <button className="dl-back" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",background:"transparent",border:"1px solid rgba(68,6,59,.4)",padding:"10px 18px",letterSpacing:".08em",textTransform:"uppercase",cursor:"pointer",marginBottom:"48px"}}><ArrowIcon direction="left" /> Back to the bench</button>
               <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
                 <div>
-                  <h1 style={{font:"400 60px/1.04 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 14px",letterSpacing:"-.02em"}}>Amara Diallo</h1>
+                  <h2 className="dl-prof-name" style={{font:"400 60px/1.04 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 14px",letterSpacing:"-.02em"}}>Amara Diallo</h2>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".06em",marginBottom:"24px"}}>HEAD OF DESIGN · DAKAR, SENEGAL</div>
                   <div style={{display:"flex",gap:"8px",flexWrap:"wrap",marginBottom:"32px"}}>
                     <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",border:"1px solid rgba(68,6,59,.35)",padding:"7px 14px",letterSpacing:".04em"}}>Consumer</span>
@@ -316,7 +316,7 @@ export default function PageBench() {
               <button className="dl-back" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",background:"transparent",border:"1px solid rgba(68,6,59,.4)",padding:"10px 18px",letterSpacing:".08em",textTransform:"uppercase",cursor:"pointer",marginBottom:"48px"}}><ArrowIcon direction="left" /> Back to the bench</button>
               <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
                 <div>
-                  <h1 style={{font:"400 60px/1.04 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 14px",letterSpacing:"-.02em"}}>Femi Adeyemi</h1>
+                  <h2 className="dl-prof-name" style={{font:"400 60px/1.04 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 14px",letterSpacing:"-.02em"}}>Femi Adeyemi</h2>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".06em",marginBottom:"24px"}}>HEAD OF DESIGN · LAGOS, NIGERIA</div>
                   <div style={{display:"flex",gap:"8px",flexWrap:"wrap",marginBottom:"32px"}}>
                     <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",border:"1px solid rgba(68,6,59,.35)",padding:"7px 14px",letterSpacing:".04em"}}>Logistics</span>
@@ -366,7 +366,7 @@ export default function PageBench() {
               <button className="dl-back" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",background:"transparent",border:"1px solid rgba(68,6,59,.4)",padding:"10px 18px",letterSpacing:".08em",textTransform:"uppercase",cursor:"pointer",marginBottom:"48px"}}><ArrowIcon direction="left" /> Back to the bench</button>
               <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
                 <div>
-                  <h1 style={{font:"400 60px/1.04 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 14px",letterSpacing:"-.02em"}}>Nadia Hassan</h1>
+                  <h2 className="dl-prof-name" style={{font:"400 60px/1.04 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 14px",letterSpacing:"-.02em"}}>Nadia Hassan</h2>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".06em",marginBottom:"24px"}}>FRACTIONAL CDO · CAIRO / REMOTE</div>
                   <div style={{display:"flex",gap:"8px",flexWrap:"wrap",marginBottom:"32px"}}>
                     <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",border:"1px solid rgba(68,6,59,.35)",padding:"7px 14px",letterSpacing:".04em"}}>Enterprise</span>
@@ -416,7 +416,7 @@ export default function PageBench() {
               <button className="dl-back" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",background:"transparent",border:"1px solid rgba(68,6,59,.4)",padding:"10px 18px",letterSpacing:".08em",textTransform:"uppercase",cursor:"pointer",marginBottom:"48px"}}><ArrowIcon direction="left" /> Back to the bench</button>
               <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}}>
                 <div>
-                  <h1 style={{font:"400 60px/1.04 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 14px",letterSpacing:"-.02em"}}>Sipho Ndlovu</h1>
+                  <h2 className="dl-prof-name" style={{font:"400 60px/1.04 'Faculty Glyphic',serif",color:"#44063B",margin:"0 0 14px",letterSpacing:"-.02em"}}>Sipho Ndlovu</h2>
                   <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".06em",marginBottom:"24px"}}>HEAD OF DESIGN · JOHANNESBURG, SA</div>
                   <div style={{display:"flex",gap:"8px",flexWrap:"wrap",marginBottom:"32px"}}>
                     <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",border:"1px solid rgba(68,6,59,.35)",padding:"7px 14px",letterSpacing:".04em"}}>Insurance</span>
