@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -50,6 +50,8 @@ const GROUPS: [string, [string, string][]][] = [
 export function MobileMenu() {
   const [open, setOpen] = useState(false);
   const [panelTop, setPanelTop] = useState(68);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
   // close on navigation; lock body scroll while open
@@ -66,6 +68,43 @@ export function MobileMenu() {
     };
   }, [open]);
 
+  useEffect(() => {
+    if (!open) return;
+
+    const panel = panelRef.current;
+    const getLinks = () => Array.from(panel?.querySelectorAll<HTMLElement>("a[href]") ?? []);
+    getLinks()[0]?.focus();
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        setOpen(false);
+        buttonRef.current?.focus();
+        return;
+      }
+      if (event.key !== "Tab") return;
+
+      const links = getLinks();
+      if (!links.length) return;
+      const first = links[0];
+      const last = links[links.length - 1];
+      const active = document.activeElement;
+      if (!panel?.contains(active)) {
+        event.preventDefault();
+        (event.shiftKey ? last : first).focus();
+      } else if (event.shiftKey && active === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && active === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [open]);
+
   // the nav's height varies (announcement bar, wrapped rows): anchor the
   // panel to the nav's real bottom edge at the moment it opens
   const toggle = (e: React.MouseEvent) => {
@@ -78,6 +117,8 @@ export function MobileMenu() {
     <div className="dl-mnav">
       <button
         className="dl-mnav-btn"
+        ref={buttonRef}
+        aria-controls="mobile-navigation"
         aria-expanded={open}
         aria-label={open ? "Close menu" : "Open menu"}
         onClick={toggle}
@@ -85,7 +126,7 @@ export function MobileMenu() {
         {open ? "CLOSE ×" : "MENU ☰"}
       </button>
       {open && (
-        <div className="dl-mnav-panel" style={{ top: panelTop }}>
+        <div id="mobile-navigation" className="dl-mnav-panel" role="dialog" aria-modal="true" aria-label="Navigation menu" ref={panelRef} style={{ top: panelTop }}>
           {GROUPS.map(([title, links]) => (
             <div key={title} className="dl-mnav-group">
               {links.map(([href, label], i) => (
