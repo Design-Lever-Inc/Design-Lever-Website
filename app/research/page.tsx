@@ -27,10 +27,13 @@ export default function PageResearch() {
       host.setAttribute("data-filter", cat);
       b.parentNode?.querySelectorAll<HTMLElement>("[data-fcat]").forEach((x) => {
         const on = x.getAttribute("data-fcat") === cat;
+        x.setAttribute("aria-pressed", String(on));
         x.style.background = on ? "#FF7D44" : "transparent";
         x.style.color = on ? "#FDFBF0" : "#44063B";
         x.style.borderColor = on ? "#FF7D44" : "rgba(68,6,59,.35)";
       });
+      const status = document.getElementById("dl-res-status");
+      if (status) status.textContent = cat === "all" ? "Showing all research formats." : `Showing ${b.textContent?.trim()} in the research library.`;
       const y = host.getBoundingClientRect().top + window.pageYOffset - 120;
       window.scrollTo({ top: y, behavior: "smooth" });
     };
@@ -168,12 +171,13 @@ export default function PageResearch() {
         </div>
         {/* THE REPORT */}
         {/* RESOURCE FILTER BAR */}
-        <div style={{position:"sticky",top:"84px",zIndex:"45",display:"flex",alignItems:"center",gap:"8px",flexWrap:"wrap",padding:"16px 64px",background:"#FDFBF0",borderTop:"1px solid rgba(68,6,59,.16)",borderBottom:"1px solid rgba(68,6,59,.16)"}}>
-          <button className="dl-fbtn" data-fcat="all" style={{color:"#FDFBF0",borderColor:"#FF7D44",backgroundColor:"#FF7D44"}}>All</button>
-          <button className="dl-fbtn" data-fcat="reports" style={{background:"transparent",color:"#44063B",borderColor:"rgba(68,6,59,.35)"}}>Reports</button>
-          <button className="dl-fbtn" data-fcat="data" style={{background:"transparent",color:"#44063B",borderColor:"rgba(68,6,59,.35)"}}>Data</button>
-          <button className="dl-fbtn" data-fcat="articles" style={{background:"transparent",color:"#44063B",borderColor:"rgba(68,6,59,.35)"}}>Analysis</button>
-          <button className="dl-fbtn" data-fcat="playbooks" style={{background:"transparent",color:"#44063B",borderColor:"rgba(68,6,59,.35)"}}>Tools</button>
+        <div role="group" aria-label="Filter research library" style={{position:"sticky",top:"84px",zIndex:"45",display:"flex",alignItems:"center",gap:"8px",flexWrap:"wrap",padding:"16px 64px",background:"#FDFBF0",borderTop:"1px solid rgba(68,6,59,.16)",borderBottom:"1px solid rgba(68,6,59,.16)"}}>
+          <button className="dl-fbtn" data-fcat="all" aria-pressed="true" style={{color:"#FDFBF0",borderColor:"#FF7D44",backgroundColor:"#FF7D44"}}>All</button>
+          <button className="dl-fbtn" data-fcat="reports" aria-pressed="false" style={{background:"transparent",color:"#44063B",borderColor:"rgba(68,6,59,.35)"}}>Reports</button>
+          <button className="dl-fbtn" data-fcat="data" aria-pressed="false" style={{background:"transparent",color:"#44063B",borderColor:"rgba(68,6,59,.35)"}}>Data</button>
+          <button className="dl-fbtn" data-fcat="articles" aria-pressed="false" style={{background:"transparent",color:"#44063B",borderColor:"rgba(68,6,59,.35)"}}>Analysis</button>
+          <button className="dl-fbtn" data-fcat="playbooks" aria-pressed="false" style={{background:"transparent",color:"#44063B",borderColor:"rgba(68,6,59,.35)"}}>Tools</button>
+          <span id="dl-res-status" role="status" aria-live="polite" aria-atomic="true" style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",marginLeft:"auto"}}>Showing all research formats.</span>
         </div>
         {/* RESOURCES */}
         <div id="reports" style={{padding:"118px 64px",borderTop:"1px solid rgba(68,6,59,.16)"}}>
