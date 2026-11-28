@@ -1835,3 +1835,7 @@ a > .dl-arrow-icon--left:first-child,
 
   .dl-about-system-card:last-child { border-bottom: 0; }
 }
+
+/* Shown only while an editor previews unpublished drafts. */
+.dl-preview-exit{position:fixed;left:16px;bottom:16px;z-index:9999;font:400 11px 'Spline Sans Mono',monospace;letter-spacing:.04em;text-transform:uppercase;color:#FDFBF0;background:#44063B;padding:10px 14px;text-decoration:none}
+.dl-preview-exit:hover{background:#FF7D44}

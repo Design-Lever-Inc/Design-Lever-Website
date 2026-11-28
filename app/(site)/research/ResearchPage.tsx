@@ -1,16 +1,54 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ArrowIcon } from "@/components/ArrowIcon";
+import { imageUrl } from "@/sanity/lib/image";
+import { postPath } from "@/sanity/lib/paths";
+import type { PostCard, Report } from "@/sanity/lib/queries";
 
 const EMPTY_FORM = { name: "", email: "", topic: "Take the practitioner survey", message: "" };
 
-export default function PageResearch() {
-  const router = useRouter();
+/** Tag styles for each report stage, as in the original design. */
+const STAGE: Record<Report["stage"], { label: string; style: React.CSSProperties }> = {
+  planned: { label: "PLANNED", style: { color: "rgba(68,6,59,.55)", border: "1px solid rgba(68,6,59,.3)" } },
+  in_production: { label: "IN PRODUCTION", style: { color: "#FDFBF0", background: "#FF7D44" } },
+  open_for_input: { label: "OPEN FOR INPUT", style: { color: "#FF7D44", border: "1px solid #FF7D44" } },
+  published: { label: "PUBLISHED", style: { color: "#FDFBF0", background: "#44063B" } },
+};
+
+/** A report's button: the PDF if one is uploaded, else its link, else the
+ *  research contact form (with an email fallback if scripts are off). */
+function ReportAction({ report, onForm, className, style, children }: {
+  report: Report;
+  onForm: (e?: { preventDefault?: () => void }) => void;
+  className: string;
+  style: React.CSSProperties;
+  children: React.ReactNode;
+}) {
+  if (report.fileUrl) {
+    return <a className={className} href={`${report.fileUrl}?dl=`} download="" style={style}>{children}</a>;
+  }
+  if (report.link) {
+    return <a className={className} href={report.link} target="_blank" rel="noopener" style={style}>{children}</a>;
+  }
+  const subject = encodeURIComponent(`${report.actionLabel}: ${report.title}`);
+  return <a className={className} onClick={onForm} href={`mailto:research@designleverinc.com?subject=${subject}`} style={style}>{children}</a>;
+}
+
+export interface ResearchContent {
+  articles: PostCard[];
+  spotlights: PostCard[];
+  reports: Report[];
+}
+
+export function ResearchPage({ articles, spotlights: allSpotlights, reports }: ResearchContent) {
+  // The spotlight image swap is built for four items (see .dl-spotimg in prototype.css).
+  const spotlights = allSpotlights.slice(0, 4);
+  const flagship = reports.find((r) => r.flagship);
+  const papers = reports.filter((r) => r !== flagship);
   const [formOpen, setFormOpen] = useState(false);
   const [sent, setSent] = useState(false);
   const [form, setForm] = useState(EMPTY_FORM);
@@ -45,7 +83,6 @@ export default function PageResearch() {
   };
   const closeForm = () => setFormOpen(false);
   const stop = (e: React.MouseEvent) => e.stopPropagation();
-  const goArticle = () => router.push("/articles/why-the-cdo-role-keeps-failing");
   const setField =
     (k: keyof typeof EMPTY_FORM) =>
     (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
@@ -185,91 +222,53 @@ export default function PageResearch() {
             </div>
           </div>
           {/* Flagship report, cover + detail (image ≥ 4 cols) */}
+          {flagship && (
           <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"48px",alignItems:"stretch",marginBottom:"64px"}}>
             <div style={{position:"relative",minHeight:"440px",display:"flex",flexDirection:"column",justifyContent:"space-between",padding:"40px",backgroundColor:"#44063B"}}>
               <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start"}}>
-                <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FDFBF0",letterSpacing:".14em",textTransform:"uppercase"}}>Flagship report · 2026</span>
-                <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.55)",letterSpacing:".06em"}}>EST. ~120 PP</span>
+                <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FDFBF0",letterSpacing:".14em",textTransform:"uppercase"}}>Flagship report{flagship.publishedAt ? ` · ${flagship.publishedAt.slice(0, 4)}` : ""}</span>
+                {flagship.flagshipDetails?.length && <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.55)",letterSpacing:".06em"}}>{flagship.flagshipDetails.length}</span>}
               </div>
               <div>
-                <div style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#FDFBF0",letterSpacing:"-.01em"}}>The African Design Leadership Report</div>
-                <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.6)",marginTop:"20px"}}>Volume 01</div>
+                <div style={{font:"400 46px/1.1 'Faculty Glyphic',serif",color:"#FDFBF0",letterSpacing:"-.01em"}}>{flagship.title}</div>
+                {flagship.flagshipDetails?.edition && <div style={{font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.6)",marginTop:"20px"}}>{flagship.flagshipDetails.edition}</div>}
               </div>
             </div>
             <div style={{display:"flex",flexDirection:"column",justifyContent:"center"}}>
               <div style={{display:"inline-flex",alignSelf:"flex-start",gap:"8px",marginBottom:"22px"}}>
-                <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",border:"1px solid #FF7D44",padding:"5px 11px"}}>ANNUAL REPORT</span>
-                <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",background:"#FF7D44",padding:"5px 11px"}}>IN PRODUCTION</span>
+                <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",border:"1px solid #FF7D44",padding:"5px 11px",textTransform:"uppercase"}}>{flagship.format}</span>
+                <span style={{font:"400 11px 'Spline Sans Mono',monospace",padding:"5px 11px",...STAGE[flagship.stage].style,color:flagship.stage === "in_production" ? "#44063B" : STAGE[flagship.stage].style.color}}>{STAGE[flagship.stage].label}</span>
               </div>
               <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.72)",margin:"0 0 28px",maxWidth:"520px"}}>
-                The annual view of how design leadership is developing across African companies and careers, bringing together practitioner data, company interviews and evidence from Design Lever engagements.
+                {flagship.summary}
               </p>
+              {!!flagship.flagshipDetails?.facts?.length && (
               <div style={{borderTop:"1px solid rgba(68,6,59,.16)"}}>
-                <div style={{display:"flex",justifyContent:"space-between",padding:"14px 0",borderBottom:"1px solid rgba(68,6,59,.1)",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B"}}>
-                  <span style={{color:"rgba(68,6,59,.55)"}}>Coverage</span>
-                  <span>20 interviews</span>
+                {flagship.flagshipDetails.facts.map((f, i, all) => (
+                <div key={i} style={{display:"flex",justifyContent:"space-between",padding:"14px 0",...(i < all.length - 1 ? {borderBottom:"1px solid rgba(68,6,59,.1)"} : {}),font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B"}}>
+                  <span style={{color:"rgba(68,6,59,.55)"}}>{f.label}</span>
+                  <span>{f.value}</span>
                 </div>
-                <div style={{display:"flex",justifyContent:"space-between",padding:"14px 0",borderBottom:"1px solid rgba(68,6,59,.1)",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B"}}>
-                  <span style={{color:"rgba(68,6,59,.55)"}}>Coverage</span>
-                  <span>500 survey responses</span>
-                </div>
-                <div style={{display:"flex",justifyContent:"space-between",padding:"14px 0",font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B"}}>
-                  <span style={{color:"rgba(68,6,59,.55)"}}>Licence</span>
-                  <span>CC BY 4.0 · free to cite</span>
-                </div>
+                ))}
               </div>
-              <a className="dl-btn" onClick={openForm} href="mailto:research@designleverinc.com?subject=Read%20the%20African%20Design%20Leadership%20Report" style={{alignSelf:"flex-start",marginTop:"28px",display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"15px 24px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#44063B"}}>Read the report <ArrowIcon direction="right" /></a>
+              )}
+              <ReportAction report={flagship} onForm={openForm} className="dl-btn" style={{alignSelf:"flex-start",marginTop:"28px",display:"inline-flex",alignItems:"center",gap:"10px",font:"400 12px 'Spline Sans Mono',monospace",color:"#FDFBF0",padding:"15px 24px",textDecoration:"none",letterSpacing:".04em",textTransform:"uppercase",backgroundColor:"#44063B"}}>{flagship.actionLabel} <ArrowIcon direction="right" /></ReportAction>
             </div>
           </div>
+          )}
           {/* Working papers list */}
           <div style={{borderTop:"1.5px solid #44063B"}}>
-            <div style={{display:"grid",gridTemplateColumns:"170px 1fr 200px 150px",gap:"32px",alignItems:"center",padding:"28px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
-              <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".04em"}}>WHITE PAPER</span>
+            {papers.map((r, i) => (
+            <div key={r._id} style={{display:"grid",gridTemplateColumns:"170px 1fr 200px 150px",gap:"32px",alignItems:"center",padding:"28px 0",...(i < papers.length - 1 ? {borderBottom:"1px solid rgba(68,6,59,.14)"} : {})}}>
+              <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".04em",textTransform:"uppercase"}}>{r.format}</span>
               <div>
-                <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B"}}>The Cost of No Design Leadership</div>
-                <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.6)",margin:"6px 0 0",maxWidth:"520px"}}>How a leaderless design function quietly compounds cost.</p>
+                <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B"}}>{r.title}</div>
+                <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.6)",margin:"6px 0 0",maxWidth:"520px"}}>{r.summary}</p>
               </div>
-              <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FDFBF0",justifySelf:"start",transform:"translateX(10px)",background:"#FF7D44",padding:"5px 11px"}}>IN PRODUCTION</span>
-              <a className="dl-link" onClick={openForm} href="mailto:research@designleverinc.com?subject=Notify:%20Cost%20of%20No%20Design%20Leadership" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",justifySelf:"end",transform:"translateX(10px)",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"3px"}}>Notify me</a>
+              <span style={{font:"400 11px 'Spline Sans Mono',monospace",justifySelf:"start",transform:"translateX(10px)",padding:"5px 11px",...STAGE[r.stage].style}}>{STAGE[r.stage].label}</span>
+              <ReportAction report={r} onForm={openForm} className="dl-link" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",justifySelf:"end",transform:"translateX(10px)",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"3px"}}>{r.actionLabel}</ReportAction>
             </div>
-            <div style={{display:"grid",gridTemplateColumns:"170px 1fr 200px 150px",gap:"32px",alignItems:"center",padding:"28px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
-              <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".04em"}}>DATA REPORT</span>
-              <div>
-                <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B"}}>Design Salary & Seniority in Nigeria 2026</div>
-                <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.6)",margin:"6px 0 0",maxWidth:"520px"}}>What designers earn at each level, and where the leadership ceiling sits.</p>
-              </div>
-              <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",justifySelf:"start",transform:"translateX(10px)",border:"1px solid #FF7D44",padding:"5px 11px"}}>OPEN FOR INPUT</span>
-              <a className="dl-link" onClick={openForm} href="mailto:research@designleverinc.com?subject=Take%20the%20salary%20survey" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",justifySelf:"end",transform:"translateX(10px)",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"3px"}}>Take the survey</a>
-            </div>
-            <div style={{display:"grid",gridTemplateColumns:"170px 1fr 200px 150px",gap:"32px",alignItems:"center",padding:"28px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
-              <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".04em"}}>FIELD REPORT</span>
-              <div>
-                <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B"}}>Japa & the Diaspora Design Bench</div>
-                <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.6)",margin:"6px 0 0",maxWidth:"520px"}}>
-                  Where Nigerian design leaders went, and how the continent stays connected to them.
-                </p>
-              </div>
-              <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.55)",justifySelf:"start",transform:"translateX(10px)",border:"1px solid rgba(68,6,59,.3)",padding:"5px 11px"}}>PLANNED</span>
-              <a className="dl-link" onClick={openForm} href="mailto:research@designleverinc.com?subject=Notify:%20Japa%20report" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",justifySelf:"end",transform:"translateX(10px)",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"3px"}}>Notify me</a>
-            </div>
-            <div style={{display:"grid",gridTemplateColumns:"170px 1fr 200px 150px",gap:"32px",alignItems:"center",padding:"28px 0",borderBottom:"1px solid rgba(68,6,59,.14)"}}>
-              <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".04em"}}>WHITE PAPER</span>
-              <div>
-                <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B"}}>Design ROI: What the Global Numbers Miss About Africa</div>
-                <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.6)",margin:"6px 0 0",maxWidth:"520px"}}>Why McKinsey, Adobe and Forrester figures don't transfer, and what does.</p>
-              </div>
-              <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FDFBF0",justifySelf:"start",transform:"translateX(10px)",background:"#FF7D44",padding:"5px 11px"}}>IN PRODUCTION</span>
-              <a className="dl-link" onClick={openForm} href="mailto:research@designleverinc.com?subject=Notify:%20Design%20ROI%20paper" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",justifySelf:"end",transform:"translateX(10px)",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"3px"}}>Notify me</a>
-            </div>
-            <div style={{display:"grid",gridTemplateColumns:"170px 1fr 200px 150px",gap:"32px",alignItems:"center",padding:"28px 0"}}>
-              <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".04em"}}>DATA BRIEF</span>
-              <div>
-                <div style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B"}}>Attrition in African Design Teams</div>
-                <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.6)",margin:"6px 0 0",maxWidth:"520px"}}>The 18-month exit curve, and the leadership factors that move it.</p>
-              </div>
-              <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",justifySelf:"start",transform:"translateX(10px)",border:"1px solid #FF7D44",padding:"5px 11px"}}>OPEN FOR INPUT</span>
-              <a className="dl-link" onClick={openForm} href="mailto:research@designleverinc.com?subject=Contribute:%20Attrition%20brief" style={{font:"400 12px 'Spline Sans Mono',monospace",color:"#44063B",textDecoration:"none",justifySelf:"end",transform:"translateX(10px)",borderBottom:"1px solid rgba(68,6,59,.4)",paddingBottom:"3px"}}>Contribute</a>
-            </div>
+            ))}
           </div>
         </div>
         <div id="dl-reswrap" data-filter="all">
@@ -281,32 +280,14 @@ export default function PageResearch() {
               <h2 style={{font:"400 60px/1.1 'Faculty Glyphic',serif",color:"#44063B",margin:"24px 0 0",letterSpacing:"-.01em"}}>Field notes and analysis.</h2>
             </div>
             <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:"44px 24px"}}>
-              <Link className="dl-rcard" href="/articles/why-the-cdo-role-keeps-failing" style={{display:"block",textDecoration:"none"}}>
-                <img src="/assets/img/article-1.svg" alt="" style={{width:"100%",height:"200px",display:"block",objectFit:"cover"}} />
-                <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",margin:"18px 0 10px",letterSpacing:".04em"}}>ESSAY</div>
-                <div style={{font:"400 24px/1.2 'Faculty Glyphic',serif",color:"#44063B"}}>Why the CDO role keeps failing in Nigeria</div>
-                <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"12px 0 0"}}>
-                  The full-time hire is right in theory and wrong at your stage. A look at the tenure data.
-                </p>
-              </Link>
-              <Link className="dl-rcard" href="/articles/design-health-assessment" style={{display:"block",textDecoration:"none"}}>
-                <img src="/assets/img/article-2.svg" alt="" style={{width:"100%",height:"200px",display:"block",objectFit:"cover"}} />
-                <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",margin:"18px 0 10px",letterSpacing:".04em"}}>FIELD NOTE</div>
-                <div style={{font:"400 24px/1.2 'Faculty Glyphic',serif",color:"#44063B"}}>What a design health assessment actually finds</div>
-                <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"12px 0 0"}}>The five costs that show up in almost every leaderless design function.</p>
-              </Link>
-              <Link className="dl-rcard" href="/articles/design-on-the-pnl" style={{display:"block",textDecoration:"none"}}>
-                <img src="/assets/img/article-3.svg" alt="" style={{width:"100%",height:"200px",display:"block",objectFit:"cover"}} />
-                <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",margin:"18px 0 10px",letterSpacing:".04em"}}>ESSAY</div>
-                <div style={{font:"400 24px/1.2 'Faculty Glyphic',serif",color:"#44063B"}}>Design on the P&L, in Nigeria</div>
-                <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"12px 0 0"}}>How to make a design function defensible to a board that only reads numbers.</p>
-              </Link>
-              <Link className="dl-rcard" href="/articles/the-eighteen-month-exit-curve" style={{display:"block",textDecoration:"none"}}>
-                <img src="/assets/img/article-4.svg" alt="" style={{width:"100%",height:"200px",display:"block",objectFit:"cover"}} />
-                <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",margin:"18px 0 10px",letterSpacing:".04em"}}>FIELD NOTE</div>
-                <div style={{font:"400 24px/1.2 'Faculty Glyphic',serif",color:"#44063B"}}>The eighteen-month exit curve</div>
-                <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"12px 0 0"}}>Why senior designers leave, and the leadership factors that move the curve.</p>
-              </Link>
+              {articles.map((a) => (
+                <Link key={a._id} className="dl-rcard" href={postPath("article", a.slug)} style={{display:"block",textDecoration:"none"}}>
+                  {a.heroImage && <img src={imageUrl(a.heroImage).width(720).url()} alt="" style={{width:"100%",height:"200px",display:"block",objectFit:"cover"}} />}
+                  <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",margin:"18px 0 10px",letterSpacing:".04em",textTransform:"uppercase"}}>{a.cardLabel}</div>
+                  <div style={{font:"400 24px/1.2 'Faculty Glyphic',serif",color:"#44063B"}}>{a.cardTitle || a.title}</div>
+                  <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"12px 0 0"}}>{a.cardSummary}</p>
+                </Link>
+              ))}
             </div>
           </div>
           {/* SPOTLIGHTS */}
@@ -318,56 +299,24 @@ export default function PageResearch() {
             </div>
             <div className="dl-spotsplit" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"stretch"}}>
               <div style={{display:"flex",flexDirection:"column",justifyContent:"center"}}>
-                <Link className="dl-spotitem" href="/spotlights/a-cdo-who-stayed" style={{borderTop:"1.5px solid #44063B"}}>
-                  <div style={{minWidth:"0"}}>
-                    <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".08em",marginBottom:"8px"}}>QUALITATIVE RESEARCH</div>
-                    <div style={{font:"400 24px/1.2 'Faculty Glyphic',serif",color:"#44063B",marginBottom:"8px"}}>Company interviews</div>
-                    <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>Structured conversations on how design investment performs inside the business.</p>
-                  </div>
-                  <span className="dl-spotarrow" style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B",flex:"none"}}><ArrowIcon /></span>
-                </Link>
-                <Link className="dl-spotitem" href="/spotlights/investing-before-the-case-studies">
-                  <div style={{minWidth:"0"}}>
-                    <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".08em",marginBottom:"8px"}}>WORKFORCE DATA</div>
-                    <div style={{font:"400 24px/1.2 'Faculty Glyphic',serif",color:"#44063B",marginBottom:"8px"}}>Practitioner survey</div>
-                    <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>Recurring data on compensation, seniority, career progression and leadership access.</p>
-                  </div>
-                  <span className="dl-spotarrow" style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B",flex:"none"}}><ArrowIcon /></span>
-                </Link>
-                <Link className="dl-spotitem" href="/spotlights/leading-from-abroad">
-                  <div style={{minWidth:"0"}}>
-                    <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".08em",marginBottom:"8px"}}>DESIGN LEVER DATA</div>
-                    <div style={{font:"400 24px/1.2 'Faculty Glyphic',serif",color:"#44063B",marginBottom:"8px"}}>Engagement data</div>
-                    <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>Approved and anonymised baseline and outcome metrics from Practice engagements.</p>
-                  </div>
-                  <span className="dl-spotarrow" style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B",flex:"none"}}><ArrowIcon /></span>
-                </Link>
-                <Link className="dl-spotitem" href="/spotlights/from-bottleneck-to-pace-setter">
-                  <div style={{minWidth:"0"}}>
-                    <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".08em",marginBottom:"8px"}}>COMPANY</div>
-                    <div style={{font:"400 24px/1.2 'Faculty Glyphic',serif",color:"#44063B",marginBottom:"8px"}}>From bottleneck to pace-setter</div>
-                    <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>A health-tech team on the quarter their design function changed gear.</p>
-                  </div>
-                  <span className="dl-spotarrow" style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B",flex:"none"}}><ArrowIcon /></span>
-                </Link>
+                {spotlights.map((s, i) => (
+                  <Link key={s._id} className="dl-spotitem" href={postPath("spotlight", s.slug)} style={i === 0 ? {borderTop:"1.5px solid #44063B"} : undefined}>
+                    <div style={{minWidth:"0"}}>
+                      <div style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FF7D44",letterSpacing:".08em",marginBottom:"8px",textTransform:"uppercase"}}>{s.cardLabel}</div>
+                      <div style={{font:"400 24px/1.2 'Faculty Glyphic',serif",color:"#44063B",marginBottom:"8px"}}>{s.cardTitle || s.title}</div>
+                      <p style={{font:"400 16px/1.5 'Roboto Flex',sans-serif",color:"rgba(68,6,59,.62)",margin:"0"}}>{s.cardSummary}</p>
+                    </div>
+                    <span className="dl-spotarrow" style={{font:"400 24px 'Faculty Glyphic',serif",color:"#44063B",flex:"none"}}><ArrowIcon /></span>
+                  </Link>
+                ))}
               </div>
               <div style={{position:"relative",minHeight:"620px",overflow:"hidden"}}>
-                <div className="dl-spotimg" data-i="1">
-                  <img src="/assets/img/spot-1.svg" alt="" style={{width:"100%",height:"100%",display:"block",objectFit:"cover"}} />
-                  <div style={{position:"absolute",left:"0",bottom:"0",background:"#FDFBF0",padding:"12px 18px",font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".08em"}}>A CDO WHO STAYED BACK HOME</div>
-                </div>
-                <div className="dl-spotimg" data-i="2">
-                  <img src="/assets/img/spot-2.svg" alt="" style={{width:"100%",height:"100%",display:"block",objectFit:"cover"}} />
-                  <div style={{position:"absolute",left:"0",bottom:"0",background:"#FDFBF0",padding:"12px 18px",font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".08em"}}>INVESTING BEFORE THE CASE STUDIES</div>
-                </div>
-                <div className="dl-spotimg" data-i="3">
-                  <img src="/assets/img/spot-3.svg" alt="" style={{width:"100%",height:"100%",display:"block",objectFit:"cover"}} />
-                  <div style={{position:"absolute",left:"0",bottom:"0",background:"#FDFBF0",padding:"12px 18px",font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".08em"}}>LEADING FROM ABROAD</div>
-                </div>
-                <div className="dl-spotimg" data-i="4">
-                  <img src="/assets/img/spot-4.svg" alt="" style={{width:"100%",height:"100%",display:"block",objectFit:"cover"}} />
-                  <div style={{position:"absolute",left:"0",bottom:"0",background:"#FDFBF0",padding:"12px 18px",font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".08em"}}>FROM BOTTLENECK TO PACE-SETTER</div>
-                </div>
+                {spotlights.map((s, i) => (
+                  <div key={s._id} className="dl-spotimg" data-i={i + 1}>
+                    {s.heroImage && <img src={imageUrl(s.heroImage).width(1200).url()} alt="" style={{width:"100%",height:"100%",display:"block",objectFit:"cover"}} />}
+                    <div style={{position:"absolute",left:"0",bottom:"0",background:"#FDFBF0",padding:"12px 18px",font:"400 11px 'Spline Sans Mono',monospace",color:"#44063B",letterSpacing:".08em",textTransform:"uppercase"}}>{s.title}</div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
