@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Fully static site: exported to plain HTML for static hosting (Vercel/CDN).
-  output: "export",
+  // Pages are still pre-rendered as static HTML. Articles, spotlights and the
+  // research page are refreshed from Sanity when something is published.
   images: { unoptimized: true },
 };
 

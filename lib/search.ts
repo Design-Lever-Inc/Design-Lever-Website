@@ -1,7 +1,7 @@
-/** Static, client-side search index for the footer search. The site is a
- *  static export with no backend, so search runs entirely in the browser over
- *  this curated index (title + description + keyword tags per page). Keeping it
- *  hand-authored means results stay relevant and ranked, and it stays tiny. */
+/** Client-side search for the footer search. Site pages are listed here by
+ *  hand; articles and spotlights come from Sanity through /search-index.json,
+ *  so a newly published piece is searchable without a code change. Search runs
+ *  entirely in the browser over title + description + keyword tags. */
 
 export type SearchType = "Article" | "Spotlight" | "Page";
 
@@ -13,67 +13,7 @@ export interface SearchEntry {
   keywords: string[];
 }
 
-export const SEARCH_INDEX: SearchEntry[] = [
-  // ---- Articles (The Lever journal) ----
-  {
-    title: "Why the CDO role keeps failing in Nigeria",
-    href: "/articles/why-the-cdo-role-keeps-failing",
-    type: "Article",
-    description: "Why full-time Chief Design Officer hires keep breaking, and the fractional alternative.",
-    keywords: ["cdo", "chief design officer", "leadership", "nigeria", "hiring", "attrition", "org design", "fractional"],
-  },
-  {
-    title: "Design on the P&L, in Nigeria",
-    href: "/articles/design-on-the-pnl",
-    type: "Article",
-    description: "Making design visible on the profit and loss, and proving its return to the board.",
-    keywords: ["p&l", "pnl", "profit", "roi", "return", "commercial", "finance", "board", "naira", "value", "revenue"],
-  },
-  {
-    title: "The eighteen-month exit curve",
-    href: "/articles/the-eighteen-month-exit-curve",
-    type: "Article",
-    description: "Why senior designers leave inside eighteen months, and how leadership changes the curve.",
-    keywords: ["attrition", "retention", "senior designers", "exit", "japa", "career ceiling", "leaving", "churn"],
-  },
-  {
-    title: "What a design health assessment actually finds",
-    href: "/articles/design-health-assessment",
-    type: "Article",
-    description: "Inside the free Design Team Health Assessment, and the cost it surfaces.",
-    keywords: ["health assessment", "diagnostic", "audit", "teams", "process", "cost", "review", "maturity"],
-  },
-
-  // ---- Spotlights (interviews) ----
-  {
-    title: "A CDO who stayed back home",
-    href: "/spotlights/a-cdo-who-stayed",
-    type: "Spotlight",
-    description: "A design leader on building a career at the top without leaving Nigeria.",
-    keywords: ["cdo", "nigeria", "retention", "leadership", "career", "interview", "stayed"],
-  },
-  {
-    title: "Leading from abroad",
-    href: "/spotlights/leading-from-abroad",
-    type: "Spotlight",
-    description: "A diaspora design leader on leading African teams remotely, turning japa into a bridge.",
-    keywords: ["diaspora", "remote", "japa", "abroad", "leadership", "interview", "bridge"],
-  },
-  {
-    title: "Investing before the case studies",
-    href: "/spotlights/investing-before-the-case-studies",
-    type: "Spotlight",
-    description: "A founder on backing design leadership early, before the proof points exist.",
-    keywords: ["founder", "investment", "early", "startup", "risk", "interview", "backing"],
-  },
-  {
-    title: "From bottleneck to pace-setter",
-    href: "/spotlights/from-bottleneck-to-pace-setter",
-    type: "Spotlight",
-    description: "How a health-tech team in Lagos went from design bottleneck to setting the pace.",
-    keywords: ["health-tech", "healthtech", "lagos", "throughput", "systems", "bottleneck", "interview", "speed"],
-  },
-
+export const PAGE_INDEX: SearchEntry[] = [
   // ---- Key pages ----
   {
     title: "Research",
@@ -210,11 +150,11 @@ function scoreEntry(entry: SearchEntry, tokens: string[], raw: string): number {
   return score;
 }
 
-export function searchEntries(query: string, limit = 8): SearchEntry[] {
+export function searchEntries(query: string, content: SearchEntry[] = [], limit = 8): SearchEntry[] {
   const raw = query.trim().toLowerCase();
   if (raw.length < 2) return [];
   const tokens = raw.split(/\s+/).filter(Boolean);
-  return SEARCH_INDEX.map((entry) => ({ entry, score: scoreEntry(entry, tokens, raw) }))
+  return [...content, ...PAGE_INDEX].map((entry) => ({ entry, score: scoreEntry(entry, tokens, raw) }))
     .filter((r) => r.score > 0)
     .sort((a, b) => b.score - a.score)
     .slice(0, limit)

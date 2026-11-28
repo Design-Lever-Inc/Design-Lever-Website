@@ -3,11 +3,13 @@ import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ArrowIcon } from "@/components/ArrowIcon";
 import type { Metadata } from "next";
+import { SiteShell } from "@/components/SiteShell";
 
 export const metadata: Metadata = { title: "Page not found", alternates: { canonical: null }, openGraph: { url: undefined } };
 
 export default function NotFound() {
   return (
+    <SiteShell>
     <div className="pg-notfound">
       <div style={{maxWidth:"1440px",margin:"0 auto",background:"#FDFBF0",overflowX:"clip"}}>
         {/* NAV */}
@@ -25,5 +27,6 @@ export default function NotFound() {
         <SiteFooter />
       </div>
     </div>
+    </SiteShell>
   );
 }

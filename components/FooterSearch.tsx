@@ -3,10 +3,13 @@
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { searchEntries } from "@/lib/search";
+import { searchEntries, type SearchEntry } from "@/lib/search";
 import { ArrowIcon } from "./ArrowIcon";
 
 const EXIT_DURATION = 280;
+
+/** Shared across footer instances and reopenings: fetched once per visit. */
+let contentRequested: Promise<SearchEntry[]> | null = null;
 
 const QUICK_PATHS = [
   ["/practice", "Practice", "Design leadership for companies"],
@@ -32,7 +35,8 @@ export function FooterSearch() {
   const listId = useId();
   const titleId = useId();
 
-  const results = useMemo(() => searchEntries(query), [query]);
+  const [content, setContent] = useState<SearchEntry[]>([]);
+  const results = useMemo(() => searchEntries(query, content), [query, content]);
   const isSearching = query.trim().length >= 2;
 
   useEffect(() => setActive(0), [query]);
@@ -48,6 +52,13 @@ export function FooterSearch() {
       window.scrollTo({ top: footerTop, behavior: reduceMotion ? "auto" : "smooth" });
     }
     setMounted(true);
+    // Articles and spotlights load the first time search opens; pages are built in.
+    if (!contentRequested) {
+      contentRequested = fetch("/search-index.json")
+        .then((r) => (r.ok ? r.json() : []))
+        .catch(() => []);
+    }
+    contentRequested.then(setContent);
   }, []);
 
   const closeSearch = useCallback((returnFocus = true) => {

@@ -7,16 +7,27 @@ export interface ArticleSeo {
   title: string;
   description: string;
   path: string;
+  /** Absolute share-image URL; defaults to the standard Design Lever card. */
+  image?: string;
+  publishedAt?: string;
+  modifiedAt?: string;
 }
 
 const DEFAULT_IMAGE = { url: "/og-default.png", width: 1200, height: 630, alt: SITE_NAME };
 
-export function articleMetadata({ title, description, path }: ArticleSeo): Metadata {
+export function articleMetadata({ title, description, path, image, publishedAt, modifiedAt }: ArticleSeo): Metadata {
   return {
     title,
     description,
     // Setting openGraph replaces the root one, so restate what it carried.
-    openGraph: { type: "article", siteName: SITE_NAME, url: path, images: [DEFAULT_IMAGE] },
+    openGraph: {
+      type: "article",
+      siteName: SITE_NAME,
+      url: path,
+      images: [image ? { url: image, width: 1200, height: 630, alt: title } : DEFAULT_IMAGE],
+      publishedTime: publishedAt,
+      modifiedTime: modifiedAt,
+    },
   };
 }
 
@@ -42,7 +53,7 @@ export function organizationJsonLd() {
   };
 }
 
-export function articleJsonLd({ title, description, path }: ArticleSeo) {
+export function articleJsonLd({ title, description, path, image, publishedAt, modifiedAt }: ArticleSeo) {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -50,7 +61,9 @@ export function articleJsonLd({ title, description, path }: ArticleSeo) {
     description,
     url: `${SITE_URL}${path}`,
     mainEntityOfPage: `${SITE_URL}${path}`,
-    image: `${SITE_URL}${DEFAULT_IMAGE.url}`,
+    image: image ?? `${SITE_URL}${DEFAULT_IMAGE.url}`,
+    datePublished: publishedAt,
+    dateModified: modifiedAt,
     author: ORGANIZATION,
     publisher: ORGANIZATION,
   };

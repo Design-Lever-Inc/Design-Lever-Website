@@ -1,12 +1,4 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import "../styles/prototype.css";
-import "../styles/responsive.css";
-import "../styles/motion.css";
-import { SiteBehaviors } from "@/components/SiteBehaviors";
-import { ScrollRestore } from "@/components/ScrollRestore";
-import { MotionScript } from "@/components/MotionScript";
-import { Analytics } from "@/components/Analytics";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -42,13 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
       </head>
-      <body>
-        <div className="dl-canvas">{children}</div>
-        <SiteBehaviors />
-        <ScrollRestore />
-        <MotionScript />
-        <Analytics />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

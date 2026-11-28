@@ -1,0 +1,487 @@
+{
+  "posts": [
+    {
+      "_type": "article",
+      "slug": "why-the-cdo-role-keeps-failing",
+      "title": "Why the CDO role keeps failing in Nigeria",
+      "h1": "Why the CDO role keeps failing in Nigeria.",
+      "byline": "By the Design Lever research team",
+      "readingMinutes": 8,
+      "year": "2026",
+      "heroImage": "/assets/img/article-1.svg",
+      "standfirst": "The full-time Chief Design Officer is the right role at the wrong moment for most Nigerian growth-stage companies. The mandate is sound; the hire, at Series A to C, rarely survives contact with reality.",
+      "body": [
+        {
+          "style": "normal",
+          "text": "One pattern repeats across our interviews: companies hire a senior design leader before the organisation can hold one. No structure, no measurement culture, no peer at the table. Within eighteen months the leader leaves."
+        },
+        {
+          "style": "h2",
+          "text": "The tenure problem"
+        },
+        {
+          "style": "normal",
+          "text": "A full-time CDO in Nigeria costs ₦25–60M in the first year once salary, recruitment and benefits are counted, and the statistical tenure is under two years. That is an expensive way to learn that the function was not ready."
+        },
+        {
+          "style": "blockquote",
+          "text": "The gap is never talent. It is the infrastructure the talent is dropped into."
+        },
+        {
+          "style": "h2",
+          "text": "The fractional window"
+        },
+        {
+          "style": "normal",
+          "text": "The fractional model exists precisely for this window: build the leadership system, prove design on the P&L, and hand it over running, so that when the company does hire full-time, there is a seat worth taking."
+        }
+      ],
+      "cardLabel": "ESSAY",
+      "cardTitle": null,
+      "cardSummary": "The full-time hire is right in theory and wrong at your stage. A look at the tenure data.",
+      "order": 1,
+      "keywords": [
+        "cdo",
+        "chief design officer",
+        "leadership",
+        "nigeria",
+        "hiring",
+        "attrition",
+        "org design",
+        "fractional"
+      ]
+    },
+    {
+      "_type": "article",
+      "slug": "design-health-assessment",
+      "title": "What a design health assessment actually finds",
+      "h1": "What a design health assessment actually finds.",
+      "byline": "By the Design Lever research team",
+      "readingMinutes": 8,
+      "year": "2026",
+      "heroImage": "/assets/img/article-2.svg",
+      "standfirst": "Five costs show up in almost every leaderless design function. None of them appear on a design budget line.",
+      "body": [
+        {
+          "style": "normal",
+          "text": "Rework, duplicated tooling, stalled approvals, quiet attrition, and brand drift. Each is measurable, and each traces back to the same missing role."
+        },
+        {
+          "style": "h2",
+          "text": "The five costs"
+        },
+        {
+          "style": "normal",
+          "text": "Engineering rework alone typically runs 15–30% of build time in functions without design leadership. The others compound it."
+        },
+        {
+          "style": "blockquote",
+          "text": "The costs are real and recurring. They are just filed under other departments."
+        },
+        {
+          "style": "h2",
+          "text": "What to do with the findings"
+        },
+        {
+          "style": "normal",
+          "text": "Score the function, price the leaks, and decide: hire, contract, or install fractional leadership until the organisation is ready."
+        }
+      ],
+      "cardLabel": "FIELD NOTE",
+      "cardTitle": null,
+      "cardSummary": "The five costs that show up in almost every leaderless design function.",
+      "order": 2,
+      "keywords": [
+        "health assessment",
+        "diagnostic",
+        "audit",
+        "teams",
+        "process",
+        "cost",
+        "review",
+        "maturity"
+      ]
+    },
+    {
+      "_type": "article",
+      "slug": "design-on-the-pnl",
+      "title": "Design on the P&L, in Nigeria",
+      "h1": "Design on the P&L, in Nigeria.",
+      "byline": "By the Design Lever research team",
+      "readingMinutes": 8,
+      "year": "2026",
+      "heroImage": "/assets/img/article-3.svg",
+      "standfirst": "A design function is defensible when it is tied to numbers a board already reads. Everything else is decoration.",
+      "body": [
+        {
+          "style": "normal",
+          "text": "Revenue per release, conversion, support-ticket volume, rework hours. Pick two, baseline them, and report movement quarterly."
+        },
+        {
+          "style": "h2",
+          "text": "Choosing the numbers"
+        },
+        {
+          "style": "normal",
+          "text": "The metric must belong to the business, not to design. NPS is weaker than repeat purchase. Usability scores are weaker than support cost."
+        },
+        {
+          "style": "blockquote",
+          "text": "Design budgets survive planning season when they arrive attached to a P&L line."
+        },
+        {
+          "style": "h2",
+          "text": "Reporting rhythm"
+        },
+        {
+          "style": "normal",
+          "text": "One page, once a quarter, same format every time. The discipline is the credibility."
+        }
+      ],
+      "cardLabel": "ESSAY",
+      "cardTitle": null,
+      "cardSummary": "How to make a design function defensible to a board that only reads numbers.",
+      "order": 3,
+      "keywords": [
+        "p&l",
+        "pnl",
+        "profit",
+        "roi",
+        "return",
+        "commercial",
+        "finance",
+        "board",
+        "naira",
+        "value",
+        "revenue"
+      ]
+    },
+    {
+      "_type": "article",
+      "slug": "the-eighteen-month-exit-curve",
+      "title": "The eighteen-month exit curve",
+      "h1": "The eighteen-month exit curve.",
+      "byline": "By the Design Lever research team",
+      "readingMinutes": 8,
+      "year": "2026",
+      "heroImage": "/assets/img/article-4.svg",
+      "standfirst": "Senior designers do not leave for money first. They leave when the ceiling is structural.",
+      "body": [
+        {
+          "style": "normal",
+          "text": "Across our interviews the exits cluster at month fourteen to twenty. The pattern is consistent: no leadership path, no measurement culture, no advocate at the table."
+        },
+        {
+          "style": "h2",
+          "text": "What moves the curve"
+        },
+        {
+          "style": "normal",
+          "text": "A named design owner, a visible growth path, and work tied to business outcomes. Teams with all three retain seniors past three years."
+        },
+        {
+          "style": "blockquote",
+          "text": "The exit curve is a leadership artefact, not a loyalty problem."
+        },
+        {
+          "style": "h2",
+          "text": "The cost of the curve"
+        },
+        {
+          "style": "normal",
+          "text": "Replacing a senior designer costs six to nine months of salary in recruitment, ramp and lost velocity. Retention is the cheapest design investment available."
+        }
+      ],
+      "cardLabel": "FIELD NOTE",
+      "cardTitle": null,
+      "cardSummary": "Why senior designers leave, and the leadership factors that move the curve.",
+      "order": 4,
+      "keywords": [
+        "attrition",
+        "retention",
+        "senior designers",
+        "exit",
+        "japa",
+        "career ceiling",
+        "leaving",
+        "churn"
+      ]
+    },
+    {
+      "_type": "spotlight",
+      "slug": "a-cdo-who-stayed",
+      "title": "A CDO who stayed back home",
+      "h1": "A CDO who stayed back home.",
+      "byline": "By the Design Lever research team",
+      "readingMinutes": 8,
+      "year": "2026",
+      "heroImage": "/assets/img/spot-1.svg",
+      "standfirst": "Most senior design leaders leave. This one stayed past the two-year mark, and the difference was structural.",
+      "body": [
+        {
+          "style": "normal",
+          "text": "The company gave design a seat, a budget, and a number to own before the hire was made. The role had a floor to stand on from day one."
+        },
+        {
+          "style": "h2",
+          "text": "What the company did"
+        },
+        {
+          "style": "normal",
+          "text": "An executive sponsor, a measurement baseline, and a mandate written into the operating plan. None of it was expensive. All of it was rare."
+        },
+        {
+          "style": "blockquote",
+          "text": "I stayed because the job was real. The title was the least of it."
+        },
+        {
+          "style": "h2",
+          "text": "What other companies can copy"
+        },
+        {
+          "style": "normal",
+          "text": "Build the seat before the hire. If the seat cannot be built yet, contract the leadership until it can."
+        }
+      ],
+      "cardLabel": "QUALITATIVE RESEARCH",
+      "cardTitle": "Company interviews",
+      "cardSummary": "Structured conversations on how design investment performs inside the business.",
+      "order": 1,
+      "keywords": [
+        "cdo",
+        "nigeria",
+        "retention",
+        "leadership",
+        "career",
+        "interview",
+        "stayed"
+      ]
+    },
+    {
+      "_type": "spotlight",
+      "slug": "investing-before-the-case-studies",
+      "title": "Investing before the case studies",
+      "h1": "Investing before the case studies.",
+      "byline": "By the Design Lever research team",
+      "readingMinutes": 8,
+      "year": "2026",
+      "heroImage": "/assets/img/spot-2.svg",
+      "standfirst": "There was no African benchmark to point to. This founder invested in design leadership anyway.",
+      "body": [
+        {
+          "style": "normal",
+          "text": "The bet: if design decisions kept reaching the CEO desk, the company was paying an executive salary for design leadership already, just badly."
+        },
+        {
+          "style": "h2",
+          "text": "The decision"
+        },
+        {
+          "style": "normal",
+          "text": "A fractional design executive, one day a week, owning quality disputes and the hiring bar. The CEO desk cleared within a quarter."
+        },
+        {
+          "style": "blockquote",
+          "text": "We were paying for design leadership either way. We chose to pay for the real thing."
+        },
+        {
+          "style": "h2",
+          "text": "The result"
+        },
+        {
+          "style": "normal",
+          "text": "Release rework fell, senior designers stopped leaving, and the first full-time design hire landed into a working system."
+        }
+      ],
+      "cardLabel": "WORKFORCE DATA",
+      "cardTitle": "Practitioner survey",
+      "cardSummary": "Recurring data on compensation, seniority, career progression and leadership access.",
+      "order": 2,
+      "keywords": [
+        "founder",
+        "investment",
+        "early",
+        "startup",
+        "risk",
+        "interview",
+        "backing"
+      ]
+    },
+    {
+      "_type": "spotlight",
+      "slug": "leading-from-abroad",
+      "title": "Leading from abroad",
+      "h1": "Leading from abroad.",
+      "byline": "By the Design Lever research team",
+      "readingMinutes": 8,
+      "year": "2026",
+      "heroImage": "/assets/img/spot-3.svg",
+      "standfirst": "Japa took the designer. It did not have to take the leadership.",
+      "body": [
+        {
+          "style": "normal",
+          "text": "A London-based African design director kept a standing fractional engagement with a Lagos scale-up: two days a month on site, weekly leadership cover remote."
+        },
+        {
+          "style": "h2",
+          "text": "How the model works"
+        },
+        {
+          "style": "normal",
+          "text": "Timezone-adjacent, culturally fluent, and senior. The diaspora bench is a leadership asset the continent has barely priced."
+        },
+        {
+          "style": "blockquote",
+          "text": "Leaving the country does not mean leaving the work."
+        },
+        {
+          "style": "h2",
+          "text": "What it takes"
+        },
+        {
+          "style": "normal",
+          "text": "A clear mandate, a local deputy, and honest scoping. The model fails only when it is treated as advisory instead of accountable."
+        }
+      ],
+      "cardLabel": "DESIGN LEVER DATA",
+      "cardTitle": "Engagement data",
+      "cardSummary": "Approved and anonymised baseline and outcome metrics from Practice engagements.",
+      "order": 3,
+      "keywords": [
+        "diaspora",
+        "remote",
+        "japa",
+        "abroad",
+        "leadership",
+        "interview",
+        "bridge"
+      ]
+    },
+    {
+      "_type": "spotlight",
+      "slug": "from-bottleneck-to-pace-setter",
+      "title": "From bottleneck to pace-setter",
+      "h1": "From bottleneck to pace-setter.",
+      "byline": "By the Design Lever research team",
+      "readingMinutes": 8,
+      "year": "2026",
+      "heroImage": "/assets/img/spot-4.svg",
+      "standfirst": "One quarter after installing design leadership, the slowest function in the company set the release pace.",
+      "body": [
+        {
+          "style": "normal",
+          "text": "The team was talented and stuck: approvals queued at the founder, a design system existed in name only, and every release relitigated the basics."
+        },
+        {
+          "style": "h2",
+          "text": "The install"
+        },
+        {
+          "style": "normal",
+          "text": "A fractional design executive took the approval queue, shipped the design system, and set a weekly critique with seniors in the room."
+        },
+        {
+          "style": "blockquote",
+          "text": "Nothing about the team changed. Everything about the system did."
+        },
+        {
+          "style": "h2",
+          "text": "The numbers"
+        },
+        {
+          "style": "normal",
+          "text": "Release cycle time fell 40% in the first quarter. Design-caused rework halved. The function now briefs the roadmap instead of receiving it."
+        }
+      ],
+      "cardLabel": "COMPANY",
+      "cardTitle": null,
+      "cardSummary": "A health-tech team on the quarter their design function changed gear.",
+      "order": 4,
+      "keywords": [
+        "health-tech",
+        "healthtech",
+        "lagos",
+        "throughput",
+        "systems",
+        "bottleneck",
+        "interview",
+        "speed"
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "title": "The African Design Leadership Report",
+      "format": "Annual report",
+      "summary": "The annual view of how design leadership is developing across African companies and careers, bringing together practitioner data, company interviews and evidence from Design Lever engagements.",
+      "stage": "in_production",
+      "actionLabel": "Read the report",
+      "flagship": true,
+      "order": 1,
+      "publishedAt": "2026-01-01",
+      "flagshipDetails": {
+        "edition": "Volume 01",
+        "length": "EST. ~120 PP",
+        "facts": [
+          {
+            "label": "Coverage",
+            "value": "20 interviews"
+          },
+          {
+            "label": "Coverage",
+            "value": "500 survey responses"
+          },
+          {
+            "label": "Licence",
+            "value": "CC BY 4.0 · free to cite"
+          }
+        ]
+      }
+    },
+    {
+      "title": "The Cost of No Design Leadership",
+      "format": "White paper",
+      "summary": "How a leaderless design function quietly compounds cost.",
+      "stage": "in_production",
+      "actionLabel": "Notify me",
+      "flagship": false,
+      "order": 2
+    },
+    {
+      "title": "Design Salary & Seniority in Nigeria 2026",
+      "format": "Data report",
+      "summary": "What designers earn at each level, and where the leadership ceiling sits.",
+      "stage": "open_for_input",
+      "actionLabel": "Take the survey",
+      "flagship": false,
+      "order": 3
+    },
+    {
+      "title": "Japa & the Diaspora Design Bench",
+      "format": "Field report",
+      "summary": "Where Nigerian design leaders went, and how the continent stays connected to them.",
+      "stage": "planned",
+      "actionLabel": "Notify me",
+      "flagship": false,
+      "order": 4
+    },
+    {
+      "title": "Design ROI: What the Global Numbers Miss About Africa",
+      "format": "White paper",
+      "summary": "Why McKinsey, Adobe and Forrester figures don't transfer, and what does.",
+      "stage": "in_production",
+      "actionLabel": "Notify me",
+      "flagship": false,
+      "order": 5
+    },
+    {
+      "title": "Attrition in African Design Teams",
+      "format": "Data brief",
+      "summary": "The 18-month exit curve, and the leadership factors that move it.",
+      "stage": "open_for_input",
+      "actionLabel": "Contribute",
+      "flagship": false,
+      "order": 6
+    }
+  ]
+}

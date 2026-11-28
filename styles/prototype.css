@@ -201,61 +201,22 @@ textarea.dl-field{border:1px solid rgba(68,6,59,.32);padding:14px;resize:vertica
 .pg-academy-foundation details.dl-faq .dl-a{font:400 16px/1.65 'Roboto Flex',sans-serif;color:rgba(68,6,59,.66);margin:0 0 26px;max-width:760px}
 .pg-academy-foundation .dl-case-testimonial{background:#FDFBF0}
 /* ---- page: articles-design-health-assessment ---- */
-.pg-articles-design-health-assessment .dl-link:hover{color:#FF7D44 !important}
-.pg-articles-design-health-assessment .dl-btn{transition:background .15s,color .15s,transform .15s}
-.pg-articles-design-health-assessment .dl-nav{position:sticky;top:0}
-.pg-articles-design-health-assessment .dl-navmenu{display:flex;align-items:center;gap:2px;margin-left:auto;margin-right:28px}
-.pg-articles-design-health-assessment .dl-navitem{position:relative}
-.pg-articles-design-health-assessment .dl-navlink{transition:color .15s}
-.pg-articles-design-health-assessment .dl-navitem:hover > .dl-navlink{color:#FF7D44 !important}
-.pg-articles-design-health-assessment .dl-drop{transition:opacity .18s,transform .18s}
-.pg-articles-design-health-assessment .dl-navitem:hover .dl-drop{opacity:1 !important;visibility:visible !important;transform:translateY(0) !important}
-.pg-articles-design-health-assessment .dl-di{transition:background .14s}
-.pg-articles-design-health-assessment .dl-di:hover{background:rgba(253,251,240,.08)}
-.pg-articles-design-health-assessment .dl-di:hover .dl-di-t{color:#FF7D44}
-.pg-articles-design-health-assessment .dl-navcta:hover{background:#44063B !important;color:#FDFBF0 !important}
 /* ---- page: articles-design-on-the-pnl ---- */
-.pg-articles-design-on-the-pnl .dl-link:hover{color:#FF7D44 !important}
-.pg-articles-design-on-the-pnl .dl-btn{transition:background .15s,color .15s,transform .15s}
-.pg-articles-design-on-the-pnl .dl-nav{position:sticky;top:0}
-.pg-articles-design-on-the-pnl .dl-navmenu{display:flex;align-items:center;gap:2px;margin-left:auto;margin-right:28px}
-.pg-articles-design-on-the-pnl .dl-navitem{position:relative}
-.pg-articles-design-on-the-pnl .dl-navlink{transition:color .15s}
-.pg-articles-design-on-the-pnl .dl-navitem:hover > .dl-navlink{color:#FF7D44 !important}
-.pg-articles-design-on-the-pnl .dl-drop{transition:opacity .18s,transform .18s}
-.pg-articles-design-on-the-pnl .dl-navitem:hover .dl-drop{opacity:1 !important;visibility:visible !important;transform:translateY(0) !important}
-.pg-articles-design-on-the-pnl .dl-di{transition:background .14s}
-.pg-articles-design-on-the-pnl .dl-di:hover{background:rgba(253,251,240,.08)}
-.pg-articles-design-on-the-pnl .dl-di:hover .dl-di-t{color:#FF7D44}
-.pg-articles-design-on-the-pnl .dl-navcta:hover{background:#44063B !important;color:#FDFBF0 !important}
+.pg-post .dl-link:hover{color:#FF7D44 !important}
+.pg-post .dl-btn{transition:background .15s,color .15s,transform .15s}
+.pg-post .dl-nav{position:sticky;top:0}
+.pg-post .dl-navmenu{display:flex;align-items:center;gap:2px;margin-left:auto;margin-right:28px}
+.pg-post .dl-navitem{position:relative}
+.pg-post .dl-navlink{transition:color .15s}
+.pg-post .dl-navitem:hover > .dl-navlink{color:#FF7D44 !important}
+.pg-post .dl-drop{transition:opacity .18s,transform .18s}
+.pg-post .dl-navitem:hover .dl-drop{opacity:1 !important;visibility:visible !important;transform:translateY(0) !important}
+.pg-post .dl-di{transition:background .14s}
+.pg-post .dl-di:hover{background:rgba(253,251,240,.08)}
+.pg-post .dl-di:hover .dl-di-t{color:#FF7D44}
+.pg-post .dl-navcta:hover{background:#44063B !important;color:#FDFBF0 !important}
 /* ---- page: articles-the-eighteen-month-exit-curve ---- */
-.pg-articles-the-eighteen-month-exit-curve .dl-link:hover{color:#FF7D44 !important}
-.pg-articles-the-eighteen-month-exit-curve .dl-btn{transition:background .15s,color .15s,transform .15s}
-.pg-articles-the-eighteen-month-exit-curve .dl-nav{position:sticky;top:0}
-.pg-articles-the-eighteen-month-exit-curve .dl-navmenu{display:flex;align-items:center;gap:2px;margin-left:auto;margin-right:28px}
-.pg-articles-the-eighteen-month-exit-curve .dl-navitem{position:relative}
-.pg-articles-the-eighteen-month-exit-curve .dl-navlink{transition:color .15s}
-.pg-articles-the-eighteen-month-exit-curve .dl-navitem:hover > .dl-navlink{color:#FF7D44 !important}
-.pg-articles-the-eighteen-month-exit-curve .dl-drop{transition:opacity .18s,transform .18s}
-.pg-articles-the-eighteen-month-exit-curve .dl-navitem:hover .dl-drop{opacity:1 !important;visibility:visible !important;transform:translateY(0) !important}
-.pg-articles-the-eighteen-month-exit-curve .dl-di{transition:background .14s}
-.pg-articles-the-eighteen-month-exit-curve .dl-di:hover{background:rgba(253,251,240,.08)}
-.pg-articles-the-eighteen-month-exit-curve .dl-di:hover .dl-di-t{color:#FF7D44}
-.pg-articles-the-eighteen-month-exit-curve .dl-navcta:hover{background:#44063B !important;color:#FDFBF0 !important}
 /* ---- page: articles-why-the-cdo-role-keeps-failing ---- */
-.pg-articles-why-the-cdo-role-keeps-failing .dl-link:hover{color:#FF7D44 !important}
-.pg-articles-why-the-cdo-role-keeps-failing .dl-btn{transition:background .15s,color .15s,transform .15s}
-.pg-articles-why-the-cdo-role-keeps-failing .dl-nav{position:sticky;top:0}
-.pg-articles-why-the-cdo-role-keeps-failing .dl-navmenu{display:flex;align-items:center;gap:2px;margin-left:auto;margin-right:28px}
-.pg-articles-why-the-cdo-role-keeps-failing .dl-navitem{position:relative}
-.pg-articles-why-the-cdo-role-keeps-failing .dl-navlink{transition:color .15s}
-.pg-articles-why-the-cdo-role-keeps-failing .dl-navitem:hover > .dl-navlink{color:#FF7D44 !important}
-.pg-articles-why-the-cdo-role-keeps-failing .dl-drop{transition:opacity .18s,transform .18s}
-.pg-articles-why-the-cdo-role-keeps-failing .dl-navitem:hover .dl-drop{opacity:1 !important;visibility:visible !important;transform:translateY(0) !important}
-.pg-articles-why-the-cdo-role-keeps-failing .dl-di{transition:background .14s}
-.pg-articles-why-the-cdo-role-keeps-failing .dl-di:hover{background:rgba(253,251,240,.08)}
-.pg-articles-why-the-cdo-role-keeps-failing .dl-di:hover .dl-di-t{color:#FF7D44}
-.pg-articles-why-the-cdo-role-keeps-failing .dl-navcta:hover{background:#44063B !important;color:#FDFBF0 !important}
 /* ---- page: bench ---- */
 .pg-bench .dl-link:hover{color:#FF7D44 !important}
 .pg-bench .dl-btn{transition:background .15s,color .15s,transform .15s}
@@ -491,61 +452,9 @@ textarea.dl-field{border:1px solid rgba(68,6,59,.32);padding:14px;resize:vertica
 .pg-research .dl-field:focus{border-color:#FF7D44}
 .pg-research textarea.dl-field:focus{border-color:#FF7D44}
 /* ---- page: spotlights-a-cdo-who-stayed ---- */
-.pg-spotlights-a-cdo-who-stayed .dl-link:hover{color:#FF7D44 !important}
-.pg-spotlights-a-cdo-who-stayed .dl-btn{transition:background .15s,color .15s,transform .15s}
-.pg-spotlights-a-cdo-who-stayed .dl-nav{position:sticky;top:0}
-.pg-spotlights-a-cdo-who-stayed .dl-navmenu{display:flex;align-items:center;gap:2px;margin-left:auto;margin-right:28px}
-.pg-spotlights-a-cdo-who-stayed .dl-navitem{position:relative}
-.pg-spotlights-a-cdo-who-stayed .dl-navlink{transition:color .15s}
-.pg-spotlights-a-cdo-who-stayed .dl-navitem:hover > .dl-navlink{color:#FF7D44 !important}
-.pg-spotlights-a-cdo-who-stayed .dl-drop{transition:opacity .18s,transform .18s}
-.pg-spotlights-a-cdo-who-stayed .dl-navitem:hover .dl-drop{opacity:1 !important;visibility:visible !important;transform:translateY(0) !important}
-.pg-spotlights-a-cdo-who-stayed .dl-di{transition:background .14s}
-.pg-spotlights-a-cdo-who-stayed .dl-di:hover{background:rgba(253,251,240,.08)}
-.pg-spotlights-a-cdo-who-stayed .dl-di:hover .dl-di-t{color:#FF7D44}
-.pg-spotlights-a-cdo-who-stayed .dl-navcta:hover{background:#44063B !important;color:#FDFBF0 !important}
 /* ---- page: spotlights-from-bottleneck-to-pace-setter ---- */
-.pg-spotlights-from-bottleneck-to-pace-setter .dl-link:hover{color:#FF7D44 !important}
-.pg-spotlights-from-bottleneck-to-pace-setter .dl-btn{transition:background .15s,color .15s,transform .15s}
-.pg-spotlights-from-bottleneck-to-pace-setter .dl-nav{position:sticky;top:0}
-.pg-spotlights-from-bottleneck-to-pace-setter .dl-navmenu{display:flex;align-items:center;gap:2px;margin-left:auto;margin-right:28px}
-.pg-spotlights-from-bottleneck-to-pace-setter .dl-navitem{position:relative}
-.pg-spotlights-from-bottleneck-to-pace-setter .dl-navlink{transition:color .15s}
-.pg-spotlights-from-bottleneck-to-pace-setter .dl-navitem:hover > .dl-navlink{color:#FF7D44 !important}
-.pg-spotlights-from-bottleneck-to-pace-setter .dl-drop{transition:opacity .18s,transform .18s}
-.pg-spotlights-from-bottleneck-to-pace-setter .dl-navitem:hover .dl-drop{opacity:1 !important;visibility:visible !important;transform:translateY(0) !important}
-.pg-spotlights-from-bottleneck-to-pace-setter .dl-di{transition:background .14s}
-.pg-spotlights-from-bottleneck-to-pace-setter .dl-di:hover{background:rgba(253,251,240,.08)}
-.pg-spotlights-from-bottleneck-to-pace-setter .dl-di:hover .dl-di-t{color:#FF7D44}
-.pg-spotlights-from-bottleneck-to-pace-setter .dl-navcta:hover{background:#44063B !important;color:#FDFBF0 !important}
 /* ---- page: spotlights-investing-before-the-case-studies ---- */
-.pg-spotlights-investing-before-the-case-studies .dl-link:hover{color:#FF7D44 !important}
-.pg-spotlights-investing-before-the-case-studies .dl-btn{transition:background .15s,color .15s,transform .15s}
-.pg-spotlights-investing-before-the-case-studies .dl-nav{position:sticky;top:0}
-.pg-spotlights-investing-before-the-case-studies .dl-navmenu{display:flex;align-items:center;gap:2px;margin-left:auto;margin-right:28px}
-.pg-spotlights-investing-before-the-case-studies .dl-navitem{position:relative}
-.pg-spotlights-investing-before-the-case-studies .dl-navlink{transition:color .15s}
-.pg-spotlights-investing-before-the-case-studies .dl-navitem:hover > .dl-navlink{color:#FF7D44 !important}
-.pg-spotlights-investing-before-the-case-studies .dl-drop{transition:opacity .18s,transform .18s}
-.pg-spotlights-investing-before-the-case-studies .dl-navitem:hover .dl-drop{opacity:1 !important;visibility:visible !important;transform:translateY(0) !important}
-.pg-spotlights-investing-before-the-case-studies .dl-di{transition:background .14s}
-.pg-spotlights-investing-before-the-case-studies .dl-di:hover{background:rgba(253,251,240,.08)}
-.pg-spotlights-investing-before-the-case-studies .dl-di:hover .dl-di-t{color:#FF7D44}
-.pg-spotlights-investing-before-the-case-studies .dl-navcta:hover{background:#44063B !important;color:#FDFBF0 !important}
 /* ---- page: spotlights-leading-from-abroad ---- */
-.pg-spotlights-leading-from-abroad .dl-link:hover{color:#FF7D44 !important}
-.pg-spotlights-leading-from-abroad .dl-btn{transition:background .15s,color .15s,transform .15s}
-.pg-spotlights-leading-from-abroad .dl-nav{position:sticky;top:0}
-.pg-spotlights-leading-from-abroad .dl-navmenu{display:flex;align-items:center;gap:2px;margin-left:auto;margin-right:28px}
-.pg-spotlights-leading-from-abroad .dl-navitem{position:relative}
-.pg-spotlights-leading-from-abroad .dl-navlink{transition:color .15s}
-.pg-spotlights-leading-from-abroad .dl-navitem:hover > .dl-navlink{color:#FF7D44 !important}
-.pg-spotlights-leading-from-abroad .dl-drop{transition:opacity .18s,transform .18s}
-.pg-spotlights-leading-from-abroad .dl-navitem:hover .dl-drop{opacity:1 !important;visibility:visible !important;transform:translateY(0) !important}
-.pg-spotlights-leading-from-abroad .dl-di{transition:background .14s}
-.pg-spotlights-leading-from-abroad .dl-di:hover{background:rgba(253,251,240,.08)}
-.pg-spotlights-leading-from-abroad .dl-di:hover .dl-di-t{color:#FF7D44}
-.pg-spotlights-leading-from-abroad .dl-navcta:hover{background:#44063B !important;color:#FDFBF0 !important}
 /* ---- page: talent-hub ---- */
 .pg-talent-hub .dl-link:hover{color:#7A2A6E !important}
 .pg-talent-hub .dl-btn{transition:background .15s,color .15s}
