@@ -97,7 +97,7 @@ export function PostPage({ post }: { post: Post }) {
           <div style={{display:"flex",gap:"28px",alignItems:"center",font:"400 12px 'Spline Sans Mono',monospace",color:"rgba(68,6,59,.6)",letterSpacing:".02em"}}>
             <span>{post.byline}</span>
             <span>·</span>
-            <span>{post.readingMinutes} min read</span>
+            <span>{`${post.readingMinutes} min read`}</span>
             <span>·</span>
             <span>{year}</span>
           </div>

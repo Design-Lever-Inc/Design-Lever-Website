@@ -2,8 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/site";
-import { client } from "@/sanity/lib/client";
-import { CONTENT_TAG } from "@/sanity/lib/fetch";
+import { CONTENT_TAG, publishedClient } from "@/sanity/lib/fetch";
 import { SITEMAP_QUERY, postPath, type PostType } from "@/sanity/lib/queries";
 import { sanityConfigured } from "@/sanity/env";
 
@@ -28,7 +27,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url: `${SITE_URL}${route === "/" ? "" : route}`,
   }));
   const content = sanityConfigured
-    ? await client.fetch<{ _type: PostType; slug: string; _updatedAt: string }[]>(
+    ? await publishedClient.fetch<{ _type: PostType; slug: string; _updatedAt: string }[]>(
         SITEMAP_QUERY,
         {},
         { next: { tags: [CONTENT_TAG], revalidate: 3600 } },

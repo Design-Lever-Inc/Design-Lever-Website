@@ -1,5 +1,4 @@
-import { client } from "@/sanity/lib/client";
-import { CONTENT_TAG } from "@/sanity/lib/fetch";
+import { CONTENT_TAG, publishedClient } from "@/sanity/lib/fetch";
 import { SEARCH_QUERY, postPath, type SearchDoc } from "@/sanity/lib/queries";
 import { sanityConfigured } from "@/sanity/env";
 import type { SearchEntry } from "@/lib/search";
@@ -10,7 +9,7 @@ export const revalidate = 3600;
 
 export async function GET() {
   const docs = sanityConfigured
-    ? await client.fetch<SearchDoc[]>(SEARCH_QUERY, {}, { next: { tags: [CONTENT_TAG], revalidate: 3600 } })
+    ? await publishedClient.fetch<SearchDoc[]>(SEARCH_QUERY, {}, { next: { tags: [CONTENT_TAG], revalidate: 3600 } })
     : [];
   const entries: SearchEntry[] = docs.map((d) => ({
     title: d.title,

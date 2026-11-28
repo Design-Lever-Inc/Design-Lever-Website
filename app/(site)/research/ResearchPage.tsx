@@ -226,7 +226,7 @@ export function ResearchPage({ articles, spotlights: allSpotlights, reports }: R
           <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"48px",alignItems:"stretch",marginBottom:"64px"}}>
             <div style={{position:"relative",minHeight:"440px",display:"flex",flexDirection:"column",justifyContent:"space-between",padding:"40px",backgroundColor:"#44063B"}}>
               <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start"}}>
-                <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FDFBF0",letterSpacing:".14em",textTransform:"uppercase"}}>Flagship report{flagship.publishedAt ? ` · ${flagship.publishedAt.slice(0, 4)}` : ""}</span>
+                <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"#FDFBF0",letterSpacing:".14em",textTransform:"uppercase"}}>{`Flagship report${flagship.publishedAt ? ` · ${flagship.publishedAt.slice(0, 4)}` : ""}`}</span>
                 {flagship.flagshipDetails?.length && <span style={{font:"400 11px 'Spline Sans Mono',monospace",color:"rgba(253,251,240,.55)",letterSpacing:".06em"}}>{flagship.flagshipDetails.length}</span>}
               </div>
               <div>
